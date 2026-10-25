@@ -258,14 +258,13 @@ T(chm, AY1 + 31, "whose top option equals the user's choice", FS, "middle")
 
 # ====================================================================== bottom lane
 DIV_X = M + (W - 2 * M) * 0.36
-c.line([(DIV_X, L2Y0 + 4), (DIV_X, L2Y1 - 4)], MID, 0.6, dash="2.5,1.8", cap="butt")
+c.line([(DIV_X, L2Y0 + 4), (DIV_X, L2Y1 - 50)], MID, 0.6, dash="2.5,1.8", cap="butt")
 PT_Y = L2Y0 + 19.5
 T(M + 5, PT_Y, "(a) Training-free scorer", 7, bold=True, color=MID)
 RX0 = DIV_X + 6
 T(RX0, PT_Y, "(b) Joint evaluator (JEV)", 7, bold=True, color=BLUE)
-MR0, MR1 = PT_Y + 5, PT_Y + 41
+MR0, MR1 = PT_Y + 5, PT_Y + 43
 mm = (MR0 + MR1) / 2
-WK_Y = [MR1 + 12.5, MR1 + 28, MR1 + 43.5]       # weakness / remedy row centres
 
 # ---- (a) training-free (gray)
 AX = M + 6
@@ -284,37 +283,54 @@ box(OX0, mm - 2.5, OX1 - OX0, 10, fill=BG, stroke=GRAY)
 T((OX0 + OX1) / 2, mm + 4.6, "A: 0.95    B: 0.05", 6.5, "middle", italic=True, color=MID,
   maxw=OX1 - OX0 - 3)
 
-PICT_X = AX + 2
-LAB_X = AX + 70
-weak = ["coarse", "position-sensitive", "overconfident"]
-remedy = ["continuous softmax over logits", "options permuted during training",
-          "uniform target for Others"]
 
-# coarse: nearly all mass on two spikes
-y = WK_Y[0]
-heights = [0.6, 0.4, 10, 0.4, 0.5, 0.4, 0.6, 0.4, 7.5, 0.5]
-for k, hgt in enumerate(heights):
-    c.rect(PICT_X + 4 + k * 4.2, y + 5 - hgt, 3.2, max(hgt, 0.6), rx=0, fill=MID if hgt > 2 else GRAY)
-c.line([(PICT_X + 2, y + 5.3), (PICT_X + 50, y + 5.3)], MID, 0.5)
+# ---- weakness (a) -> remedy (b): one row of three cards across the lane
+def pict_coarse(x, y):
+    heights = [0.6, 0.4, 10, 0.4, 0.5, 0.4, 0.6, 0.4, 7.5, 0.5]
+    for k, hgt in enumerate(heights):
+        c.rect(x + 2 + k * 4.2, y + 5 - hgt, 3.2, max(hgt, 0.6), rx=0,
+               fill=MID if hgt > 2 else GRAY)
+    c.line([(x, y + 5.3), (x + 46, y + 5.3)], MID, 0.5)
 
-# position-sensitive: same options, swapped order, first line always on top
-y = WK_Y[1]
-for k, (a_, b_) in enumerate((("d₁", "d₂"), ("d₂", "d₁"))):
-    lx = PICT_X + k * 33
-    c.rect(lx, y - 7, 28, 6.6, rx=1, fill=GRAY, stroke=None)
-    T(lx + 1.5, y - 1.8, f"`A. <{a_}>`", FS, color=INK)
-    T(lx + 1.5, y + 4.8, f"`B. <{b_}>`", FS, color=MID)
-c.rect(PICT_X - 1, y - 8, 61, 14.5, rx=2, fill="none", stroke=GRAY, sw=0.5)
 
-# overconfident: one tall bar although no option fits
-y = WK_Y[2]
-for k, hgt in enumerate((10.5, 1.2)):
-    c.rect(PICT_X + 4 + k * 6, y + 5 - hgt, 4.6, hgt, rx=0, fill=MID if k == 0 else GRAY)
-c.line([(PICT_X + 2, y + 5.3), (PICT_X + 17, y + 5.3)], MID, 0.5)
-pill(PICT_X + 20, y + 0.5, "no option fits", GRAY, MID, fill=BG)
+def pict_position(x, y):
+    for k, (a_, b_) in enumerate((("d₁", "d₂"), ("d₂", "d₁"))):
+        lx = x + 1 + k * 33
+        c.rect(lx, y - 7, 28, 6.6, rx=1, fill=GRAY, stroke=None)
+        T(lx + 1.5, y - 1.8, f"`A. <{a_}>`", FS, color=INK)
+        T(lx + 1.5, y + 4.8, f"`B. <{b_}>`", FS, color=MID)
+    c.rect(x, y - 8, 62, 14.5, rx=2, fill="none", stroke=GRAY, sw=0.5)
 
-for k, s in enumerate(weak):
-    T(LAB_X, WK_Y[k] + 2.2, s, 6.5, bold=True, color=MID)
+
+def pict_overconf(x, y):
+    for k, hgt in enumerate((10.5, 1.2)):
+        c.rect(x + 2 + k * 6, y + 5 - hgt, 4.6, hgt, rx=0, fill=MID if k == 0 else GRAY)
+    c.line([(x, y + 5.3), (x + 15, y + 5.3)], MID, 0.5)
+    pill(x + 18, y + 0.5, "no option fits", GRAY, MID, fill=BG)
+
+
+weak = [("coarse", pict_coarse), ("position-sensitive", pict_position),
+        ("overconfident", pict_overconf)]
+remedy = [["continuous softmax", "over logits"], ["options permuted", "during training"],
+          ["uniform target", "for Others"]]
+ST_Y0, ST_Y1 = L2Y1 - 40, L2Y1 - 4
+ST_X0, ST_X1 = M + 5, W - M - 4
+T(ST_X0, ST_Y0 - 3.2, "/{weakness of (a)}  ⋯→  /{remedy in (b)}", FS, color=MID)
+CG = 6.0
+CWD = (ST_X1 - ST_X0 - 2 * CG) / 3
+for k, ((wl, pict), rl) in enumerate(zip(weak, remedy)):
+    x0 = ST_X0 + k * (CWD + CG)
+    box(x0, ST_Y0, CWD, ST_Y1 - ST_Y0, stroke=GRAY, sw=0.6)
+    lw_ = 64.0
+    tw_ = max(c.tw(r_, FS) for r_ in rl) + 8
+    gx = x0 + (CWD - (lw_ + 22 + tw_)) / 2
+    pict(gx, ST_Y0 + 12)
+    T(gx, ST_Y0 + 29.5, wl, 6.5, bold=True, color=MID)
+    tx = gx + lw_ + 22
+    ty = (ST_Y0 + ST_Y1) / 2
+    box(tx, ty - 9, tw_, 18, stroke=BLUE, sw=0.9, rx=4)
+    centered(tx + tw_ / 2, ty, rl, FS, 6.8, color=BLUE)
+    c.arrow([(gx + lw_ + 4, ty), (tx - 1.5, ty)], MID, 0.7, dash="0.1,1.7", hs=2.8)
 
 # ---- (b) JEV (blue)
 CD = RX0
@@ -379,14 +395,6 @@ c.line([(DCX, CY1), (DCX, mm - DHH - 6)], INK, THICK)
 c.polygon([(DCX, mm - DHH), (DCX - 2.7, mm - DHH - 6.3), (DCX + 2.7, mm - DHH - 6.3)], INK)
 T(DCX + 4.5, L2Y0 + 10, "$θ^{*}$", 8.5, bold=True)
 T(TRAIN_CX + 4.5, L2Y0 + 10, "trained JEV", 6.5, bold=True)
-
-# remedy tags + weakness-to-remedy links
-TAG_X = RX0 + 10
-for k, s in enumerate(remedy):
-    y = WK_Y[k]
-    lab_end = LAB_X + c.tw(weak[k], 6.5, True) + 3
-    c.line([(lab_end, y), (TAG_X - 2, y)], MID, 0.6, dash="0.1,1.6")
-    pill(TAG_X, y, s, BLUE, BLUE, size=FS, h=9.5)
 
 c.save("figure/pipeline_compare", W_IN, H_IN)
 for wmsg in c.warn:
