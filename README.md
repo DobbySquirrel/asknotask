@@ -9,6 +9,7 @@ box or fall below the 6 pt minimum.
 | Figure | Size | Script | Outputs |
 | --- | --- | --- | --- |
 | System overview with running example | 7.16 in × 3.4 in | `make_overview.py` | `figure/overview.{pdf,svg,png}` |
+| Motivating example (single column) | 3.5 in × 3.58 in | `make_motivation.py` | `figure/motivation.{pdf,svg,png}` |
 | Architecture with offline strip | 7.16 in × 2.754 in (2.6:1) | `make_figure.py` | `figure/architecture.{pdf,svg,png}` |
 
 The PDFs embed their fonts and go straight into LaTeX; the SVGs are editable in
@@ -41,6 +42,7 @@ Inkscape / Illustrator; the PNGs are 600 dpi previews.
 ```bash
 pip install -r requirements.txt
 python3 make_overview.py
+python3 make_motivation.py
 python3 make_figure.py
 ```
 
