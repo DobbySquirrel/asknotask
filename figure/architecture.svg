@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.16in" height="2.7539in" viewBox="0 0 515.52 198.28">
+<rect x="0" y="0" width="515.52" height="198.28" fill="#FFFFFF"/>
+<rect x="68.00" y="18.00" width="103.00" height="134.00" rx="4" fill="#F2F2F2" stroke="none"/>
+<circle cx="77.00" cy="27.00" r="5.2" fill="#0072B2" stroke="none"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="74.91" y="29.60" font-size="7.50" font-weight="bold">1</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="85.00" y="29.60" font-size="7.50" font-weight="bold">Staged Detection</tspan></text>
+<rect x="180.00" y="18.00" width="125.00" height="134.00" rx="4" fill="#F2F2F2" stroke="none"/>
+<circle cx="189.00" cy="27.00" r="5.2" fill="#0072B2" stroke="none"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="186.91" y="29.60" font-size="7.50" font-weight="bold">2</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="197.00" y="29.60" font-size="7.50" font-weight="bold">Type Detectors</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="197.00" y="37.00" font-size="5.80" font-style="italic">(data observability)</tspan></text>
+<rect x="314.00" y="18.00" width="120.00" height="134.00" rx="4" fill="#F2F2F2" stroke="none"/>
+<circle cx="323.00" cy="27.00" r="5.2" fill="#0072B2" stroke="none"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="320.91" y="29.60" font-size="7.50" font-weight="bold">3</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="331.00" y="29.60" font-size="7.50" font-weight="bold">Uncertainty Gate</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="331.00" y="37.00" font-size="5.80" font-style="italic">(model resolvability)</tspan></text>
+<rect x="443.00" y="18.00" width="70.00" height="134.00" rx="4" fill="#F2F2F2" stroke="none"/>
+<circle cx="452.00" cy="27.00" r="5.2" fill="#0072B2" stroke="none"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="449.91" y="29.60" font-size="7.50" font-weight="bold">4</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="460.00" y="29.60" font-size="7.50" font-weight="bold">Parsing</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="21.06" y="29.50" font-size="6.50" font-weight="bold">Input</tspan></text>
+<rect x="3.00" y="34.00" width="52.00" height="12.00" rx="2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<circle cx="9.50" cy="40.00" r="3" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#0072B2"><tspan x="7.91" y="42.10" font-size="5.20" font-weight="bold">?</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="15.00" y="42.10" font-size="6.00">Question </tspan><tspan x="40.68" y="42.10" font-size="6.00" font-style="italic">Q</tspan></text>
+<rect x="3.00" y="50.00" width="52.00" height="25.00" rx="2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<rect x="6.00" y="53.00" width="7.00" height="6.00" rx="0.8" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75"/>
+<rect x="6.00" y="53.00" width="7.00" height="1.68" rx="0.8" fill="#56B4E9" stroke="#0072B2" stroke-width="0.75"/>
+<polyline points="8.33,54.68 8.33,59.00" fill="none" stroke="#0072B2" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="10.67,54.68 10.67,59.00" fill="none" stroke="#0072B2" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="6.00,56.84 13.00,56.84" fill="none" stroke="#0072B2" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="15.00" y="58.00" font-size="6.00">Schema </tspan><tspan x="38.68" y="58.00" font-size="6.00" font-style="italic">S</tspan><tspan x="42.68" y="55.72" font-size="4.08">+</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="15.00" y="65.20" font-size="5.50">(descriptions,</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="15.00" y="71.40" font-size="5.50">sample values)</tspan></text>
+<rect x="3.00" y="79.00" width="52.00" height="12.00" rx="2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<path d="M7.0,81.2 H11.0 L13.0,83.2 V88.8 H7.0 Z" fill="none" stroke="#0072B2" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="8.20,84.40 11.80,84.40" fill="none" stroke="#0072B2" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="8.20,85.90 11.80,85.90" fill="none" stroke="#0072B2" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="8.20,87.40 11.80,87.40" fill="none" stroke="#0072B2" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="15.00" y="87.10" font-size="6.00">Evidence </tspan><tspan x="41.35" y="87.10" font-size="6.00" font-style="italic">E</tspan></text>
+<path d="M12.0,100.16 A17.0,4.16 0 0 1 46.0,100.16 V117.84 A17.0,4.16 0 0 1 12.0,117.84 Z" fill="#FFFFFF" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M12.0,100.16 A17.0,4.16 0 0 0 46.0,100.16" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="16.16" y="109.50" font-size="6.00">Database</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="26.83" y="116.70" font-size="6.00" font-style="italic">D</tspan></text>
+<polyline points="55.00,40.00 60.00,40.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="55.00,62.50 60.00,62.50" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="55.00,85.00 60.00,85.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="46.00,109.00 60.00,109.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="60.00,40.00 60.00,109.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="60.00,75.00 64.52,75.00" fill="none" stroke="#333333" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="68.20,75.00 63.60,76.93 63.60,73.07" fill="#333333"/>
+<rect x="86.00" y="37.00" width="81.00" height="14.00" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<rect x="86.00" y="37.00" width="13.00" height="14.00" rx="2.2" fill="#0072B2" stroke="#0072B2" stroke-width="0.75"/>
+<rect x="94.00" y="37.00" width="5.00" height="14.00" rx="0" fill="#0072B2" stroke="none"/>
+<polyline points="99.00,37.00 99.00,51.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="86.00" y="37.00" width="81.00" height="14.00" rx="2.2" fill="none" stroke="#333333" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="88.71" y="46.20" font-size="6.20" font-weight="bold">S1</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="102.00" y="46.10" font-size="6.00">Scope · Attachment</tspan></text>
+<rect x="86.00" y="57.00" width="81.00" height="19.00" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<rect x="86.00" y="57.00" width="13.00" height="19.00" rx="2.2" fill="#0072B2" stroke="#0072B2" stroke-width="0.75"/>
+<rect x="94.00" y="57.00" width="5.00" height="19.00" rx="0" fill="#0072B2" stroke="none"/>
+<polyline points="99.00,57.00 99.00,76.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="86.00" y="57.00" width="81.00" height="19.00" rx="2.2" fill="none" stroke="#333333" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="88.71" y="68.70" font-size="6.20" font-weight="bold">S2</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="102.00" y="65.00" font-size="6.00">Column · Join</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="102.00" y="72.20" font-size="6.00">Value · NULL</tspan></text>
+<rect x="86.00" y="82.00" width="81.00" height="19.00" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<rect x="86.00" y="82.00" width="13.00" height="19.00" rx="2.2" fill="#0072B2" stroke="#0072B2" stroke-width="0.75"/>
+<rect x="94.00" y="82.00" width="5.00" height="19.00" rx="0" fill="#0072B2" stroke="none"/>
+<polyline points="99.00,82.00 99.00,101.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="86.00" y="82.00" width="81.00" height="19.00" rx="2.2" fill="none" stroke="#333333" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="88.71" y="93.70" font-size="6.20" font-weight="bold">S3</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="102.00" y="90.00" font-size="6.00">Aggregate ·</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="102.00" y="97.20" font-size="6.00">Project · Tie</tspan></text>
+<polyline points="132.50,51.00 132.50,54.60" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="132.50,57.00 131.24,54.00 133.76,54.00" fill="#333333"/>
+<polyline points="132.50,76.00 132.50,79.60" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="132.50,82.00 131.24,79.00 133.76,79.00" fill="#333333"/>
+<polyline points="86.00,44.00 76.50,44.00 76.50,91.50" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="76.50,66.50 83.60,66.50" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="86.00,66.50 83.00,67.76 83.00,65.24" fill="#333333"/>
+<polyline points="76.50,91.50 83.60,91.50" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="86.00,91.50 83.00,92.76 83.00,90.24" fill="#333333"/>
+<rect x="69.54" y="49.60" width="13.93" height="7.40" rx="0" fill="#F2F2F2" stroke="none"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="70.54" y="55.20" font-size="6.00">Φ</tspan><tspan x="75.32" y="52.92" font-size="4.08">(&lt;s)</tspan></text>
+<polyline points="85.00,101.00 85.00,110.10" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="85.00,112.50 83.74,109.50 86.26,109.50" fill="#333333"/>
+<rect x="82.40" y="117.40" width="13.00" height="9.50" rx="1" fill="#FFFFFF" stroke="#333333" stroke-width="0.6"/>
+<rect x="82.40" y="117.40" width="13.00" height="2.60" rx="1" fill="#56B4E9" stroke="#333333" stroke-width="0.6"/>
+<polyline points="84.40,122.00 92.90,122.00" fill="none" stroke="#333333" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="84.40,124.40 90.90,124.40" fill="none" stroke="#333333" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="80.20" y="115.20" width="13.00" height="9.50" rx="1" fill="#FFFFFF" stroke="#333333" stroke-width="0.6"/>
+<rect x="80.20" y="115.20" width="13.00" height="2.60" rx="1" fill="#56B4E9" stroke="#333333" stroke-width="0.6"/>
+<polyline points="82.20,119.80 90.70,119.80" fill="none" stroke="#333333" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="82.20,122.20 88.70,122.20" fill="none" stroke="#333333" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="78.00" y="113.00" width="13.00" height="9.50" rx="1" fill="#FFFFFF" stroke="#333333" stroke-width="0.6"/>
+<rect x="78.00" y="113.00" width="13.00" height="2.60" rx="1" fill="#56B4E9" stroke="#333333" stroke-width="0.6"/>
+<polyline points="80.00,117.60 88.50,117.60" fill="none" stroke="#333333" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="80.00,120.00 86.50,120.00" fill="none" stroke="#333333" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="72.83" y="135.00" font-size="6.00">Raw cards</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="81.32" y="142.50" font-size="6.00">Φ</tspan><tspan x="86.11" y="143.82" font-size="4.08">raw</tspan></text>
+<polyline points="91.00,113.00 112.00,107.00" fill="none" stroke="#BBBBBB" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1.6,1.2"/>
+<polyline points="95.40,126.90 112.00,141.00" fill="none" stroke="#BBBBBB" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1.6,1.2"/>
+<rect x="112.00" y="107.00" width="53.00" height="34.00" rx="2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<path d="M112.0,116.5 V109 Q112.0,107 114.0,107 H163.0 Q165.0,107 165.0,109 V116.5 Z" fill="#56B4E9" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="128.83" y="113.90" font-size="6.00" font-weight="bold">span </tspan><tspan x="144.50" y="113.90" font-size="6.00" font-weight="bold" font-style="italic">h</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="116.00" y="125.40" font-size="6.00" font-style="italic">p</tspan><tspan x="119.34" y="126.72" font-size="4.08">1</tspan><tspan x="121.61" y="125.40" font-size="6.00"> = </tspan><tspan x="128.44" y="125.40" font-size="6.00" font-family="'DejaVu Sans', 'Cambria Math', 'Segoe UI Symbol', sans-serif">⟨</tspan><tspan x="130.78" y="125.40" font-size="6.00" font-style="italic">e</tspan><tspan x="134.12" y="126.72" font-size="4.08">1</tspan><tspan x="136.39" y="125.40" font-size="6.00">, </tspan><tspan x="139.72" y="125.40" font-size="6.00" font-style="italic">d</tspan><tspan x="143.06" y="126.72" font-size="4.08">1</tspan><tspan x="145.33" y="125.40" font-size="6.00" font-family="'DejaVu Sans', 'Cambria Math', 'Segoe UI Symbol', sans-serif">⟩</tspan></text>
+<polyline points="115.00,128.60 162.00,128.60" fill="none" stroke="#BBBBBB" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="116.00" y="136.20" font-size="6.00" font-style="italic">p</tspan><tspan x="119.34" y="137.52" font-size="4.08">2</tspan><tspan x="121.61" y="136.20" font-size="6.00"> = </tspan><tspan x="128.44" y="136.20" font-size="6.00" font-family="'DejaVu Sans', 'Cambria Math', 'Segoe UI Symbol', sans-serif">⟨</tspan><tspan x="130.78" y="136.20" font-size="6.00" font-style="italic">e</tspan><tspan x="134.12" y="137.52" font-size="4.08">2</tspan><tspan x="136.39" y="136.20" font-size="6.00">, </tspan><tspan x="139.72" y="136.20" font-size="6.00" font-style="italic">d</tspan><tspan x="143.06" y="137.52" font-size="4.08">2</tspan><tspan x="145.33" y="136.20" font-size="6.00" font-family="'DejaVu Sans', 'Cambria Math', 'Segoe UI Symbol', sans-serif">⟩</tspan></text>
+<rect x="184.00" y="40.00" width="117.00" height="89.00" rx="3" fill="none" stroke="#BBBBBB" stroke-width="0.75"/>
+<polyline points="166.00,124.00 180.32,124.00" fill="none" stroke="#333333" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="184.00,124.00 179.40,125.93 179.40,122.07" fill="#333333"/>
+<rect x="186.50" y="42.50" width="35.00" height="61.50" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<rect x="197.00" y="47.50" width="12.00" height="10.00" rx="0.8" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75"/>
+<rect x="197.00" y="47.50" width="12.00" height="2.80" rx="0.8" fill="#56B4E9" stroke="#0072B2" stroke-width="0.75"/>
+<polyline points="201.00,50.30 201.00,57.50" fill="none" stroke="#0072B2" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="205.00,50.30 205.00,57.50" fill="none" stroke="#0072B2" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="197.00,53.90 209.00,53.90" fill="none" stroke="#0072B2" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="208.50" cy="56.50" r="2.8" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75"/>
+<polyline points="210.48,58.48 212.32,60.32" fill="none" stroke="#0072B2" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="189.99" y="66.00" font-size="6.00" font-weight="bold">Existence</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="195.49" y="72.80" font-size="6.00" font-weight="bold">check</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#0072B2"><tspan x="187.04" y="81.10" font-size="5.50" font-style="italic">Column · Join</tspan></text>
+<rect x="224.00" y="42.50" width="35.00" height="61.50" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<path d="M235.5,48.58 A5.5,2.08 0 0 1 246.5,48.58 V57.42 A5.5,2.08 0 0 1 235.5,57.42 Z" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M235.5,48.58 A5.5,2.08 0 0 0 246.5,48.58" fill="none" stroke="#0072B2" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="246.50" cy="56.50" r="2.8" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75"/>
+<polyline points="248.48,58.48 250.32,60.32" fill="none" stroke="#0072B2" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="230.17" y="66.00" font-size="6.00" font-weight="bold">Content</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="232.99" y="72.80" font-size="6.00" font-weight="bold">check</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#0072B2"><tspan x="225.09" y="81.10" font-size="5.50" font-style="italic">Value · NULL</tspan></text>
+<rect x="261.50" y="42.50" width="39.00" height="61.50" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<rect x="271.50" y="46.50" width="6.00" height="5.00" rx="0.6" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.6"/>
+<polyline points="272.70,48.30 276.30,48.30" fill="none" stroke="#0072B2" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="272.70,49.80 275.10,49.80" fill="none" stroke="#0072B2" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="284.50" y="46.50" width="6.00" height="5.00" rx="0.6" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.6"/>
+<polyline points="285.70,48.30 289.30,48.30" fill="none" stroke="#0072B2" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="285.70,49.80 288.10,49.80" fill="none" stroke="#0072B2" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="279.30,48.30 282.70,48.30" fill="none" stroke="#333333" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="279.30,49.80 282.70,49.80" fill="none" stroke="#333333" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M276.0,54.284 A5.0,1.1840000000000002 0 0 1 286.0,54.284 V59.316 A5.0,1.1840000000000002 0 0 1 276.0,59.316 Z" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M276.0,54.284 A5.0,1.1840000000000002 0 0 0 286.0,54.284" fill="none" stroke="#0072B2" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="265.67" y="66.00" font-size="6.00" font-weight="bold">Execution-</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="263.83" y="72.80" font-size="6.00" font-weight="bold">equivalence</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="272.49" y="79.60" font-size="6.00" font-weight="bold">check</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#0072B2"><tspan x="271.52" y="87.90" font-size="5.50" font-style="italic">Scope ·</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#0072B2"><tspan x="265.41" y="94.10" font-size="5.50" font-style="italic">Attachment ·</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#0072B2"><tspan x="273.97" y="100.30" font-size="5.50" font-style="italic">NULL</tspan></text>
+<rect x="186.50" y="106.50" width="112.00" height="20.00" rx="1.5" fill="#F2F2F2" stroke="#BBBBBB" stroke-width="0.6"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="189.00" y="112.40" font-size="5.40" font-weight="bold">P1</tspan><tspan x="195.60" y="112.40" font-size="5.40"> act only on positive evidence</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="189.00" y="118.60" font-size="5.40" font-weight="bold">P2</tspan><tspan x="195.60" y="118.60" font-size="5.40"> write a single reading only if informative</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="189.00" y="124.80" font-size="5.40" font-weight="bold">P3</tspan><tspan x="195.60" y="124.80" font-size="5.40"> check only where data can decide</tspan></text>
+<polyline points="204.00,129.00 204.00,133.94" fill="none" stroke="#BBBBBB" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="204.00,136.50 202.66,133.30 205.34,133.30" fill="#BBBBBB"/>
+<rect x="190.00" y="136.50" width="50.00" height="10.50" rx="5.25" fill="#BBBBBB" stroke="#BBBBBB" stroke-width="0.75"/>
+<polyline points="194.80,139.70 199.60,139.70" fill="none" stroke="#333333" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="196.40,139.70 196.40,138.90 198.00,138.90 198.00,139.70" fill="none" stroke="#333333" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M195.39999999999998,140.3 L195.79999999999998,144.5 L198.6,144.5 L199.0,140.3" fill="none" stroke="#333333" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="196.60,141.10 196.60,143.70" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="197.80,141.10 197.80,143.70" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="202.50" y="143.90" font-size="6.00">Remove card</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="245.00" y="140.00" font-size="5.50" font-style="italic">any failure →</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="245.00" y="146.40" font-size="5.50" font-style="italic">pass unchanged</tspan></text>
+<path d="M301.00,47.00 L305.25,47.00 Q309.50,47.00 309.50,42.75 L309.50,16.00 Q309.50,9.00 316.50,9.00 L490.00,9.00 Q497.00,9.00 497.00,16.00 L497.00,39.12" fill="none" stroke="#56B4E9" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="497.00,42.00 495.49,38.40 498.51,38.40" fill="#56B4E9"/>
+<rect x="354.00" y="4.00" width="40.00" height="10.00" rx="5.0" fill="#56B4E9" stroke="#56B4E9" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="360.06" y="11.10" font-size="6.00" font-weight="bold">Write to </tspan><tspan x="383.94" y="11.10" font-size="6.00" font-weight="bold" font-style="italic">E</tspan></text>
+<polyline points="301.00,62.00 316.32,62.00" fill="none" stroke="#333333" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="320.00,62.00 315.40,63.93 315.40,60.07" fill="#333333"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="320.00" y="46.00" font-size="5.50" font-style="italic">Remaining cards Φ</tspan></text>
+<rect x="320.00" y="52.00" width="26.00" height="20.00" rx="2.2" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="327.33" y="60.50" font-size="6.00" font-weight="bold">JEV</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="324.67" y="67.70" font-size="6.00">scorer</tspan></text>
+<polyline points="346.00,62.00 349.60,62.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="352.00,62.00 349.00,63.26 349.00,60.74" fill="#333333"/>
+<rect x="354.50" y="66.00" width="5.00" height="5.00" rx="0" fill="#56B4E9" stroke="none"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="355.17" y="77.00" font-size="5.50">A</tspan></text>
+<rect x="362.00" y="54.00" width="5.00" height="17.00" rx="0" fill="#0072B2" stroke="none"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="362.67" y="77.00" font-size="5.50">B</tspan></text>
+<rect x="369.50" y="67.50" width="5.00" height="3.50" rx="0" fill="#56B4E9" stroke="none"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="370.01" y="77.00" font-size="5.50">C</tspan></text>
+<polyline points="353.00,71.00 377.00,71.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="353.00,71.00 353.00,52.50" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="383.00" y="55.50" font-size="6.00" font-style="italic">H</tspan><tspan x="387.33" y="56.82" font-size="4.08">norm</tspan><tspan x="396.63" y="55.50" font-size="6.00"> =</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="383.00" y="64.20" font-size="6.00">−Σ</tspan><tspan x="390.21" y="65.52" font-size="4.08" font-style="italic">j</tspan><tspan x="391.12" y="64.20" font-size="6.00"> </tspan><tspan x="392.79" y="64.20" font-size="6.00" font-style="italic">p</tspan><tspan x="396.12" y="65.52" font-size="4.08" font-style="italic">j</tspan><tspan x="397.03" y="64.20" font-size="6.00"> log </tspan><tspan x="408.37" y="64.20" font-size="6.00" font-style="italic">p</tspan><tspan x="411.71" y="65.52" font-size="4.08" font-style="italic">j</tspan></text>
+<polyline points="383.00,66.60 412.61,66.60" fill="none" stroke="#333333" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="390.47" y="73.00" font-size="6.00">log </tspan><tspan x="400.14" y="73.00" font-size="6.00" font-style="italic">m</tspan></text>
+<path d="M352.0,86.0 L381.0,99.0 L352.0,112.0 L323.0,99.0 Z" fill="#FFFFFF" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="337.70" y="101.10" font-size="6.00" font-style="italic">H</tspan><tspan x="342.04" y="102.42" font-size="4.08">norm</tspan><tspan x="351.33" y="101.10" font-size="6.00"> ≤ θ ?</tspan></text>
+<path d="M397.81,75.50 L397.81,77.25 Q397.81,79.00 396.06,79.00 L354.00,79.00 Q352.00,79.00 352.00,81.00 L352.00,83.60" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="352.00,86.00 350.74,83.00 353.26,83.00" fill="#333333"/>
+<polyline points="381.00,99.00 388.60,99.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="391.00,99.00 388.00,100.26 388.00,97.74" fill="#333333"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="381.72" y="96.20" font-size="5.50" font-style="italic">yes</tspan></text>
+<rect x="391.00" y="93.50" width="39.00" height="11.00" rx="5.5" fill="#0072B2" stroke="#0072B2" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="398.48" y="101.10" font-size="6.00" font-weight="bold">Auto(</tspan><tspan x="414.14" y="101.10" font-size="6.00" font-weight="bold" font-style="italic">p</tspan><tspan x="417.80" y="102.42" font-size="4.08" font-weight="bold" font-style="italic">j</tspan><tspan x="418.94" y="98.82" font-size="4.08" font-weight="bold">*</tspan><tspan x="420.52" y="101.10" font-size="6.00" font-weight="bold">)</tspan></text>
+<polyline points="352.00,112.00 352.00,136.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="344.08" y="118.00" font-size="5.50" font-style="italic">no</tspan></text>
+<polyline points="352.00,117.50 359.60,117.50" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="362.00,117.50 359.00,118.76 359.00,116.24" fill="#333333"/>
+<polyline points="352.00,135.99 352.01,136.00 359.60,136.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="362.00,136.00 359.00,137.26 359.00,134.74" fill="#333333"/>
+<rect x="362.00" y="112.00" width="61.00" height="11.00" rx="5.5" fill="#E69F00" stroke="#E69F00" stroke-width="0.75"/>
+<rect x="365.50" y="115.00" width="6.00" height="3.80" rx="1.2" fill="none" stroke="#333333" stroke-width="0.6"/>
+<path d="M367.1,118.8 L366.5,120.3 L368.5,118.8" fill="#333333" stroke="#333333" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="373.50" y="119.60" font-size="6.00" font-weight="bold">Ask user → </tspan><tspan x="408.18" y="119.60" font-size="6.00" font-weight="bold" font-style="italic">r</tspan><tspan x="410.52" y="119.60" font-size="6.00" font-weight="bold">(φ)</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="364.00" y="128.70" font-size="5.50" font-style="italic">interactive</tspan></text>
+<rect x="362.00" y="130.50" width="25.00" height="11.00" rx="5.5" fill="#BBBBBB" stroke="#BBBBBB" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="367.50" y="138.10" font-size="6.00" font-weight="bold">Drop</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="390.00" y="138.00" font-size="5.50" font-style="italic">non-interactive</tspan></text>
+<rect x="447.00" y="42.00" width="62.00" height="30.00" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="466.51" y="51.90" font-size="6.00" font-weight="bold" font-style="italic">E</tspan><tspan x="470.51" y="51.90" font-size="6.00" font-weight="bold">′ = </tspan><tspan x="478.79" y="51.90" font-size="6.00" font-weight="bold" font-style="italic">E</tspan><tspan x="482.79" y="51.90" font-size="6.00" font-weight="bold"> </tspan><tspan x="484.46" y="51.90" font-size="6.00" font-weight="bold" font-family="'DejaVu Sans', 'Cambria Math', 'Segoe UI Symbol', sans-serif">⊕</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="462.99" y="59.10" font-size="6.00">clarification</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="464.33" y="66.30" font-size="6.00">sentences</tspan></text>
+<path d="M430.00,99.00 L433.50,99.00 Q436.50,99.00 436.50,96.00 L436.50,55.00 Q436.50,52.00 439.50,52.00 L444.28,52.00" fill="none" stroke="#0072B2" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="447.00,52.00 443.60,53.43 443.60,50.57" fill="#0072B2"/>
+<path d="M423.00,117.50 L437.50,117.50 Q440.50,117.50 440.50,114.50 L440.50,63.89 Q440.50,62.00 442.39,62.00 L444.28,62.00" fill="none" stroke="#E69F00" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="447.00,62.00 443.60,63.43 443.60,60.57" fill="#E69F00"/>
+<polyline points="478.00,72.00 478.00,79.60" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="478.00,82.00 476.74,79.00 479.26,79.00" fill="#333333"/>
+<rect x="447.00" y="82.00" width="62.00" height="20.00" rx="2.2" fill="#333333" stroke="#333333" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="468.66" y="90.50" font-size="6.00" font-weight="bold">Parser</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#FFFFFF"><tspan x="463.33" y="97.70" font-size="6.00">(black box)</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="447.00" y="110.50" font-size="5.50" font-style="italic">sees table and</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="447.00" y="116.60" font-size="5.50" font-style="italic">column names only</tspan></text>
+<polyline points="500.00,102.00 500.00,121.60" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="500.00,124.00 498.74,121.00 501.26,121.00" fill="#333333"/>
+<rect x="455.00" y="124.00" width="46.00" height="22.00" rx="2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="458.50" y="131.40" font-size="6.20" font-weight="bold">SQL</tspan></text>
+<polyline points="458.50,135.50 488.92,135.50" fill="none" stroke="#BBBBBB" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="458.50,138.90 479.95,138.90" fill="none" stroke="#BBBBBB" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="458.50,142.30 484.24,142.30" fill="none" stroke="#BBBBBB" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="496.00" cy="129.20" r="3.6" fill="#009E73" stroke="none"/>
+<polyline points="494.40,129.30 495.60,130.50 497.80,128.00" fill="none" stroke="#FFFFFF" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="68.00" y="159.00" width="366.00" height="36.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.75" stroke-dasharray="3,2"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="73.00" y="173.50" font-size="7.00" font-weight="bold">Offline</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="73.00" y="180.50" font-size="5.50" font-style="italic">training &amp;</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="73.00" y="186.50" font-size="5.50" font-style="italic">θ selection</tspan></text>
+<rect x="108.00" y="165.00" width="61.45" height="24.00" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="120.35" y="175.55" font-size="5.80">Cards from 60</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="111.00" y="182.51" font-size="5.80">BIRD-train databases</tspan></text>
+<rect x="181.03" y="165.00" width="45.00" height="24.00" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="184.03" y="175.55" font-size="5.80">Simulated-user</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="195.95" y="182.51" font-size="5.80">labels</tspan></text>
+<rect x="237.62" y="165.00" width="67.46" height="24.00" rx="2.2" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="248.30" y="172.07" font-size="5.80" font-weight="bold">Train JEV</tspan><tspan x="274.73" y="172.07" font-size="5.80"> (LoRA,</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="240.62" y="179.03" font-size="5.80">soft-label cross-entropy,</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="250.93" y="185.99" font-size="5.80">option shuffling)</tspan></text>
+<rect x="316.66" y="165.00" width="32.76" height="24.00" rx="2.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="320.14" y="175.55" font-size="5.80">9 held-out</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="319.66" y="182.51" font-size="5.80">databases</tspan></text>
+<rect x="361.01" y="165.00" width="55.41" height="24.00" rx="2.2" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.75"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="365.06" y="175.55" font-size="5.80" font-weight="bold">Select θ</tspan><tspan x="386.89" y="175.55" font-size="5.80">: largest θ</tspan></text>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="364.01" y="182.51" font-size="5.80">with agreement ≥ α</tspan></text>
+<polyline points="169.45,177.00 178.63,177.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="181.03,177.00 178.03,178.26 178.03,175.74" fill="#333333"/>
+<polyline points="226.03,177.00 235.22,177.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="237.62,177.00 234.62,178.26 234.62,175.74" fill="#333333"/>
+<polyline points="349.42,177.00 358.61,177.00" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="361.01,177.00 358.01,178.26 358.01,175.74" fill="#333333"/>
+<polyline points="310.87,163.00 310.87,191.00" fill="none" stroke="#BBBBBB" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2,1.5"/>
+<path d="M388.71,165.00 L388.71,157.50 Q388.71,155.50 386.71,155.50 L337.00,155.50 Q335.00,155.50 335.00,153.50 L335.00,106.94" fill="none" stroke="#0072B2" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2.2,1.4"/>
+<polygon points="335.00,104.38 336.34,107.58 333.66,107.58" fill="#0072B2"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#0072B2"><tspan x="329.22" y="146.00" font-size="7.00" font-weight="bold">θ</tspan></text>
+<polyline points="445.00,163.50 455.60,163.50" fill="none" stroke="#333333" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="458.00,163.50 455.00,164.76 455.00,162.24" fill="#333333"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="461.00" y="165.50" font-size="5.50">card flow</tspan></text>
+<polyline points="445.00,171.90 455.60,171.90" fill="none" stroke="#56B4E9" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="458.00,171.90 455.00,173.16 455.00,170.64" fill="#56B4E9"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="461.00" y="173.90" font-size="5.50">write to evidence</tspan></text>
+<polyline points="445.00,180.30 455.60,180.30" fill="none" stroke="#BBBBBB" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="458.00,180.30 455.00,181.56 455.00,179.04" fill="#BBBBBB"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="461.00" y="182.30" font-size="5.50">removed / dropped</tspan></text>
+<polyline points="445.00,188.70 455.60,188.70" fill="none" stroke="#0072B2" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2.2,1.4"/>
+<polygon points="458.00,188.70 455.00,189.96 455.00,187.44" fill="#0072B2"/>
+<text font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" fill="#333333"><tspan x="461.00" y="190.70" font-size="5.50">offline parameter</tspan></text>
+</svg>
