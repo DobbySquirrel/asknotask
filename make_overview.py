@@ -92,8 +92,9 @@ def mini_card(x, y, color, w=12.5, h=9):
 
 # ====================================================================== grid
 M = 4.0
-AY0, AY1 = 4.0, 63.0          # row A
-PT, PB = 78.0, 241.5          # row B
+AY0, AY1 = 4.0, 47.5          # row A
+SHIFT = 11.0                  # row B is drawn in its own frame, lifted by SHIFT
+PT, PB = 78.0, 241.5 + SHIFT  # row B (in its frame)
 GAP = 8.0
 widths = [108.0, 171.0, 117.0, W - 2 * M - 3 * GAP - 396.0]
 xs = [M]
@@ -121,7 +122,7 @@ T(DBX + 18, 22.8, "`Laboratory(ID, Date, T-CHO, ...)`", 6, maxw=W - M - DBX - 20
 
 # question with highlighted spans
 QS = 7.0
-QY = 47.0
+QY = 39.0
 segs = [("“For the patient who was ", None), ("born on 1959/2/18", 1),
         (", what is the ", None), ("decrease rate", 2), (" for his/her ", None),
         ("total cholesterol", 3), (" from November to December in 1981?”", None)]
@@ -138,6 +139,7 @@ for n, (sx, sw_) in span_x.items():
     tag(sx + sw_ / 2, QY - 11.5, n)
 
 # ====================================================================== panels
+c.items.append(f'<g transform="translate(0,{-SHIFT})">')
 titles = [("Staged Detection", None), ("Type Detectors", "— data observability"),
           ("Uncertainty Gate", "— model resolvability"), ("Parsing", None)]
 for k, ((x, w_), (t, s)) in enumerate(zip(P, titles)):
@@ -153,9 +155,9 @@ T(x0 + pw / 2, 113.9, "$S^{+}$: schema with descriptions", 6, "middle", italic=T
 T(x0 + pw / 2, 120.0, "and sample values", 6, "middle", italic=True)
 
 SX, SWD = x0 + 17, pw - 20
-stages = [("S1", ["Scope · Attachment"], 127.0, 13.0),
-          ("S2", ["Column · Join ·", "Value · NULL"], 149.0, 18.0),
-          ("S3", ["Aggregate · Project · Tie"], 175.0, 13.0)]
+stages = [("S1", ["Scope · Attachment"], 129.0, 14.0),
+          ("S2", ["Column · Join ·", "Value · NULL"], 153.0, 19.0),
+          ("S3", ["Aggregate · Project · Tie"], 182.0, 14.0)]
 mids = []
 for tg, rows, y, h in stages:
     box(SX, y, SWD, h)
@@ -173,18 +175,18 @@ RAIL = x0 + 7
 c.line([(SX, mids[0]), (RAIL, mids[0]), (RAIL, mids[2])], r=1.5)
 c.arrow([(RAIL, mids[1]), (SX, mids[1])], hs=3)
 c.arrow([(RAIL, mids[2]), (SX, mids[2])], hs=3)
-T(RAIL + 2.2, 147.4, "$Φ^{(<s)}$", 6.5)
+T(RAIL + 2.2, 150.6, "$Φ^{(<s)}$", 6.5)
 
 # output: fanned stack + enlarged card [2]
-STX, STY = x0 + 3.0, 199.0
-c.arrow([(SX + 3, 188), (SX + 3, 190.6), (STX + 7, 190.6), (STX + 7, STY - 0.3)], hs=2.8, r=1.5)
+STX, STY = x0 + 3.0, 208.0
+c.arrow([(SX + 3, 196), (SX + 3, 199.4), (STX + 7, 199.4), (STX + 7, STY - 0.3)], hs=2.8, r=1.5)
 for k, (n, rot) in enumerate([(3, -9), (1, -4), (2, 2)]):
     c.items.append(f'<g transform="rotate({rot} {STX + 6} {STY + 10})">')
     mini_card(STX + k * 0.6, STY + k * 1.6, CARD[n])
     c.items.append("</g>")
-T(STX + 7, 222.5, "$Φ_{raw}$", 6.5, "middle")
+T(STX + 7, 231.5, "$Φ_{raw}$", 6.5, "middle")
 
-CX, CY, CW, CH = x0 + 18.5, 194.0, pw - 22.0, 43.5
+CX, CY, CW, CH = x0 + 18.5, 203.0, pw - 22.0, 43.5
 c.line([(STX + 12.5, STY + 3), (CX, CY + 0.5)], GRAY, 0.6, dash="1.5,1.2")
 c.line([(STX + 13.5, STY + 13), (CX, CY + CH - 0.5)], GRAY, 0.6, dash="1.5,1.2")
 box(CX, CY, CW, CH)
@@ -208,8 +210,8 @@ cols = [
     (66.0, ["Execution", "equivalence"], ["Scope · Attachment", "· NULL"],
      ["res(q₁, D) =", "res(q₂, D) →", "indistinguishable"]),
 ]
-CT, CODE_Y, CB = GY + 2, 149.0, 176.0
-BAR = (GX + 2, 179.0, 0, 22.5)
+CT, CODE_Y, CB = GY + 2, 153.0, 181.0
+BAR = (GX + 2, 185.0, 0, 22.5)
 cx_ = GX + 2
 col_pos = []
 for k, (cw, title, types, code) in enumerate(cols):
@@ -253,7 +255,7 @@ for j, (p, t_) in enumerate([("P1", "act only on positive evidence"),
 GBOT = BAR[1] + BAR[3] + 2.5
 
 # remove
-RPX, RPY = GX + 4, 216.0
+RPX, RPY = GX + 4, 224.0
 c.arrow([(RPX + 16, GBOT), (RPX + 16, RPY)], GRAY, 1.0)
 pill(RPX, RPY, 36, 11, GRAY)
 trash(RPX + 7.5, RPY + 5.6)
@@ -261,7 +263,7 @@ T(RPX + 13, RPY + 7.6, "Remove", 6.5, bold=True)
 T(RPX + 44, RPY + 7.6, "any failure → pass the card unchanged", 6, italic=True)
 
 # P1 -> P2
-c.arrow([(P[0][0] + P[0][1] - 2, 201.5), (GX, 201.5)], INK, THICK)
+c.arrow([(P[0][0] + P[0][1] - 2, 210.0), (GX, 210.0)], INK, THICK)
 
 # ---------------------------------------------------------------- panel 3
 x0, pw = P[2]
@@ -286,12 +288,12 @@ for n, ry, bars, lab, tx in rows3:
     tag(tx, ry + 2.5, n)
     tag_pos[n] = (tx, ry + 2.5)
 
-FSY = 142.0
+FSY = 145.0
 box(x0 + 3, FSY, pw - 6, 11.5, stroke=GRAY, rx=2)
 T(x0 + pw / 2, FSY + 8.3, "$H_{norm}(φ) = −Σ_{j} π_{j} log π_{j} / log |P|$", 6.5, "middle",
   maxw=pw - 8)
 
-DCX, DCY, DHW, DHH = x0 + 28, 170.0, 25.0, 12.0
+DCX, DCY, DHW, DHH = x0 + 28, 175.0, 25.0, 12.0
 c.arrow([(DCX, FSY + 11.5), (DCX, DCY - DHH)], hs=2.8)
 c.path(f"M{DCX},{DCY - DHH} L{DCX + DHW},{DCY} L{DCX},{DCY + DHH} L{DCX - DHW},{DCY} Z",
        INK, SW, fill=WHITE)
@@ -304,7 +306,7 @@ tag((DCX + DHW + APX) / 2 + 0.5, DCY, 2, r=3.4)
 pill(APX, DCY - 5.5, APW, 11, BLUE)
 T(APX + APW / 2, DCY + 2.2, "Auto($p_{j}^{*}$)", 6.5, "middle", bold=True, color=WHITE)
 
-NY1, NY2 = 194.5, 215.0
+NY1, NY2 = 201.0, 223.0
 QX = x0 + 36
 QW = pw - 38
 c.line([(DCX, DCY + DHH), (DCX, NY2)], r=0)
@@ -323,7 +325,7 @@ T(QX + 28, NY2 + 2.1, "non-interactive", 6, italic=True, maxw=x0 + pw - QX - 29)
 TX = x0 + 10
 ty_edge = DCY + DHH * (1 - (DCX - TX) / DHW)
 c.arrow([(TX, PB), (TX, ty_edge)], INK, 0.75, dash="2.2,1.4", hs=3, cap="butt")
-T(TX + 3, 236.0, "$θ$ selected offline (Fig. 3)", 6)
+T(TX + 3, PB - 5.5, "$θ$ selected offline (Fig. 3)", 6)
 
 # ---------------------------------------------------------------- panel 4
 x0, pw = P[3]
@@ -331,7 +333,7 @@ WPX, WPW = x0 + 50, 34.0
 pill(WPX, PT + 4, WPW, 10, BLUE_L)
 T(WPX + WPW / 2, PT + 11.1, "Write to $E$", 6, "middle", bold=True)
 
-EX, EY, EW = x0 + 3, 97.0, pw - 6
+EX, EY, EW = x0 + 3, 99.0, pw - 6
 items = [
     (BLUE_L, ["Birthday is stored", "as '1959-02-18'."]),
     (BLUE, ["'decrease rate':", "<description of p₁>."]),
@@ -356,13 +358,13 @@ T(EX + EW / 2, EY + 14.0, "clarification sentences", 6, "middle")
 c.arrow([(WPX + WPW / 2, PT + 14), (WPX + WPW / 2, EY)], BLUE_L, 1.1, hs=3)
 
 EB = EY + EH
-PRY, PRH = EB + 6, 12.0
+PRY, PRH = EB + 8, 13.0
 c.arrow([(EX + EW / 2, EB), (EX + EW / 2, PRY)], hs=3)
 box(EX, PRY, EW, PRH, fill=INK, stroke=INK)
-T(EX + EW / 2, PRY + 8.3, "!{Parser} (black box)", 6.5, "middle", color=WHITE)
-T(EX + 1, PRY + PRH + 7.3, "input: $Q$, $E′$, table", 6, italic=True)
-T(EX + 1, PRY + PRH + 13.8, "and column names", 6, italic=True)
-SQX, SQY = x0 + 12, PRY + PRH + 17.5
+T(EX + EW / 2, PRY + 8.8, "!{Parser} (black box)", 6.5, "middle", color=WHITE)
+T(EX + 1, PRY + PRH + 8.0, "input: $Q$, $E′$, table", 6, italic=True)
+T(EX + 1, PRY + PRH + 14.6, "and column names", 6, italic=True)
+SQX, SQY = x0 + 12, PRY + PRH + 19.5
 SQW, SQH = x0 + pw - 2 - SQX, 23.5
 c.arrow([(SQX + SQW - 8, PRY + PRH), (SQX + SQW - 8, SQY)], hs=3)
 box(SQX, SQY, SQW, SQH, stroke=GREEN)
@@ -380,14 +382,18 @@ c.arrow([(APX + APW, DCY), (G34 - 1.6, DCY), (G34 - 1.6, mid2), (EX, mid2)], BLU
 c.arrow([(QX + QW, NY1), (G34 + 1.6, NY1), (G34 + 1.6, mid3), (EX, mid3)], ORANGE, 1.1, r=2.5)
 
 # ---------------------------------------------------------------- connectors
+c.items.append("</g>")
 c1x = col_pos[1][0] + col_pos[1][1] * 0.68
-tag(c1x, CT, 1)
+tag(c1x, CT - SHIFT, 1)
 s1 = span_x[1][0] + span_x[1][1] / 2
 s2 = span_x[2][0] + span_x[2][1] / 2
 s3 = span_x[3][0] + span_x[3][1] / 2
-dotted([(s1, QY + 2.6), (s1, 69.5), (c1x, 69.5), (c1x, CT - 3.8)], BLUE_L)
-dotted([(s2, QY + 2.6), (s2, 67.5), (tag_pos[2][0], 67.5), (tag_pos[2][0], tag_pos[2][1] - 3.8)], BLUE)
-dotted([(s3, QY + 2.6), (s3, 65.5), (tag_pos[3][0], 65.5), (tag_pos[3][0], tag_pos[3][1] - 3.8)], ORANGE)
+J = AY1 + 4.5
+dotted([(s1, QY + 2.6), (s1, J + 4), (c1x, J + 4), (c1x, CT - 3.8 - SHIFT)], BLUE_L)
+dotted([(s2, QY + 2.6), (s2, J + 2), (tag_pos[2][0], J + 2),
+        (tag_pos[2][0], tag_pos[2][1] - 3.8 - SHIFT)], BLUE)
+dotted([(s3, QY + 2.6), (s3, J), (tag_pos[3][0], J), (tag_pos[3][0], tag_pos[3][1] - 3.8 - SHIFT)], ORANGE)
+c.items.append(f'<g transform="translate(0,{-SHIFT})">')
 
 # write-to-E arc: from the Content check, over panel 3, into panel 4
 ARC_Y = 72.5
@@ -395,6 +401,7 @@ a0 = c1x + 8
 c.arrow([(a0, CT), (a0, ARC_Y), (WPX + WPW / 2, ARC_Y), (WPX + WPW / 2, PT + 4)],
         BLUE_L, 1.1, r=4, halo=2.2)
 tag(P[2][0] + 30, ARC_Y, 1, r=3.4)
+c.items.append("</g>")
 
 c.save("figure/overview", W_IN, H_IN)
 print("wrote figure/overview.{svg,pdf,png}")
