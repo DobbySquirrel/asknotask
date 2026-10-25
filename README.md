@@ -12,6 +12,7 @@ box or fall below the 6 pt minimum.
 | Motivating example (single column) | 3.5 in × 3.58 in | `make_motivation.py` | `figure/motivation.{pdf,svg,png}` |
 | Scorer design, training and threshold | 7.16 in × 2.5 in | `make_scorer.py` | `figure/scorer.{pdf,svg,png}` |
 | Offline training / online use pipeline | 7.16 in × 3.0 in | `make_pipeline.py` | `figure/pipeline.{pdf,svg,png}` |
+| Offline training + online JEV vs. training-free scorer | 7.16 in × 3.5 in | `make_pipeline_compare.py` | `figure/pipeline_compare.{pdf,svg,png}` |
 | Architecture with offline strip | 7.16 in × 2.754 in (2.6:1) | `make_figure.py` | `figure/architecture.{pdf,svg,png}` |
 
 The PDFs embed their fonts and go straight into LaTeX; the SVGs are editable in
@@ -47,6 +48,7 @@ python3 make_overview.py
 python3 make_motivation.py
 python3 make_scorer.py
 python3 make_pipeline.py
+python3 make_pipeline_compare.py
 python3 make_figure.py
 ```
 

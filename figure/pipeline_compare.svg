@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.16in" height="3.5in" viewBox="0 0 515.52 252.0">
+<rect width="515.52" height="252.0" fill="#FFFFFF"/>
+<rect x="3.00" y="3.00" width="509.52" height="128.00" rx="3" fill="#F4F4F4" stroke="none"/>
+<rect x="3.00" y="135.00" width="509.52" height="114.00" rx="3" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.6"/>
+<text fill="#333333" xml:space="preserve"><tspan x="8.00" y="12.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="8.00" font-weight="bold">Offline · training databases only</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="8.00" y="144.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="8.00" font-weight="bold">Online · any question</tspan></text>
+<path d="M15.0,40.55 A8.0,2.5500000000000003 0 0 1 31.0,40.55 V50.45 A8.0,2.5500000000000003 0 0 1 15.0,50.45 Z" fill="#FFFFFF" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M15.0,40.55 A8.0,2.5500000000000003 0 0 0 31.0,40.55" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M18.2,45.05 A8.0,2.5500000000000003 0 0 1 34.2,45.05 V54.95 A8.0,2.5500000000000003 0 0 1 18.2,54.95 Z" fill="#FFFFFF" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M18.2,45.05 A8.0,2.5500000000000003 0 0 0 34.2,45.05" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M21.4,49.55 A8.0,2.5500000000000003 0 0 1 37.4,49.55 V59.45 A8.0,2.5500000000000003 0 0 1 21.4,59.45 Z" fill="#FFFFFF" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M21.4,49.55 A8.0,2.5500000000000003 0 0 0 37.4,49.55" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#333333" xml:space="preserve"><tspan x="15.36" y="80.58" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Training</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="12.10" y="87.98" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">databases</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="7.99" y="96.30" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">disjoint from all</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="13.16" y="103.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">benchmark</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="14.16" y="109.90" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">databases</tspan></text>
+<path d="M31.00,61.50 L31.00,71.75 L57.00,71.75" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M57.00,42.00 L57.00,101.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="57.00" cy="71.75" r="1.3" fill="#333333" stroke="none"/>
+<path d="M57.00,42.00 L94.76,42.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="97.00,42.00 94.20,43.18 94.20,40.82" fill="#333333"/>
+<path d="M57.00,101.50 L94.76,101.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="97.00,101.50 94.20,102.68 94.20,100.32" fill="#333333"/>
+<text fill="#333333" xml:space="preserve"><tspan x="59.50" y="39.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">train split</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="59.50" y="99.30" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">held-out split</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="60.00" y="73.95" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">split by database</tspan></text>
+<rect x="97.00" y="23.50" width="47.00" height="37.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="110.99" y="33.75" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Staged</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="105.74" y="40.65" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">detection +</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="101.66" y="47.55" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">type detectors</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="104.79" y="54.45" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">(Fig. 2 </tspan><tspan x="123.46" y="54.45" font-family="'DejaVu Sans', 'Segoe UI Symbol', sans-serif" font-size="6.00">①②</tspan><tspan x="134.22" y="54.45" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">)</tspan></text>
+<path d="M144.00,42.00 L147.76,42.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="150.00,42.00 147.20,43.18 147.20,40.82" fill="#333333"/>
+<g transform="rotate(-10 165.0 38.5)">
+<rect x="159.50" y="29.50" width="11.00" height="8.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
+<path d="M159.5,31.98 V30.7 Q159.5,29.5 160.7,29.5 H169.3 Q170.5,29.5 170.5,30.7 V31.98 Z" fill="#56B4E9" stroke="#333333" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M161.26,33.91 L168.30,33.91" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M161.26,35.73 L165.88,35.73" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<g transform="rotate(-3 165.0 38.5)">
+<rect x="160.10" y="30.90" width="11.00" height="8.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
+<path d="M160.1,33.379999999999995 V32.1 Q160.1,30.9 161.29999999999998,30.9 H169.9 Q171.1,30.9 171.1,32.1 V33.379999999999995 Z" fill="#56B4E9" stroke="#333333" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M161.86,35.31 L168.90,35.31" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M161.86,37.13 L166.48,37.13" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<g transform="rotate(5 165.0 38.5)">
+<rect x="160.70" y="32.30" width="11.00" height="8.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
+<path d="M160.7,34.779999999999994 V33.5 Q160.7,32.3 161.89999999999998,32.3 H170.5 Q171.7,32.3 171.7,33.5 V34.779999999999994 Z" fill="#56B4E9" stroke="#333333" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M162.46,36.71 L169.50,36.71" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M162.46,38.53 L167.08,38.53" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<text fill="#333333" xml:space="preserve"><tspan x="155.17" y="55.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">cards </tspan><tspan x="171.51" y="55.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">φ</tspan></text>
+<path d="M180.00,42.00 L183.76,42.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="186.00,42.00 183.20,43.18 183.20,40.82" fill="#333333"/>
+<rect x="186.00" y="19.50" width="74.00" height="45.00" rx="3" fill="#E69F00" stroke="#E69F00" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="190.00" y="34.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Simulated user</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="190.00" y="43.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">picks the option</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="190.00" y="49.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">consistent with the</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="190.00" y="56.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">gold query, or Others</tspan></text>
+<rect x="182.59" y="14.90" width="80.82" height="9.60" rx="4.8" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<path d="M186.59140625,19.4 V17.8 A1.6,1.6 0 0 1 189.79140625,17.8 V19.4" fill="none" stroke="#333333" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="185.79" y="19.20" width="4.80" height="3.60" rx="0.6" fill="#333333" stroke="none"/>
+<text fill="#333333" xml:space="preserve"><tspan x="192.59" y="21.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">gold SQL used only here</tspan></text>
+<path d="M260.00,42.00 L262.76,42.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="265.00,42.00 262.20,43.18 262.20,40.82" fill="#333333"/>
+<rect x="266.00" y="21.00" width="8.50" height="7.20" rx="1" fill="#E69F00" stroke="#E69F00" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="268.58" y="26.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">1</tspan></text>
+<rect x="274.50" y="21.00" width="8.50" height="7.20" rx="1" fill="#FFFFFF" stroke="#E69F00" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="277.08" y="26.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">0</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="266.00" y="34.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">option chosen</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="266.00" y="40.90" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">→ one-hot</tspan></text>
+<rect x="266.00" y="45.00" width="8.50" height="7.20" rx="1" fill="#BBBBBB" stroke="#BBBBBB" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="267.75" y="50.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">½</tspan></text>
+<rect x="274.50" y="45.00" width="8.50" height="7.20" rx="1" fill="#BBBBBB" stroke="#BBBBBB" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="276.25" y="50.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">½</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="266.00" y="58.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Others →</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="266.00" y="64.90" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">uniform</tspan></text>
+<path d="M305.00,42.00 L308.76,42.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="311.00,42.00 308.20,43.18 308.20,40.82" fill="#333333"/>
+<rect x="311.00" y="19.50" width="53.00" height="45.00" rx="3" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.1"/>
+<text fill="#0072B2" xml:space="preserve"><tspan x="321.97" y="27.67" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Train joint</tspan></text>
+<text fill="#0072B2" xml:space="preserve"><tspan x="313.84" y="34.88" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">evaluator (JEV)</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="314.64" y="47.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">L</tspan><tspan x="318.25" y="47.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50"> = − </tspan><tspan x="331.26" y="47.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">Σ</tspan><tspan x="335.13" y="48.56" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">j</tspan><tspan x="336.79" y="47.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50"> </tspan><tspan x="338.60" y="47.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">y</tspan><tspan x="341.49" y="48.56" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">j</tspan><tspan x="343.15" y="47.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50"> log </tspan><tspan x="355.44" y="47.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">π</tspan><tspan x="358.69" y="48.56" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">j</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="314.32" y="55.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">options permuted</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="326.49" y="61.30" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">each epoch</tspan></text>
+<path d="M324.58859375000003,59.4 A2.6,2.6 0 1 1 321.98859375,56.8" fill="none" stroke="#0072B2" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="321.59,55.00 324.29,56.80 321.59,58.60" fill="#0072B2"/>
+<rect x="97.00" y="83.00" width="47.00" height="37.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="110.99" y="93.25" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Staged</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="105.74" y="100.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">detection +</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="101.66" y="107.05" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">type detectors</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="104.79" y="113.95" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">(Fig. 2 </tspan><tspan x="123.46" y="113.95" font-family="'DejaVu Sans', 'Segoe UI Symbol', sans-serif" font-size="6.00">①②</tspan><tspan x="134.22" y="113.95" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">)</tspan></text>
+<path d="M144.00,101.50 L147.76,101.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="150.00,101.50 147.20,102.68 147.20,100.32" fill="#333333"/>
+<rect x="148.50" y="83.00" width="33.00" height="37.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="155.08" y="93.25" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">cards +</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="151.16" y="100.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">simulated-</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="159.16" y="107.05" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">user</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="154.83" y="113.95" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">choices</tspan></text>
+<path d="M181.50,101.50 L183.76,101.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="186.00,101.50 183.20,102.68 183.20,100.32" fill="#333333"/>
+<path d="M337.50,64.50 L337.50,160.00" fill="none" stroke="#333333" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="337.50,166.00 334.80,159.70 340.20,159.70" fill="#333333"/>
+<text fill="#333333" xml:space="preserve"><tspan x="297.74" y="74.05" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">trained JEV</tspan></text>
+<rect x="186.00" y="86.00" width="178.00" height="31.00" rx="3" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.1"/>
+<text fill="#0072B2" xml:space="preserve"><tspan x="223.53" y="97.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Score with trained JEV</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="219.08" y="107.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">per card: </tspan><tspan x="244.42" y="107.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">H</tspan><tspan x="248.75" y="108.94" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">norm</tspan><tspan x="261.42" y="107.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">(</tspan><tspan x="263.42" y="107.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">φ</tspan><tspan x="266.74" y="107.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">)</tspan><tspan x="268.73" y="107.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">, top option</tspan></text>
+<path d="M364.00,101.50 L367.76,101.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="370.00,101.50 367.20,102.68 367.20,100.32" fill="#333333"/>
+<rect x="370.00" y="16.50" width="138.52" height="110.50" rx="3" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.1"/>
+<text fill="#333333" xml:space="preserve"><tspan x="388.70" y="26.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="7.00" font-weight="bold">Validation: held-out databases</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="391.44" y="33.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">θ is never tuned on benchmark data</tspan></text>
+<path d="M379.00,87.50 L379.00,41.58" fill="none" stroke="#333333" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="379.00,39.50 380.09,42.10 377.91,42.10" fill="#333333"/>
+<path d="M379.00,87.50 L496.44,87.50" fill="none" stroke="#333333" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="498.52,87.50 495.92,88.59 495.92,86.41" fill="#333333"/>
+<text fill="#333333" xml:space="preserve"><tspan x="382.00" y="42.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">agreement</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="500.52" y="89.80" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="7.50" font-style="italic">θ</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="379.00" y="95.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">← few cards auto-resolved</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="476.18" y="95.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">many →</tspan></text>
+<path d="M379.00,61.50 L495.52,61.50" fill="none" stroke="#333333" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="butt" stroke-dasharray="2,1.4"/>
+<text fill="#333333" xml:space="preserve"><tspan x="498.02" y="64.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="7.50" font-style="italic">α</tspan></text>
+<path d="M382.00,48.50 C441.00,45.50 449.00,84.50 494.52,83.50" fill="none" stroke="#0072B2" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M437.02,61.50 L437.02,87.50" fill="none" stroke="#0072B2" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="437.02,57.10 438.11,60.00 441.20,60.14 438.78,62.07 439.61,65.06 437.02,63.35 434.43,65.06 435.26,62.07 432.84,60.14 435.93,60.00" fill="#0072B2"/>
+<text fill="#333333" xml:space="preserve"><tspan x="392.47" y="71.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">selected here</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="384.34" y="71.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="7.00" font-weight="bold" font-style="italic">θ</tspan><tspan x="387.97" y="68.70" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-weight="bold">*</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="379.84" y="104.50" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">θ* = max { θ : agreement(θ) ≥ α }</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="383.96" y="112.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">agreement: share of cards with </tspan><tspan x="467.99" y="112.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">H</tspan><tspan x="472.32" y="113.44" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">norm</tspan><tspan x="484.99" y="112.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00"> ≤ </tspan><tspan x="491.62" y="112.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">θ</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="383.66" y="118.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">whose top option equals the user's choice</tspan></text>
+<path d="M186.43,139.00 L186.43,245.00" fill="none" stroke="#8C8C8C" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="butt" stroke-dasharray="2.5,1.8"/>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="8.00" y="154.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="7.00" font-weight="bold">(a) Training-free scorer</tspan></text>
+<text fill="#0072B2" xml:space="preserve"><tspan x="192.43" y="154.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="7.00" font-weight="bold">(b) Joint evaluator (JEV)</tspan></text>
+<rect x="9.00" y="161.50" width="105.23" height="32.00" rx="3" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.7"/>
+<path d="M9.0,169.5 V164.5 Q9.0,161.5 12.0,161.5 H111.2253125 Q114.2253125,161.5 114.2253125,164.5 V169.5 Z" fill="#F4F4F4" stroke="#BBBBBB" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="12.50" y="167.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Prompt (abridged)</tspan></text>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="13.00" y="176.50" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">Rate how likely each option</tspan></text>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="13.00" y="183.00" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">is intended (0–1).</tspan></text>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="13.00" y="189.50" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">A. &lt;d₁&gt;   B. &lt;d₂&gt;</tspan></text>
+<path d="M114.23,179.50 L120.99,179.50" fill="none" stroke="#8C8C8C" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="123.23,179.50 120.43,180.68 120.43,178.32" fill="#8C8C8C"/>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="133.99" y="171.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">verbal scores</tspan></text>
+<rect x="123.23" y="175.00" width="57.20" height="10.00" rx="3" fill="#F4F4F4" stroke="#BBBBBB" stroke-width="0.7"/>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="127.62" y="182.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-style="italic">A: 0.95    B: 0.05</tspan></text>
+<rect x="15.00" y="212.40" width="3.20" height="0.60" rx="0" fill="#BBBBBB" stroke="none"/>
+<rect x="19.20" y="212.60" width="3.20" height="0.60" rx="0" fill="#BBBBBB" stroke="none"/>
+<rect x="23.40" y="203.00" width="3.20" height="10.00" rx="0" fill="#8C8C8C" stroke="none"/>
+<rect x="27.60" y="212.60" width="3.20" height="0.60" rx="0" fill="#BBBBBB" stroke="none"/>
+<rect x="31.80" y="212.50" width="3.20" height="0.60" rx="0" fill="#BBBBBB" stroke="none"/>
+<rect x="36.00" y="212.60" width="3.20" height="0.60" rx="0" fill="#BBBBBB" stroke="none"/>
+<rect x="40.20" y="212.40" width="3.20" height="0.60" rx="0" fill="#BBBBBB" stroke="none"/>
+<rect x="44.40" y="212.60" width="3.20" height="0.60" rx="0" fill="#BBBBBB" stroke="none"/>
+<rect x="48.60" y="205.50" width="3.20" height="7.50" rx="0" fill="#8C8C8C" stroke="none"/>
+<rect x="52.80" y="212.50" width="3.20" height="0.60" rx="0" fill="#BBBBBB" stroke="none"/>
+<path d="M13.00,213.30 L61.00,213.30" fill="none" stroke="#8C8C8C" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="11.00" y="216.50" width="28.00" height="6.60" rx="1" fill="#BBBBBB" stroke="none"/>
+<text fill="#333333" xml:space="preserve"><tspan x="12.50" y="221.70" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">A. &lt;d₁&gt;</tspan></text>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="12.50" y="228.30" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">B. &lt;d₂&gt;</tspan></text>
+<rect x="44.00" y="216.50" width="28.00" height="6.60" rx="1" fill="#BBBBBB" stroke="none"/>
+<text fill="#333333" xml:space="preserve"><tspan x="45.50" y="221.70" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">A. &lt;d₂&gt;</tspan></text>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="45.50" y="228.30" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">B. &lt;d₁&gt;</tspan></text>
+<rect x="10.00" y="215.50" width="61.00" height="14.50" rx="2" fill="none" stroke="#BBBBBB" stroke-width="0.5"/>
+<rect x="15.00" y="233.50" width="4.60" height="10.50" rx="0" fill="#8C8C8C" stroke="none"/>
+<rect x="21.00" y="242.80" width="4.60" height="1.20" rx="0" fill="#BBBBBB" stroke="none"/>
+<path d="M13.00,244.30 L28.00,244.30" fill="none" stroke="#8C8C8C" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="31.00" y="235.00" width="41.02" height="9.00" rx="4.5" fill="#F4F4F4" stroke="#BBBBBB" stroke-width="0.7"/>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="34.50" y="241.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">no option fits</tspan></text>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="79.00" y="210.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">coarse</tspan></text>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="79.00" y="225.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">position-sensitive</tspan></text>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="79.00" y="241.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">overconfident</tspan></text>
+<rect x="192.43" y="166.50" width="19.00" height="14.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<path d="M192.4272,170.84 V167.7 Q192.4272,166.5 193.6272,166.5 H210.2272 Q211.4272,166.5 211.4272,167.7 V170.84 Z" fill="#56B4E9" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M195.47,174.22 L207.63,174.22" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M195.47,177.41 L203.45,177.41" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#333333" xml:space="preserve"><tspan x="193.60" y="187.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">card </tspan><tspan x="206.94" y="187.10" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">φ</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="192.00" y="194.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">= </tspan><tspan x="197.17" y="194.10" font-family="'DejaVu Sans', 'Segoe UI Symbol', sans-serif" font-size="6.00">⟨</tspan><tspan x="199.51" y="194.10" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">h</tspan><tspan x="202.51" y="194.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">, </tspan><tspan x="205.85" y="194.10" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">P</tspan><tspan x="209.51" y="194.10" font-family="'DejaVu Sans', 'Segoe UI Symbol', sans-serif" font-size="6.00">⟩</tspan></text>
+<path d="M211.43,173.50 L215.19,173.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="217.43,173.50 214.63,174.68 214.63,172.32" fill="#333333"/>
+<rect x="217.43" y="159.50" width="102.07" height="36.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<path d="M217.4272,168.0 V162.5 Q217.4272,159.5 220.4272,159.5 H316.5 Q319.5,159.5 319.5,162.5 V168.0 Z" fill="#F4F4F4" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#333333" xml:space="preserve"><tspan x="219.93" y="165.90" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">All options in one prompt (abridged)</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="220.43" y="175.00" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">Question: ...</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="220.43" y="181.40" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">Evidence: ...</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="220.43" y="187.80" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">Span h: '...'</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="274.43" y="175.00" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">Options:</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="274.43" y="181.40" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">A. &lt;d₁&gt;</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="274.43" y="187.80" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">B. &lt;d₂&gt;</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="274.43" y="194.20" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">Answer:</tspan></text>
+<path d="M319.50,177.50 L324.26,177.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="326.50,177.50 323.70,178.68 323.70,176.32" fill="#333333"/>
+<rect x="326.50" y="166.00" width="22.00" height="23.00" rx="3" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.1"/>
+<text fill="#0072B2" xml:space="preserve"><tspan x="331.36" y="179.78" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">JEV</tspan></text>
+<path d="M348.50,177.50 L351.76,177.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="354.00,177.50 351.20,178.68 351.20,176.32" fill="#333333"/>
+<rect x="354.00" y="175.00" width="3.30" height="5.00" rx="0" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.35"/>
+<rect x="357.30" y="175.00" width="3.30" height="5.00" rx="0" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.35"/>
+<rect x="360.60" y="175.00" width="3.30" height="5.00" rx="0" fill="#0072B2" stroke="#0072B2" stroke-width="0.35"/>
+<rect x="363.90" y="175.00" width="3.30" height="5.00" rx="0" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.35"/>
+<rect x="367.20" y="175.00" width="3.30" height="5.00" rx="0" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.35"/>
+<rect x="370.50" y="175.00" width="3.30" height="5.00" rx="0" fill="#0072B2" stroke="#0072B2" stroke-width="0.35"/>
+<rect x="373.80" y="175.00" width="3.30" height="5.00" rx="0" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.35"/>
+<rect x="377.10" y="175.00" width="3.30" height="5.00" rx="0" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.35"/>
+<text fill="#0072B2" xml:space="preserve"><tspan x="360.08" y="173.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">A</tspan></text>
+<text fill="#0072B2" xml:space="preserve"><tspan x="369.98" y="173.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">B</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="351.36" y="185.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">option-letter</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="360.20" y="192.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">logits</tspan></text>
+<path d="M380.40,177.50 L383.66,177.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="385.90,177.50 383.10,178.68 383.10,176.32" fill="#333333"/>
+<rect x="385.90" y="168.50" width="25.00" height="18.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="387.90" y="176.09" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">softmax</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="393.06" y="183.11" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">→ </tspan><tspan x="400.73" y="183.11" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">π</tspan></text>
+<path d="M410.90,177.50 L414.16,177.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="416.40,177.50 413.60,178.68 413.60,176.32" fill="#333333"/>
+<rect x="416.40" y="164.50" width="40.62" height="26.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="421.69" y="172.30" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">H</tspan><tspan x="426.17" y="173.79" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">norm</tspan><tspan x="438.83" y="172.30" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20">(</tspan><tspan x="440.89" y="172.30" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">φ</tspan><tspan x="444.32" y="172.30" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20">)</tspan><tspan x="446.39" y="172.30" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20"> =</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="420.73" y="179.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20">−</tspan><tspan x="424.35" y="179.70" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">Σ</tspan><tspan x="428.04" y="181.19" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">j</tspan><tspan x="429.70" y="179.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20"> </tspan><tspan x="431.43" y="179.70" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">π</tspan><tspan x="434.53" y="181.19" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">j</tspan><tspan x="436.20" y="179.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20"> log </tspan><tspan x="447.92" y="179.70" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">π</tspan><tspan x="451.02" y="181.19" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">j</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="426.49" y="187.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20">/ log |</tspan><tspan x="441.54" y="187.10" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">P</tspan><tspan x="445.32" y="187.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20">|</tspan></text>
+<path d="M457.02,177.50 L460.28,177.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="462.52,177.50 459.72,178.68 459.72,176.32" fill="#333333"/>
+<path d="M485.52,161.5 L508.52,177.5 L485.52,193.5 L462.52,177.5 Z" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#333333" xml:space="preserve"><tspan x="476.95" y="175.90" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">H</tspan><tspan x="481.43" y="177.39" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">norm</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="477.35" y="184.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20">≤ </tspan><tspan x="482.47" y="184.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">θ</tspan><tspan x="485.52" y="182.02" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">*</tspan><tspan x="488.52" y="184.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20"> ?</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="452.45" y="201.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">to the gate (Fig. 2 </tspan><tspan x="501.14" y="201.50" font-family="'DejaVu Sans', 'Segoe UI Symbol', sans-serif" font-size="6.00">③</tspan><tspan x="506.52" y="201.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">)</tspan></text>
+<path d="M485.52,127.00 L485.52,155.50" fill="none" stroke="#333333" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="485.52,161.50 482.82,155.20 488.22,155.20" fill="#333333"/>
+<text fill="#333333" xml:space="preserve"><tspan x="490.02" y="145.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="8.50" font-weight="bold" font-style="italic">θ</tspan><tspan x="494.43" y="141.60" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.29" font-weight="bold">*</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="342.00" y="145.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">trained JEV</tspan></text>
+<path d="M102.96,208.00 L200.43,208.00" fill="none" stroke="#8C8C8C" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="0.1,1.6"/>
+<rect x="202.43" y="203.25" width="87.70" height="9.50" rx="4.75" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.7"/>
+<text fill="#0072B2" xml:space="preserve"><tspan x="205.93" y="210.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">continuous softmax over logits</tspan></text>
+<path d="M137.25,223.50 L200.43,223.50" fill="none" stroke="#8C8C8C" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="0.1,1.6"/>
+<rect x="202.43" y="218.75" width="93.05" height="9.50" rx="4.75" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.7"/>
+<text fill="#0072B2" xml:space="preserve"><tspan x="205.93" y="225.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">options permuted during training</tspan></text>
+<path d="M124.97,239.00 L200.43,239.00" fill="none" stroke="#8C8C8C" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="0.1,1.6"/>
+<rect x="202.43" y="234.25" width="72.35" height="9.50" rx="4.75" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.7"/>
+<text fill="#0072B2" xml:space="preserve"><tspan x="205.93" y="241.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">uniform target for Others</tspan></text>
+</svg>
