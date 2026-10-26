@@ -1,7 +1,7 @@
 """System overview figure with running example (7.16 in x 3.4 in).
 
 Row A: running example (question with three highlighted spans, schema).
-Row B: four stage panels; each example card keeps its colour throughout.
+Row B: four stage panels; each example ambiguity keeps its colour throughout.
 """
 
 from figlib import Canvas
@@ -140,8 +140,8 @@ for n, (sx, sw_) in span_x.items():
 
 # ====================================================================== panels
 c.items.append(f'<g transform="translate(0,{-SHIFT})">')
-titles = [("Staged Detection", None), ("Type Detectors", "— data observability"),
-          ("Uncertainty Gate", "— model resolvability"), ("Parsing", None)]
+titles = [("Staged Detection", None), ("Ambiguity Checks", "— Q1–Q3 by execution"),
+          ("Resolution Criterion", "— Q4 by uncertainty"), ("Parsing", None)]
 for k, ((x, w_), (t, s)) in enumerate(zip(P, titles)):
     box(x, PT, w_, PB - PT, fill=BG, stroke=None)
     header(x, PT, k + 1, t, s)
@@ -205,24 +205,28 @@ T(CX + 2.5, CY + 40.4, "$p$₂: /{<second reading>}", 6)
 x0, pw = P[1]
 GX, GY = x0 + 1.5, 100.0
 cols = [
-    (38.0, ["Existence"], ["Column · Join"], ["e ∉ S →", "remove", "candidate"]),
-    (56.0, ["Content"], ["Value · NULL"], ["SELECT", "DISTINCT ...", "→ '1959-02-18'"]),
-    (66.0, ["Execution", "equivalence"], ["Scope · Attachment", "· NULL"],
-     ["res(q₁, D) =", "res(q₂, D) →", "indistinguishable"]),
+    (52.0, ["Validity"], ["Column · Join ·", "Value · NULL"],
+     ["COUNT(*)=0 →", "remove; keep", "'1959-02-18'"]),
+    (56.0, ["Coincidence"], ["Scope · Attachment", "· Value · NULL"],
+     ["res(q₁, D) =", "res(q₂, D) →", "discard"]),
+    (52.0, ["Relevance"], ["all nine types,", "parser's input"],
+     ["res(y_p₁) = …", "= res(y_⊥) →", "discard"]),
 ]
 CT, CODE_Y, CB = GY + 2, 153.0, 181.0
-BAR = (GX + 2, 185.0, 0, 22.5)
+BAR = (GX + 2, 185.0, 0, 15.6)
 cx_ = GX + 2
 col_pos = []
 for k, (cw, title, types, code) in enumerate(cols):
     box(cx_, CT, cw, CB - CT, stroke=INK)
     ic = cx_ + cw / 2
     if k == 0:
-        table_icon(ic - 6.5, CT + 4.5, 11, 9)
-        magnifier(ic + 4.6, CT + 12.2)
-    elif k == 1:
         c.cylinder(ic - 5.5, CT + 3.5, 10, 12)
         magnifier(ic + 4.6, CT + 12.2)
+    elif k == 2:
+        c.rect(ic - 11, CT + 4, 9, 11, rx=1, fill=INK)
+        for dy in (5.5, 9.5, 13.5):
+            c.line([(ic - 2, CT + dy), (ic + 3, CT + 9.5)], INK, 0.5)
+        T(ic + 6.5, CT + 11.6, "=", 7, "middle", bold=True)
     else:
         for dx in (-9.5, 3.5):
             c.rect(ic + dx, CT + 3.2, 6, 5, rx=0.8, fill=WHITE, stroke=INK, sw=0.55)
@@ -238,43 +242,43 @@ for k, (cw, title, types, code) in enumerate(cols):
     for j, t_ in enumerate(types):
         T(ic, ty + j * 6.8, t_, 6, "middle", italic=True, maxw=cw - 0.8)
     box(cx_ + 1.2, CODE_Y, cw - 2.4, CB - CODE_Y - 1.5, fill=BG, rx=2)
-    if k == 1:
+    if k == 0:
         c.rect(cx_ + 1.2, CODE_Y, 2.2, CB - CODE_Y - 1.5, rx=0.8, fill=BLUE_L)
     for j, ln in enumerate(code):
-        T(cx_ + 4.0 if k == 1 else cx_ + 2.6, CODE_Y + 6.7 + j * 6.8, f"`{ln}`", 6,
-          maxw=cw - (5.2 if k == 1 else 3.8))
+        T(cx_ + 4.0 if k == 0 else cx_ + 2.6, CODE_Y + 6.7 + j * 6.8, f"`{ln}`", 6,
+          maxw=cw - (5.2 if k == 0 else 3.8))
     col_pos.append((cx_, cw))
     cx_ += cw + 2
 GW = cx_ - GX
 box(GX, GY, GW, BAR[1] + BAR[3] + 2.5 - GY, fill="none", stroke=GRAY)
 box(GX + 2, BAR[1], GW - 4, BAR[3], fill=WHITE, stroke=GRAY, rx=2)
-for j, (p, t_) in enumerate([("P1", "act only on positive evidence"),
-                             ("P2", "write a single reading only if it adds information"),
-                             ("P3", "check only where data can decide")]):
+for j, (p, t_) in enumerate([("P1", "act only on conclusive evidence"),
+                             ("P2", "write a single interpretation only if it informs the parser")]):
     T(GX + 5, BAR[1] + 6.6 + j * 6.9, f"!{{{p}}}  {t_}", 6, maxw=GW - 9)
 GBOT = BAR[1] + BAR[3] + 2.5
 
 # remove
-RPX, RPY = GX + 4, 224.0
+RPX, RPY = GX + 4, 218.0
 c.arrow([(RPX + 16, GBOT), (RPX + 16, RPY)], GRAY, 1.0)
 pill(RPX, RPY, 36, 11, GRAY)
 trash(RPX + 7.5, RPY + 5.6)
-T(RPX + 13, RPY + 7.6, "Remove", 6.5, bold=True)
-T(RPX + 44, RPY + 7.6, "any failure → pass the card unchanged", 6, italic=True)
+T(RPX + 13, RPY + 7.6, "Discard", 6.5, bold=True)
+T(RPX + 44, RPY + 7.6, "check fails → pass on unchanged", 6, italic=True)
 
 # P1 -> P2
 c.arrow([(P[0][0] + P[0][1] - 2, 210.0), (GX, 210.0)], INK, THICK)
 
 # ---------------------------------------------------------------- panel 3
 x0, pw = P[2]
-SCX, SCY0, SCW, SCH = x0 + 22, 101.0, 26.0, 30.0
+SCX, SCY0, SCW, SCH = x0 + 19, 101.0, 30.0, 30.0
 JY = SCY0 + SCH / 2
 c.arrow([(GX + GW, JY), (SCX, JY)], INK, THICK)
 for k, n in enumerate((2, 3)):
     tag(x0 + 3 + k * 8.2, JY, n, r=3.4)
 T((P[1][0] + P[1][1] + x0) / 2, JY - 4.2, "$Φ$", 7, "middle")
 box(SCX, SCY0, SCW, SCH, stroke=INK)
-T(SCX + SCW / 2, JY + 2.3, "Scorer", 6.5, "middle", bold=True)
+T(SCX + SCW / 2, JY - 1.3, "Listwise", 6.5, "middle", bold=True)
+T(SCX + SCW / 2, JY + 6.0, "scorer", 6.5, "middle", bold=True)
 
 BX0 = x0 + 56
 rows3 = [(2, SCY0 + 4.5, [(42, BLUE), (2.5, GRAY)], "$H_{norm}$ = 0.19", x0 + 104),
@@ -372,7 +376,7 @@ for j, ln in enumerate(["SELECT … T-CHO …", "FROM Patient JOIN …", "WHERE 
     T(SQX + 2.2, SQY + 7.3 + j * 6.8, f"`{ln}`", 6, maxw=SQW - 3)
 check(SQX + SQW, SQY)
 T(x0 + 6.5, SQY + 14, "$ŷ$", 8, "middle")
-T(x0 + 3, PB - 2.8, "1 question asked (ask-all: 2)", 6, maxw=pw - 4)
+T(x0 + 3, PB - 2.8, "1 question (Always-Ask: 2)", 6, maxw=pw - 4)
 
 # P3 -> P4 coloured hand-offs
 G34 = (P[2][0] + P[2][1] + x0) / 2
@@ -383,13 +387,15 @@ c.arrow([(QX + QW, NY1), (G34 + 1.6, NY1), (G34 + 1.6, mid3), (EX, mid3)], ORANG
 
 # ---------------------------------------------------------------- connectors
 c.items.append("</g>")
-c1x = col_pos[1][0] + col_pos[1][1] * 0.68
-tag(c1x, CT - SHIFT, 1)
+C1L = col_pos[0][0]
+Y1A, Y1B = CT + 8.0, CT + 19.0
+LX1, LX2 = P[0][0] + P[0][1] + 1.6, P[0][0] + P[0][1] + 5.6
+tag(C1L, Y1B - SHIFT, 1)
 s1 = span_x[1][0] + span_x[1][1] / 2
 s2 = span_x[2][0] + span_x[2][1] / 2
 s3 = span_x[3][0] + span_x[3][1] / 2
 J = AY1 + 4.5
-dotted([(s1, QY + 2.6), (s1, J + 4), (c1x, J + 4), (c1x, CT - 3.8 - SHIFT)], BLUE_L)
+dotted([(s1, QY + 2.6), (s1, J + 4), (LX1, J + 4), (LX1, Y1B - SHIFT), (C1L - 3.8, Y1B - SHIFT)], BLUE_L)
 dotted([(s2, QY + 2.6), (s2, J + 2), (tag_pos[2][0], J + 2),
         (tag_pos[2][0], tag_pos[2][1] - 3.8 - SHIFT)], BLUE)
 dotted([(s3, QY + 2.6), (s3, J), (tag_pos[3][0], J), (tag_pos[3][0], tag_pos[3][1] - 3.8 - SHIFT)], ORANGE)
@@ -397,9 +403,8 @@ c.items.append(f'<g transform="translate(0,{-SHIFT})">')
 
 # write-to-E arc: from the Content check, over panel 3, into panel 4
 ARC_Y = 72.5
-a0 = c1x + 8
-c.arrow([(a0, CT), (a0, ARC_Y), (WPX + WPW / 2, ARC_Y), (WPX + WPW / 2, PT + 4)],
-        BLUE_L, 1.1, r=4, halo=2.2)
+c.arrow([(C1L, Y1A), (LX2, Y1A), (LX2, ARC_Y), (WPX + WPW / 2, ARC_Y), (WPX + WPW / 2, PT + 4)],
+        BLUE_L, 1.1, r=3, halo=2.2)
 tag(P[2][0] + 30, ARC_Y, 1, r=3.4)
 c.items.append("</g>")
 

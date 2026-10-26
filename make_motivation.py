@@ -1,4 +1,4 @@
-"""Motivating example: ask-every-ambiguity vs. selective clarification.
+"""Motivating example: Always-Ask vs. selective clarification.
 
 Single-column figure, 3.5 in wide; height follows the content.  No math
 symbols, Greek letters, variable names or numeric scores appear in it.
@@ -118,7 +118,7 @@ LX, LW = M, 96.0
 RX = LX + LW + 10
 RW = W - M - RX
 SEPX = LX + LW + 5
-T(LX + LW / 2, B2Y + 6, "Ask every ambiguity", 7.5, "middle", bold=True)
+T(LX + LW / 2, B2Y + 6, "Always-Ask", 7.5, "middle", bold=True)
 T(RX + RW / 2, B2Y + 6, "Selective clarification (ours)", 7.5, "middle", bold=True, maxw=RW)
 
 ROW_H, ROW_GAP = 36.0, 5.0

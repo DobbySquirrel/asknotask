@@ -1,5 +1,5 @@
-"""Offline training of the joint evaluator and online comparison with a
-training-free scorer (7.16 in x 3.5 in).
+"""Offline training of the listwise scorer and online comparison with the
+verbal scorer (7.16 in x 3.5 in).
 
 Two swim lanes; flow is left to right and only downward between lanes.
 Charts are schematic (no ticks, no values).  The only numbers are the
@@ -149,14 +149,15 @@ T(FKX + 2.5, r1m - 2.2, "train split", FS)
 T(FKX + 2.5, r2m - 2.2, "held-out split", FS)
 T(FKX + 3, BAND_Y + 2.2, "/{split by database}", FS)
 
-DET = ["Staged", "detection +", "type detectors", "(Fig. 2 ①②)"]
+DET1 = ["Detection +", "validity &", "coincidence", "checks", "(Fig. 2 ①②)"]
+DET2 = ["Detection +", "all checks,", "incl. relevance", "(Fig. 2 ①②)"]
 
 # ---- upper row: training
 x, w = COLS[0]
-label_box(x, R1Y + 4, w, R1H - 8, DET, lead=6.9)
+label_box(x, R1Y + 2.5, w, R1H - 5, DET1, lead=6.6)
 harrow(right(0), COLS[1][0], r1m)
 fan(cx(1), r1m - 12.5)
-T(cx(1), r1m + 13.5, "cards $φ$", FS, "middle")
+T(cx(1), r1m + 13.5, "ambiguities $φ$", FS, "middle")
 harrow(right(1), COLS[2][0], r1m)
 
 x, w = COLS[2]
@@ -185,7 +186,7 @@ harrow(right(3), COLS[4][0], r1m)
 x, w = COLS[4]
 TRAIN_CX = cx(4)
 box(x, R1Y, w, R1H, stroke=BLUE, sw=1.1)
-centered(TRAIN_CX, R1Y + 9.5, ["Train joint", "evaluator (JEV)"], 6.5, 7.2, bold=True, color=BLUE)
+centered(TRAIN_CX, R1Y + 9.5, ["Train listwise", "scorer"], 6.5, 7.2, bold=True, color=BLUE)
 T(TRAIN_CX, R1Y + 27.5, "$L$ = − $Σ_{j}$ $y_{j}$ log $π_{j}$", 6.5, "middle", maxw=w - 3)
 T(TRAIN_CX, R1Y + 35.5, "options permuted", FS, "middle", maxw=w - 3)
 ew = c.tw("each epoch", FS)
@@ -194,25 +195,25 @@ cycle_icon(TRAIN_CX + 4.5 - ew / 2 - 4.5, R1Y + 39.9, r=2.6)
 
 # ---- lower row: threshold selection
 x, w = COLS[0]
-label_box(x, R2Y + 4, w, R2H - 8, DET, lead=6.9)
-harrow(right(0), COLS[1][0], r2m)
+label_box(x, R2Y + 4, w, R2H - 8, DET2, lead=6.9)
+harrow(right(0), COLS[1][0] - 2, r2m)
 x, w = COLS[1]
-label_box(x - 1.5, R2Y + 4, w + 3, R2H - 8, ["cards +", "simulated-", "user", "choices"], lead=6.9)
+label_box(x - 2, R2Y + 4, w + 4, R2H - 8, ["ambiguities", "+ simulated", "user", "choices"], lead=6.9)
 SC_X0, SC_X1 = COLS[2][0], right(4)
-harrow(right(1) + 1.5, SC_X0, r2m)
+harrow(right(1) + 2, SC_X0, r2m)
 
 # hand-off 1 (trained JEV): straight down through the scoring box
 JEV_TOP = 166.0
 c.line([(TRAIN_CX, R1Y + R1H), (TRAIN_CX, JEV_TOP - 6)], INK, THICK)
 c.polygon([(TRAIN_CX, JEV_TOP), (TRAIN_CX - 2.7, JEV_TOP - 6.3), (TRAIN_CX + 2.7, JEV_TOP - 6.3)],
           INK)
-T(TRAIN_CX - 4, BAND_Y + 2.3, "trained JEV", 6.5, "end", bold=True)
+T(TRAIN_CX - 4, BAND_Y + 2.3, "trained scorer", 6.5, "end", bold=True)
 
 SC_Y, SC_H = R2Y + 7, R2H - 14
 box(SC_X0, SC_Y, SC_X1 - SC_X0, SC_H, stroke=BLUE, sw=1.1)
 scx = (SC_X0 + TRAIN_CX - 6) / 2
-T(scx, SC_Y + 11.5, "Score with trained JEV", 6.5, "middle", bold=True, color=BLUE)
-T(scx, SC_Y + 21.5, "per card: $H_{norm}(φ)$, top option", FS, "middle")
+T(scx, SC_Y + 11.5, "Apply trained scorer", 6.5, "middle", bold=True, color=BLUE)
+T(scx, SC_Y + 21.5, "per ambiguity: $H_{norm}(φ)$, top option", FS, "middle")
 harrow(SC_X1, CH_X0, r2m)
 
 # ---- validation chart (visual focus of the top lane)
@@ -226,7 +227,7 @@ c.arrow([(AX0, AY1), (AX0, AY0)], INK, 0.65, hs=2.6)
 c.arrow([(AX0, AY1), (AX1 + 3, AY1)], INK, 0.65, hs=2.6)
 T(AX0 + 3, AY0 + 2.5, "agreement", FS)
 T(AX1 + 5, AY1 + 2.3, "$θ$", 7.5)
-T(AX0, AY1 + 7.5, "← few cards auto-resolved", FS)
+T(AX0, AY1 + 7.5, "← few auto-resolved", FS)
 T(AX1 + 3, AY1 + 7.5, "many →", FS, "end")
 p0, p1, p2, p3 = (AX0 + 3, AY0 + 9), (AX0 + 62, AY0 + 6), (AX0 + 70, AY1 - 3), (AX1 - 1, AY1 - 4)
 
@@ -253,16 +254,16 @@ slw = c.tw("selected here", 6.5, True)
 T(ix - 3, ALY + 10, "selected here", 6.5, "end", bold=True)
 T(ix - 3 - slw - 1.5, ALY + 10, "$θ^{*}$", 7, "end", bold=True)
 T(chm, AY1 + 17, "`θ* = max { θ : agreement(θ) ≥ α }`", FS, "middle", maxw=CH_X1 - CH_X0 - 4)
-T(chm, AY1 + 24.5, "agreement: share of cards with $H_{norm}$ ≤ $θ$", FS, "middle", color=INK)
+T(chm, AY1 + 24.5, "agreement: share of ambiguities with $H_{norm}$ ≤ $θ$", FS, "middle", color=INK)
 T(chm, AY1 + 31, "whose top option equals the user's choice", FS, "middle")
 
 # ====================================================================== bottom lane
 DIV_X = M + (W - 2 * M) * 0.36
 c.line([(DIV_X, L2Y0 + 4), (DIV_X, L2Y1 - 50)], MID, 0.6, dash="2.5,1.8", cap="butt")
 PT_Y = L2Y0 + 19.5
-T(M + 5, PT_Y, "(a) Training-free scorer", 7, bold=True, color=MID)
+T(M + 5, PT_Y, "(a) Verbal scorer", 7, bold=True, color=MID)
 RX0 = DIV_X + 6
-T(RX0, PT_Y, "(b) Joint evaluator (JEV)", 7, bold=True, color=BLUE)
+T(RX0, PT_Y, "(b) Listwise scorer", 7, bold=True, color=BLUE)
 MR0, MR1 = PT_Y + 5, PT_Y + 43
 mm = (MR0 + MR1) / 2
 
@@ -333,11 +334,11 @@ for k, ((wl, pict), rl) in enumerate(zip(weak, remedy)):
     c.arrow([(gx + lw_ + 4, ty), (tx - 1.5, ty)], MID, 0.7, dash="0.1,1.7", hs=2.8)
 
 # ---- (b) JEV (blue)
-CD = RX0
+CD = RX0 + 1.5
 card_icon(CD, mm - 11, 19, 14, sw=SW)
-centered(CD + 9.5, mm + 11, ["card $φ$", "= ⟨$h$, $P$⟩"], FS, 7)
-PX0 = CD + 25
-JW = 22.0
+centered(CD + 9.5, mm + 11, ["ambiguity $φ$", "= ⟨$h$, $P$⟩"], FS, 7)
+PX0 = CD + 24
+JW = 28.0
 JX0 = TRAIN_CX - JW / 2
 PX1 = JX0 - 7
 harrow(CD + 19, PX0, mm - 4)
@@ -354,7 +355,7 @@ if c.tw("`Span h: '...'`", FS) + PX0 + 4 > pc2:
     c.warn.append("prompt columns collide")
 
 harrow(PX1, JX0, mm)
-label_box(JX0, JEV_TOP, JW, (mm - JEV_TOP) * 2, ["JEV"], stroke=BLUE, sw=1.1, size=6.5, bold=True,
+label_box(JX0, JEV_TOP, JW, (mm - JEV_TOP) * 2, ["Listwise", "scorer"], stroke=BLUE, sw=1.1, size=6.0, bold=True,
           color=BLUE)
 
 GAP = 5.5
@@ -388,13 +389,13 @@ c.path(f"M{DCX},{mm - DHH} L{DCX + DW / 2},{mm} L{DCX},{mm + DHH} L{DCX - DW / 2
        BLUE, 1.0, fill=WHITE)
 T(DCX, mm - 1.6, "$H_{norm}$", 6.2, "middle")
 T(DCX, mm + 7.0, "≤ $θ^{*}$ ?", 6.2, "middle")
-T(W - M - 4, mm + DHH + 8, "to the gate (Fig. 2 ③)", FS, "end")
+T(W - M - 4, mm + DHH + 8, "→ Auto or Ask (Fig. 2 ③)", FS, "end")
 
 # hand-off 2 (θ*): from the bottom of the validation box
 c.line([(DCX, CY1), (DCX, mm - DHH - 6)], INK, THICK)
 c.polygon([(DCX, mm - DHH), (DCX - 2.7, mm - DHH - 6.3), (DCX + 2.7, mm - DHH - 6.3)], INK)
 T(DCX + 4.5, L2Y0 + 10, "$θ^{*}$", 8.5, bold=True)
-T(TRAIN_CX + 4.5, L2Y0 + 10, "trained JEV", 6.5, bold=True)
+T(TRAIN_CX + 4.5, L2Y0 + 10, "trained scorer", 6.5, bold=True)
 
 c.save("figure/pipeline_compare", W_IN, H_IN)
 for wmsg in c.warn:
