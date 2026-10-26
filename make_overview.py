@@ -155,18 +155,18 @@ T(x0 + pw / 2, 113.9, "$S^{+}$: schema with descriptions", 6, "middle", italic=T
 T(x0 + pw / 2, 120.0, "and sample values", 6, "middle", italic=True)
 
 SX, SWD = x0 + 17, pw - 20
-stages = [("S1", ["Scope · Attachment"], 129.0, 14.0),
-          ("S2", ["Column · Join ·", "Value · NULL"], 153.0, 19.0),
-          ("S3", ["Aggregate · Project · Tie"], 182.0, 14.0)]
+stages = [("$Φ$_{str}", ["Scope · Attachment"], 129.0, 14.0),
+          ("$Φ$_{row}", ["Column · Join ·", "Value · NULL"], 153.0, 19.0),
+          ("$Φ$_{out}", ["Aggregate · Project · Tie"], 182.0, 14.0)]
 mids = []
 for tg, rows, y, h in stages:
     box(SX, y, SWD, h)
-    c.path(f"M{SX + 12.5},{y} H{SX + R} Q{SX},{y} {SX},{y + R} V{y + h - R} "
-           f"Q{SX},{y + h} {SX + R},{y + h} H{SX + 12.5} Z", INK, SW, fill=INK)
-    T(SX + 6.3, y + h / 2 + 2.2, tg, 6.2, "middle", bold=True, color=WHITE)
+    c.path(f"M{SX + 16.5},{y} H{SX + R} Q{SX},{y} {SX},{y + R} V{y + h - R} "
+           f"Q{SX},{y + h} {SX + R},{y + h} H{SX + 16.5} Z", INK, SW, fill=INK)
+    T(SX + 8.3, y + h / 2 + 2.2, tg, 6.2, "middle", bold=True, color=WHITE)
     y0 = y + h / 2 - (len(rows) - 1) * 3.5 + 2.15
     for j, r_ in enumerate(rows):
-        T(SX + 15.5, y0 + j * 7.0, r_, 6, maxw=SWD - 17)
+        T(SX + 18.6, y0 + j * 7.0, r_, 6, maxw=SWD - 20)
     mids.append(y + h / 2)
 acx = SX + SWD / 2 + 6
 for (_, _, y, h), (_, _, yn, _) in zip(stages, stages[1:]):

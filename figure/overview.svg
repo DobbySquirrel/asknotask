@@ -57,18 +57,18 @@
 <text fill="#333333" xml:space="preserve"><tspan x="19.63" y="113.90" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">S</tspan><tspan x="22.63" y="111.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">+</tspan><tspan x="26.01" y="113.90" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">: schema with descriptions</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="32.99" y="120.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">and sample values</tspan></text>
 <rect x="21.00" y="129.00" width="88.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<path d="M33.5,129.0 H24.0 Q21.0,129.0 21.0,132.0 V140.0 Q21.0,143.0 24.0,143.0 H33.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#FFFFFF" xml:space="preserve"><tspan x="23.51" y="138.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20" font-weight="bold">S1</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="36.50" y="138.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Scope · Attachment</tspan></text>
+<path d="M37.5,129.0 H24.0 Q21.0,129.0 21.0,132.0 V140.0 Q21.0,143.0 24.0,143.0 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#FFFFFF" xml:space="preserve"><tspan x="23.02" y="138.20" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="27.91" y="139.69" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">str</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="138.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Scope · Attachment</tspan></text>
 <rect x="21.00" y="153.00" width="88.00" height="19.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<path d="M33.5,153.0 H24.0 Q21.0,153.0 21.0,156.0 V169.0 Q21.0,172.0 24.0,172.0 H33.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#FFFFFF" xml:space="preserve"><tspan x="23.51" y="164.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20" font-weight="bold">S2</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="36.50" y="161.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Column · Join ·</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="36.50" y="168.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Value · NULL</tspan></text>
+<path d="M37.5,153.0 H24.0 Q21.0,153.0 21.0,156.0 V169.0 Q21.0,172.0 24.0,172.0 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#FFFFFF" xml:space="preserve"><tspan x="21.52" y="164.70" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="26.41" y="166.19" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">row</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="161.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Column · Join ·</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="168.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Value · NULL</tspan></text>
 <rect x="21.00" y="182.00" width="88.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<path d="M33.5,182.0 H24.0 Q21.0,182.0 21.0,185.0 V193.0 Q21.0,196.0 24.0,196.0 H33.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#FFFFFF" xml:space="preserve"><tspan x="23.51" y="191.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20" font-weight="bold">S3</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="36.50" y="191.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Aggregate · Project · Tie</tspan></text>
+<path d="M37.5,182.0 H24.0 Q21.0,182.0 21.0,185.0 V193.0 Q21.0,196.0 24.0,196.0 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#FFFFFF" xml:space="preserve"><tspan x="22.19" y="191.20" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="27.08" y="192.69" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">out</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="191.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Aggregate · Project · Tie</tspan></text>
 <path d="M71.00,143.00 L71.00,150.60" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="71.00,153.00 69.74,150.00 72.26,150.00" fill="#333333"/>
 <path d="M71.00,172.00 L71.00,179.60" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
