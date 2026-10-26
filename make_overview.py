@@ -150,7 +150,7 @@ for k, ((x, w_), (t, s)) in enumerate(zip(P, titles)):
 x0, pw = P[0]
 FB = (x0 + 3, 98.0, pw - 6, 24.0)
 box(*FB, stroke=INK)
-T(x0 + pw / 2, 106.8, "$Φ^{(s)}$ = $Detect_{s}(Q, S^{+}, E, Φ^{(<s)})$", 6.5, "middle", maxw=FB[2] - 3)
+T(x0 + pw / 2, 106.8, "one $Detect$ call per stage", 6.5, "middle", maxw=FB[2] - 3)
 T(x0 + pw / 2, 113.9, "$S^{+}$: schema with descriptions", 6, "middle", italic=True)
 T(x0 + pw / 2, 120.0, "and sample values", 6, "middle", italic=True)
 
@@ -175,7 +175,7 @@ RAIL = x0 + 7
 c.line([(SX, mids[0]), (RAIL, mids[0]), (RAIL, mids[2])], r=1.5)
 c.arrow([(RAIL, mids[1]), (SX, mids[1])], hs=3)
 c.arrow([(RAIL, mids[2]), (SX, mids[2])], hs=3)
-T(RAIL + 2.2, 150.6, "$Φ^{(<s)}$", 6.5)
+T(RAIL + 2.2, 150.6, "earlier $Φ$", 6)
 
 # output: fanned stack + enlarged card [2]
 STX, STY = x0 + 3.0, 208.0
