@@ -28,7 +28,7 @@
 <rect x="97.00" y="22.00" width="47.00" height="40.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
 <text fill="#333333" xml:space="preserve"><tspan x="105.24" y="30.90" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Detection +</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="108.50" y="37.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">validity &amp;</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="104.66" y="44.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">coincidence</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="104.49" y="44.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">equivalence</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="111.16" y="50.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">checks</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="104.79" y="57.30" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">(Fig. 2 </tspan><tspan x="123.46" y="57.30" font-family="'DejaVu Sans', 'Segoe UI Symbol', sans-serif" font-size="6.00">①②</tspan><tspan x="134.22" y="57.30" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">)</tspan></text>
 <path d="M144.00,42.00 L147.76,42.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
