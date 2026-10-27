@@ -226,7 +226,7 @@
 <text fill="#333333" xml:space="preserve"><tspan x="363.00" y="225.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">non-interactive</tspan></text>
 <path d="M309.00,252.50 L309.00,180.76" fill="none" stroke="#333333" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="butt" stroke-dasharray="2.2,1.4"/>
 <polygon points="309.00,178.36 310.26,181.36 307.74,181.36" fill="#333333"/>
-<text fill="#333333" xml:space="preserve"><tspan x="312.00" y="247.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">θ</tspan><tspan x="314.95" y="247.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00"> selected offline (Fig. 3)</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="312.00" y="247.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">θ</tspan><tspan x="314.95" y="247.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00"> selected offline</tspan></text>
 <rect x="474.00" y="82.00" width="34.00" height="10.00" rx="5.0" fill="#56B4E9" stroke="none"/>
 <text fill="#333333" xml:space="preserve"><tspan x="477.06" y="89.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">Write to </tspan><tspan x="500.94" y="89.10" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-weight="bold" font-style="italic">E</tspan></text>
 <rect x="427.00" y="99.00" width="81.52" height="76.10" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>

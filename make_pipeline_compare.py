@@ -149,8 +149,8 @@ T(FKX + 2.5, r1m - 2.2, "train split", FS)
 T(FKX + 2.5, r2m - 2.2, "validation", FS)
 T(FKX + 3, BAND_Y + 2.2, "/{split by database}", FS)
 
-DET1 = ["Detection", "+ validity &", "equivalence", "(Fig. 2 ①②)"]
-DET2 = ["Detection", "+ all three", "checks", "(Fig. 2 ①②)"]
+DET1 = ["Detection", "+ validity &", "equivalence"]
+DET2 = ["Detection", "+ all three", "checks"]
 
 # ---- upper row: training
 x, w = COLS[0]
@@ -388,7 +388,7 @@ c.path(f"M{DCX},{mm - DHH} L{DCX + DW / 2},{mm} L{DCX},{mm + DHH} L{DCX - DW / 2
        BLUE, 1.0, fill=WHITE)
 T(DCX, mm - 1.6, "$H_{norm}$", 6.2, "middle")
 T(DCX, mm + 7.0, "≤ $θ^{*}$ ?", 6.2, "middle")
-T(W - M - 4, mm + DHH + 8, "→ Auto or Ask (Fig. 2 ③)", FS, "end")
+T(W - M - 4, mm + DHH + 8, "→ Auto or Ask", FS, "end")
 
 # hand-off 2 (θ*): from the bottom of the validation box
 c.line([(DCX, CY1), (DCX, mm - DHH - 6)], INK, THICK)

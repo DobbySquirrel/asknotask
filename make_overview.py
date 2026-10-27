@@ -329,7 +329,7 @@ T(QX + 28, NY2 + 2.1, "non-interactive", 6, italic=True, maxw=x0 + pw - QX - 29)
 TX = x0 + 10
 ty_edge = DCY + DHH * (1 - (DCX - TX) / DHW)
 c.arrow([(TX, PB), (TX, ty_edge)], INK, 0.75, dash="2.2,1.4", hs=3, cap="butt")
-T(TX + 3, PB - 5.5, "$θ$ selected offline (Fig. 3)", 6)
+T(TX + 3, PB - 5.5, "$θ$ selected offline", 6)
 
 # ---------------------------------------------------------------- panel 4
 x0, pw = P[3]

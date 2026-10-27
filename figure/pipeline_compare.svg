@@ -25,10 +25,9 @@
 <text fill="#333333" xml:space="preserve"><tspan x="59.50" y="99.30" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">validation</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="60.00" y="73.95" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">split by database</tspan></text>
 <rect x="97.00" y="22.00" width="47.00" height="40.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<text fill="#333333" xml:space="preserve"><tspan x="107.83" y="34.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Detection</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="105.91" y="40.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">+ validity &amp;</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="104.49" y="47.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">equivalence</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="104.79" y="54.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">(Fig. 2 </tspan><tspan x="123.46" y="54.00" font-family="'DejaVu Sans', 'Segoe UI Symbol', sans-serif" font-size="6.00">①②</tspan><tspan x="134.22" y="54.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">)</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="107.83" y="37.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Detection</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="105.91" y="44.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">+ validity &amp;</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="104.49" y="50.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">equivalence</tspan></text>
 <path d="M144.00,42.00 L147.76,42.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="150.00,42.00 147.20,43.18 147.20,40.82" fill="#333333"/>
 <g transform="rotate(-10 165.0 38.5)">
@@ -86,10 +85,9 @@
 <path d="M324.58859375000003,59.4 A2.6,2.6 0 1 1 321.98859375,56.8" fill="none" stroke="#0072B2" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="321.59,55.00 324.29,56.80 321.59,58.60" fill="#0072B2"/>
 <rect x="97.00" y="83.00" width="47.00" height="37.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<text fill="#333333" xml:space="preserve"><tspan x="107.83" y="93.25" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Detection</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="107.24" y="100.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">+ all three</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="111.16" y="107.05" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">checks</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="104.79" y="113.95" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">(Fig. 2 </tspan><tspan x="123.46" y="113.95" font-family="'DejaVu Sans', 'Segoe UI Symbol', sans-serif" font-size="6.00">①②</tspan><tspan x="134.22" y="113.95" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">)</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="107.83" y="96.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Detection</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="107.24" y="103.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">+ all three</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="111.16" y="110.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">checks</tspan></text>
 <path d="M144.00,101.50 L145.76,101.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="148.00,101.50 145.20,102.68 145.20,100.32" fill="#333333"/>
 <rect x="148.00" y="83.00" width="34.00" height="37.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
@@ -239,7 +237,7 @@
 <path d="M485.52,162.5 L508.52,178.5 L485.52,194.5 L462.52,178.5 Z" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
 <text fill="#333333" xml:space="preserve"><tspan x="476.95" y="176.90" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">H</tspan><tspan x="481.43" y="178.39" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">norm</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="477.35" y="185.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20">≤ </tspan><tspan x="482.47" y="185.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">θ</tspan><tspan x="485.52" y="183.02" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">*</tspan><tspan x="488.52" y="185.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20"> ?</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="442.79" y="202.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">→ Auto or Ask (Fig. 2 </tspan><tspan x="501.14" y="202.50" font-family="'DejaVu Sans', 'Segoe UI Symbol', sans-serif" font-size="6.00">③</tspan><tspan x="506.52" y="202.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">)</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="470.50" y="202.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">→ Auto or Ask</tspan></text>
 <path d="M485.52,127.00 L485.52,156.50" fill="none" stroke="#333333" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="485.52,162.50 482.82,156.20 488.22,156.20" fill="#333333"/>
 <text fill="#333333" xml:space="preserve"><tspan x="490.02" y="145.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="8.50" font-weight="bold" font-style="italic">θ</tspan><tspan x="494.43" y="141.60" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.29" font-weight="bold">*</tspan></text>
