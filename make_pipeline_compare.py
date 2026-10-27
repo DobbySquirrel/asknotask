@@ -111,8 +111,8 @@ L1Y0, L1Y1 = M, 131.0
 L2Y0, L2Y1 = 135.0, H - M
 box(M, L1Y0, W - 2 * M, L1Y1 - L1Y0, fill=BG, stroke=None)
 box(M, L2Y0, W - 2 * M, L2Y1 - L2Y0, fill=WHITE, stroke=GRAY, sw=0.6)
-T(M + 5, L1Y0 + 9.5, "Offline · training databases only", 8, bold=True)
-T(M + 5, L2Y0 + 9.5, "Online · any question", 8, bold=True)
+T(M + 5, L1Y0 + 9.5, "Offline: train the scorer, select θ*", 8, bold=True)
+T(M + 5, L2Y0 + 9.5, "Online: score a new ambiguity", 8, bold=True)
 
 # ====================================================================== top lane
 CH_X0, CH_X1 = 370.0, W - M - 4          # validation chart box (right third)
@@ -137,20 +137,17 @@ for k in range(3):
     c.cylinder(SRC_CX - 13 + k * 3.2, 38 + k * 4.5, 16, 15)
 CYL_BOT = 38 + 2 * 4.5 + 15
 centered(SRC_CX, 82, ["Training", "databases"], 6.5, 7.4, bold=True)
-centered(SRC_CX, 101, ["disjoint from all", "benchmark", "databases"], FS, 6.8, italic=True,
-         color=INK)
 FKX = 57.0
 c.line([(SRC_CX + 3, CYL_BOT - 0.5), (SRC_CX + 3, BAND_Y), (FKX, BAND_Y)], INK, SW)
 c.line([(FKX, r1m), (FKX, r2m)], INK, SW)
 c.circle(FKX, BAND_Y, 1.3, fill=INK)
 harrow(FKX, COLS[0][0], r1m)
 harrow(FKX, COLS[0][0], r2m)
-T(FKX + 2.5, r1m - 2.2, "train split", FS)
-T(FKX + 2.5, r2m - 2.2, "held-out split", FS)
-T(FKX + 3, BAND_Y + 2.2, "/{split by database}", FS)
+T(FKX + 2.5, r1m - 2.2, "train", FS)
+T(FKX + 2.5, r2m - 2.2, "validation", FS)
 
-DET1 = ["Detection +", "validity &", "equivalence", "checks", "(Fig. 2 ①②)"]
-DET2 = ["Detection +", "all checks,", "incl. relevance", "(Fig. 2 ①②)"]
+DET1 = ["Detection", "+ checks"]
+DET2 = ["Detection", "+ checks"]
 
 # ---- upper row: training
 x, w = COLS[0]
@@ -163,42 +160,31 @@ harrow(right(1), COLS[2][0], r1m)
 x, w = COLS[2]
 box(x, R1Y, w, R1H, fill=ORANGE, stroke=ORANGE)
 T(x + 4, R1Y + 15, "Simulated user", 6.5, bold=True)
-for j, s in enumerate(["picks the option", "consistent with the", "gold query, or Others"]):
-    T(x + 4, R1Y + 23.5 + j * 6.8, s, FS, maxw=w - 6)
-tgl = "gold SQL used only here"
-tgw = c.tw(tgl, FS) + 15
-tgx = x + w / 2 - tgw / 2
-box(tgx, R1Y - 4.6, tgw, 9.6, fill=WHITE, stroke=INK, rx=4.8)
-lock(tgx + 5.6, R1Y + 0.5)
-T(tgx + 10, R1Y + 2.3, tgl, FS)
+lock(x + 7, R1Y + 28.5)
+T(x + 12, R1Y + 30.3, "reads gold SQL", FS, maxw=w - 14)
 harrow(right(2), COLS[3][0], r1m)
 
 x, w = COLS[3]
 tx0 = x + 1
 target(tx0, R1Y + 1.5, ["1", "0"], ORANGE)
-T(tx0, R1Y + 15, "option chosen", FS, maxw=w - 1)
-T(tx0, R1Y + 21.4, "→ one-hot", FS)
+T(tx0, R1Y + 15, "chosen", FS, maxw=w - 1)
 target(tx0, R1Y + 25.5, ["½", "½"], GRAY)
-T(tx0, R1Y + 39, "Others →", FS)
-T(tx0, R1Y + 45.4, "uniform", FS)
+T(tx0, R1Y + 39, "Others", FS)
 harrow(right(3), COLS[4][0], r1m)
 
 x, w = COLS[4]
 TRAIN_CX = cx(4)
 box(x, R1Y, w, R1H, stroke=BLUE, sw=1.1)
-centered(TRAIN_CX, R1Y + 9.5, ["Train listwise", "scorer"], 6.5, 7.2, bold=True, color=BLUE)
-T(TRAIN_CX, R1Y + 27.5, "$L$ = − $Σ_{j}$ $y_{j}$ log $π_{j}$", 6.5, "middle", maxw=w - 3)
-T(TRAIN_CX, R1Y + 35.5, "options permuted", FS, "middle", maxw=w - 3)
-ew = c.tw("each epoch", FS)
-T(TRAIN_CX + 4.5, R1Y + 41.8, "each epoch", FS, "middle")
-cycle_icon(TRAIN_CX + 4.5 - ew / 2 - 4.5, R1Y + 39.9, r=2.6)
+centered(TRAIN_CX, R1Y + 14, ["Train", "scorer"], 6.5, 7.2, bold=True, color=BLUE)
+T(TRAIN_CX, R1Y + 31, "options", FS, "middle")
+T(TRAIN_CX, R1Y + 37.5, "shuffled", FS, "middle")
 
 # ---- lower row: threshold selection
 x, w = COLS[0]
 label_box(x, R2Y + 4, w, R2H - 8, DET2, lead=6.9)
 harrow(right(0), COLS[1][0] - 2, r2m)
 x, w = COLS[1]
-label_box(x - 2, R2Y + 4, w + 4, R2H - 8, ["ambiguities", "+ simulated", "user", "choices"], lead=6.9)
+label_box(x - 2, R2Y + 4, w + 4, R2H - 8, ["ambiguities", "+ user", "choices"], lead=6.9)
 SC_X0, SC_X1 = COLS[2][0], right(4)
 harrow(right(1) + 2, SC_X0, r2m)
 
@@ -212,23 +198,20 @@ T(TRAIN_CX - 4, BAND_Y + 2.3, "trained scorer", 6.5, "end", bold=True)
 SC_Y, SC_H = R2Y + 7, R2H - 14
 box(SC_X0, SC_Y, SC_X1 - SC_X0, SC_H, stroke=BLUE, sw=1.1)
 scx = (SC_X0 + TRAIN_CX - 6) / 2
-T(scx, SC_Y + 11.5, "Apply trained scorer", 6.5, "middle", bold=True, color=BLUE)
-T(scx, SC_Y + 21.5, "per ambiguity: $H_{norm}(φ)$, top option", FS, "middle")
+T(scx, SC_Y + 11.5, "Score", 6.5, "middle", bold=True, color=BLUE)
+T(scx, SC_Y + 21.5, "$H_{norm}(φ)$ and top option", FS, "middle")
 harrow(SC_X1, CH_X0, r2m)
 
 # ---- validation chart (visual focus of the top lane)
 CY0, CY1 = R1Y - 3, L1Y1 - 4
 box(CH_X0, CY0, CH_X1 - CH_X0, CY1 - CY0, stroke=BLUE, sw=1.1)
 chm = (CH_X0 + CH_X1) / 2
-T(chm, CY0 + 9.5, "Validation: held-out databases", 7, "middle", bold=True, maxw=CH_X1 - CH_X0 - 4)
-T(chm, CY0 + 17, "/{θ is never tuned on benchmark data}", FS, "middle")
+T(chm, CY0 + 11, "Select θ*", 7, "middle", bold=True, maxw=CH_X1 - CH_X0 - 4)
 AX0, AY0, AX1, AY1 = CH_X0 + 9, CY0 + 23, CH_X1 - 13, CY0 + 71
 c.arrow([(AX0, AY1), (AX0, AY0)], INK, 0.65, hs=2.6)
 c.arrow([(AX0, AY1), (AX1 + 3, AY1)], INK, 0.65, hs=2.6)
 T(AX0 + 3, AY0 + 2.5, "agreement", FS)
 T(AX1 + 5, AY1 + 2.3, "$θ$", 7.5)
-T(AX0, AY1 + 7.5, "← few auto-resolved", FS)
-T(AX1 + 3, AY1 + 7.5, "many →", FS, "end")
 p0, p1, p2, p3 = (AX0 + 3, AY0 + 9), (AX0 + 62, AY0 + 6), (AX0 + 70, AY1 - 3), (AX1 - 1, AY1 - 4)
 
 
@@ -250,12 +233,8 @@ for _ in range(50):
 ix, iy = bez(lo)
 c.line([(ix, iy), (ix, AY1)], BLUE, 0.6)
 star(ix, iy)
-slw = c.tw("selected here", 6.5, True)
-T(ix - 3, ALY + 10, "selected here", 6.5, "end", bold=True)
-T(ix - 3 - slw - 1.5, ALY + 10, "$θ^{*}$", 7, "end", bold=True)
-T(chm, AY1 + 17, "`θ* = max { θ : agreement(θ) ≥ α }`", FS, "middle", maxw=CH_X1 - CH_X0 - 4)
-T(chm, AY1 + 24.5, "agreement: share of ambiguities with $H_{norm}$ ≤ $θ$", FS, "middle", color=INK)
-T(chm, AY1 + 31, "whose top option equals the user's choice", FS, "middle")
+T(ix - 3, ALY + 10, "$θ^{*}$", 7.5, "end", bold=True)
+T(chm, AY1 + 17, "largest θ with agreement ≥ α", FS, "middle", maxw=CH_X1 - CH_X0 - 4)
 
 # ====================================================================== bottom lane
 DIV_X = M + (W - 2 * M) * 0.36
@@ -273,7 +252,7 @@ pw = c.tw("`Rate how likely each option`", FS) + 8
 box(AX, MR0 + 2, pw, MR1 - MR0 - 4, stroke=GRAY)
 c.path(f"M{AX},{MR0 + 10} V{MR0 + 2 + R} Q{AX},{MR0 + 2} {AX + R},{MR0 + 2} H{AX + pw - R} "
        f"Q{AX + pw},{MR0 + 2} {AX + pw},{MR0 + 2 + R} V{MR0 + 10} Z", GRAY, SW, fill=BG)
-T(AX + 3.5, MR0 + 8.3, "Prompt (abridged)", FS, color=MID)
+T(AX + 3.5, MR0 + 8.3, "Prompt", FS, color=MID)
 for j, s in enumerate(["Rate how likely each option", "is intended (0–1).", "A. <d₁>   B. <d₂>"]):
     T(AX + 4, MR0 + 17 + j * 6.5, f"`{s}`", FS, color=MID)
 OX0 = AX + pw + 9
@@ -316,7 +295,7 @@ remedy = [["continuous softmax", "over logits"], ["options permuted", "during tr
           ["uniform target", "for Others"]]
 ST_Y0, ST_Y1 = L2Y1 - 40, L2Y1 - 4
 ST_X0, ST_X1 = M + 5, W - M - 4
-T(ST_X0, ST_Y0 - 3.2, "/{weakness of (a)}  ⋯→  /{remedy in (b)}", FS, color=MID)
+T(ST_X0, ST_Y0 - 3.2, "/{weakness of (a)}  ⋯→  /{fix in (b)}", FS, color=MID)
 CG = 6.0
 CWD = (ST_X1 - ST_X0 - 2 * CG) / 3
 for k, ((wl, pict), rl) in enumerate(zip(weak, remedy)):
@@ -345,7 +324,7 @@ harrow(CD + 19, PX0, mm - 4)
 box(PX0, MR0, PX1 - PX0, MR1 - MR0)
 c.path(f"M{PX0},{MR0 + 8.5} V{MR0 + R} Q{PX0},{MR0} {PX0 + R},{MR0} H{PX1 - R} Q{PX1},{MR0} "
        f"{PX1},{MR0 + R} V{MR0 + 8.5} Z", INK, SW, fill=BG)
-T(PX0 + 2.5, MR0 + 6.4, "All options in one prompt (abridged)", FS, maxw=PX1 - PX0 - 3)
+T(PX0 + 2.5, MR0 + 6.4, "All options, one prompt", FS, maxw=PX1 - PX0 - 3)
 for j, s in enumerate(["Question: ...", "Evidence: ...", "Span h: '...'"]):
     T(PX0 + 3, MR0 + 15.5 + j * 6.4, f"`{s}`", FS)
 pc2 = PX0 + 57
@@ -389,7 +368,7 @@ c.path(f"M{DCX},{mm - DHH} L{DCX + DW / 2},{mm} L{DCX},{mm + DHH} L{DCX - DW / 2
        BLUE, 1.0, fill=WHITE)
 T(DCX, mm - 1.6, "$H_{norm}$", 6.2, "middle")
 T(DCX, mm + 7.0, "≤ $θ^{*}$ ?", 6.2, "middle")
-T(W - M - 4, mm + DHH + 8, "→ Auto or Ask (Fig. 2 ③)", FS, "end")
+T(W - M - 4, mm + DHH + 8, "yes: Auto   no: Ask", FS, "end")
 
 # hand-off 2 (θ*): from the bottom of the validation box
 c.line([(DCX, CY1), (DCX, mm - DHH - 6)], INK, THICK)
