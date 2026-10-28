@@ -14,6 +14,10 @@ GREEN = "#009E73"    # correct SQL
 BG = "#F4F4F4"
 INK = "#333333"
 WHITE = "#FFFFFF"
+PURPLE = "#CC79A7"   # highlight of the divergence source (meeting version only)
+
+import sys
+HIGHLIGHT = "--highlight" in sys.argv
 
 W_IN, H_IN = 7.16, 3.4
 W, H = W_IN * 72, H_IN * 72
@@ -148,16 +152,16 @@ for k, ((x, w_), (t, s)) in enumerate(zip(P, titles)):
 
 # ---------------------------------------------------------------- panel 1
 x0, pw = P[0]
-FB = (x0 + 3, 98.0, pw - 6, 24.0)
+FB = (x0 + 3, 97.0, pw - 6, 17.5)
 box(*FB, stroke=INK)
-T(x0 + pw / 2, 106.8, "one $Detect$ call per stage", 6.5, "middle", maxw=FB[2] - 3)
-T(x0 + pw / 2, 113.9, "$S^{+}$: schema with descriptions", 6, "middle", italic=True)
-T(x0 + pw / 2, 120.0, "and sample values", 6, "middle", italic=True)
+T(x0 + pw / 2, 104.2, "one $Detect$ call per stage", 6.2, "middle", maxw=FB[2] - 3)
+T(x0 + pw / 2, 111.0, "$S^{+}$: descriptions, sample values", 6, "middle", italic=True,
+  maxw=FB[2] - 3)
 
 SX, SWD = x0 + 17, pw - 20
-stages = [("$Φ$_{str}", ["Scope · Attachment"], 129.0, 14.0),
-          ("$Φ$_{row}", ["Column · Join ·", "Value · NULL"], 153.0, 19.0),
-          ("$Φ$_{out}", ["Aggregate · Project · Tie"], 182.0, 14.0)]
+stages = [("$Φ$_{str}", ["Scope · Attachment"], 116.5, 12.0),
+          ("$Φ$_{row}", ["Column · Join ·", "Value · NULL"], 138.5, 16.0),
+          ("$Φ$_{out}", ["Aggregate · Project · Tie"], 158.5, 12.0)]
 mids = []
 for tg, rows, y, h in stages:
     box(SX, y, SWD, h)
@@ -175,11 +179,27 @@ RAIL = x0 + 7
 c.line([(SX, mids[0]), (RAIL, mids[0]), (RAIL, mids[2])], r=1.5)
 c.arrow([(RAIL, mids[1]), (SX, mids[1])], hs=3)
 c.arrow([(RAIL, mids[2]), (SX, mids[2])], hs=3)
-T(RAIL + 2.2, 150.6, "earlier $Φ$", 6)
+T(RAIL + 2.2, 135.4, "earlier $Φ$", 6)
+
+# divergence detection: a fourth source of ambiguities, merged into the same Φ_raw
+DY, DH = 175.0, 22.5
+dcol = PURPLE if HIGHLIGHT else INK
+box(SX, DY, SWD, DH, stroke=dcol, dash="2,1.2" if HIGHLIGHT else None)
+c.path(f"M{SX + 16.5},{DY} H{SX + R} Q{SX},{DY} {SX},{DY + R} V{DY + DH - R} "
+       f"Q{SX},{DY + DH} {SX + R},{DY + DH} H{SX + 16.5} Z", dcol, SW, fill=dcol)
+T(SX + 8.3, DY + (9.6 if HIGHLIGHT else DH / 2 + 2.2), "$Φ$_{div}", 6.2, "middle", bold=True,
+  color=WHITE)
+for j, r_ in enumerate(["drafts executed and", "grouped by result,",
+                        "≠ $y$_{⊥} → span and type"]):
+    T(SX + 18.6, DY + 6.5 + j * 6.5, r_, 6, maxw=SWD - 20)
+c.arrow([(acx, stages[2][2] + stages[2][3]), (acx, DY)], hs=3)
+if HIGHLIGHT:
+    T(SX + 8.3, DY + 18.2, "new", 6, "middle", bold=True, color=WHITE)
 
 # output: fanned stack + enlarged card [2]
 STX, STY = x0 + 3.0, 208.0
-c.arrow([(SX + 3, 196), (SX + 3, 199.4), (STX + 7, 199.4), (STX + 7, STY - 0.3)], hs=2.8, r=1.5)
+c.arrow([(SX + 3, DY + DH), (SX + 3, 201.4), (STX + 7, 201.4), (STX + 7, STY - 0.3)],
+        hs=2.8, r=1.5)
 for k, (n, rot) in enumerate([(3, -9), (1, -4), (2, 2)]):
     c.items.append(f'<g transform="rotate({rot} {STX + 6} {STY + 10})">')
     mini_card(STX + k * 0.6, STY + k * 1.6, CARD[n])
@@ -408,5 +428,8 @@ c.arrow([(C1L, Y1A), (LX2, Y1A), (LX2, ARC_Y), (WPX + WPW / 2, ARC_Y), (WPX + WP
 tag(P[2][0] + 30, ARC_Y, 1, r=3.4)
 c.items.append("</g>")
 
-c.save("figure/overview", W_IN, H_IN)
-print("wrote figure/overview.{svg,pdf,png}")
+for w_ in c.warn:
+    print("WARN", w_)
+stem = "figure/overview_highlight" if HIGHLIGHT else "figure/overview"
+c.save(stem, W_IN, H_IN)
+print(f"wrote {stem}.{{svg,pdf,png}}")
