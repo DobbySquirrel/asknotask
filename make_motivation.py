@@ -114,69 +114,94 @@ T(DBX + 15, B1Y + B1H / 2 + 11, "Database", FS, "middle")
 
 # ====================================================================== band 2
 B2Y = B1Y + B1H + 9
-LX, LW = M, 96.0
-RX = LX + LW + 10
+LX, LW = M, 74.0
+RX = LX + LW + 9
 RW = W - M - RX
-SEPX = LX + LW + 5
+SEPX = LX + LW + 4.5
 T(LX + LW / 2, B2Y + 6, "Always-Ask", 7.5, "middle", bold=True)
 T(RX + RW / 2, B2Y + 6, "Selective clarification (ours)", 7.5, "middle", bold=True, maxw=RW)
 
-ROW_H, ROW_GAP = 36.0, 5.0
-ROW0 = B2Y + 12
-asks = [["Q1: Which value", "does '1959/2/18'", "mean?"],
-        ["Q2: How should", "'decrease rate'", "be computed?"],
-        ["Q3: What does", "'total cholesterol'", "refer to?"]]
-cards = [
-    (1, "Value", "Settled by|the data"),
-    (2, "Aggregate", "Resolved|automatically"),
-    (3, "Project", "Ask the|user"),
-]
-CW = 80.0
-PW = RW - CW - 8
-for k in range(3):
-    y = ROW0 + k * (ROW_H + ROW_GAP)
-    # left: speech bubble
-    bh = len(asks[k]) * LEAD + 7
-    by = y + (ROW_H - bh) / 2 - 1.5
-    rbox(LX, by, LW, bh, fill=ORANGE_FILL, stroke=ORANGE)
-    tx0 = LX + 11
-    c.path(f"M{tx0},{by + bh - 0.4} L{tx0 - 2},{by + bh + 4} L{tx0 + 5},{by + bh - 0.4}",
-           ORANGE, SW, fill=ORANGE_FILL)
-    c.line([(tx0 + 0.6, by + bh), (tx0 + 4.4, by + bh)], ORANGE_FILL, 1.2, cap="butt")
-    qmark(LX + 8, by + bh / 2)
-    lines_at(LX + 15, by + 3.5 + 5.6, asks[k], maxw=LW - 17)
+FB = 6.3          # card body font size
+BLEAD = 7.4
+HDR = 13.0
+asks = [["Q1: How is", "'1959/2/18'", "written in SQL?"],
+        ["Q2: How is", "'decrease rate'", "computed?"],
+        ["Q3: What should", "'total cholesterol'", "return?"]]
 
-    # right: ambiguity card + outcome
-    n, typ, outcome = cards[k]
-    rbox(RX, y, CW, ROW_H)
+# Each card: (n, type, outcome, body).  Body rows are (kind, payload).
+cards = [
+    (1, "Value", "Settled by the data", [
+        ("code", ("`Birthday = '1959/2/18'`", "0 rows", True)),
+        ("code", ("`Birthday = '1959-02-18'`", "1 patient", False)),
+        ("code", ("`date(Birthday) = '1959-02-18'`", "1 patient", False)),
+        ("note", "First form fails, the other two agree"),
+    ]),
+    (2, "Aggregate", "Resolved automatically", [
+        ("note", "Several `T-CHO` tests per month"),
+        ("bar", (27, BLUE, "(Nov − Dec) / Nov, monthly sums")),
+        ("bar", (3, GRAY, "(Nov − Dec) / Dec, monthly sums")),
+        ("bar", (2, GRAY, "(Nov − Dec) / Nov, monthly averages")),
+    ]),
+    (3, "Project", "Ask the user", [
+        ("note", "Output columns not stated"),
+        ("bar", (16, ORANGE, "The rate only")),
+        ("bar", (14.5, ORANGE, "The rate and both monthly sums")),
+    ]),
+]
+OUT_COL = {1: BLUE_L, 2: BLUE, 3: ORANGE}
+OUT_TXT = {1: INK, 2: WHITE, 3: INK}
+
+ROW_GAP = 5.0
+y = B2Y + 12
+row_spans = []
+for (n, typ, outcome, body), ask in zip(cards, asks):
+    h = HDR + len(body) * BLEAD + 3.5
+    # right: card
+    rbox(RX, y, RW, h)
     num(RX + 7.5, y + 7.5, n)
     tw_ = c.tw(typ, FS)
     rbox(RX + 14, y + 2.8, tw_ + 6, 9.4, fill=BG, stroke=GRAY, rx=2)
     T(RX + 17, y + 10, typ, FS)
-    cy = y + 15.5
-    if n == 1:
-        cylinder_mag(RX + 4.5, cy + 1.5)
-        lines_at(RX + 21, cy + 6.8, ["`stored as`", "`'1959-02-18'`"], maxw=CW - 23)
-    else:
-        bars = [(26, BLUE), (2.5, GRAY)] if n == 2 else [(24, ORANGE), (22.5, ORANGE)]
-        for j, (ln, col) in enumerate(bars):
-            c.rect(RX + 5, cy + 3 + j * 5.6, ln, 4, rx=0.8, fill=col)
-        c.line([(RX + 4.4, cy + 1.5), (RX + 4.4, cy + 15)], INK, 0.6)
-        lab = "confident" if n == 2 else "uncertain"
-        lines_at(RX + 35, cy + 6.8, ["Model is", lab], maxw=CW - 37)
-    px = RX + CW + 8
-    ph = 2 * LEAD + 5
-    pyy = y + (ROW_H - ph) / 2
-    c.arrow([(RX + CW, y + ROW_H / 2), (px, y + ROW_H / 2)], hs=3.2)
-    c.rect(px, pyy, PW, ph, rx=ph / 2, fill=COL[n])
-    for j, s in enumerate(outcome.split("|")):
-        T(px + PW / 2, pyy + 7.6 + j * LEAD, s, FS, "middle", bold=True,
-          color=WHITE if n == 2 else INK, maxw=PW - 3)
+    pw_ = c.tw(outcome, 6.5, bold=True) + 9
+    px = RX + RW - pw_ - 3
+    c.rect(px, y + 2.8, pw_, 9.4, rx=4.7, fill=OUT_COL[n])
+    T(px + pw_ / 2, y + 9.6, outcome, 6.5, "middle", bold=True, color=OUT_TXT[n])
+    by = y + HDR + 5.6
+    for kind, p in body:
+        if kind == "code":
+            sql, res, bad = p
+            T(RX + 5, by, sql, FB, color=GRAY if bad else INK, maxw=RW - 44)
+            T(RX + RW - 5, by, res, FB, "end", bold=not bad, color=GRAY if bad else INK)
+            if bad:
+                sw_ = c.tw(sql, FB)
+                c.line([(RX + 5, by - 2.0), (RX + 5 + sw_, by - 2.0)], GRAY, 0.6, cap="butt")
+        elif kind == "note":
+            T(RX + 5, by, p, FB, italic=True, maxw=RW - 10)
+        else:
+            ln, col, lab = p
+            c.rect(RX + 5, by - 4.3, ln, 4.0, rx=0.8, fill=col)
+            T(RX + 36, by, lab, FB, maxw=RW - 40)
+        by += BLEAD
+    if n != 1:
+        c.line([(RX + 4.4, y + HDR + 1.4 + BLEAD), (RX + 4.4, y + h - 2.5)], INK, 0.6)
 
-ROWS_END = ROW0 + 3 * ROW_H + 2 * ROW_GAP
+    # left: Always-Ask speech bubble, vertically centred on the card
+    bh = len(ask) * LEAD + 7
+    bub_y = y + (h - bh) / 2 - 1.5
+    rbox(LX, bub_y, LW, bh, fill=ORANGE_FILL, stroke=ORANGE)
+    tx0 = LX + 11
+    c.path(f"M{tx0},{bub_y + bh - 0.4} L{tx0 - 2},{bub_y + bh + 4} L{tx0 + 5},{bub_y + bh - 0.4}",
+           ORANGE, SW, fill=ORANGE_FILL)
+    c.line([(tx0 + 0.6, bub_y + bh), (tx0 + 4.4, bub_y + bh)], ORANGE_FILL, 1.2, cap="butt")
+    qmark(LX + 8, bub_y + bh / 2)
+    lines_at(LX + 15, bub_y + 3.5 + 5.6, ask, maxw=LW - 17)
+    row_spans.append((y, h))
+    y += h + ROW_GAP
+
+ROWS_END = y - ROW_GAP
 BADGE_Y, BADGE_H = ROWS_END + 6, 12.0
 badges = {}
-for (x0, w0), lab in [((LX, LW), "3 questions to the user"), ((RX, RW), "1 question to the user")]:
+for (x0, w0), lab in [((LX, LW), "3 questions"), ((RX, RW), "1 question to the user")]:
     bw = c.tw(lab, FS) + 18
     bx = x0 + (w0 - bw) / 2
     rbox(bx, BADGE_Y, bw, BADGE_H, rx=BADGE_H / 2, stroke=ORANGE)
@@ -187,32 +212,33 @@ c.line([(SEPX, B2Y - 1), (SEPX, BADGE_Y + BADGE_H)], GRAY, 0.75, dash="2.5,2")
 
 # ====================================================================== band 3
 B3Y = BADGE_Y + BADGE_H
-PBY = B3Y + 22
+PBY = B3Y + 14
 PBW, PBH = 124.0, 15.0
-PBX = M
-sq_lines = ["`SELECT …`", "`FROM Patient`", "`JOIN Laboratory …`"]
-SQW = max(c.tw(s, FS) for s in sq_lines) + 8
-SQX = W - M - SQW
-lx_ = badges["3"]
-c.arrow([(lx_, BADGE_Y + BADGE_H), (lx_, PBY)], hs=3.2)
-T(lx_ + 3, B3Y + 9.6, "3 questions", FS)
-rx_ = badges["1"]
-ent = PBX + PBW - 14
-c.arrow([(rx_, BADGE_Y + BADGE_H), (rx_, B3Y + 12), (ent, B3Y + 12), (ent, PBY)], hs=3.2, r=2.5)
-T(rx_ - 4, B3Y + 9.6, "1 question", FS, "end")
+PBX = M + (W - 2 * M - PBW) / 2
+for key in ("3", "1"):
+    bx_ = badges[key]
+    ent = PBX + 12 if key == "3" else PBX + PBW - 12
+    c.arrow([(bx_, BADGE_Y + BADGE_H), (bx_, B3Y + 7), (ent, B3Y + 7), (ent, PBY)], hs=3.2, r=2.5)
 rbox(PBX, PBY, PBW, PBH)
 T(PBX + PBW / 2, PBY + 10, "Clarified question → NL2SQL parser", FS, "middle", maxw=PBW - 4)
 
-SQH = len(sq_lines) * LEAD + 6
-SQY = PBY + PBH / 2 - SQH / 2 + 6
-c.arrow([(PBX + PBW, PBY + PBH / 2), (SQX, PBY + PBH / 2)], hs=3.2)
+sq_lines = ["`SELECT (SUM(…) - SUM(…)) / SUM(…)`",
+            "`FROM Patient JOIN Laboratory …`",
+            "`WHERE Birthday = '1959-02-18'`"]
+SQW = max(c.tw(s, FB) for s in sq_lines) + 10
+SQH = len(sq_lines) * BLEAD + 5
+SQX = M + (W - 2 * M - SQW) / 2
+SQY = PBY + PBH + 15
+c.arrow([(W / 2, PBY + PBH), (W / 2, SQY)], hs=3.2)
 rbox(SQX, SQY, SQW, SQH, stroke=GREEN)
 for j, s in enumerate(sq_lines):
-    T(SQX + 4, SQY + 8.2 + j * LEAD, s, FS)
+    T(SQX + 5, SQY + 7.6 + j * BLEAD, s, FB)
 check(SQX + SQW - 1, SQY)
 T(SQX + SQW - 7, SQY - 3, "Correct SQL", FS, "end", bold=True)
 
 H = SQY + SQH + M
 c.h = H
+for w_ in c.warn:
+    print("WARN", w_)
 c.save("figure/motivation", W_IN, round(H / 72, 4))
 print(f"wrote figure/motivation.{{svg,pdf,png}}  ({W_IN} in x {H / 72:.2f} in)")
