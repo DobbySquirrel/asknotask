@@ -175,7 +175,7 @@ T(RAIL + 2.2, 126.0, "earlier $Φ$", 6)
 
 SEP = 165.5
 c.line([(x0 + 3, SEP), (x0 + pw - 3, SEP)], GRAY, 0.6, dash="2,1.5")
-T(x0 + 4, 173.0, "!{Backward}: from drafted SQL", 6.2, maxw=pw - 16)
+T(SX, 173.0, "!{Backward}: from drafted SQL", 6.2, maxw=pw - 16)
 
 DY, DH = 176.5, 21.5
 box(SX, DY, SWD, DH)
@@ -185,8 +185,8 @@ T(SX + 8.3, DY + DH / 2 + 2.2, "$Φ$_{div}", 6.2, "middle", bold=True, color=WHI
 for j, r_ in enumerate(["drafts executed and", "grouped by result,",
                         "≠ $y$_{⊥} → span and type"]):
     T(SX + 18.6, DY + 6.3 + j * 6.4, r_, 6, maxw=SWD - 20)
-AX = SX + SWD - 5
-c.arrow([(AX, stages[2][2] + stages[2][3]), (AX, DY)], hs=3)
+FWX = x0 + 10
+c.line([(SX + 8, stages[2][2] + stages[2][3]), (SX + 8, 163.0), (FWX, 163.0), (FWX, 201.4)], r=1.5)
 
 # output: fanned stack + enlarged card [2]
 STX, STY = x0 + 3.0, 208.0
