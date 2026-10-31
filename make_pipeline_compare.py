@@ -186,7 +186,7 @@ harrow(right(3), COLS[4][0], r1m)
 x, w = COLS[4]
 TRAIN_CX = cx(4)
 box(x, R1Y, w, R1H, stroke=BLUE, sw=1.1)
-centered(TRAIN_CX, R1Y + 9.5, ["Train listwise", "scorer"], 6.5, 7.2, bold=True, color=BLUE)
+centered(TRAIN_CX, R1Y + 9.5, ["Train", "scorer"], 6.5, 7.2, bold=True, color=BLUE)
 T(TRAIN_CX, R1Y + 27.5, "$L$ = − $Σ_{j}$ $y_{j}$ log $π_{j}$", 6.5, "middle", maxw=w - 3)
 T(TRAIN_CX, R1Y + 35.5, "options permuted", FS, "middle", maxw=w - 3)
 ew = c.tw("each epoch", FS)
@@ -260,9 +260,9 @@ T(chm, AY1 + 25, "/{agreement: top option = user's choice}", FS, "middle", color
 DIV_X = M + (W - 2 * M) * 0.36
 c.line([(DIV_X, L2Y0 + 4), (DIV_X, L2Y1 - 50)], MID, 0.6, dash="2.5,1.8", cap="butt")
 PT_Y = L2Y0 + 19.5
-T(M + 5, PT_Y, "(a) Verbal scorer", 7, bold=True, color=MID)
+T(M + 5, PT_Y, "(a) Verbal scores", 7, bold=True, color=MID)
 RX0 = DIV_X + 6
-T(RX0, PT_Y, "(b) Listwise scorer", 7, bold=True, color=BLUE)
+T(RX0, PT_Y, "(b) Our scorer", 7, bold=True, color=BLUE)
 MR0, MR1 = PT_Y + 5, PT_Y + 43
 mm = (MR0 + MR1) / 2
 
@@ -354,7 +354,7 @@ if c.tw("`Span h: '...'`", FS) + PX0 + 4 > pc2:
     c.warn.append("prompt columns collide")
 
 harrow(PX1, JX0, mm)
-label_box(JX0, JEV_TOP, JW, (mm - JEV_TOP) * 2, ["Listwise", "scorer"], stroke=BLUE, sw=1.1, size=6.0, bold=True,
+label_box(JX0, JEV_TOP, JW, (mm - JEV_TOP) * 2, ["Trained", "scorer"], stroke=BLUE, sw=1.1, size=6.0, bold=True,
           color=BLUE)
 
 GAP = 5.5

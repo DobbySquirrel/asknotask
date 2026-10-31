@@ -181,9 +181,8 @@ DY, DH = 176.5, 21.5
 box(SX, DY, SWD, DH)
 c.path(f"M{SX + 16.5},{DY} H{SX + R} Q{SX},{DY} {SX},{DY + R} V{DY + DH - R} "
        f"Q{SX},{DY + DH} {SX + R},{DY + DH} H{SX + 16.5} Z", INK, SW, fill=INK)
-T(SX + 8.3, DY + DH / 2 + 2.2, "$Φ$_{div}", 6.2, "middle", bold=True, color=WHITE)
-for j, r_ in enumerate(["drafts executed and", "grouped by result,",
-                        "≠ $y$_{⊥} → span and type"]):
+T(SX + 8.3, DY + DH / 2 + 2.2, "$Φ$_{bwd}", 6.2, "middle", bold=True, color=WHITE)
+for j, r_ in enumerate(["drafts grouped by result,", "three stages run again,", "uncovered groups added"]):
     T(SX + 18.6, DY + 6.3 + j * 6.4, r_, 6, maxw=SWD - 20)
 FWX = x0 + 10
 c.line([(SX + 8, stages[2][2] + stages[2][3]), (SX + 8, 163.0), (FWX, 163.0), (FWX, 201.4)], r=1.5)

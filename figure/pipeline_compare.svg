@@ -77,7 +77,7 @@
 <path d="M305.00,42.00 L308.76,42.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="311.00,42.00 308.20,43.18 308.20,40.82" fill="#333333"/>
 <rect x="311.00" y="19.50" width="53.00" height="45.00" rx="3" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.1"/>
-<text fill="#0072B2" xml:space="preserve"><tspan x="317.09" y="27.67" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Train listwise</tspan></text>
+<text fill="#0072B2" xml:space="preserve"><tspan x="329.73" y="27.67" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Train</tspan></text>
 <text fill="#0072B2" xml:space="preserve"><tspan x="327.56" y="34.88" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">scorer</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="314.64" y="47.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">L</tspan><tspan x="318.25" y="47.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50"> = − </tspan><tspan x="331.26" y="47.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">Σ</tspan><tspan x="335.13" y="48.56" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">j</tspan><tspan x="336.79" y="47.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50"> </tspan><tspan x="338.60" y="47.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">y</tspan><tspan x="341.49" y="48.56" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">j</tspan><tspan x="343.15" y="47.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50"> log </tspan><tspan x="355.44" y="47.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">π</tspan><tspan x="358.69" y="48.56" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">j</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="314.32" y="55.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">options permuted</tspan></text>
@@ -126,8 +126,8 @@
 <text fill="#333333" xml:space="preserve"><tspan x="379.84" y="104.50" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">θ* = max { θ : agreement(θ) ≥ α }</tspan></text>
 <text fill="#8C8C8C" xml:space="preserve"><tspan x="389.24" y="112.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">agreement: top option = user's choice</tspan></text>
 <path d="M186.43,139.00 L186.43,199.00" fill="none" stroke="#8C8C8C" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="butt" stroke-dasharray="2.5,1.8"/>
-<text fill="#8C8C8C" xml:space="preserve"><tspan x="8.00" y="154.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="7.00" font-weight="bold">(a) Verbal scorer</tspan></text>
-<text fill="#0072B2" xml:space="preserve"><tspan x="192.43" y="154.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="7.00" font-weight="bold">(b) Listwise scorer</tspan></text>
+<text fill="#8C8C8C" xml:space="preserve"><tspan x="8.00" y="154.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="7.00" font-weight="bold">(a) Verbal scores</tspan></text>
+<text fill="#0072B2" xml:space="preserve"><tspan x="192.43" y="154.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="7.00" font-weight="bold">(b) Our scorer</tspan></text>
 <rect x="9.00" y="161.50" width="105.23" height="34.00" rx="3" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.7"/>
 <path d="M9.0,169.5 V164.5 Q9.0,161.5 12.0,161.5 H111.2253125 Q114.2253125,161.5 114.2253125,164.5 V169.5 Z" fill="#F4F4F4" stroke="#BBBBBB" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <text fill="#8C8C8C" xml:space="preserve"><tspan x="12.50" y="167.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Prompt (abridged)</tspan></text>
@@ -205,7 +205,7 @@
 <path d="M316.50,178.50 L321.26,178.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="323.50,178.50 320.70,179.68 320.70,177.32" fill="#333333"/>
 <rect x="323.50" y="166.00" width="28.00" height="25.00" rx="3" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.1"/>
-<text fill="#0072B2" xml:space="preserve"><tspan x="325.66" y="177.09" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">Listwise</tspan></text>
+<text fill="#0072B2" xml:space="preserve"><tspan x="326.83" y="177.09" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">Trained</tspan></text>
 <text fill="#0072B2" xml:space="preserve"><tspan x="328.33" y="184.11" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">scorer</tspan></text>
 <path d="M351.50,178.50 L354.76,178.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="357.00,178.50 354.20,179.68 354.20,177.32" fill="#333333"/>
