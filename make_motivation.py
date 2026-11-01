@@ -1,4 +1,4 @@
-"""Motivating example: Always-Ask vs. selective clarification.
+"""Motivating example: asking every ambiguity vs. selective clarification.
 
 Single-column figure, 3.5 in wide; height follows the content.  No math
 symbols, Greek letters, variable names or numeric scores appear in it.
@@ -118,7 +118,7 @@ LX, LW = M, 74.0
 RX = LX + LW + 9
 RW = W - M - RX
 SEPX = LX + LW + 4.5
-T(LX + LW / 2, B2Y + 6, "Always-Ask", 7.5, "middle", bold=True)
+T(LX + LW / 2, B2Y + 6, "Ask every ambiguity", 7.5, "middle", bold=True)
 T(RX + RW / 2, B2Y + 6, "Selective clarification (ours)", 7.5, "middle", bold=True, maxw=RW)
 
 FB = 6.3          # card body font size
@@ -133,19 +133,20 @@ cards = [
     (1, "Value", "Settled by the data", [
         ("code", ("`Birthday = '1959/2/18'`", "0 rows", True)),
         ("code", ("`Birthday = '1959-02-18'`", "1 patient", False)),
-        ("code", ("`date(Birthday) = '1959-02-18'`", "1 patient", False)),
-        ("note", "First form fails, the other two agree"),
+        ("code", ("`date(Birthday) = '1959-02-18'`", "same patient", False)),
+        ("note", "No match: removed. Equal results: one kept"),
     ]),
     (2, "Aggregate", "Resolved automatically", [
-        ("note", "Several `T-CHO` tests per month"),
+        ("note", "Base month, and sum or average of the monthly tests"),
         ("bar", (27, BLUE, "(Nov − Dec) / Nov, monthly sums")),
         ("bar", (3, GRAY, "(Nov − Dec) / Dec, monthly sums")),
         ("bar", (2, GRAY, "(Nov − Dec) / Nov, monthly averages")),
+        ("bar", (1.5, GRAY, "(Nov − Dec) / Dec, monthly averages")),
     ]),
     (3, "Project", "Ask the user", [
         ("note", "Output columns not stated"),
         ("bar", (16, ORANGE, "The rate only")),
-        ("bar", (14.5, ORANGE, "The rate and both monthly sums")),
+        ("bar", (14.5, ORANGE, "The rate and both monthly values")),
     ]),
 ]
 OUT_COL = {1: BLUE_L, 2: BLUE, 3: ORANGE}
