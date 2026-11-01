@@ -141,7 +141,7 @@ for n, (sx, sw_) in span_x.items():
 # ====================================================================== panels
 c.items.append(f'<g transform="translate(0,{-SHIFT})">')
 titles = [("Detection", None), ("Ambiguity Checks", "— Q1–Q3 by execution"),
-          ("Resolution Criterion", "— Q4 by uncertainty"), ("Parsing", None)]
+          ("Resolution Criterion", "— by estimated user choice"), ("Parsing", None)]
 for k, ((x, w_), (t, s)) in enumerate(zip(P, titles)):
     box(x, PT, w_, PB - PT, fill=BG, stroke=None)
     header(x, PT, k + 1, t, s)
@@ -216,7 +216,7 @@ T(CX + 2.5, CY + 40.4, "$p$₂: /{<second reading>}", 6)
 x0, pw = P[1]
 GX, GY = x0 + 1.5, 100.0
 cols = [
-    (52.0, ["Validity"], ["Column · Join ·", "Value · NULL"],
+    (52.0, ["Existence"], ["Column · Join ·", "Value · NULL"],
      ["COUNT(*)=0 →", "remove; keep", "'1959-02-18'"]),
     (56.0, ["Equivalence"], ["Scope · Attachment", "· Value · NULL"],
      ["res(q₁, D) =", "res(q₂, D) →", "discard"]),
@@ -288,7 +288,7 @@ for k, n in enumerate((2, 3)):
     tag(x0 + 3 + k * 8.2, JY, n, r=3.4)
 T((P[1][0] + P[1][1] + x0) / 2, JY - 4.2, "$Φ$", 7, "middle")
 box(SCX, SCY0, SCW, SCH, stroke=INK)
-T(SCX + SCW / 2, JY - 1.3, "Listwise", 6.5, "middle", bold=True)
+T(SCX + SCW / 2, JY - 1.3, "Trained", 6.5, "middle", bold=True)
 T(SCX + SCW / 2, JY + 6.0, "scorer", 6.5, "middle", bold=True)
 
 BX0 = x0 + 56
@@ -305,7 +305,7 @@ for n, ry, bars, lab, tx in rows3:
 
 FSY = 145.0
 box(x0 + 3, FSY, pw - 6, 11.5, stroke=GRAY, rx=2)
-T(x0 + pw / 2, FSY + 8.3, "$H_{norm}(φ) = −Σ_{j} π_{j} log π_{j} / log |P|$", 6.5, "middle",
+T(x0 + pw / 2, FSY + 8.3, "$H_{norm}(φ) = −Σ_{j} w_{j} log w_{j} / log |P|$", 6.5, "middle",
   maxw=pw - 8)
 
 DCX, DCY, DHW, DHH = x0 + 28, 175.0, 25.0, 12.0
@@ -324,18 +324,14 @@ T(APX + APW / 2, DCY + 2.2, "Auto($p_{j}^{*}$)", 6.5, "middle", bold=True, color
 NY1, NY2 = 201.0, 223.0
 QX = x0 + 36
 QW = pw - 38
-c.line([(DCX, DCY + DHH), (DCX, NY2)], r=0)
+c.line([(DCX, DCY + DHH), (DCX, NY1)], r=0)
 T(DCX - 2, DCY + DHH + 7.2, "no", 6, "end", italic=True)
 c.arrow([(DCX, NY1), (QX, NY1)], hs=3)
-c.arrow([(DCX, NY2), (QX, NY2)], hs=3)
 pill(QX, NY1 - 5.5, QW, 11, ORANGE)
 bubble(QX + 6.4, NY1 - 0.3)
 T(QX + 11.5, NY1 + 2.1, "Ask → $r(φ) ∈ P ∪ {⊥}$", 6, bold=True, maxw=QW - 13)
-iw = T(QX + 2, NY1 + 12.4, "interactive", 6, italic=True)
+iw = T(QX + 2, NY1 + 12.4, "to the user", 6, italic=True)
 tag(QX + 2 + iw + 5.5, NY1 + 10.2, 3, r=3.4)
-pill(QX, NY2 - 5.5, 25, 11, GRAY)
-T(QX + 12.5, NY2 + 2.2, "Drop", 6.5, "middle", bold=True)
-T(QX + 28, NY2 + 2.1, "non-interactive", 6, italic=True, maxw=x0 + pw - QX - 29)
 
 TX = x0 + 10
 ty_edge = DCY + DHH * (1 - (DCX - TX) / DHW)
@@ -387,7 +383,7 @@ for j, ln in enumerate(["SELECT … T-CHO …", "FROM Patient JOIN …", "WHERE 
     T(SQX + 2.2, SQY + 7.3 + j * 6.8, f"`{ln}`", 6, maxw=SQW - 3)
 check(SQX + SQW, SQY)
 T(x0 + 6.5, SQY + 14, "$ŷ$", 8, "middle")
-T(x0 + 3, PB - 2.8, "1 question (Always-Ask: 2)", 6, maxw=pw - 4)
+T(x0 + 3, PB - 2.8, "1 question (w/o scorer: 2)", 6, maxw=pw - 4)
 
 # P3 -> P4 coloured hand-offs
 G34 = (P[2][0] + P[2][1] + x0) / 2

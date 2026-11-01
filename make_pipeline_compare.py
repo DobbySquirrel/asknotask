@@ -149,7 +149,7 @@ T(FKX + 2.5, r1m - 2.2, "train split", FS)
 T(FKX + 2.5, r2m - 2.2, "validation", FS)
 T(FKX + 3, BAND_Y + 2.2, "/{split by database}", FS)
 
-DET1 = ["Detection", "+ validity &", "equivalence"]
+DET1 = ["Detection", "+ existence &", "equivalence"]
 DET2 = ["Detection", "+ all three", "checks"]
 
 # ---- upper row: training
@@ -187,7 +187,7 @@ x, w = COLS[4]
 TRAIN_CX = cx(4)
 box(x, R1Y, w, R1H, stroke=BLUE, sw=1.1)
 centered(TRAIN_CX, R1Y + 9.5, ["Train", "scorer"], 6.5, 7.2, bold=True, color=BLUE)
-T(TRAIN_CX, R1Y + 27.5, "$L$ = − $Σ_{j}$ $y_{j}$ log $π_{j}$", 6.5, "middle", maxw=w - 3)
+T(TRAIN_CX, R1Y + 27.5, "$L$ = − $Σ_{j}$ $q_{j}$ log $w_{j}$", 6.5, "middle", maxw=w - 3)
 T(TRAIN_CX, R1Y + 35.5, "options permuted", FS, "middle", maxw=w - 3)
 ew = c.tw("each epoch", FS)
 T(TRAIN_CX + 4.5, R1Y + 41.8, "each epoch", FS, "middle")
@@ -372,7 +372,7 @@ centered((SX0 + SX1) / 2, mm + 9.5, ["option-letter", "logits"], FS, 6.6, italic
 
 SMX, SMW = SX1 + GAP, 25.0
 harrow(SX1, SMX, mm)
-label_box(SMX, mm - 9, SMW, 18, ["softmax", "→ $π$"])
+label_box(SMX, mm - 9, SMW, 18, ["softmax", "→ $w$"])
 
 DW, DHH = 46.0, 16.0
 DCX = W - M - 4 - DW / 2
@@ -380,7 +380,7 @@ HX = SMX + SMW + GAP
 HX1 = DCX - DW / 2 - GAP
 harrow(SMX + SMW, HX, mm)
 box(HX, mm - 13, HX1 - HX, 26)
-for j, s in enumerate(["$H_{norm}(φ)$ =", "−$Σ_{j}$ $π_{j}$ log $π_{j}$", "/ log |$P$|"]):
+for j, s in enumerate(["$H_{norm}(φ)$ =", "−$Σ_{j}$ $w_{j}$ log $w_{j}$", "/ log |$P$|"]):
     T((HX + HX1) / 2, mm - 5.2 + j * 7.4, s, 6.2, "middle", maxw=HX1 - HX - 2)
 
 harrow(HX1, DCX - DW / 2, mm)
