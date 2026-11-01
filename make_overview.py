@@ -216,11 +216,11 @@ T(CX + 2.5, CY + 40.4, "$p$₂: /{<second reading>}", 6)
 x0, pw = P[1]
 GX, GY = x0 + 1.5, 100.0
 cols = [
-    (52.0, ["Existence"], ["Column · Join ·", "Value · NULL"],
+    (52.0, ["Q1 Existence"], ["Column · Join ·", "Value · NULL"],
      ["COUNT(*)=0 →", "remove; keep", "'1959-02-18'"]),
-    (56.0, ["Difference"], ["Scope · Attachment", "· Value · NULL"],
+    (56.0, ["Q2 Difference"], ["Scope · Attachment", "· Value · NULL"],
      ["res(q₁, D) =", "res(q₂, D) →", "discard"]),
-    (52.0, ["Relevance"], ["all nine types,", "parser's input"],
+    (52.0, ["Q3 Relevance"], ["all nine types,", "parser's input"],
      ["res(y_p₁) = …", "= res(y_⊥) →", "discard"]),
 ]
 CT, CODE_Y, CB = GY + 2, 153.0, 181.0
