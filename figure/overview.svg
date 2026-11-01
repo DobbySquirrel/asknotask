@@ -143,7 +143,7 @@
 <path d="M203.70,108.90 L207.30,108.90" fill="none" stroke="#333333" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M201.0,112.892 A4.5,1.292 0 0 1 210.0,112.892 V117.90799999999999 A4.5,1.292 0 0 1 201.0,117.90799999999999 Z" fill="#FFFFFF" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M201.0,112.892 A4.5,1.292 0 0 0 210.0,112.892" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#333333" xml:space="preserve"><tspan x="186.53" y="125.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Equivalence</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="189.61" y="125.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Difference</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="179.27" y="132.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">Scope · Attachment</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="185.77" y="139.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">· Value · NULL</tspan></text>
 <rect x="178.70" y="153.00" width="53.60" height="26.50" rx="2" fill="#F4F4F4" stroke="#333333" stroke-width="0.7"/>

@@ -27,7 +27,7 @@
 <rect x="97.00" y="22.00" width="47.00" height="40.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
 <text fill="#333333" xml:space="preserve"><tspan x="107.83" y="37.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Detection</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="102.41" y="44.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">+ existence &amp;</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="104.49" y="50.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">equivalence</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="107.38" y="50.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">difference</tspan></text>
 <path d="M144.00,42.00 L147.76,42.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="150.00,42.00 147.20,43.18 147.20,40.82" fill="#333333"/>
 <g transform="rotate(-10 165.0 38.5)">

@@ -149,7 +149,7 @@ T(FKX + 2.5, r1m - 2.2, "train split", FS)
 T(FKX + 2.5, r2m - 2.2, "validation", FS)
 T(FKX + 3, BAND_Y + 2.2, "/{split by database}", FS)
 
-DET1 = ["Detection", "+ existence &", "equivalence"]
+DET1 = ["Detection", "+ existence &", "difference"]
 DET2 = ["Detection", "+ all three", "checks"]
 
 # ---- upper row: training
