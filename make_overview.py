@@ -198,28 +198,31 @@ c.line([(STX + 13.5, STY + 13), (CX, CY + CH - 0.5)], GRAY, 0.6, dash="1.5,1.2")
 box(CX, CY, CW, CH)
 c.path(f"M{CX},{CY + 10} V{CY + R} Q{CX},{CY} {CX + R},{CY} H{CX + CW - R} "
        f"Q{CX + CW},{CY} {CX + CW},{CY + R} V{CY + 10} Z", INK, SW, fill=BLUE)
-T(CX + CW / 2 - 1.4, CY + 7.4, "Aggregate · $h$ = 'decrease rate'", 6, "middle",
+T(CX + CW / 2 - 1.4, CY + 7.4, "'decrease rate' · Aggregate", 6, "middle",
   color=WHITE, maxw=CW - 3.2)
 tag(CX + CW, CY, 2)
-T(CX + 2.5, CY + 17, "$p$₁: difference of summed", 6, maxw=CW - 4)
-T(CX + 7.6, CY + 23.8, "`T-CHO`, Nov − Dec,", 6, maxw=CW - 9)
-T(CX + 7.6, CY + 30.6, "divided by Nov sum", 6, maxw=CW - 9)
-c.line([(CX + 2, CY + 33.4), (CX + CW - 2, CY + 33.4)], GRAY, 0.5)
-T(CX + 2.5, CY + 40.4, "$p$₂: /{<second reading>}", 6)
+for j, (lt, rd) in enumerate([("A", "(Nov − Dec) / Nov, sums"), ("B", "(Nov − Dec) / Dec, sums"),
+                              ("C", "(Nov − Dec) / Nov, averages"),
+                              ("D", "(Nov − Dec) / Dec, averages")]):
+    T(CX + 2.5, CY + 17.2 + j * 7.4, lt, 6, bold=True)
+    T(CX + 8.5, CY + 17.2 + j * 7.4, rd, 6, maxw=CW - 10)
 
 # ---------------------------------------------------------------- panel 2
 x0, pw = P[1]
 GX, GY = x0 + 1.5, 100.0
 cols = [
     (52.0, ["Existence"], ["Column · Join ·", "Value · NULL"],
-     ["COUNT(*)=0 →", "remove, keep", "'1959-02-18'"]),
+     ["0 rows →", "remove, keep", "'1959-02-18'"]),
     (56.0, ["Difference"], ["Scope · Attachment", "· Value · NULL"],
      ["res(q₁, D) =", "res(q₂, D) →", "drop"]),
-    (52.0, ["Relevance"], ["all nine types,", "parser's input"],
+    (52.0, ["Relevance"], ["all nine", "types"],
      ["res(y_p₁) = …", "= res(y_⊥) →", "drop"]),
 ]
-CT, CODE_Y, CB = GY + 2, 153.0, 181.0
-BAR = (GX + 2, 185.0, 0, 15.6)
+CT, CODE_Y, CB = GY + 2, 161.0, 191.0
+BAR = (GX + 2, 195.0, 0, 15.6)
+TOOLS = [("Template", "`COUNT(*)` on $D$", GRAY, INK),
+         ("LLM, 2 calls", "target: $p_{j}$, verified", BLUE_L, INK),
+         ("Parser", "target: $Q$, $E$ ⊕ $c_{j}$", INK, WHITE)]
 cx_ = GX + 2
 col_pos = []
 for k, (cw, title, types, code) in enumerate(cols):
@@ -241,12 +244,17 @@ for k, (cw, title, types, code) in enumerate(cols):
         for dy in (4.5, 5.7, 6.9):
             c.line([(ic - 1.8, CT + dy), (ic + 1.8, CT + dy)], INK, 0.5)
         c.cylinder(ic - 4.5, CT + 9.6, 9, 7.6)
-    ty = CT + 23.5
+    ty = CT + 22.0
     for j, t_ in enumerate(title):
         T(ic, ty + j * 7.2, t_, 6.5, "middle", bold=True, maxw=cw - 2)
     ty += len(title) * 7.2
     for j, t_ in enumerate(types):
         T(ic, ty + j * 6.8, t_, 6, "middle", italic=True, maxw=cw - 0.8)
+    chip, sub, cf, ct = TOOLS[k]
+    chw = c.tw(chip, 6, True) + 7
+    c.rect(ic - chw / 2, 142.0, chw, 8.6, rx=4.3, fill=cf)
+    T(ic, 148.2, chip, 6, "middle", bold=True, color=ct)
+    T(ic, 157.0, sub, 6, "middle", maxw=cw - 1.5)
     box(cx_ + 1.2, CODE_Y, cw - 2.4, CB - CODE_Y - 1.5, fill=BG, rx=2)
     if k == 0:
         c.rect(cx_ + 1.2, CODE_Y, 2.2, CB - CODE_Y - 1.5, rx=0.8, fill=BLUE_L)
@@ -258,18 +266,18 @@ for k, (cw, title, types, code) in enumerate(cols):
 GW = cx_ - GX
 box(GX, GY, GW, BAR[1] + BAR[3] + 2.5 - GY, fill="none", stroke=GRAY)
 box(GX + 2, BAR[1], GW - 4, BAR[3], fill=WHITE, stroke=GRAY, rx=2)
-for j, t_ in enumerate(["act only on conclusive evidence",
-                        "write a single interpretation only if it informs the parser"]):
+for j, t_ in enumerate(["drop only on conclusive evidence",
+                        "check incomplete → pass on unchanged"]):
     T(GX + 5, BAR[1] + 6.6 + j * 6.9, t_, 6, maxw=GW - 9)
 GBOT = BAR[1] + BAR[3] + 2.5
 
 # remove
-RPX, RPY = GX + 4, 218.0
+RPX, RPY = GX + 4, 224.0
 c.arrow([(RPX + 16, GBOT), (RPX + 16, RPY)], GRAY, 1.0)
 pill(RPX, RPY, 30, 11, GRAY)
 trash(RPX + 7.5, RPY + 5.6)
 T(RPX + 13, RPY + 7.6, "Drop", 6.5, bold=True)
-T(RPX + 37, RPY + 7.6, "check incomplete → pass on unchanged", 6, italic=True)
+T(RPX + 37, RPY + 7.6, "no difference on $D$, or not relevant", 6, italic=True)
 
 # P1 -> P2
 c.arrow([(P[0][0] + P[0][1] - 2, 210.0), (GX, 210.0)], INK, THICK)
@@ -307,7 +315,7 @@ DCX, DCY, DHW, DHH = x0 + 28, 175.0, 25.0, 12.0
 c.arrow([(DCX, FSY + 11.5), (DCX, DCY - DHH)], hs=2.8)
 c.path(f"M{DCX},{DCY - DHH} L{DCX + DHW},{DCY} L{DCX},{DCY + DHH} L{DCX - DHW},{DCY} Z",
        INK, SW, fill=WHITE)
-T(DCX, DCY + 2.2, "$H_{norm}$ ≤ $θ$ ?", 6.5, "middle", maxw=2 * DHW - 10)
+T(DCX, DCY + 2.2, "$H_{norm}$ ≤ $θ^{*}$ ?", 6.5, "middle", maxw=2 * DHW - 10)
 
 APX, APW = x0 + 68, 46.0
 c.arrow([(DCX + DHW, DCY), (APX, DCY)], hs=3)
@@ -331,7 +339,7 @@ tag(QX + 2 + iw + 5.5, NY1 + 10.2, 3, r=3.4)
 TX = x0 + 10
 ty_edge = DCY + DHH * (1 - (DCX - TX) / DHW)
 c.arrow([(TX, PB), (TX, ty_edge)], INK, 0.75, dash="2.2,1.4", hs=3, cap="butt")
-T(TX + 3, PB - 5.5, "$θ$ selected offline", 6)
+T(TX + 3, PB - 5.5, "$θ^{*}$ from validation data", 6)
 
 # ---------------------------------------------------------------- panel 4
 x0, pw = P[3]
@@ -367,7 +375,7 @@ EB = EY + EH
 PRY, PRH = EB + 8, 13.0
 c.arrow([(EX + EW / 2, EB), (EX + EW / 2, PRY)], hs=3)
 box(EX, PRY, EW, PRH, fill=INK, stroke=INK)
-T(EX + EW / 2, PRY + 8.8, "!{Parser} (black box)", 6.5, "middle", color=WHITE)
+T(EX + EW / 2, PRY + 8.8, "!{Parser}", 6.5, "middle", color=WHITE)
 T(EX + 1, PRY + PRH + 8.0, "input: $Q$, $E′$, table", 6, italic=True)
 T(EX + 1, PRY + PRH + 14.6, "and column names", 6, italic=True)
 SQX, SQY = x0 + 12, PRY + PRH + 19.5
