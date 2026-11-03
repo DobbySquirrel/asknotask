@@ -217,9 +217,9 @@ cols = [
     (52.0, ["Relevance"], ["res(y_p₁) = …", "= res(y_⊥) →", "drop"]),
 ]
 CT, CODE_Y, CB = GY + 2, 148.0, 177.0
-TOOLS = [("each option", "template query", GRAY, INK),
-         ("options on $D$", "LLM: write, verify", BLUE_L, INK),
-         ("Parser", "input $E$ ⊕ $c_{j}$", INK, WHITE)]
+TOOLS = [("exists?", "SQL: template", GRAY, INK),
+         ("differs on $D$?", "SQL: LLM, verified", BLUE_L, INK),
+         ("changes SQL?", "SQL: parser", INK, WHITE)]
 cx_ = GX + 2
 col_pos = []
 for k, (cw, title, code) in enumerate(cols):
@@ -262,15 +262,16 @@ TBY = CB + 4
 LEAD_T = 7.3
 TB_H = 5 * LEAD_T + 4
 box(GX + 2, TBY, GW - 4, TB_H, fill=WHITE, stroke=GRAY, rx=2)
-TCX = [GX + 10, GX + 21, GX + 32]
-OCX = GX + 44
+TOFF = 30.0
+TCX = [GX + 10 + TOFF, GX + 21 + TOFF, GX + 32 + TOFF]
+OCX = GX + 44 + TOFF
 for x_, h_ in zip(TCX, ("E", "D", "R")):
     T(x_, TBY + 6.6, h_, 6, "middle", bold=True)
 T(OCX, TBY + 6.6, "outcome", 6, bold=True)
-rows_t = [(("T", "T", "T"), "pass on as $Φ$", None),
+rows_t = [(("1 left", None, None), "Auto, written to $E$", BLUE_L),
           (("T", "F", "·"), "Drop", GRAY),
           (("T", "T", "F"), "Drop", GRAY),
-          (("1 left", None, None), "Auto, written to $E$", BLUE_L)]
+          (("T", "T", "T"), "pass on as $Φ$", None)]
 for j, (marks, out, col) in enumerate(rows_t):
     yy = TBY + 6.6 + (j + 1) * LEAD_T
     if marks[1] is None:
@@ -284,11 +285,6 @@ for j, (marks, out, col) in enumerate(rows_t):
         T(OCX + 1.5, yy, out, 6, bold=True)
     else:
         T(OCX, yy, out, 6, bold=True)
-NX = GX + 104
-T(NX, TBY + 13.9, "F only on conclusive", 6, italic=True)
-T(NX, TBY + 21.2, "evidence", 6, italic=True)
-T(NX, TBY + 31.0, "check incomplete", 6, italic=True)
-T(NX, TBY + 38.3, "→ counts as T", 6, italic=True)
 GBOT = TBY + TB_H + 2.5
 box(GX, GY, GW, GBOT - GY, fill="none", stroke=GRAY)
 
@@ -389,8 +385,7 @@ PRY, PRH = EB + 8, 13.0
 c.arrow([(EX + EW / 2, EB), (EX + EW / 2, PRY)], hs=3)
 box(EX, PRY, EW, PRH, fill=INK, stroke=INK)
 T(EX + EW / 2, PRY + 8.8, "!{Parser}", 6.5, "middle", color=WHITE)
-T(EX + 1, PRY + PRH + 8.0, "input: $Q$, $E′$, table", 6, italic=True)
-T(EX + 1, PRY + PRH + 14.6, "and column names", 6, italic=True)
+T(EX + 1, PRY + PRH + 8.0, "input: $Q$, $E′$, schema", 6, italic=True)
 SQX, SQY = x0 + 12, PRY + PRH + 19.5
 SQW, SQH = x0 + pw - 2 - SQX, 23.5
 c.arrow([(SQX + SQW - 8, PRY + PRH), (SQX + SQW - 8, SQY)], hs=3)

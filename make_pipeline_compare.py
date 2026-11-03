@@ -126,12 +126,14 @@ SRC_CX = 24.0
 for k in range(3):
     c.cylinder(SRC_CX - 13 + k * 3.2, CM - 24 + k * 4.5, 16, 15)
 centered(SRC_CX, CM + 12, ["Training", "databases"], 6.5, 7.4, bold=True)
-centered(SRC_CX, CM + 29, ["disjoint from", "all benchmarks"], FS, 6.8, italic=True)
 
 # detection + three checks
-DX0, DW = 50.0, 32.0
+DX0, DW = 48.0, 36.0
 harrow(44.0, DX0, CM - 8)
-label_box(DX0, CM - 11, DW, 22, ["Detection"])
+box(DX0, CM - 23.5, DW, 47)
+T(DX0 + DW / 2, CM - 15.5, "Detection", 6.2, "middle", bold=True)
+for k, nm in enumerate(["forward", "backward"]):
+    label_box(DX0 + 3, CM - 10 + k * 15, DW - 6, 11, [nm])
 FX0, FX1 = 88.0, 134.0
 harrow(DX0 + DW, FX0, CM)
 box(FX0, CM - 23.5, FX1 - FX0, 47, fill="none", stroke=GRAY, sw=0.6)
@@ -150,9 +152,17 @@ T(FAN_CX, CM + 14, "$Φ$", 6.5, "middle")
 SUX0, SUW = 158.0, 64.0
 harrow(FAN_CX + 8, SUX0, CM)
 box(SUX0, CM - 23, SUW, 46, fill=ORANGE, stroke=ORANGE)
-T(SUX0 + 4, CM - 8, "Simulated user", 6.5, bold=True)
-for j, s in enumerate(["picks the option", "matching the gold", "query, or Others"]):
-    T(SUX0 + 4, CM + 0.5 + j * 6.8, s, FS, maxw=SUW - 6)
+T(SUX0 + 4, CM - 10, "Simulated user", 6.5, bold=True)
+T(SUX0 + 4, CM - 2.5, "/{matches the gold SQL?}", FS)
+for j, (fill_a, out) in enumerate(((INK, "pick A"), (None, "Others"))):
+    yy = CM + 2 + j * 10
+    for q, lt in enumerate("AB"):
+        on = fill_a is not None and q == 0
+        c.rect(SUX0 + 4 + q * 9, yy, 7.5, 7.5, rx=1.2, fill=INK if on else WHITE,
+               stroke=INK, sw=0.5)
+        T(SUX0 + 7.75 + q * 9, yy + 5.6, lt, FS, "middle", bold=True, color=WHITE if on else MID)
+    c.arrow([(SUX0 + 24, yy + 3.75), (SUX0 + 31, yy + 3.75)], INK, 0.6, hs=2.2)
+    T(SUX0 + 33, yy + 5.8, out, FS, bold=True)
 tgl = "can see the gold SQL"
 tgw = c.tw(tgl, FS) + 15
 tgx = SUX0 + SUW / 2 - tgw / 2
@@ -168,8 +178,8 @@ c.line([(FKX, r1m), (FKX, r2m)], INK, SW)
 c.circle(FKX, CM, 1.3, fill=INK)
 harrow(FKX, BR, r1m)
 harrow(FKX, BR, r2m)
-T(FKX + 3, r1m - 2.2, "training set, 60 DBs", FS)
-T(FKX + 3, r2m - 2.2, "validation set, 9 DBs", FS)
+T(FKX + 3, r1m - 2.2, "training set", FS)
+T(FKX + 3, r2m - 2.2, "validation set", FS)
 T(FKX + 3, CM - 1.2, "/{split by}", FS)
 T(FKX + 3, CM + 5.6, "/{database}", FS)
 
@@ -186,11 +196,15 @@ TRAIN_CX = TX + TW / 2
 harrow(330.0, TX, r1m)
 box(TX, R1Y, TW, R1H, stroke=BLUE, sw=1.1)
 centered(TRAIN_CX, R1Y + 8.5, ["Train", "scorer"], 6.5, 7.2, bold=True, color=BLUE)
-T(TRAIN_CX, R1Y + 26.5, "$L$ = − $Σ_{j}$ $q_{j}$ log $w_{j}$", 6.2, "middle", maxw=TW - 2)
-T(TRAIN_CX, R1Y + 33.5, "option order", FS, "middle", maxw=TW - 2)
-ew = c.tw("shuffled per epoch", FS)
-T(TRAIN_CX + 3, R1Y + 39.5, "shuffled per epoch", FS, "middle")
-cycle_icon(TRAIN_CX + 3 - ew / 2 - 4.0, R1Y + 37.6, r=2.3)
+T(TRAIN_CX, R1Y + 24.5, "$L$ = − $Σ_{j}$ $q_{j}$ log $w_{j}$", 6.2, "middle", maxw=TW - 2)
+SHY = R1Y + 27.5
+for g, order in enumerate(("AB", "BA")):
+    gx = TRAIN_CX - 21 + g * 27
+    for q, lt in enumerate(order):
+        c.rect(gx + q * 7.5, SHY, 6.5, 6.5, rx=1, fill=WHITE, stroke=BLUE, sw=0.5)
+        T(gx + 3.25 + q * 7.5, SHY + 5.0, lt, 5.5 if False else FS, "middle", bold=True, color=BLUE)
+cycle_icon(TRAIN_CX, SHY + 3.4, r=2.4)
+T(TRAIN_CX, R1Y + 39.8, "/{shuffled per epoch}", FS, "middle", maxw=TW - 2)
 
 # online hand-off line (drawn before the boxes it passes)
 JW = 28.0
@@ -206,9 +220,8 @@ SC_X0, SC_X1 = BR, TX + TW
 SC_Y, SC_H = R2Y + 4, R2H - 8
 box(SC_X0, SC_Y, SC_X1 - SC_X0, SC_H, stroke=BLUE, sw=1.1)
 scx = (SC_X0 + TRAIN_CX - 4) / 2
-T(scx, SC_Y + 10, "Apply trained", 6.5, "middle", bold=True, color=BLUE)
-T(scx, SC_Y + 17.5, "scorer", 6.5, "middle", bold=True, color=BLUE)
-T(scx, SC_Y + 25.5, "$H_{norm}$, top option", FS, "middle")
+T(scx, SC_Y + 13, "Apply trained", 6.5, "middle", bold=True, color=BLUE)
+T(scx, SC_Y + 20.5, "scorer", 6.5, "middle", bold=True, color=BLUE)
 harrow(SC_X1, CH_X0, r2m)
 
 # validation chart
@@ -216,7 +229,7 @@ CY0, CY1 = R1Y - 3, L1Y1 - 4
 box(CH_X0, CY0, CH_X1 - CH_X0, CY1 - CY0, stroke=BLUE, sw=1.1)
 chm = (CH_X0 + CH_X1) / 2
 T(chm, CY0 + 9, "Select θ* on validation set", 6.5, "middle", bold=True, maxw=CH_X1 - CH_X0 - 4)
-AX0, AY0, AX1, AY1 = CH_X0 + 8, CY0 + 14, CH_X1 - 10, CY1 - 31
+AX0, AY0, AX1, AY1 = CH_X0 + 8, CY0 + 14, CH_X1 - 10, CY1 - 37
 c.arrow([(AX0, AY1), (AX0, AY0)], INK, 0.65, hs=2.4)
 c.arrow([(AX0, AY1), (AX1 + 3, AY1)], INK, 0.65, hs=2.4)
 T(AX0 + 3, AY0 + 2.5, "agreement", FS)
@@ -247,10 +260,11 @@ c.line([(ix, iy), (ix, AY1)], BLUE, 0.6)
 star(ix, iy, ro=3.8, ri=1.6)
 T(ix - 4, ALY + 12, "$θ^{*}$", 7, "end", bold=True)
 T(chm, AY1 + 15, "`θ* = max{θ : agr(θ) ≥ α}`", FS, "middle", maxw=CH_X1 - CH_X0 - 4)
-T(chm, AY1 + 22, "/{α: target agreement, set by the user}", FS, "middle", color=MID,
-  maxw=CH_X1 - CH_X0 - 4)
-T(chm, AY1 + 28.5, "/{agr: top option = user's choice}", FS, "middle", color=MID,
-  maxw=CH_X1 - CH_X0 - 4)
+for j, ln in enumerate(["θ*: largest threshold that meets α",
+                        "α: target agreement, set by the user",
+                        "agr: top option = user's choice"]):
+    T(chm, AY1 + 22 + j * 6.5, f"/{{{ln}}}", FS, "middle", color=INK if j == 0 else MID,
+      maxw=CH_X1 - CH_X0 - 4)
 
 # ====================================================================== bottom lane
 CD, CDW = M + 5, 92.0
@@ -259,10 +273,9 @@ box(CD, CDY, CDW, CDH)
 c.path(f"M{CD},{CDY + 9} V{CDY + R} Q{CD},{CDY} {CD + R},{CDY} H{CD + CDW - R} "
        f"Q{CD + CDW},{CDY} {CD + CDW},{CDY + R} V{CDY + 9} Z", INK, SW, fill=ORANGE)
 T(CD + 3, CDY + 6.6, "'total cholesterol' · Project", 6, bold=True, maxw=CDW - 5)
-T(CD + 3, CDY + 16.5, "ambiguity $φ$ ∈ $Φ$, $m$ = 2", FS, italic=True, maxw=CDW - 5)
 for j, (lt, ln) in enumerate([("A", "The rate only"), ("B", "The rate and both"), ("", "monthly values")]):
-    T(CD + 3, CDY + 25 + j * 6.8, lt, FS, bold=True)
-    T(CD + 9.5, CDY + 25 + j * 6.8, ln, FS, maxw=CDW - 11)
+    T(CD + 3, CDY + 19 + j * 7.2, lt, FS, bold=True)
+    T(CD + 9.5, CDY + 19 + j * 7.2, ln, FS, maxw=CDW - 11)
 PX0 = CD + CDW + 7
 JX0 = TRAIN_CX - JW / 2
 PX1 = JX0 - 7
@@ -270,7 +283,7 @@ harrow(CD + CDW, PX0, mm)
 box(PX0, MR0, PX1 - PX0, MR1 - MR0)
 c.path(f"M{PX0},{MR0 + 8.5} V{MR0 + R} Q{PX0},{MR0} {PX0 + R},{MR0} H{PX1 - R} Q{PX1},{MR0} "
        f"{PX1},{MR0 + R} V{MR0 + 8.5} Z", INK, SW, fill=BG)
-T(PX0 + 2.5, MR0 + 6.4, "Scorer input for the running example (abridged)", FS, maxw=PX1 - PX0 - 3)
+T(PX0 + 2.5, MR0 + 6.4, "Scorer input for the running example", FS, maxw=PX1 - PX0 - 3)
 rows = ["Question: …the decrease rate for his/her total cholesterol…",
         "Evidence: …   Schema: Laboratory(ID, Date, T-CHO, …)",
         "Span h: 'total cholesterol'   Type: Project",
