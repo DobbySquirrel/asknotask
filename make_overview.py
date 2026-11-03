@@ -140,8 +140,8 @@ for n, (sx, sw_) in span_x.items():
 
 # ====================================================================== panels
 c.items.append(f'<g transform="translate(0,{-SHIFT})">')
-titles = [("Detection", None), ("Ambiguity Checks", "— Q1–Q3 by execution"),
-          ("Resolution Criterion", "— by estimated user choice"), ("Parsing", None)]
+titles = [("Detection", None), ("Ambiguity Checks", None),
+          ("Predicting the User's Choice", None), ("Parsing", None)]
 for k, ((x, w_), (t, s)) in enumerate(zip(P, titles)):
     box(x, PT, w_, PB - PT, fill=BG, stroke=None)
     header(x, PT, k + 1, t, s)
@@ -216,11 +216,11 @@ T(CX + 2.5, CY + 40.4, "$p$₂: /{<second reading>}", 6)
 x0, pw = P[1]
 GX, GY = x0 + 1.5, 100.0
 cols = [
-    (52.0, ["Q1 Existence"], ["Column · Join ·", "Value · NULL"],
+    (52.0, ["Existence"], ["Column · Join ·", "Value · NULL"],
      ["COUNT(*)=0 →", "remove; keep", "'1959-02-18'"]),
-    (56.0, ["Q2 Difference"], ["Scope · Attachment", "· Value · NULL"],
+    (56.0, ["Difference"], ["Scope · Attachment", "· Value · NULL"],
      ["res(q₁, D) =", "res(q₂, D) →", "discard"]),
-    (52.0, ["Q3 Relevance"], ["all nine types,", "parser's input"],
+    (52.0, ["Relevance"], ["all nine types,", "parser's input"],
      ["res(y_p₁) = …", "= res(y_⊥) →", "discard"]),
 ]
 CT, CODE_Y, CB = GY + 2, 153.0, 181.0
@@ -263,9 +263,9 @@ for k, (cw, title, types, code) in enumerate(cols):
 GW = cx_ - GX
 box(GX, GY, GW, BAR[1] + BAR[3] + 2.5 - GY, fill="none", stroke=GRAY)
 box(GX + 2, BAR[1], GW - 4, BAR[3], fill=WHITE, stroke=GRAY, rx=2)
-for j, (p, t_) in enumerate([("P1", "act only on conclusive evidence"),
-                             ("P2", "write a single interpretation only if it informs the parser")]):
-    T(GX + 5, BAR[1] + 6.6 + j * 6.9, f"!{{{p}}}  {t_}", 6, maxw=GW - 9)
+for j, t_ in enumerate(["act only on conclusive evidence",
+                        "write a single interpretation only if it informs the parser"]):
+    T(GX + 5, BAR[1] + 6.6 + j * 6.9, t_, 6, maxw=GW - 9)
 GBOT = BAR[1] + BAR[3] + 2.5
 
 # remove
