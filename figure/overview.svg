@@ -50,72 +50,78 @@
 <circle cx="433.00" cy="87.00" r="5.4" fill="#333333" stroke="none"/>
 <text fill="#FFFFFF" xml:space="preserve"><tspan x="430.91" y="89.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="7.50" font-weight="bold">4</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="441.00" y="89.70" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="7.50" font-weight="bold">Parsing</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="8.00" y="104.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20" font-weight="bold">Forward</tspan><tspan x="32.46" y="104.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20">: from </tspan><tspan x="50.02" y="104.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">Q</tspan><tspan x="54.50" y="104.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20">, </tspan><tspan x="57.95" y="104.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">S</tspan><tspan x="61.05" y="102.02" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">+</tspan><tspan x="64.43" y="104.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20">, and </tspan><tspan x="79.94" y="104.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-style="italic">E</tspan></text>
-<rect x="21.00" y="108.50" width="88.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<path d="M37.5,108.5 H24.0 Q21.0,108.5 21.0,111.5 V117.5 Q21.0,120.5 24.0,120.5 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#FFFFFF" xml:space="preserve"><tspan x="23.02" y="116.70" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="27.91" y="118.19" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">str</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="116.65" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Scope · Attachment</tspan></text>
-<rect x="21.00" y="128.00" width="88.00" height="16.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<path d="M37.5,128.0 H24.0 Q21.0,128.0 21.0,131.0 V141.0 Q21.0,144.0 24.0,144.0 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#FFFFFF" xml:space="preserve"><tspan x="21.52" y="138.20" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="26.41" y="139.69" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">row</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="134.65" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Column · Join ·</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="141.65" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Value · NULL</tspan></text>
-<rect x="21.00" y="148.50" width="88.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<path d="M37.5,148.5 H24.0 Q21.0,148.5 21.0,151.5 V157.5 Q21.0,160.5 24.0,160.5 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#FFFFFF" xml:space="preserve"><tspan x="22.19" y="156.70" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="27.08" y="158.19" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">out</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="156.65" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Aggregate · Project · Tie</tspan></text>
-<path d="M71.00,120.50 L71.00,125.60" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="71.00,128.00 69.74,125.00 72.26,125.00" fill="#333333"/>
-<path d="M71.00,144.00 L71.00,146.10" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="71.00,148.50 69.74,145.50 72.26,145.50" fill="#333333"/>
-<path d="M21.00,114.50 L12.50,114.50 Q11.00,114.50 11.00,116.00 L11.00,154.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M11.00,136.00 L18.60,136.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="21.00,136.00 18.00,137.26 18.00,134.74" fill="#333333"/>
-<path d="M11.00,154.50 L18.60,154.50" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="21.00,154.50 18.00,155.76 18.00,153.24" fill="#333333"/>
-<text fill="#333333" xml:space="preserve"><tspan x="13.20" y="126.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">earlier </tspan><tspan x="31.54" y="126.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">Φ</tspan></text>
-<path d="M7.00,165.50 L109.00,165.50" fill="none" stroke="#BBBBBB" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2,1.5"/>
-<text fill="#333333" xml:space="preserve"><tspan x="21.00" y="173.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20" font-weight="bold">Backward</tspan><tspan x="50.29" y="173.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20">: from drafted SQL</tspan></text>
-<rect x="21.00" y="176.50" width="88.00" height="21.50" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<path d="M37.5,176.5 H24.0 Q21.0,176.5 21.0,179.5 V195.0 Q21.0,198.0 24.0,198.0 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#FFFFFF" xml:space="preserve"><tspan x="20.86" y="189.45" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="25.75" y="190.94" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">bwd</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="182.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">drafts grouped by result,</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="189.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">three stages run again,</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="195.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">uncovered groups added</tspan></text>
-<path d="M29.00,160.50 L29.00,161.75 Q29.00,163.00 27.75,163.00 L15.50,163.00 Q14.00,163.00 14.00,164.50 L14.00,201.40" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M24.00,198.00 L24.00,199.90 Q24.00,201.40 22.50,201.40 L15.50,201.40 Q14.00,201.40 14.00,202.90 L14.00,205.46" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="14.00,207.70 12.82,204.90 15.18,204.90" fill="#333333"/>
-<g transform="rotate(-9 13.0 218.0)">
-<rect x="7.00" y="208.00" width="12.50" height="9.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
-<path d="M7.0,210.8 V209.2 Q7.0,208.0 8.2,208.0 H18.3 Q19.5,208.0 19.5,209.2 V210.8 Z" fill="#E69F00" stroke="#333333" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M9.00,212.80 L17.00,212.80" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M9.00,215.00 L14.50,215.00" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="7.00" y="100.00" width="49.00" height="17.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="19.27" y="106.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20" font-weight="bold">Forward</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="20.98" y="113.60" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">Q</tspan><tspan x="25.31" y="113.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">, </tspan><tspan x="28.64" y="113.60" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">S</tspan><tspan x="31.64" y="111.20" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">+</tspan><tspan x="35.03" y="113.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">, </tspan><tspan x="38.36" y="113.60" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">E</tspan></text>
+<path d="M31.50,117.00 L31.50,120.76" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="31.50,123.00 30.32,120.20 32.68,120.20" fill="#333333"/>
+<rect x="60.00" y="100.00" width="49.00" height="17.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<text fill="#333333" xml:space="preserve"><tspan x="69.85" y="106.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.20" font-weight="bold">Backward</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="62.91" y="113.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">+ draft groups </tspan><tspan x="101.76" y="113.60" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">G</tspan></text>
+<path d="M84.50,117.00 L84.50,120.76" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="84.50,123.00 83.32,120.20 85.68,120.20" fill="#333333"/>
+<rect x="21.00" y="123.00" width="88.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<path d="M37.5,123.0 H24.0 Q21.0,123.0 21.0,126.0 V132.0 Q21.0,135.0 24.0,135.0 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#FFFFFF" xml:space="preserve"><tspan x="23.02" y="131.20" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="27.91" y="132.69" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">str</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="131.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Scope · Attachment</tspan></text>
+<rect x="21.00" y="143.00" width="88.00" height="16.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<path d="M37.5,143.0 H24.0 Q21.0,143.0 21.0,146.0 V156.0 Q21.0,159.0 24.0,159.0 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#FFFFFF" xml:space="preserve"><tspan x="21.52" y="153.20" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="26.41" y="154.69" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">row</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="149.65" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Column · Join ·</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="156.65" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Value · NULL</tspan></text>
+<rect x="21.00" y="167.00" width="88.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<path d="M37.5,167.0 H24.0 Q21.0,167.0 21.0,170.0 V176.0 Q21.0,179.0 24.0,179.0 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#FFFFFF" xml:space="preserve"><tspan x="22.19" y="175.20" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="27.08" y="176.69" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">out</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="175.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Aggregate · Project · Tie</tspan></text>
+<rect x="21.00" y="186.00" width="88.00" height="10.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<path d="M37.5,186.0 H24.0 Q21.0,186.0 21.0,189.0 V193.0 Q21.0,196.0 24.0,196.0 H37.5 Z" fill="#333333" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#FFFFFF" xml:space="preserve"><tspan x="21.69" y="193.20" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.20" font-weight="bold" font-style="italic">Φ</tspan><tspan x="26.58" y="194.69" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">cov</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="39.60" y="193.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">groups not separated</tspan></text>
+<path d="M71.00,135.00 L71.00,140.60" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="71.00,143.00 69.74,140.00 72.26,140.00" fill="#333333"/>
+<path d="M71.00,159.00 L71.00,164.60" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="71.00,167.00 69.74,164.00 72.26,164.00" fill="#333333"/>
+<path d="M71.00,179.00 L71.00,183.60" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="71.00,186.00 69.74,183.00 72.26,183.00" fill="#333333"/>
+<path d="M21.00,129.00 L12.50,129.00 Q11.00,129.00 11.00,130.50 L11.00,173.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M11.00,151.00 L18.60,151.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="21.00,151.00 18.00,152.26 18.00,149.74" fill="#333333"/>
+<path d="M11.00,173.00 L18.60,173.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="21.00,173.00 18.00,174.26 18.00,171.74" fill="#333333"/>
+<text fill="#333333" xml:space="preserve"><tspan x="13.20" y="140.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">earlier </tspan><tspan x="31.54" y="140.60" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">Φ</tspan></text>
+<path d="M24.00,196.00 L24.00,200.50 Q24.00,202.00 22.50,202.00 L15.50,202.00 Q14.00,202.00 14.00,203.50 L14.00,207.46" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="14.00,209.70 12.82,206.90 15.18,206.90" fill="#333333"/>
+<g transform="rotate(-9 13.0 220.0)">
+<rect x="7.00" y="210.00" width="12.50" height="9.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
+<path d="M7.0,212.8 V211.2 Q7.0,210.0 8.2,210.0 H18.3 Q19.5,210.0 19.5,211.2 V212.8 Z" fill="#E69F00" stroke="#333333" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M9.00,214.80 L17.00,214.80" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M9.00,217.00 L14.50,217.00" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
 </g>
-<g transform="rotate(-4 13.0 218.0)">
-<rect x="7.60" y="209.60" width="12.50" height="9.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
-<path d="M7.6,212.4 V210.79999999999998 Q7.6,209.6 8.799999999999999,209.6 H18.900000000000002 Q20.1,209.6 20.1,210.79999999999998 V212.4 Z" fill="#56B4E9" stroke="#333333" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M9.60,214.40 L17.60,214.40" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M9.60,216.60 L15.10,216.60" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<g transform="rotate(-4 13.0 220.0)">
+<rect x="7.60" y="211.60" width="12.50" height="9.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
+<path d="M7.6,214.4 V212.79999999999998 Q7.6,211.6 8.799999999999999,211.6 H18.900000000000002 Q20.1,211.6 20.1,212.79999999999998 V214.4 Z" fill="#56B4E9" stroke="#333333" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M9.60,216.40 L17.60,216.40" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M9.60,218.60 L15.10,218.60" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
 </g>
-<g transform="rotate(2 13.0 218.0)">
-<rect x="8.20" y="211.20" width="12.50" height="9.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
-<path d="M8.2,214.0 V212.39999999999998 Q8.2,211.2 9.399999999999999,211.2 H19.5 Q20.7,211.2 20.7,212.39999999999998 V214.0 Z" fill="#0072B2" stroke="#333333" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M10.20,216.00 L18.20,216.00" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M10.20,218.20 L15.70,218.20" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<g transform="rotate(2 13.0 220.0)">
+<rect x="8.20" y="213.20" width="12.50" height="9.00" rx="1.2" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
+<path d="M8.2,216.0 V214.39999999999998 Q8.2,213.2 9.399999999999999,213.2 H19.5 Q20.7,213.2 20.7,214.39999999999998 V216.0 Z" fill="#0072B2" stroke="#333333" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M10.20,218.00 L18.20,218.00" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M10.20,220.20 L15.70,220.20" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
 </g>
-<text fill="#333333" xml:space="preserve"><tspan x="7.03" y="231.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">Φ</tspan><tspan x="11.98" y="233.06" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">raw</tspan></text>
-<path d="M19.50,211.00 L22.50,203.50" fill="none" stroke="#BBBBBB" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1.5,1.2"/>
-<path d="M20.50,221.00 L22.50,246.00" fill="none" stroke="#BBBBBB" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1.5,1.2"/>
-<rect x="22.50" y="203.00" width="86.00" height="43.50" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
-<path d="M22.5,213.0 V206.0 Q22.5,203.0 25.5,203.0 H105.5 Q108.5,203.0 108.5,206.0 V213.0 Z" fill="#0072B2" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#FFFFFF" xml:space="preserve"><tspan x="23.18" y="210.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Aggregate · </tspan><tspan x="56.20" y="210.40" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">h</tspan><tspan x="59.20" y="210.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00"> = 'decrease rate'</tspan></text>
-<circle cx="108.50" cy="203.00" r="3.6" fill="#0072B2" stroke="#FFFFFF" stroke-width="0.6"/>
-<text fill="#FFFFFF" xml:space="preserve"><tspan x="106.83" y="205.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">2</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="25.00" y="220.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">p</tspan><tspan x="28.00" y="220.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">₁: difference of summed</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="30.10" y="226.80" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">T-CHO</tspan><tspan x="48.10" y="226.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">, Nov − Dec,</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="30.10" y="233.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">divided by Nov sum</tspan></text>
-<path d="M24.50,236.40 L106.50,236.40" fill="none" stroke="#BBBBBB" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#333333" xml:space="preserve"><tspan x="25.00" y="243.40" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">p</tspan><tspan x="28.00" y="243.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">₂: </tspan><tspan x="33.66" y="243.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">&lt;second reading&gt;</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="7.03" y="233.50" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.50" font-style="italic">Φ</tspan><tspan x="11.98" y="235.06" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00">raw</tspan></text>
+<path d="M19.50,213.00 L22.50,204.50" fill="none" stroke="#BBBBBB" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1.5,1.2"/>
+<path d="M20.50,223.00 L22.50,247.00" fill="none" stroke="#BBBBBB" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1.5,1.2"/>
+<rect x="22.50" y="204.00" width="86.00" height="43.50" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
+<path d="M22.5,214.0 V207.0 Q22.5,204.0 25.5,204.0 H105.5 Q108.5,204.0 108.5,207.0 V214.0 Z" fill="#0072B2" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#FFFFFF" xml:space="preserve"><tspan x="23.18" y="211.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">Aggregate · </tspan><tspan x="56.20" y="211.40" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">h</tspan><tspan x="59.20" y="211.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00"> = 'decrease rate'</tspan></text>
+<circle cx="108.50" cy="204.00" r="3.6" fill="#0072B2" stroke="#FFFFFF" stroke-width="0.6"/>
+<text fill="#FFFFFF" xml:space="preserve"><tspan x="106.83" y="206.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">2</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="25.00" y="221.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">p</tspan><tspan x="28.00" y="221.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">₁: difference of summed</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="30.10" y="227.80" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">T-CHO</tspan><tspan x="48.10" y="227.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">, Nov − Dec,</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="30.10" y="234.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">divided by Nov sum</tspan></text>
+<path d="M24.50,237.40 L106.50,237.40" fill="none" stroke="#BBBBBB" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text fill="#333333" xml:space="preserve"><tspan x="25.00" y="244.40" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-style="italic">p</tspan><tspan x="28.00" y="244.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">₂: </tspan><tspan x="33.66" y="244.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">&lt;second reading&gt;</tspan></text>
 <rect x="123.50" y="102.00" width="52.00" height="79.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
 <path d="M144.0,107.54 A5.0,2.04 0 0 1 154.0,107.54 V115.46 A5.0,2.04 0 0 1 144.0,115.46 Z" fill="#FFFFFF" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M144.0,107.54 A5.0,2.04 0 0 0 154.0,107.54" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
@@ -127,7 +133,7 @@
 <rect x="124.70" y="153.00" width="49.60" height="26.50" rx="2" fill="#F4F4F4" stroke="#333333" stroke-width="0.7"/>
 <rect x="124.70" y="153.00" width="2.20" height="26.50" rx="0.8" fill="#56B4E9" stroke="none"/>
 <text fill="#333333" xml:space="preserve"><tspan x="127.50" y="159.70" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">COUNT(*)=0 →</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="127.50" y="166.50" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">remove; keep</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="127.50" y="166.50" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">remove, keep</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="127.50" y="173.30" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">'1959-02-18'</tspan></text>
 <rect x="177.50" y="102.00" width="56.00" height="79.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
 <rect x="196.00" y="105.20" width="6.00" height="5.00" rx="0.8" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
@@ -147,7 +153,7 @@
 <rect x="178.70" y="153.00" width="53.60" height="26.50" rx="2" fill="#F4F4F4" stroke="#333333" stroke-width="0.7"/>
 <text fill="#333333" xml:space="preserve"><tspan x="180.10" y="159.70" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">res(q₁, D) =</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="180.10" y="166.50" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">res(q₂, D) →</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="180.10" y="173.30" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">discard</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="180.10" y="173.30" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">drop</tspan></text>
 <rect x="235.50" y="102.00" width="52.00" height="79.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
 <rect x="250.50" y="106.00" width="9.00" height="11.00" rx="1" fill="#333333" stroke="none"/>
 <path d="M259.50,107.50 L264.50,111.50" fill="none" stroke="#333333" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
@@ -160,19 +166,19 @@
 <rect x="236.70" y="153.00" width="49.60" height="26.50" rx="2" fill="#F4F4F4" stroke="#333333" stroke-width="0.7"/>
 <text fill="#333333" xml:space="preserve"><tspan x="238.10" y="159.70" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">res(y_p₁) = …</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="238.10" y="166.50" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">= res(y_</tspan><tspan x="266.91" y="166.50" font-family="'DejaVu Sans Mono', 'Segoe UI Symbol', monospace" font-size="6.00">⊥</tspan><tspan x="270.52" y="166.50" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">) →</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="238.10" y="173.30" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">discard</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="238.10" y="173.30" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">drop</tspan></text>
 <rect x="121.50" y="100.00" width="168.00" height="103.10" rx="3" fill="none" stroke="#BBBBBB" stroke-width="0.7"/>
 <rect x="123.50" y="185.00" width="164.00" height="15.60" rx="2" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="0.7"/>
 <text fill="#333333" xml:space="preserve"><tspan x="126.50" y="191.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">act only on conclusive evidence</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="126.50" y="198.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">write a single interpretation only if it informs the parser</tspan></text>
 <path d="M141.50,203.10 L141.50,215.44" fill="none" stroke="#BBBBBB" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="141.50,218.00 140.16,214.80 142.84,214.80" fill="#BBBBBB"/>
-<rect x="125.50" y="218.00" width="36.00" height="11.00" rx="5.5" fill="#BBBBBB" stroke="none"/>
+<rect x="125.50" y="218.00" width="30.00" height="11.00" rx="5.5" fill="#BBBBBB" stroke="none"/>
 <path d="M130.70,221.40 L135.30,221.40" fill="none" stroke="#333333" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M132.20,221.40 L132.20,220.70 L133.80,220.70 L133.80,221.40" fill="none" stroke="#333333" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M131.3,222.1 L131.7,226.1 L134.3,226.1 L134.7,222.1" fill="none" stroke="#333333" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
-<text fill="#333333" xml:space="preserve"><tspan x="138.50" y="225.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Discard</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="169.50" y="225.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">check fails → pass on unchanged</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="138.50" y="225.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Drop</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="162.50" y="225.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">check incomplete → pass on unchanged</tspan></text>
 <path d="M110.00,210.00 L117.66,210.00" fill="none" stroke="#333333" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="121.50,210.00 116.70,212.02 116.70,207.98" fill="#333333"/>
 <path d="M289.50,116.00 L314.16,116.00" fill="none" stroke="#333333" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>

@@ -149,11 +149,19 @@ for k, ((x, w_), (t, s)) in enumerate(zip(P, titles)):
 # ---------------------------------------------------------------- panel 1
 x0, pw = P[0]
 SX, SWD = x0 + 17, pw - 20
-T(x0 + 4, 104.5, "!{Forward}: from $Q$, $S^{+}$, and $E$", 6.2, maxw=pw - 7)
+CHW, CHY, CHH = (pw - 10) / 2, 100.0, 17.0
+chips = [(x0 + 3, "!{Forward}", "$Q$, $S^{+}$, $E$"),
+         (x0 + 7 + CHW, "!{Backward}", "+ draft groups $G$")]
+for chx, t1, t2 in chips:
+    box(chx, CHY, CHW, CHH)
+    T(chx + CHW / 2, CHY + 6.6, t1, 6.2, "middle", maxw=CHW - 2)
+    T(chx + CHW / 2, CHY + 13.6, t2, 6, "middle", maxw=CHW - 2)
+    c.arrow([(chx + CHW / 2, CHY + CHH), (chx + CHW / 2, 123.0)], hs=2.8)
 
-stages = [("$Φ$_{str}", ["Scope · Attachment"], 108.5, 12.0),
-          ("$Φ$_{row}", ["Column · Join ·", "Value · NULL"], 128.0, 16.0),
-          ("$Φ$_{out}", ["Aggregate · Project · Tie"], 148.5, 12.0)]
+stages = [("$Φ$_{str}", ["Scope · Attachment"], 123.0, 12.0),
+          ("$Φ$_{row}", ["Column · Join ·", "Value · NULL"], 143.0, 16.0),
+          ("$Φ$_{out}", ["Aggregate · Project · Tie"], 167.0, 12.0),
+          ("$Φ$_{cov}", ["groups not separated"], 186.0, 10.0)]
 mids = []
 for tg, rows, y, h in stages:
     box(SX, y, SWD, h)
@@ -162,7 +170,7 @@ for tg, rows, y, h in stages:
     T(SX + 8.3, y + h / 2 + 2.2, tg, 6.2, "middle", bold=True, color=WHITE)
     y0 = y + h / 2 - (len(rows) - 1) * 3.5 + 2.15
     for j, r_ in enumerate(rows):
-        T(SX + 18.6, y0 + j * 7.0, r_, 6, maxw=SWD - 20)
+        T(SX + 18.6, y0 + j * 7.0, r_, 6, maxw=SWD - 20, italic=(tg == "$Φ$_{cov}"))
     mids.append(y + h / 2)
 acx = SX + SWD / 2 + 6
 for (_, _, y, h), (_, _, yn, _) in zip(stages, stages[1:]):
@@ -171,33 +179,20 @@ RAIL = x0 + 7
 c.line([(SX, mids[0]), (RAIL, mids[0]), (RAIL, mids[2])], r=1.5)
 c.arrow([(RAIL, mids[1]), (SX, mids[1])], hs=3)
 c.arrow([(RAIL, mids[2]), (SX, mids[2])], hs=3)
-T(RAIL + 2.2, 126.0, "earlier $Φ$", 6)
-
-SEP = 165.5
-c.line([(x0 + 3, SEP), (x0 + pw - 3, SEP)], GRAY, 0.6, dash="2,1.5")
-T(SX, 173.0, "!{Backward}: from drafted SQL", 6.2, maxw=pw - 16)
-
-DY, DH = 176.5, 21.5
-box(SX, DY, SWD, DH)
-c.path(f"M{SX + 16.5},{DY} H{SX + R} Q{SX},{DY} {SX},{DY + R} V{DY + DH - R} "
-       f"Q{SX},{DY + DH} {SX + R},{DY + DH} H{SX + 16.5} Z", INK, SW, fill=INK)
-T(SX + 8.3, DY + DH / 2 + 2.2, "$Φ$_{bwd}", 6.2, "middle", bold=True, color=WHITE)
-for j, r_ in enumerate(["drafts grouped by result,", "three stages run again,", "uncovered groups added"]):
-    T(SX + 18.6, DY + 6.3 + j * 6.4, r_, 6, maxw=SWD - 20)
-FWX = x0 + 10
-c.line([(SX + 8, stages[2][2] + stages[2][3]), (SX + 8, 163.0), (FWX, 163.0), (FWX, 201.4)], r=1.5)
+T(RAIL + 2.2, 140.6, "earlier $Φ$", 6)
+DY, DH = stages[3][2], stages[3][3]
 
 # output: fanned stack + enlarged card [2]
-STX, STY = x0 + 3.0, 208.0
-c.arrow([(SX + 3, DY + DH), (SX + 3, 201.4), (STX + 7, 201.4), (STX + 7, STY - 0.3)],
+STX, STY = x0 + 3.0, 210.0
+c.arrow([(SX + 3, DY + DH), (SX + 3, 202.0), (STX + 7, 202.0), (STX + 7, STY - 0.3)],
         hs=2.8, r=1.5)
 for k, (n, rot) in enumerate([(3, -9), (1, -4), (2, 2)]):
     c.items.append(f'<g transform="rotate({rot} {STX + 6} {STY + 10})">')
     mini_card(STX + k * 0.6, STY + k * 1.6, CARD[n])
     c.items.append("</g>")
-T(STX + 7, 231.5, "$Φ_{raw}$", 6.5, "middle")
+T(STX + 7, 233.5, "$Φ_{raw}$", 6.5, "middle")
 
-CX, CY, CW, CH = x0 + 18.5, 203.0, pw - 22.0, 43.5
+CX, CY, CW, CH = x0 + 18.5, 204.0, pw - 22.0, 43.5
 c.line([(STX + 12.5, STY + 3), (CX, CY + 0.5)], GRAY, 0.6, dash="1.5,1.2")
 c.line([(STX + 13.5, STY + 13), (CX, CY + CH - 0.5)], GRAY, 0.6, dash="1.5,1.2")
 box(CX, CY, CW, CH)
@@ -217,11 +212,11 @@ x0, pw = P[1]
 GX, GY = x0 + 1.5, 100.0
 cols = [
     (52.0, ["Existence"], ["Column · Join ·", "Value · NULL"],
-     ["COUNT(*)=0 →", "remove; keep", "'1959-02-18'"]),
+     ["COUNT(*)=0 →", "remove, keep", "'1959-02-18'"]),
     (56.0, ["Difference"], ["Scope · Attachment", "· Value · NULL"],
-     ["res(q₁, D) =", "res(q₂, D) →", "discard"]),
+     ["res(q₁, D) =", "res(q₂, D) →", "drop"]),
     (52.0, ["Relevance"], ["all nine types,", "parser's input"],
-     ["res(y_p₁) = …", "= res(y_⊥) →", "discard"]),
+     ["res(y_p₁) = …", "= res(y_⊥) →", "drop"]),
 ]
 CT, CODE_Y, CB = GY + 2, 153.0, 181.0
 BAR = (GX + 2, 185.0, 0, 15.6)
@@ -271,10 +266,10 @@ GBOT = BAR[1] + BAR[3] + 2.5
 # remove
 RPX, RPY = GX + 4, 218.0
 c.arrow([(RPX + 16, GBOT), (RPX + 16, RPY)], GRAY, 1.0)
-pill(RPX, RPY, 36, 11, GRAY)
+pill(RPX, RPY, 30, 11, GRAY)
 trash(RPX + 7.5, RPY + 5.6)
-T(RPX + 13, RPY + 7.6, "Discard", 6.5, bold=True)
-T(RPX + 44, RPY + 7.6, "check fails → pass on unchanged", 6, italic=True)
+T(RPX + 13, RPY + 7.6, "Drop", 6.5, bold=True)
+T(RPX + 37, RPY + 7.6, "check incomplete → pass on unchanged", 6, italic=True)
 
 # P1 -> P2
 c.arrow([(P[0][0] + P[0][1] - 2, 210.0), (GX, 210.0)], INK, THICK)
