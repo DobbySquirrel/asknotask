@@ -211,7 +211,10 @@ JW = 28.0
 MR0, MR1 = L2Y0 + 14, L2Y0 + 66
 mm = (MR0 + MR1) / 2
 JEV_TOP = mm - 14
-c.line([(TRAIN_CX, R1Y + R1H), (TRAIN_CX, JEV_TOP - 6)], INK, THICK)
+c.line([(TRAIN_CX, R1Y + R1H), (TRAIN_CX, R2Y + 4 - 5)], INK, THICK)
+c.polygon([(TRAIN_CX, R2Y + 4), (TRAIN_CX - 2.7, R2Y + 4 - 5.3), (TRAIN_CX + 2.7, R2Y + 4 - 5.3)],
+          INK)
+c.line([(TRAIN_CX, R2Y + R2H - 4), (TRAIN_CX, JEV_TOP - 6)], INK, THICK)
 c.polygon([(TRAIN_CX, JEV_TOP), (TRAIN_CX - 2.7, JEV_TOP - 6.3), (TRAIN_CX + 2.7, JEV_TOP - 6.3)],
           INK)
 
@@ -219,9 +222,9 @@ c.polygon([(TRAIN_CX, JEV_TOP), (TRAIN_CX - 2.7, JEV_TOP - 6.3), (TRAIN_CX + 2.7
 SC_X0, SC_X1 = BR, TX + TW
 SC_Y, SC_H = R2Y + 4, R2H - 8
 box(SC_X0, SC_Y, SC_X1 - SC_X0, SC_H, stroke=BLUE, sw=1.1)
-scx = (SC_X0 + TRAIN_CX - 4) / 2
-T(scx, SC_Y + 13, "Apply trained", 6.5, "middle", bold=True, color=BLUE)
-T(scx, SC_Y + 20.5, "scorer", 6.5, "middle", bold=True, color=BLUE)
+scx = (SC_X0 + SC_X1) / 2
+T(scx, SC_Y + 12.5, "Apply trained scorer", 6.5, "middle", bold=True, color=BLUE)
+T(scx, SC_Y + 21.5, "/{agreement at each θ}", FS, "middle")
 harrow(SC_X1, CH_X0, r2m)
 
 # validation chart
@@ -260,7 +263,7 @@ c.line([(ix, iy), (ix, AY1)], BLUE, 0.6)
 star(ix, iy, ro=3.8, ri=1.6)
 T(ix - 4, ALY + 12, "$θ^{*}$", 7, "end", bold=True)
 T(chm, AY1 + 15, "`θ* = max{θ : agr(θ) ≥ α}`", FS, "middle", maxw=CH_X1 - CH_X0 - 4)
-for j, ln in enumerate(["θ*: largest threshold that meets α",
+for j, ln in enumerate(["θ*: largest entropy threshold meeting α",
                         "α: target agreement, set by the user",
                         "agr: top option = user's choice"]):
     T(chm, AY1 + 22 + j * 6.5, f"/{{{ln}}}", FS, "middle", color=INK if j == 0 else MID,

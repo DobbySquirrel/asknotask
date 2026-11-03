@@ -117,11 +117,13 @@
 <path d="M365.4,48.9 A2.4,2.4 0 1 1 363.0,46.5" fill="none" stroke="#0072B2" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="362.60,44.70 365.30,46.50 362.60,48.30" fill="#0072B2"/>
 <text fill="#333333" xml:space="preserve"><tspan x="338.32" y="57.80" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">shuffled per epoch</tspan></text>
-<path d="M363.00,60.00 L363.00,140.00" fill="none" stroke="#333333" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M363.00,60.00 L363.00,69.00" fill="none" stroke="#333333" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="363.00,74.00 360.30,68.70 365.70,68.70" fill="#333333"/>
+<path d="M363.00,104.00 L363.00,140.00" fill="none" stroke="#333333" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="363.00,146.00 360.30,139.70 365.70,139.70" fill="#333333"/>
 <rect x="292.00" y="74.00" width="100.00" height="30.00" rx="3" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.1"/>
-<text fill="#0072B2" xml:space="preserve"><tspan x="304.74" y="87.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Apply trained</tspan></text>
-<text fill="#0072B2" xml:space="preserve"><tspan x="315.56" y="94.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">scorer</tspan></text>
+<text fill="#0072B2" xml:space="preserve"><tspan x="310.40" y="86.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.50" font-weight="bold">Apply trained scorer</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="314.52" y="95.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">agreement at each θ</tspan></text>
 <path d="M392.00,89.00 L397.76,89.00" fill="none" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="400.00,89.00 397.20,90.18 397.20,87.82" fill="#333333"/>
 <rect x="400.00" y="15.00" width="108.52" height="97.00" rx="3" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.1"/>
@@ -141,7 +143,7 @@
 <polygon points="458.12,41.20 459.06,43.71 461.73,43.83 459.64,45.49 460.35,48.07 458.12,46.60 455.88,48.07 456.59,45.49 454.50,43.83 457.18,43.71" fill="#0072B2"/>
 <text fill="#333333" xml:space="preserve"><tspan x="447.48" y="57.00" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="7.00" font-weight="bold" font-style="italic">θ</tspan><tspan x="451.12" y="54.20" font-family="'Liberation Serif', 'Times New Roman', Times, serif" font-size="6.00" font-weight="bold">*</tspan></text>
 <text fill="#333333" xml:space="preserve"><tspan x="411.05" y="90.00" font-family="'Liberation Mono', 'Courier New', Courier, monospace" font-size="6.00">θ* = max{θ : agr(θ) ≥ α}</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="410.24" y="97.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">θ*: largest threshold that meets α</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="402.73" y="97.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">θ*: largest entropy threshold meeting α</tspan></text>
 <text fill="#8C8C8C" xml:space="preserve"><tspan x="406.69" y="103.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">α: target agreement, set by the user</tspan></text>
 <text fill="#8C8C8C" xml:space="preserve"><tspan x="414.25" y="110.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">agr: top option = user's choice</tspan></text>
 <rect x="8.00" y="138.00" width="92.00" height="44.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
