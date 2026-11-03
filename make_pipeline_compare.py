@@ -220,20 +220,33 @@ c.polygon([(TRAIN_CX, JEV_TOP), (TRAIN_CX - 2.7, JEV_TOP - 6.3), (TRAIN_CX + 2.7
 
 # lower row: apply scorer
 SC_X0, SC_X1 = BR, TX + TW
-SC_Y, SC_H = R2Y + 4, R2H - 8
+SC_Y, SC_H = R2Y + 2, R2H - 4
 box(SC_X0, SC_Y, SC_X1 - SC_X0, SC_H, stroke=BLUE, sw=1.1)
 scx = (SC_X0 + SC_X1) / 2
 T(scx, SC_Y + 8.5, "Apply trained scorer", 6.5, "middle", bold=True, color=BLUE)
-steps = ["$H_{norm}$, top", "top = user?", "agr($θ$)"]
-sw_ = [c.tw(t_, FS) + 5 for t_ in steps]
-SG = 7.0
-sx = scx - (sum(sw_) + SG * (len(steps) - 1)) / 2
-for k, (t_, w_) in enumerate(zip(steps, sw_)):
-    box(sx, SC_Y + 13, w_, 11, stroke=BLUE, sw=0.6, rx=2)
-    T(sx + w_ / 2, SC_Y + 20.4, t_, FS, "middle")
-    if k < len(steps) - 1:
-        harrow(sx + w_, sx + w_ + SG, SC_Y + 18.5, BLUE)
-    sx += w_ + SG
+BASE = SC_Y + 24.5
+LBL = SC_Y + 31.0
+bx = SC_X0 + 6
+for lt, hgt in (("A", 10.0), ("B", 3.5), ("C", 1.5), ("…", None), ("Z", 0.6)):
+    if hgt is not None:
+        c.rect(bx, BASE - hgt, 3.8, hgt, rx=0.4, fill=BLUE if lt == "A" else GRAY)
+    T(bx + 1.9, LBL, lt, FS, "middle", bold=(lt == "A"),
+      color=BLUE if lt == "A" else MID)
+    bx += 5.6
+c.line([(SC_X0 + 5, BASE), (bx - 1, BASE)], MID, 0.4)
+AR0 = bx + 1
+harrow(AR0, AR0 + 6, BASE - 4)
+TPX = AR0 + 8
+c.rect(TPX, BASE - 8.5, 8, 8, rx=1.2, fill=BLUE)
+T(TPX + 4, BASE - 2.6, "A", FS, "middle", bold=True, color=WHITE)
+T(TPX + 4, LBL, "top", FS, "middle", color=MID)
+T(TPX + 13, BASE - 2.4, "=", 7, "middle", bold=True)
+USX = TPX + 18
+c.rect(USX, BASE - 8.5, 8, 8, rx=1.2, fill=ORANGE)
+T(USX + 4, BASE - 2.6, "A", FS, "middle", bold=True)
+T(USX + 4, LBL, "user", FS, "middle", color=MID)
+harrow(USX + 9, USX + 15, BASE - 4)
+T(USX + 17, BASE - 2.4, "agr($θ$)", FS)
 harrow(SC_X1, CH_X0, r2m)
 
 # validation chart

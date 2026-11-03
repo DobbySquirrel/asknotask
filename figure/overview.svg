@@ -141,7 +141,7 @@
 <text fill="#333333" xml:space="preserve"><tspan x="130.32" y="144.00" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-style="italic">SQL: template</tspan></text>
 <rect x="124.70" y="148.00" width="49.60" height="20.50" rx="2" fill="#F4F4F4" stroke="#333333" stroke-width="0.7"/>
 <text fill="#333333" xml:space="preserve"><tspan x="126.00" y="155.60" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">0 rows → remove</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="132.32" y="163.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">1 left → Auto</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="131.11" y="163.20" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">1 left → Auto</tspan></text>
 <rect x="177.50" y="102.00" width="54.00" height="68.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
 <rect x="195.00" y="105.20" width="6.00" height="5.00" rx="0.8" fill="#FFFFFF" stroke="#333333" stroke-width="0.55"/>
 <path d="M196.20,107.00 L199.80,107.00" fill="none" stroke="#333333" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>

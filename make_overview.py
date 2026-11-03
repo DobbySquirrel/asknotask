@@ -250,7 +250,7 @@ for k, (cw, title, code) in enumerate(cols):
     box(cx_ + 1.2, CODE_Y, cw - 2.4, CB - CODE_Y - 1.5, fill=BG, rx=2)
     for j, ln in enumerate(code):
         T(cx_ + cw / 2, CODE_Y + 7.6 + j * 7.6, ln, 6, "middle",
-          bold=(j == 1 and k > 0), maxw=cw - (4.4 if k == 0 else 3.8))
+          bold=(j == 1), maxw=cw - (4.4 if k == 0 else 3.8))
     col_pos.append((cx_, cw))
     cx_ += cw + 2
 GW = cx_ - GX
