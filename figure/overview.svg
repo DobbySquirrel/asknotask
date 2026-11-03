@@ -115,7 +115,7 @@
 <rect x="22.50" y="202.50" width="86.00" height="15.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>
 <path d="M22.5,210.1 V205.5 Q22.5,202.5 25.5,202.5 H105.5 Q108.5,202.5 108.5,205.5 V210.1 Z" fill="#56B4E9" stroke="#333333" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
 <text fill="#333333" xml:space="preserve"><tspan x="24.70" y="208.10" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">'born on 1959/2/18' · Value</tspan></text>
-<text fill="#333333" xml:space="preserve"><tspan x="25.00" y="215.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">A–C: three date forms</tspan></text>
+<text fill="#333333" xml:space="preserve"><tspan x="25.00" y="215.40" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00">A '1959-02-18'   B '1959/02/18'</tspan></text>
 <circle cx="108.50" cy="203.00" r="3.2" fill="#56B4E9" stroke="#FFFFFF" stroke-width="0.6"/>
 <text fill="#333333" xml:space="preserve"><tspan x="106.83" y="205.15" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="6.00" font-weight="bold">1</tspan></text>
 <rect x="22.50" y="218.70" width="86.00" height="15.00" rx="3" fill="#FFFFFF" stroke="#333333" stroke-width="0.7"/>

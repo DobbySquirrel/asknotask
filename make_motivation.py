@@ -131,10 +131,10 @@ asks = [["Q1: How is", "'1959/2/18'", "written in SQL?"],
 # Each card: (n, type, outcome, body).  Body rows are (kind, payload).
 cards = [
     (1, "Value", "Settled by the data", [
-        ("code", ("`Birthday = '1959/2/18'`", "0 rows", True)),
+        ("note", "Two stored forms, counted on the data"),
         ("code", ("`Birthday = '1959-02-18'`", "1 patient", False)),
-        ("code", ("`date(Birthday) = '1959-02-18'`", "same patient", False)),
-        ("note", "No match: removed. Equal results: one kept"),
+        ("code", ("`Birthday = '1959/02/18'`", "0 rows", True)),
+        ("note", "No match: removed. One left: written to E"),
     ]),
     (2, "Aggregate", "Resolved automatically", [
         ("note", "Base month, and sum or average of the monthly tests"),
@@ -221,7 +221,7 @@ for key in ("3", "1"):
     ent = PBX + 12 if key == "3" else PBX + PBW - 12
     c.arrow([(bx_, BADGE_Y + BADGE_H), (bx_, B3Y + 7), (ent, B3Y + 7), (ent, PBY)], hs=3.2, r=2.5)
 rbox(PBX, PBY, PBW, PBH)
-T(PBX + PBW / 2, PBY + 10, "Clarified question → NL2SQL parser", FS, "middle", maxw=PBW - 4)
+T(PBX + PBW / 2, PBY + 10, "Clarified input → Text-to-SQL parser", FS, "middle", maxw=PBW - 4)
 
 sq_lines = ["`SELECT (SUM(…) - SUM(…)) / SUM(…)`",
             "`FROM Patient JOIN Laboratory …`",

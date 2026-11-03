@@ -196,7 +196,7 @@ CX, CY, CW = x0 + 18.5, 202.5, pw - 22.0
 KH, KG, KB = 15.0, 1.2, 7.6
 c.line([(STX + 12.5, STY + 3), (CX, CY + 0.5)], GRAY, 0.6, dash="1.5,1.2")
 c.line([(STX + 13.5, STY + 13), (CX, CY + 3 * KH + 2 * KG - 0.5)], GRAY, 0.6, dash="1.5,1.2")
-amb_cards = [(1, "'born on 1959/2/18' · Value", "A–C: three date forms"),
+amb_cards = [(1, "'born on 1959/2/18' · Value", "A '1959-02-18'   B '1959/02/18'"),
              (2, "'decrease rate' · Aggregate", "A–D: base month × sum/avg"),
              (3, "'total cholesterol' · Project", "A rate   B rate + both months")]
 for k, (n, hd, bd) in enumerate(amb_cards):
