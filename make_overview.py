@@ -192,40 +192,37 @@ for k, (n, rot) in enumerate([(3, -9), (1, -4), (2, 2)]):
     c.items.append("</g>")
 T(STX + 7, 233.5, "$Φ_{raw}$", 6.5, "middle")
 
-CX, CY, CW, CH = x0 + 18.5, 204.0, pw - 22.0, 43.5
+CX, CY, CW = x0 + 18.5, 202.5, pw - 22.0
+KH, KG, KB = 15.0, 1.2, 7.6
 c.line([(STX + 12.5, STY + 3), (CX, CY + 0.5)], GRAY, 0.6, dash="1.5,1.2")
-c.line([(STX + 13.5, STY + 13), (CX, CY + CH - 0.5)], GRAY, 0.6, dash="1.5,1.2")
-box(CX, CY, CW, CH)
-c.path(f"M{CX},{CY + 10} V{CY + R} Q{CX},{CY} {CX + R},{CY} H{CX + CW - R} "
-       f"Q{CX + CW},{CY} {CX + CW},{CY + R} V{CY + 10} Z", INK, SW, fill=BLUE)
-T(CX + CW / 2 - 1.4, CY + 7.4, "'decrease rate' · Aggregate", 6, "middle",
-  color=WHITE, maxw=CW - 3.2)
-tag(CX + CW, CY, 2)
-for j, (lt, rd) in enumerate([("A", "(Nov − Dec) / Nov, sums"), ("B", "(Nov − Dec) / Dec, sums"),
-                              ("C", "(Nov − Dec) / Nov, averages"),
-                              ("D", "(Nov − Dec) / Dec, averages")]):
-    T(CX + 2.5, CY + 17.2 + j * 7.4, lt, 6, bold=True)
-    T(CX + 8.5, CY + 17.2 + j * 7.4, rd, 6, maxw=CW - 10)
+c.line([(STX + 13.5, STY + 13), (CX, CY + 3 * KH + 2 * KG - 0.5)], GRAY, 0.6, dash="1.5,1.2")
+amb_cards = [(1, "'born on 1959/2/18' · Value", "A–C: three date forms"),
+             (2, "'decrease rate' · Aggregate", "A–D: base month × sum/avg"),
+             (3, "'total cholesterol' · Project", "A rate   B rate + both months")]
+for k, (n, hd, bd) in enumerate(amb_cards):
+    ky = CY + k * (KH + KG)
+    box(CX, ky, CW, KH)
+    c.path(f"M{CX},{ky + KB} V{ky + R} Q{CX},{ky} {CX + R},{ky} H{CX + CW - R} "
+           f"Q{CX + CW},{ky} {CX + CW},{ky + R} V{ky + KB} Z", INK, SW, fill=CARD[n])
+    T(CX + 2.2, ky + 5.6, hd, 6, color=CARD_TXT[n], maxw=CW - 5)
+    T(CX + 2.5, ky + 12.9, bd, 6, maxw=CW - 4)
+    tag(CX + CW, ky + 0.5, n, r=3.2)
 
 # ---------------------------------------------------------------- panel 2
 x0, pw = P[1]
 GX, GY = x0 + 1.5, 100.0
 cols = [
-    (52.0, ["Existence"], ["Column · Join ·", "Value · NULL"],
-     ["0 rows →", "remove, keep", "'1959-02-18'"]),
-    (56.0, ["Difference"], ["Scope · Attachment", "· Value · NULL"],
-     ["res(q₁, D) =", "res(q₂, D) →", "drop"]),
-    (52.0, ["Relevance"], ["all nine", "types"],
-     ["res(y_p₁) = …", "= res(y_⊥) →", "drop"]),
+    (52.0, ["Existence"], ["0 rows →", "remove, keep", "'1959-02-18'"]),
+    (56.0, ["Difference"], ["res(q₁, D) =", "res(q₂, D) →", "drop"]),
+    (52.0, ["Relevance"], ["res(y_p₁) = …", "= res(y_⊥) →", "drop"]),
 ]
-CT, CODE_Y, CB = GY + 2, 161.0, 191.0
-BAR = (GX + 2, 195.0, 0, 15.6)
-TOOLS = [("Template", "`COUNT(*)` on $D$", GRAY, INK),
-         ("LLM, 2 calls", "target: $p_{j}$, verified", BLUE_L, INK),
-         ("Parser", "target: $Q$, $E$ ⊕ $c_{j}$", INK, WHITE)]
+CT, CODE_Y, CB = GY + 2, 148.0, 177.0
+TOOLS = [("each option", "template query", GRAY, INK),
+         ("options on $D$", "LLM: write, verify", BLUE_L, INK),
+         ("Parser", "input $E$ ⊕ $c_{j}$", INK, WHITE)]
 cx_ = GX + 2
 col_pos = []
-for k, (cw, title, types, code) in enumerate(cols):
+for k, (cw, title, code) in enumerate(cols):
     box(cx_, CT, cw, CB - CT, stroke=INK)
     ic = cx_ + cw / 2
     if k == 0:
@@ -244,17 +241,12 @@ for k, (cw, title, types, code) in enumerate(cols):
         for dy in (4.5, 5.7, 6.9):
             c.line([(ic - 1.8, CT + dy), (ic + 1.8, CT + dy)], INK, 0.5)
         c.cylinder(ic - 4.5, CT + 9.6, 9, 7.6)
-    ty = CT + 22.0
-    for j, t_ in enumerate(title):
-        T(ic, ty + j * 7.2, t_, 6.5, "middle", bold=True, maxw=cw - 2)
-    ty += len(title) * 7.2
-    for j, t_ in enumerate(types):
-        T(ic, ty + j * 6.8, t_, 6, "middle", italic=True, maxw=cw - 0.8)
+    T(ic, CT + 22.5, title[0], 6.5, "middle", bold=True, maxw=cw - 2)
     chip, sub, cf, ct = TOOLS[k]
     chw = c.tw(chip, 6, True) + 7
-    c.rect(ic - chw / 2, 142.0, chw, 8.6, rx=4.3, fill=cf)
-    T(ic, 148.2, chip, 6, "middle", bold=True, color=ct)
-    T(ic, 157.0, sub, 6, "middle", maxw=cw - 1.5)
+    c.rect(ic - chw / 2, CT + 26.5, chw, 8.6, rx=4.3, fill=cf)
+    T(ic, CT + 32.7, chip, 6, "middle", bold=True, color=ct, maxw=cw - 2)
+    T(ic, CT + 42.0, sub, 6, "middle", italic=True, maxw=cw - 1.5)
     box(cx_ + 1.2, CODE_Y, cw - 2.4, CB - CODE_Y - 1.5, fill=BG, rx=2)
     if k == 0:
         c.rect(cx_ + 1.2, CODE_Y, 2.2, CB - CODE_Y - 1.5, rx=0.8, fill=BLUE_L)
@@ -264,20 +256,41 @@ for k, (cw, title, types, code) in enumerate(cols):
     col_pos.append((cx_, cw))
     cx_ += cw + 2
 GW = cx_ - GX
-box(GX, GY, GW, BAR[1] + BAR[3] + 2.5 - GY, fill="none", stroke=GRAY)
-box(GX + 2, BAR[1], GW - 4, BAR[3], fill=WHITE, stroke=GRAY, rx=2)
-for j, t_ in enumerate(["drop only on conclusive evidence",
-                        "check incomplete → pass on unchanged"]):
-    T(GX + 5, BAR[1] + 6.6 + j * 6.9, t_, 6, maxw=GW - 9)
-GBOT = BAR[1] + BAR[3] + 2.5
 
-# remove
-RPX, RPY = GX + 4, 224.0
-c.arrow([(RPX + 16, GBOT), (RPX + 16, RPY)], GRAY, 1.0)
-pill(RPX, RPY, 30, 11, GRAY)
-trash(RPX + 7.5, RPY + 5.6)
-T(RPX + 13, RPY + 7.6, "Drop", 6.5, bold=True)
-T(RPX + 37, RPY + 7.6, "no difference on $D$, or not relevant", 6, italic=True)
+# outcome table
+TBY = CB + 4
+LEAD_T = 7.3
+TB_H = 5 * LEAD_T + 4
+box(GX + 2, TBY, GW - 4, TB_H, fill=WHITE, stroke=GRAY, rx=2)
+TCX = [GX + 10, GX + 21, GX + 32]
+OCX = GX + 44
+for x_, h_ in zip(TCX, ("E", "D", "R")):
+    T(x_, TBY + 6.6, h_, 6, "middle", bold=True)
+T(OCX, TBY + 6.6, "outcome", 6, bold=True)
+rows_t = [(("T", "T", "T"), "pass on as $Φ$", None),
+          (("T", "F", "·"), "Drop", GRAY),
+          (("T", "T", "F"), "Drop", GRAY),
+          (("1 left", None, None), "Auto, written to $E$", BLUE_L)]
+for j, (marks, out, col) in enumerate(rows_t):
+    yy = TBY + 6.6 + (j + 1) * LEAD_T
+    if marks[1] is None:
+        T(TCX[0] - 4, yy, marks[0], 6, color=INK)
+    else:
+        for x_, m_ in zip(TCX, marks):
+            T(x_, yy, m_, 6, "middle", color=BLUE if m_ == "T" else INK, bold=(m_ == "F"))
+    if col:
+        ww = c.tw(out, 6, True) + 6
+        c.rect(OCX - 1.5, yy - 5.2, ww, 7, rx=3.5, fill=col)
+        T(OCX + 1.5, yy, out, 6, bold=True)
+    else:
+        T(OCX, yy, out, 6, bold=True)
+NX = GX + 104
+T(NX, TBY + 13.9, "F only on conclusive", 6, italic=True)
+T(NX, TBY + 21.2, "evidence", 6, italic=True)
+T(NX, TBY + 31.0, "check incomplete", 6, italic=True)
+T(NX, TBY + 38.3, "→ counts as T", 6, italic=True)
+GBOT = TBY + TB_H + 2.5
+box(GX, GY, GW, GBOT - GY, fill="none", stroke=GRAY)
 
 # P1 -> P2
 c.arrow([(P[0][0] + P[0][1] - 2, 210.0), (GX, 210.0)], INK, THICK)

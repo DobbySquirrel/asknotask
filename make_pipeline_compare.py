@@ -253,13 +253,20 @@ T(chm, AY1 + 28.5, "/{agr: top option = user's choice}", FS, "middle", color=MID
   maxw=CH_X1 - CH_X0 - 4)
 
 # ====================================================================== bottom lane
-CD = M + 6
-card_icon(CD, mm - 11, 19, 14, color=ORANGE, sw=SW)
-centered(CD + 9.5, mm + 11, ["ambiguity", "$φ$ ∈ $Φ$"], FS, 7)
-PX0 = CD + 27
+CD, CDW = M + 5, 92.0
+CDY, CDH = MR0 + 4, MR1 - MR0 - 8
+box(CD, CDY, CDW, CDH)
+c.path(f"M{CD},{CDY + 9} V{CDY + R} Q{CD},{CDY} {CD + R},{CDY} H{CD + CDW - R} "
+       f"Q{CD + CDW},{CDY} {CD + CDW},{CDY + R} V{CDY + 9} Z", INK, SW, fill=ORANGE)
+T(CD + 3, CDY + 6.6, "'total cholesterol' · Project", 6, bold=True, maxw=CDW - 5)
+T(CD + 3, CDY + 16.5, "ambiguity $φ$ ∈ $Φ$, $m$ = 2", FS, italic=True, maxw=CDW - 5)
+for j, (lt, ln) in enumerate([("A", "The rate only"), ("B", "The rate and both"), ("", "monthly values")]):
+    T(CD + 3, CDY + 25 + j * 6.8, lt, FS, bold=True)
+    T(CD + 9.5, CDY + 25 + j * 6.8, ln, FS, maxw=CDW - 11)
+PX0 = CD + CDW + 7
 JX0 = TRAIN_CX - JW / 2
 PX1 = JX0 - 7
-harrow(CD + 19, PX0, mm - 4)
+harrow(CD + CDW, PX0, mm)
 box(PX0, MR0, PX1 - PX0, MR1 - MR0)
 c.path(f"M{PX0},{MR0 + 8.5} V{MR0 + R} Q{PX0},{MR0} {PX0 + R},{MR0} H{PX1 - R} Q{PX1},{MR0} "
        f"{PX1},{MR0 + R} V{MR0 + 8.5} Z", INK, SW, fill=BG)
