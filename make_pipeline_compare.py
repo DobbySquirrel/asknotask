@@ -223,8 +223,17 @@ SC_X0, SC_X1 = BR, TX + TW
 SC_Y, SC_H = R2Y + 4, R2H - 8
 box(SC_X0, SC_Y, SC_X1 - SC_X0, SC_H, stroke=BLUE, sw=1.1)
 scx = (SC_X0 + SC_X1) / 2
-T(scx, SC_Y + 12.5, "Apply trained scorer", 6.5, "middle", bold=True, color=BLUE)
-T(scx, SC_Y + 21.5, "/{agreement at each θ}", FS, "middle")
+T(scx, SC_Y + 8.5, "Apply trained scorer", 6.5, "middle", bold=True, color=BLUE)
+steps = ["$H_{norm}$, top", "top = user?", "agr($θ$)"]
+sw_ = [c.tw(t_, FS) + 5 for t_ in steps]
+SG = 7.0
+sx = scx - (sum(sw_) + SG * (len(steps) - 1)) / 2
+for k, (t_, w_) in enumerate(zip(steps, sw_)):
+    box(sx, SC_Y + 13, w_, 11, stroke=BLUE, sw=0.6, rx=2)
+    T(sx + w_ / 2, SC_Y + 20.4, t_, FS, "middle")
+    if k < len(steps) - 1:
+        harrow(sx + w_, sx + w_ + SG, SC_Y + 18.5, BLUE)
+    sx += w_ + SG
 harrow(SC_X1, CH_X0, r2m)
 
 # validation chart

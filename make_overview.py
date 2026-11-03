@@ -212,11 +212,11 @@ for k, (n, hd, bd) in enumerate(amb_cards):
 x0, pw = P[1]
 GX, GY = x0 + 1.5, 100.0
 cols = [
-    (52.0, ["Existence"], ["0 rows →", "remove, keep", "'1959-02-18'"]),
-    (56.0, ["Difference"], ["res(q₁, D) =", "res(q₂, D) →", "drop"]),
-    (52.0, ["Relevance"], ["res(y_p₁) = …", "= res(y_⊥) →", "drop"]),
+    (52.0, ["Existence"], ["0 rows → remove", "1 left → Auto"]),
+    (54.0, ["Difference"], ["res($q_{1}$) = res($q_{2}$)", "→ Drop"]),
+    (54.0, ["Relevance"], ["res($y_{p}$) = res($y_{⊥}$)", "→ Drop"]),
 ]
-CT, CODE_Y, CB = GY + 2, 148.0, 177.0
+CT, CODE_Y, CB = GY + 2, 148.0, 170.0
 TOOLS = [("exists?", "SQL: template", GRAY, INK),
          ("differs on $D$?", "SQL: LLM, verified", BLUE_L, INK),
          ("changes SQL?", "SQL: parser", INK, WHITE)]
@@ -248,11 +248,9 @@ for k, (cw, title, code) in enumerate(cols):
     T(ic, CT + 32.7, chip, 6, "middle", bold=True, color=ct, maxw=cw - 2)
     T(ic, CT + 42.0, sub, 6, "middle", italic=True, maxw=cw - 1.5)
     box(cx_ + 1.2, CODE_Y, cw - 2.4, CB - CODE_Y - 1.5, fill=BG, rx=2)
-    if k == 0:
-        c.rect(cx_ + 1.2, CODE_Y, 2.2, CB - CODE_Y - 1.5, rx=0.8, fill=BLUE_L)
     for j, ln in enumerate(code):
-        T(cx_ + 4.0 if k == 0 else cx_ + 2.6, CODE_Y + 6.7 + j * 6.8, f"`{ln}`", 6,
-          maxw=cw - (5.2 if k == 0 else 3.8))
+        T(cx_ + cw / 2, CODE_Y + 7.6 + j * 7.6, ln, 6, "middle",
+          bold=(j == 1 and k > 0), maxw=cw - (4.4 if k == 0 else 3.8))
     col_pos.append((cx_, cw))
     cx_ += cw + 2
 GW = cx_ - GX
