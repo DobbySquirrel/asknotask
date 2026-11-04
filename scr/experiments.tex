@@ -1,0 +1,527 @@
+\section{Experimental Evaluation}
+\label{sec:exp}
+
+We evaluate our method with three research questions.
+\textbf{RQ1 (Effectiveness)} asks whether it makes the parser more
+accurate than existing clarification methods.
+\textbf{RQ2 (Fewer questions)} asks whether it can ask fewer questions
+without losing accuracy. \textbf{RQ3 (Real users)} asks whether the
+gains hold when real users answer the questions.
+
+%======================================================================
+\subsection{Experimental Setup}
+\label{sec:exp-setup}
+
+\textbf{Benchmarks and metrics.} \emph{BIRD}~\cite{dataset-bird}: the 498 questions
+of BIRD Mini-Dev with the corrected annotations of
+Arcwise~\cite{arcwise}, over real databases and with an official
+evidence for each question. \emph{AMBROSIA}~\cite{ambrosia}: the
+1{,}149 ambiguous test questions, involving scope, attachment, and
+vagueness, with one gold query per interpretation (two for 779
+questions, three for 370). \emph{CLAMBSQL}~\cite{zhang2025clear}:
+200 questions for each of seven ambiguity types drawn from AmbiQT
+and AMBROSIA, with two or three gold queries each. As the intended
+query $y^{*}$, we take the first AMBROSIA gold query in the released
+order and the gold query designated by CLAMBSQL. AMBROSIA and
+CLAMBSQL have no evidence, so on them all evidence that the parser
+receives comes from the clarifications. We report execution accuracy
+(EX), where a predicted query is correct if its result on $D$ equals
+that of the gold query, compared as sets with their column order, and
+the average number of questions per instance ($Q$). For our methods,
+$Q$ counts ambiguities sent to the user, and automatic resolutions are
+not counted. For CLEAR and AmbiSQL, $Q$ counts the clarification slots
+each method asks. We test differences in EX with the exact McNemar
+test (two-sided).
+
+The rest of the setup follows the pipeline of
+Fig.~\ref{fig:overview}. Our method detects, checks, and scores the
+ambiguities, a simulated user answers the questions that remain, and
+a parser writes the final query from the clarified input.
+
+\textbf{Clarification models.} Our method uses two models.
+Detection, the ambiguity checks, and the relevance check run on
+\coder, which denotes Qwen3-Coder-30B-A3B-Instruct~\cite{qwen3}
+served locally, whichever parser writes the final query. The relevance
+check therefore asks whether an answer changes the query that \coder{}
+writes, and for the other parsers it uses this as an approximation of
+their behavior. The scorer is Qwen3-8B, fine-tuned with
+LoRA~\cite{lora} (rank 16, scaling factor 32) on \trainCards{}
+ambiguities that our pipeline produces on \trainCardQuestions{}
+questions from 60 BIRD training databases, labeled by the simulated
+user. \valCards{} ambiguities from \valCardQuestions{} questions on
+nine further training databases serve as validation data. The split
+is by database, and none of these databases appears in the three
+benchmarks. We select $\theta$ on the validation ambiguities by the
+agreement of Eq.~\eqref{eq:theta} with $\alpha=0.9$, over
+$\theta\in\{0.1,0.2,\dots,0.9\}$. The selected threshold is
+$\theta^{*}=\thetaJev$, at which the scorer auto-resolves 305
+validation ambiguities (\abValAuto) and agrees with the simulated user
+on \abValAgree{} of them. The same $\theta^{*}$ is applied unchanged
+to all benchmarks and parsers. Ambiguities with more than 26
+interpretations are treated as $H_{\mathrm{norm}}=1$.
+
+\textbf{Simulated user.} As in prior
+work~\cite{zhang2025clear,xu2026visinteract}, the simulated user knows
+the intended query. It is \coder{} given the gold query and the
+ambiguity, and it selects the interpretation consistent with the gold
+query, or answers ``Others'' if no interpretation is. Two
+checks support this proxy. On the \simN{} CLAMBSQL spans whose
+annotated gold column is among our interpretations, it selects the
+gold choice on \simPct{} (\simHit/\simN). With \terra{} as the
+simulated user instead, no EX changes significantly (smallest
+$p=\pSimTeClambsqlAskAll$). Section~\ref{sec:exp-user} replaces it
+with real users.
+
+\textbf{Parsers.} Our method only appends clarifications to the
+evidence and can be combined with any parser. We use three parsers of
+increasing strength. \coder{} is prompted zero-shot with the question,
+the evidence, and the table and column names. DeepEye-SQL~\cite{deepeye}
+runs with its official pipeline and \coder{} as its backbone.
+\terra{} is a closed-source model of OpenAI's GPT-5.6
+family~\cite{openai2026gpt56}, called with the zero-shot prompt of
+\coder, \texttt{reasoning\_effort=\terraEffort}, and the default
+temperature on \terraCallDate. BIRD may be part of its training data,
+which affects all systems equally because they share the parser.
+
+\textbf{Baselines.} \emph{Never-Ask} runs the parser on the original
+input. \emph{CLEAR}~\cite{zhang2025clear} and
+\emph{AmbiSQL}~\cite{ding2025ambisql} detect ambiguities before
+parsing and ask the user about every detected one. We re-implement
+both from their papers and code, keeping their detection prompts and
+post-detection steps. CLEAR by design rewrites the question and the
+schema instead of only adding evidence, and we keep this behavior.
+AmbiSQL answers keep their native form, which may select several
+mappings (\ambiMultiPctMin--\ambiMultiPctMax{} of questions). All
+systems share the detection LLM, the simulated user, and the parser,
+so differences in EX come from what is detected and how it is
+resolved. \emph{Ours} is the full pipeline, in which the scorer
+decides which of the ambiguities that survive the checks are written
+into the evidence and which are asked. \emph{Ours w/o scorer} asks
+about every ambiguity that survives the checks.
+
+\textbf{Implementation details.} Every system is run once, and all
+variants of our method share one detection output per benchmark, as
+well as the simulated responses and parser outputs, which are cached
+by the final evidence string. Whenever the parser input of any system
+(question, schema, and evidence) is identical to the
+no-clarification input, we reuse the no-clarification prediction, so
+differences between systems are caused only by the clarifications they
+write. All open-weight models use greedy decoding with thinking
+disabled, output is limited to 4{,}096 tokens for our pipeline, and
+queries time out after 30 seconds.
+
+%======================================================================
+\subsection{Overall Effectiveness (RQ1)}
+\label{sec:exp-rq1}
+
+\begin{table}[t]
+\centering
+\caption{EX (\%) and questions per instance ($Q$) with \coder{} on BIRD~\cite{dataset-bird}, AMBROSIA~\cite{ambrosia}, and CLAMBSQL~\cite{zhang2025clear}. Arrows: change over Never-Ask. Bold: best EX. Differences are computed before rounding.}
+\label{tab:main}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+& \multicolumn{2}{c}{BIRD} & \multicolumn{2}{c}{AMBROSIA} &
+\multicolumn{2}{c}{CLAMBSQL} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Method & EX & $Q$ & EX & $Q$ & EX & $Q$ \\
+\midrule
+Never-Ask & \abBirdZero & 0 & \abAmbrosiaZero & 0 & \abClambsqlZero & 0 \\
+CLEAR~\cite{zhang2025clear} & \abBirdClear & \qTabBirdClear & \abAmbrosiaClear & \qTabAmbrosiaClear & \abClambsqlClear & \qTabClambsqlClear \\
+AmbiSQL~\cite{ding2025ambisql} & \abBirdAmbiSql & \qTabBirdAmbiSql & \abAmbrosiaAmbiSql & \qTabAmbrosiaAmbiSql & \abClambsqlAmbiSql & \qTabClambsqlAmbiSql \\
+\midrule
+Ours w/o scorer & \textbf{\abBirdAskAll} & \abQBirdAskAll & \abAmbrosiaAskAll & \abQAmbrosiaAskAll & \textbf{\abClambsqlAskAll} & \abQClambsqlAskAll \\
+Ours & \textbf{\abBirdJevAsk} & \abQBirdJevAsk & \textbf{\abAmbrosiaJevAsk} & \abQAmbrosiaJevAsk & \abClambsqlJevAsk & \abQClambsqlJevAsk \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Accuracy and questions.} Table~\ref{tab:main} compares all
+systems with \coder{} as the parser. Asking every ambiguity that survives
+the checks (Ours w/o scorer) improves EX over Never-Ask by 7.4, 34.6,
+and 11.4 points on BIRD, AMBROSIA, and CLAMBSQL. CLEAR improves EX by
+0.8, 4.8, and 2.2 points, and AmbiSQL by 0.6, 8.0, and 3.1. The
+scorer auto-resolves part of the ambiguities, so Ours asks 35\%, 29\%,
+and 32\% fewer questions than Ours w/o scorer, and its EX differs by
+$0.0$, $+0.8$, and $-0.4$ points, none of them significant
+($p=1.0$, $0.16$, and $0.33$, exact McNemar). Ours asks about as many
+questions as AmbiSQL (\abQBirdJevAsk, \abQAmbrosiaJevAsk, and
+\abQClambsqlJevAsk{} against \qTabBirdAmbiSql, \qTabAmbrosiaAmbiSql,
+and \qTabClambsqlAmbiSql) and is 6.8, 27.4, and 7.9 points more
+accurate ($p=0.002$, $3.4\times10^{-53}$, and $1.5\times10^{-11}$). The gain over AmbiSQL therefore comes
+from which ambiguities are detected and how the answers are written
+into the evidence.
+
+\textbf{Detection coverage.} To test whether the gain comes from what
+is detected, we count on CLAMBSQL how many of its annotated ambiguous
+spans each method covers (Table~\ref{tab:recall}). CLAMBSQL annotates 1{,}690 spans on its
+1{,}400 questions, since a question may carry several. A gold span is
+covered if a span of the method matches it by word-boundary substring,
+content-word overlap, or a fuzzy ratio of at least 0.8. Matching
+ignores the type, so the three taxonomies need no alignment. Predicted
+spans that cover at least 70\% of the content words of the question
+are excluded, and for AmbiSQL, which outputs no spans, we take the
+phrase that each of its questions quotes. A manual check of 90
+automatic labels agrees with all of them. For Ours,
+we take the ambiguities that survive the checks, i.e., those of Ours
+w/o scorer. The scorer only decides whether each of them is asked or
+resolved automatically, so the full method handles the same set.
+Ours covers 72.8\% of the spans,
+against 59.5\% for CLEAR and 39.7\% for AmbiSQL. It leads on five of
+the seven types, most clearly on Scope (97.5\% against 50.0\% and
+50.5\%).
+CLEAR leads on Join and Aggregate. CLAMBSQL's mappings were initialized
+with CLEAR's own detection before manual revision, so its spans follow
+CLEAR's granularity, e.g., one span per aggregate word in ``average,
+minimum, and maximum age''. The checks cost little coverage: before
+them, Ours covers 75.1\%. Covering more costs few additional
+questions: Ours asks \abQClambsqlJevAsk{} questions per instance,
+against \qTabClambsqlAmbiSql{} for AmbiSQL (Table~\ref{tab:main}).
+
+\begin{table}[t]
+\centering
+\caption{Span-level detection recall on CLAMBSQL~\cite{zhang2025clear} (\%). $n$: gold spans. Ours: ambiguities after the checks. \#Spans: distinct predicted spans per question, not comparable to $Q$.}
+\label{tab:recall}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrccc@{}}
+\toprule
+Gold type & $n$ & CLEAR~\cite{zhang2025clear} & AmbiSQL~\cite{ding2025ambisql} & Ours \\
+\midrule
+Scope       & 200 & 50.0 & 50.5 & \textbf{97.5} \\
+Attachment  & 200 & 48.5 & 77.5 & \textbf{83.5} \\
+Column      & 200 & 72.5 & 32.0 & \textbf{83.0} \\
+Table       & 313 & 56.5 & 34.2 & \textbf{67.4} \\
+Join        & 200 & \textbf{75.0} & 23.5 & 71.5 \\
+Aggregate   & 377 & \textbf{66.8} & 28.6 & 59.4 \\
+Vagueness   & 200 & 42.0 & 44.5 & \textbf{62.5} \\
+\midrule
+Overall     & 1{,}690 & 59.5 & 39.7 & \textbf{72.8} \\
+\#Spans     & --  & 1.15 & 1.12 & 1.87 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[t]
+\centering
+\caption{EX (\%) with strong parsers, using the ambiguities, answers, and $\theta^{*}$ of \coder{}. Arrows: change over Never-Ask. Bold: best EX per parser.}
+\label{tab:terra}
+\footnotesize
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Method & AMBROSIA & CLAMBSQL \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{\terra}~\cite{openai2026gpt56}} \\
+Never-Ask & 25.8 & 52.9 \\
+CLEAR & 28.9\dUp{3.0} & 54.1\dUp{1.2} \\
+AmbiSQL & 33.3\dUp{7.5} & 56.1\dUp{3.2} \\
+\midrule
+Ours w/o scorer & \textbf{58.6}\dUp{32.8} & \textbf{61.4}\dUp{8.5} \\
+Ours & 58.4\dUp{32.6} & 61.3\dUp{8.4} \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{DeepEye-SQL}~\cite{deepeye}} \\
+Never-Ask & 27.2 & 54.1 \\
+CLEAR & 32.8\dUp{5.6} & 56.4\dUp{2.3} \\
+AmbiSQL & 36.3\dUp{9.1} & 58.9\dUp{4.9} \\
+\midrule
+Ours w/o scorer & 47.6\dUp{20.4} & \textbf{61.4}\dUp{7.3} \\
+Ours & \textbf{47.7}\dUp{20.5} & 60.8\dUp{6.7} \\
+\bottomrule
+\end{tabular}
+\end{table}
+\textbf{Strong parsers.} Table~\ref{tab:terra} repeats the comparison
+with \terra{} and DeepEye-SQL as the parser. With both, Ours w/o
+scorer gains the most over Never-Ask, so a stronger parser does not
+make the clarifications redundant. On AMBROSIA and CLAMBSQL, Ours is 25.1
+and 5.1 points more accurate than AmbiSQL with \terra{}
+($p=2.5\times10^{-38}$ and $2.9\times10^{-6}$) and 11.4 and 1.9
+points with DeepEye-SQL ($p=4.5\times10^{-13}$ and $0.062$), so only
+the last gain is not significant. The
+scorer, whose $\theta^{*}$ is not tuned per parser, changes EX by at
+most 0.6 points against Ours w/o scorer, never significantly
+($p\ge0.077$).
+
+%======================================================================
+\subsection{Fewer Questions (RQ2)}
+\label{sec:exp-rq2}
+
+We answer RQ2 in three steps: how accuracy changes as the scorer
+resolves more ambiguities, which types the scorer resolves, and which
+components remove questions.
+
+\textbf{Operating points.} Figure~\ref{fig:pareto} traces the scorer over
+$\theta\in\{0.1,\dots,0.9\}$ against the baselines.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/pareto.pdf}
+\caption{Accuracy versus questions (\coder). The curve varies $\theta$ from 0.1, where nothing is auto-resolved (Ours w/o scorer), to 0.9. Star: $\theta^{*}$.}
+\label{fig:pareto}
+\end{figure*}
+
+Every operating point is more accurate than CLEAR and AmbiSQL on all
+three benchmarks. At $\theta=0.9$, Ours asks 0.64, 0.52, and 0.55
+questions per instance on BIRD, AMBROSIA, and CLAMBSQL, fewer than
+AmbiSQL everywhere and fewer than CLEAR on AMBROSIA and CLAMBSQL, and
+is still 5.2, 23.6, and 5.4 points more accurate than the stronger of
+the two. Up to $\theta^{*}$, EX stays within 0.8 points of Ours w/o
+scorer. Beyond $\theta^{*}$, it falls by up to 1.6, 3.8, and 2.5 points, so
+$\theta^{*}$ sits where $Q$ has dropped most before accuracy starts to
+fall. At $\theta^{*}$, the auto-resolved interpretations agree with
+the simulated user on 92\%, 94\%, and 67\% of the ambiguities, against
+\abValAgree{} on validation. On CLAMBSQL, whose readings are
+constructed to be plausible alike, a third of the automatic choices
+differ from the user, but EX drops by only 0.4 points, so most of these
+choices do not change whether the query is correct.
+
+\textbf{Per type.} Table~\ref{tab:pertype} breaks the automatic
+resolutions at $\theta^{*}$ down by type. The scorer leaves the types
+that change the row set to the user. Of the 156 Join, NULL, and Tie
+ambiguities on the three benchmarks, it auto-resolves 7, all in
+agreement with the simulated user, and it auto-resolves at most 11\%
+of the Scope ambiguities on any benchmark. Most automatic resolutions
+are Column, Project, and Aggregate ambiguities. The low agreement on
+CLAMBSQL comes mostly from Column ambiguities, which account for 795
+of its 1{,}339 automatic resolutions and agree with the user on
+62.9\%. CLAMBSQL constructs its column
+ambiguities so that either column fits the question, and the scorer,
+trained on BIRD databases only, has little to tell them apart.
+
+\begin{table}[t]
+\centering
+\caption{Automatic resolutions per type at $\theta^{*}$ (\coder). Auto: auto-resolved out of detected. Agr.: agreement with the simulated user (\%).}
+\label{tab:pertype}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{BIRD} & \multicolumn{2}{c}{AMBROSIA} &
+\multicolumn{2}{c}{CLAMBSQL} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Type & Auto & Agr. & Auto & Agr. & Auto & Agr. \\
+\midrule
+Scope & 19/172 & 78.9 & 13/859 & 84.6 & 11/613 & 72.7 \\
+Attachment & 1/49 & 100 & 6/144 & 66.7 & 6/113 & 100 \\
+Column & 249/487 & 92.0 & 486/1{,}271 & 93.4 & 795/1{,}822 & 62.9 \\
+Join & 1/16 & 100 & 3/46 & 100 & 2/37 & 100 \\
+Value & 27/144 & 77.8 & 25/179 & 96.0 & 37/239 & 75.7 \\
+NULL & 0/4 & -- & 0/1 & -- & 0/0 & -- \\
+Aggregate & 96/352 & 92.7 & 43/186 & 100 & 135/690 & 71.9 \\
+Project & 142/526 & 94.4 & 292/1{,}279 & 95.5 & 353/1{,}489 & 73.7 \\
+Tie & 0/22 & -- & 1/10 & 100 & 0/20 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Ablation.}\label{sec:exp-rq3} Table~\ref{tab:ablation} adds one component at a
+time on BIRD, whose real databases exercise all checks.
+ Without the
+ambiguity checks, forward detection asks \abAblQFwdNoCheck{} questions
+per instance and reaches 61.8\% EX. The checks remove 31\% of these
+questions and add 3.2 points, because the
+existence and difference checks write values verified on $D$ that
+the user's answers do not supply. Backward detection adds 1.4
+points at 0.42 more questions per instance, and 2.2 and 2.0 points on
+AMBROSIA and CLAMBSQL. The scorer then removes 35\% of the
+questions at unchanged EX. Auto-resolving as many ambiguities at random
+lowers EX to 64.9\%, so the scorer's choice
+preserves accuracy.
+
+% \begin{table}[t]
+% \centering
+% \caption{Ablation on BIRD (\coder). EX under $y^{*}$ (\%). Each row
+% adds one component to the row above, and arrows give the change over
+% that row. Rows above the scorer ask every remaining ambiguity.
+% $^{\dagger}$Replaces the scorer: auto-resolves as many ambiguities as
+% the scorer, chosen at random with a random interpretation (mean of
+% three seeds), arrows relative to the backward-detection row.}
+% \label{tab:ablation}
+% \footnotesize
+% \begin{tabular}{@{}lcc@{}}
+% \toprule
+% Variant & EX & $Q$ \\
+% \midrule
+% Never-Ask & \abBirdZero & 0 \\
+% Forward detection, no checks & \abAblFwdNoCheck & \abAblQFwdNoCheck \\
+% \quad + ambiguity checks & \abAblFwd & \abAblQFwd \\
+% \quad + backward detection & \abAblAskAll & \abAblQAskAll \\
+% \quad + scorer & \abAblJevAsk & \abAblQJevAsk \\
+% \quad + random auto-resolution$^{\dagger}$ & \abAblRand & \abAblQRand \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Ablation on BIRD (\coder). Each row adds one component, and arrows give the change over the row above.}
+\label{tab:ablation}
+\footnotesize
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Variant & EX & $Q$ \\
+\midrule
+Never-Ask & \abBirdZero & 0 \\
+Forward detection & \abAblFwdNoCheck & \abAblQFwdNoCheck \\
+\quad + ambiguity checks & \abAblFwd & \abAblQFwd \\
+\quad + backward detection & \abAblAskAll & \abAblQAskAll \\
+\quad + scorer & \abAblJevAsk & \abAblQJevAsk \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+%======================================================================
+\subsection{User Study (RQ3)}
+\label{sec:exp-user}
+
+The results above rely on a simulated user. To test whether real users
+answer our questions as usefully, we replace it with people on a
+subset of the benchmarks, with \terra{} as the parser.
+
+\textbf{Protocol.} We sample 100 questions, 40 from BIRD and 30 each
+from AMBROSIA and CLAMBSQL, among those where Ours or AmbiSQL asks at
+least one question, spread round-robin over the databases with a fixed
+seed. \pending{Ten} computer science graduate students with at least
+one year of SQL experience take part. None is an author or familiar
+with the benchmarks. Each answers 10 questions, and each question is
+handled by exactly one participant. A participant receives the same
+information as the simulated user: the question, the schema with
+column descriptions and example values, and an intent card with the
+gold query and a one-sentence description of the intended result. The
+two systems are shown anonymously, in counterbalanced order. For every
+clarification question, the participant selects an option or answers
+``Others'' in free text, and rates whether it is clear and
+whether it helps to obtain the intended result, both on a 1--5 scale.
+For the ambiguities that our scorer resolves automatically, the
+participant states whether the written interpretation is the one they
+mean. We write the answers into the evidence with the same procedure
+as for the simulated user and reparse with \terra.
+
+\begin{table}[t]
+\centering
+\caption{User study on 100 questions (\terra). EX (\%) with simulated (Sim.) and participants' (Part.) answers and McNemar $p$. \cmark\xmark: correct with Sim.\ only, \xmark\cmark: with Part.\ only. Agr.: same choice as the simulated user (\%).}
+\label{tab:user}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lccccccc c@{}}
+\toprule
+Method & Sim. & Part. & $p$ & \cmark\cmark & \cmark\xmark & \xmark\cmark &
+\xmark\xmark & Agr. \\
+\midrule
+Never-Ask & 60.0 & -- & -- & -- & -- & -- & -- & -- \\
+AmbiSQL~\cite{ding2025ambisql} & 70.0 & \pending{--} & \pending{--} & \pending{--} &
+\pending{--} & \pending{--} & \pending{--} & \pending{--} \\
+Ours & 78.0 & \pending{--} & \pending{--} & \pending{--} &
+\pending{--} & \pending{--} & \pending{--} & \pending{--} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Results.} With the simulated user, Ours reaches 78.0\% EX on
+the sample, against 70.0\% for AmbiSQL and 60.0\% for Never-Ask. Reparsing
+the same answers once more gives 75.0\%, 69.0\%, and 62.0\%, so the
+ranking holds although \terra{} is not deterministic.
+\pending{With the participants' answers, Ours reaches X\% against Y\%
+for AmbiSQL ($p=\cdot$). Relative to the simulated user, EX changes by
+Z points for Ours and by W points for AmbiSQL, neither significant
+($p=\cdot$ and $\cdot$). The off-diagonal cells of
+Table~\ref{tab:user} are small and roughly symmetric, so the simulated
+user neither systematically overestimates nor underestimates the
+accuracy that real users reach. The participants choose the same
+option as the simulated user on A\% of our questions and B\% of
+AmbiSQL's, and accept C\% of our automatic resolutions. They rate our
+questions D and AmbiSQL's E for clarity, and F and G for usefulness.}
+
+%======================================================================
+\subsection{Case Study}
+\label{sec:exp-case}
+
+\textbf{Backward detection.} The BIRD question ``Among the customers
+who paid in euro, how many of them have a monthly consumption of over
+1000?'' gets forward questions on how monthly consumption is computed,
+but none on what is counted, and the parser counts monthly records
+with \texttt{COUNT(*)}. The drafted queries disagree on this point,
+and backward detection asks whether to count distinct customers or
+monthly records. With the answer, the parser writes
+\texttt{COUNT(DISTINCT CustomerID)}, as the gold query does.
+
+\textbf{Scope.} For the AMBROSIA question ``List the animals we have
+in each zoo,'' AmbiSQL asks which SQL operation to use. All its
+options (count per zoo, list per zoo, distinct animal types per zoo)
+read ``each zoo'' distributively, so the simulated user picks the
+closest ones, and AmbiSQL returns the query of Never-Ask. Our Scope
+ambiguity also offers the collective reading, the animals present in
+every zoo. With it, the parser groups by animal and keeps those whose
+count of distinct zoos equals the number of zoos, as the gold query
+does.
+
+\textbf{A scorer error.} The question ``show me all
+projects by company'' occurs in AMBROSIA and in CLAMBSQL with the same
+two readings of \emph{company}, the real estate developer and the
+contractor. The gold query uses the developer in AMBROSIA and the
+contractor in CLAMBSQL. The scorer resolves both to the developer
+($H_{\mathrm{norm}}=0.42$ and $0.39$), which is wrong on CLAMBSQL.
+
+%======================================================================
+\subsection{Limitations}
+\label{sec:discussion}
+
+
+\textbf{Failures of clarification.}\label{sec:exp-fail} Asking rarely
+hurts. Among the questions where the simulated user was asked and the
+written interpretation matches the answer, asking turns a correct
+query into a wrong one on at most 1.6\% on AMBROSIA and 3.0\% on
+CLAMBSQL, against 394 and 184 questions that it turns from wrong to
+correct. The remaining errors have three sources. First, the options
+may not cover the reading of the gold query. On one CLAMBSQL question,
+both options name the car maker while the gold query returns its
+identifier. Second, the parser may ignore a correct clarification. For
+the BIRD question ``Name the user that commented `thank you
+user93!','' the evidence names the display name of the user, but every
+system reads the near-identical column of the comments table, which is
+empty for this row. Third, an automatic resolution of two equally
+plausible readings can only follow a prior
+(Section~\ref{sec:exp-case}).
+
+\textbf{Soundness of not asking.} The queries that the difference
+check executes for Scope and Attachment are written by an LLM and may
+not implement their readings, although a second call verifies them
+(Section~\ref{sec:method-check}). The relevance check tests one
+ambiguity at a time and can miss ambiguities that change the result
+only jointly, for example when the chosen column changes the values of
+another ambiguity. It also probes \coder{} for every parser, so for
+DeepEye-SQL and \terra{} it predicts relevance from the behavior of
+\coder{} (Section~\ref{sec:exp-setup}). A missed ambiguity costs
+accuracy only when the parser then picks the wrong reading, and
+Table~\ref{tab:terra} shows that the gains persist for both parsers.
+
+\textbf{Generalization.} The scorer is trained and evaluated with a
+simulated user who knows the gold query, as in prior
+work~\cite{zhang2025clear,xu2026visinteract}. A user who holds only
+domain knowledge may answer less reliably or reject every option, and
+our user study (Section~\ref{sec:exp-user}) covers 100 questions.
+The scorer is trained on BIRD databases only. On CLAMBSQL, whose
+column ambiguities are constructed so that either column fits, its
+agreement with the simulated user falls to 62.9\% for Column
+(Table~\ref{tab:pertype}). A threshold selected on validation data
+meets the target agreement only when the test ambiguities resemble
+the validation ones, an assumption shared by selective
+prediction~\cite{geifman2017selective,kamath2020selective}. Finally,
+AMBROSIA and CLAMBSQL contain few data-dependent ambiguities, which
+the existence and difference checks target, so the checks are
+exercised mainly on BIRD (Table~\ref{tab:ablation}).
+
+\textbf{Practical cost.} Fewer questions to the user come at the price
+of more computation. Forward detection makes three LLM calls, backward
+detection drafts six queries and makes a final call
+(Section~\ref{sec:method-detect}), and the relevance check makes
+\probeCallsBird, \probeCallsAmbrosia, and \probeCallsClamb{} \coder{}
+calls per question on BIRD, AMBROSIA, and CLAMBSQL. The scorer adds
+one forward pass of Qwen3-8B per ambiguity and requires no decoding.
+These calls add latency before the first question reaches the user.
+All checks also need read-only access to the database, as do other
+methods that probe the database~\cite{tian2026pv,xiong2025multi}.
+In exchange, Ours is more accurate than CLEAR and AmbiSQL on all
+three benchmarks while asking about as many questions as AmbiSQL
+(Table~\ref{tab:main}).

@@ -144,9 +144,10 @@ for k, nm in enumerate(["forward", "backward"]):
 FX0, FX1 = 88.0, 134.0
 harrow(DX0 + DW, FX0, CM)
 box(FX0, CM - 23.5, FX1 - FX0, 47, fill="none", stroke=GRAY, sw=0.6)
+T((FX0 + FX1) / 2, CM - 17.0, "Check", 6.2, "middle", bold=True)
 CHK = ["Existence", "Difference", "Relevance"]
-CBH, CBG = 11.0, 4.0
-cb_y0 = CM - (3 * CBH + 2 * CBG) / 2
+CBH, CBG = 9.0, 2.4
+cb_y0 = CM - 9.2
 for k, nm in enumerate(CHK):
     yy = cb_y0 + k * (CBH + CBG)
     label_box(FX0 + 3, yy, FX1 - FX0 - 6, CBH, [nm])
