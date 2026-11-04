@@ -9,7 +9,7 @@ box or fall below the 6 pt minimum.
 | Figure | Size | Script | Outputs |
 | --- | --- | --- | --- |
 | System overview with running example | 7.16 in × 3.4 in | `make_overview.py` | `figure/overview.{pdf,svg,png}` |
-| Motivating example (single column) | 3.5 in × 3.58 in | `make_motivation.py` | `figure/motivation.{pdf,svg,png}` |
+| Motivating example (single column) | 3.5 in × 4.53 in | `make_motivation.py` | `figure/motivation.{pdf,svg,png}` |
 | Scorer design, training and threshold | 7.16 in × 2.5 in | `make_scorer.py` | `figure/scorer.{pdf,svg,png}` |
 | Offline training / online use pipeline | 7.16 in × 3.0 in | `make_pipeline.py` | `figure/pipeline.{pdf,svg,png}` |
 | Offline training + online JEV vs. training-free scorer | 7.16 in × 3.5 in | `make_pipeline_compare.py` | `figure/pipeline_compare.{pdf,svg,png}` |
@@ -29,11 +29,12 @@ Inkscape / Illustrator; the PNGs are 600 dpi previews.
 
 ## Overview figure conventions
 
-- Card colours: `#56B4E9` settled by data, `#0072B2` auto-resolved, `#E69F00`
-  asked, `#BBBBBB` removed / dropped, `#009E73` correct SQL; `#F4F4F4` panel
-  backgrounds; `#333333` text and arrows.
+- Card colours: `#6CB6E3` settled by data, `#2F7FB8` auto-resolved, `#E8922A`
+  asked, `#C9CED4` removed / dropped, `#3BAF9F` correct SQL; `#F3F6F9` panel
+  backgrounds; `#55606C` text and arrows. The motivating example keeps a
+  slightly darker ink, `#2A3138`.
 - Labels in sans-serif, code in monospace, math in italic serif; minimum 6 pt.
-- 0.7 pt strokes, 3 pt corner radius, no gradients or shadows.
+- 0.7 pt strokes, 5 pt corner radius (5.5 pt on the motivating example), no gradients or shadows.
 - The three example cards (tags 1–3) keep their colour from the question
   highlight through to the clarification sentence in E′.
 

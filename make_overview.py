@@ -6,30 +6,38 @@ Row B: four stage panels; each example ambiguity keeps its colour throughout.
 
 from figlib import Canvas
 
-BLUE_L = "#56B4E9"   # settled by data
-BLUE = "#0072B2"     # auto-resolved
-ORANGE = "#E69F00"   # asked
-GRAY = "#BBBBBB"     # removed / dropped
-GREEN = "#009E73"    # correct SQL
-BG = "#F4F4F4"
-INK = "#333333"
+# Soft ICDE-friendly palette (warmer, less chalky) — match motivation
+BLUE_L = "#6CB6E3"   # settled by data
+BLUE = "#2F7FB8"     # auto-resolved
+ORANGE = "#E8922A"   # asked
+ORANGE_FILL = "#FFE6C2"
+ORANGE_SOFT = "#FFD9A0"
+GRAY = "#C9CED4"     # removed / dropped
+GREEN = "#3BAF9F"    # correct SQL
+GREEN_SOFT = "#E6F6F2"
+BG = "#F3F6F9"
+INK = "#55606C"  # softer than motivation ink
+MUTED = "#6B7580"
 WHITE = "#FFFFFF"
+SOFT_STROKE = "#D7DEE6"
+BLUE_SOFT = "#DCEAF5"
 
 W_IN, H_IN = 7.16, 3.4
 W, H = W_IN * 72, H_IN * 72
 SW = 0.7
 THICK = 1.6
-R = 3
+R = 5
 
 c = Canvas(W, H, stroke=SW, ink=INK)
 T = c.text
 
 CARD = {1: BLUE_L, 2: BLUE, 3: ORANGE}
-CARD_TXT = {1: INK, 2: WHITE, 3: INK}
+CARD_TXT = {1: INK, 2: WHITE, 3: WHITE}
 
 
 def tag(cx, cy, n, r=3.6):
-    c.circle(cx, cy, r, fill=CARD[n], stroke=WHITE, sw=0.6)
+    # single solid disc (no double ring)
+    c.circle(cx, cy, r, fill=CARD[n])
     T(cx, cy + 2.15, str(n), 6, "middle", bold=True, color=CARD_TXT[n])
 
 
@@ -37,8 +45,8 @@ def box(x, y, w, h, fill=WHITE, stroke=INK, rx=R, sw=None, dash=None):
     c.rect(x, y, w, h, rx=rx, fill=fill, stroke=stroke, sw=sw, dash=dash)
 
 
-def pill(x, y, w, h, fill):
-    c.rect(x, y, w, h, rx=h / 2, fill=fill)
+def pill(x, y, w, h, fill, stroke=None):
+    c.rect(x, y, w, h, rx=h / 2, fill=fill, stroke=stroke)
 
 
 def header(x, y, n, title, sub=None):
@@ -50,12 +58,12 @@ def header(x, y, n, title, sub=None):
 
 
 def magnifier(cx, cy, r=2.6, color=INK):
-    c.circle(cx, cy, r, fill=WHITE, stroke=color, sw=0.65)
+    c.circle(cx, cy, r, fill="#EEF6FB", stroke=color, sw=0.65)
     c.line([(cx + r * 0.71, cy + r * 0.71), (cx + r * 0.71 + 2.2, cy + r * 0.71 + 2.2)], color, 1.0)
 
 
 def table_icon(x, y, w, h, color=INK):
-    c.rect(x, y, w, h, rx=0.8, fill=WHITE, stroke=color, sw=0.6)
+    c.rect(x, y, w, h, rx=1.2, fill="#F5F9FC", stroke=color, sw=0.6)
     c.line([(x, y + h * 0.3), (x + w, y + h * 0.3)], color, 0.6)
     c.line([(x, y + h * 0.65), (x + w, y + h * 0.65)], color, 0.45)
     for k in (1, 2):
@@ -63,7 +71,7 @@ def table_icon(x, y, w, h, color=INK):
 
 
 def bubble(cx, cy, color=INK):
-    c.rect(cx - 3.1, cy - 2.4, 6.2, 4, rx=1.3, fill="none", stroke=color, sw=0.6)
+    c.rect(cx - 3.1, cy - 2.4, 6.2, 4, rx=1.8, fill="#FFF7EA", stroke=color, sw=0.6)
     c.path(f"M{cx - 1.5},{cy + 1.6} L{cx - 2.1},{cy + 3.1} L{cx + 0.1},{cy + 1.6}", color, 0.6, fill=color)
 
 
@@ -74,6 +82,7 @@ def trash(cx, cy, color=INK):
 
 
 def check(cx, cy, r=3.7):
+    c.circle(cx, cy, r + 0.8, fill=GREEN_SOFT, stroke=None)
     c.circle(cx, cy, r, fill=GREEN, stroke=WHITE, sw=0.6)
     c.line([(cx - 1.6, cy + 0.1), (cx - 0.4, cy + 1.3), (cx + 1.8, cy - 1.2)], WHITE, 0.9)
 
@@ -131,7 +140,7 @@ span_x = {}
 for txt, n in segs:
     w_ = c.tw(txt, QS, italic=True)
     if n:
-        c.rect(qx - 1, QY - 6.3, w_ + 2, 8.6, rx=1.6, fill=CARD[n])
+        c.rect(qx - 1, QY - 6.3, w_ + 2, 8.6, rx=2.2, fill=CARD[n])
         span_x[n] = (qx, w_)
     T(qx, QY, txt, QS, italic=True, color=CARD_TXT[n] if n else INK)
     qx += w_
@@ -165,8 +174,9 @@ stages = [("$Φ$_{str}", ["Scope · Attachment"], 123.0, 12.0),
 mids = []
 for tg, rows, y, h in stages:
     box(SX, y, SWD, h)
-    c.path(f"M{SX + 16.5},{y} H{SX + R} Q{SX},{y} {SX},{y + R} V{y + h - R} "
-           f"Q{SX},{y + h} {SX + R},{y + h} H{SX + 16.5} Z", INK, SW, fill=INK)
+    rr = min(R, h / 2 - 0.4)
+    c.path(f"M{SX + 16.5},{y} H{SX + rr} Q{SX},{y} {SX},{y + rr} V{y + h - rr} "
+           f"Q{SX},{y + h} {SX + rr},{y + h} H{SX + 16.5} Z", INK, SW, fill=INK)
     T(SX + 8.3, y + h / 2 + 2.2, tg, 6.2, "middle", bold=True, color=WHITE)
     y0 = y + h / 2 - (len(rows) - 1) * 3.5 + 2.15
     for j, r_ in enumerate(rows):
@@ -202,8 +212,9 @@ amb_cards = [(1, "'born on 1959/2/18' · Value", "A '1959-02-18'   B '1959/02/18
 for k, (n, hd, bd) in enumerate(amb_cards):
     ky = CY + k * (KH + KG)
     box(CX, ky, CW, KH)
-    c.path(f"M{CX},{ky + KB} V{ky + R} Q{CX},{ky} {CX + R},{ky} H{CX + CW - R} "
-           f"Q{CX + CW},{ky} {CX + CW},{ky + R} V{ky + KB} Z", INK, SW, fill=CARD[n])
+    rr = min(R, KB - 0.4)
+    c.path(f"M{CX},{ky + KB} V{ky + rr} Q{CX},{ky} {CX + rr},{ky} H{CX + CW - rr} "
+           f"Q{CX + CW},{ky} {CX + CW},{ky + rr} V{ky + KB} Z", INK, SW, fill=CARD[n])
     T(CX + 2.2, ky + 5.6, hd, 6, color=CARD_TXT[n], maxw=CW - 5)
     T(CX + 2.5, ky + 12.9, bd, 6, maxw=CW - 4)
     tag(CX + CW, ky + 0.5, n, r=3.2)
@@ -212,14 +223,14 @@ for k, (n, hd, bd) in enumerate(amb_cards):
 x0, pw = P[1]
 GX, GY = x0 + 1.5, 100.0
 cols = [
-    (52.0, ["Existence"], ["0 rows →", "remove, keep", "'1959-02-18'"]),
-    (56.0, ["Difference"], ["res(q₁, D) =", "res(q₂, D) →", "drop"]),
-    (52.0, ["Relevance"], ["res(y_p₁) = …", "= res(y_⊥) →", "drop"]),
+    (52.0, ["Existence"], ["0 rows → remove", "1 left → Auto"]),
+    (54.0, ["Difference"], ["res($q_{1}$) = res($q_{2}$)", "→ Drop"]),
+    (54.0, ["Relevance"], ["res($y_{p}$) = res($y_{⊥}$)", "→ Drop"]),
 ]
-CT, CODE_Y, CB = GY + 2, 148.0, 177.0
-TOOLS = [("each option", "template query", GRAY, INK),
-         ("options on $D$", "LLM: write, verify", BLUE_L, INK),
-         ("Parser", "input $E$ ⊕ $c_{j}$", INK, WHITE)]
+CT, CODE_Y, CB = GY + 2, 148.0, 170.0
+TOOLS = [("exists?", "SQL: template", GRAY, INK),
+         ("differs on $D$?", "SQL: LLM, verified", BLUE_L, INK),
+         ("changes SQL?", "SQL: parser", INK, WHITE)]
 cx_ = GX + 2
 col_pos = []
 for k, (cw, title, code) in enumerate(cols):
@@ -248,11 +259,9 @@ for k, (cw, title, code) in enumerate(cols):
     T(ic, CT + 32.7, chip, 6, "middle", bold=True, color=ct, maxw=cw - 2)
     T(ic, CT + 42.0, sub, 6, "middle", italic=True, maxw=cw - 1.5)
     box(cx_ + 1.2, CODE_Y, cw - 2.4, CB - CODE_Y - 1.5, fill=BG, rx=2)
-    if k == 0:
-        c.rect(cx_ + 1.2, CODE_Y, 2.2, CB - CODE_Y - 1.5, rx=0.8, fill=BLUE_L)
     for j, ln in enumerate(code):
-        T(cx_ + 4.0 if k == 0 else cx_ + 2.6, CODE_Y + 6.7 + j * 6.8, f"`{ln}`", 6,
-          maxw=cw - (5.2 if k == 0 else 3.8))
+        T(cx_ + cw / 2, CODE_Y + 7.6 + j * 7.6, ln, 6, "middle",
+          bold=(j == 1), maxw=cw - (4.4 if k == 0 else 3.8))
     col_pos.append((cx_, cw))
     cx_ += cw + 2
 GW = cx_ - GX
@@ -262,15 +271,16 @@ TBY = CB + 4
 LEAD_T = 7.3
 TB_H = 5 * LEAD_T + 4
 box(GX + 2, TBY, GW - 4, TB_H, fill=WHITE, stroke=GRAY, rx=2)
-TCX = [GX + 10, GX + 21, GX + 32]
-OCX = GX + 44
+TOFF = 30.0
+TCX = [GX + 10 + TOFF, GX + 21 + TOFF, GX + 32 + TOFF]
+OCX = GX + 44 + TOFF
 for x_, h_ in zip(TCX, ("E", "D", "R")):
     T(x_, TBY + 6.6, h_, 6, "middle", bold=True)
 T(OCX, TBY + 6.6, "outcome", 6, bold=True)
-rows_t = [(("T", "T", "T"), "pass on as $Φ$", None),
+rows_t = [(("1 left", None, None), "Auto, written to $E$", BLUE_L),
           (("T", "F", "·"), "Drop", GRAY),
           (("T", "T", "F"), "Drop", GRAY),
-          (("1 left", None, None), "Auto, written to $E$", BLUE_L)]
+          (("T", "T", "T"), "pass on as $Φ$", None)]
 for j, (marks, out, col) in enumerate(rows_t):
     yy = TBY + 6.6 + (j + 1) * LEAD_T
     if marks[1] is None:
@@ -284,11 +294,6 @@ for j, (marks, out, col) in enumerate(rows_t):
         T(OCX + 1.5, yy, out, 6, bold=True)
     else:
         T(OCX, yy, out, 6, bold=True)
-NX = GX + 104
-T(NX, TBY + 13.9, "F only on conclusive", 6, italic=True)
-T(NX, TBY + 21.2, "evidence", 6, italic=True)
-T(NX, TBY + 31.0, "check incomplete", 6, italic=True)
-T(NX, TBY + 38.3, "→ counts as T", 6, italic=True)
 GBOT = TBY + TB_H + 2.5
 box(GX, GY, GW, GBOT - GY, fill="none", stroke=GRAY)
 
@@ -320,7 +325,7 @@ for n, ry, bars, lab, tx in rows3:
     tag_pos[n] = (tx, ry + 2.5)
 
 FSY = 145.0
-box(x0 + 3, FSY, pw - 6, 11.5, stroke=GRAY, rx=2)
+box(x0 + 3, FSY, pw - 6, 11.5, stroke=SOFT_STROKE, rx=3)
 T(x0 + pw / 2, FSY + 8.3, "$H_{norm}(φ) = −Σ_{j} w_{j} log w_{j} / log |P|$", 6.5, "middle",
   maxw=pw - 8)
 
@@ -334,8 +339,8 @@ APX, APW = x0 + 68, 46.0
 c.arrow([(DCX + DHW, DCY), (APX, DCY)], hs=3)
 T(DCX + DHW + 2, DCY - 5.2, "yes", 6, italic=True)
 tag((DCX + DHW + APX) / 2 + 0.5, DCY, 2, r=3.4)
-pill(APX, DCY - 5.5, APW, 11, BLUE)
-T(APX + APW / 2, DCY + 2.2, "Auto($p_{j}^{*}$)", 6.5, "middle", bold=True, color=WHITE)
+pill(APX, DCY - 5.5, APW, 11, BLUE_SOFT, stroke=BLUE)
+T(APX + APW / 2, DCY + 2.2, "Auto($p_{j}^{*}$)", 6.5, "middle", bold=True, color=BLUE)
 
 NY1, NY2 = 201.0, 223.0
 QX = x0 + 36
@@ -343,8 +348,8 @@ QW = pw - 38
 c.line([(DCX, DCY + DHH), (DCX, NY1)], r=0)
 T(DCX - 2, DCY + DHH + 7.2, "no", 6, "end", italic=True)
 c.arrow([(DCX, NY1), (QX, NY1)], hs=3)
-pill(QX, NY1 - 5.5, QW, 11, ORANGE)
-bubble(QX + 6.4, NY1 - 0.3)
+pill(QX, NY1 - 5.5, QW, 11, ORANGE_FILL, stroke=ORANGE)
+bubble(QX + 6.4, NY1 - 0.3, ORANGE)
 T(QX + 11.5, NY1 + 2.1, "Ask → $r(φ) ∈ P ∪ {⊥}$", 6, bold=True, maxw=QW - 13)
 iw = T(QX + 2, NY1 + 12.4, "to the user", 6, italic=True)
 tag(QX + 2 + iw + 5.5, NY1 + 10.2, 3, r=3.4)
@@ -357,8 +362,8 @@ T(TX + 3, PB - 5.5, "$θ^{*}$ from validation data", 6)
 # ---------------------------------------------------------------- panel 4
 x0, pw = P[3]
 WPX, WPW = x0 + 50, 34.0
-pill(WPX, PT + 4, WPW, 10, BLUE_L)
-T(WPX + WPW / 2, PT + 11.1, "Write to $E$", 6, "middle", bold=True)
+pill(WPX, PT + 4, WPW, 10, BLUE_SOFT, stroke=BLUE_L)
+T(WPX + WPW / 2, PT + 11.1, "Write to $E$", 6, "middle", bold=True, color=BLUE)
 
 EX, EY, EW = x0 + 3, 99.0, pw - 6
 items = [
@@ -389,12 +394,11 @@ PRY, PRH = EB + 8, 13.0
 c.arrow([(EX + EW / 2, EB), (EX + EW / 2, PRY)], hs=3)
 box(EX, PRY, EW, PRH, fill=INK, stroke=INK)
 T(EX + EW / 2, PRY + 8.8, "!{Parser}", 6.5, "middle", color=WHITE)
-T(EX + 1, PRY + PRH + 8.0, "input: $Q$, $E′$, table", 6, italic=True)
-T(EX + 1, PRY + PRH + 14.6, "and column names", 6, italic=True)
+T(EX + 1, PRY + PRH + 8.0, "input: $Q$, $E′$, schema", 6, italic=True)
 SQX, SQY = x0 + 12, PRY + PRH + 19.5
 SQW, SQH = x0 + pw - 2 - SQX, 23.5
 c.arrow([(SQX + SQW - 8, PRY + PRH), (SQX + SQW - 8, SQY)], hs=3)
-box(SQX, SQY, SQW, SQH, stroke=GREEN)
+box(SQX, SQY, SQW, SQH, stroke=GREEN, fill=GREEN_SOFT)
 for j, ln in enumerate(["SELECT … T-CHO …", "FROM Patient JOIN …", "WHERE Birthday = …"]):
     T(SQX + 2.2, SQY + 7.3 + j * 6.8, f"`{ln}`", 6, maxw=SQW - 3)
 check(SQX + SQW, SQY)

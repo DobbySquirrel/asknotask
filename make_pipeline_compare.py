@@ -9,19 +9,26 @@ import math
 
 from figlib import Canvas
 
-BLUE = "#0072B2"
-BLUE_L = "#56B4E9"
-ORANGE = "#E69F00"
-GRAY = "#BBBBBB"
-MID = "#8C8C8C"
-BG = "#F4F4F4"
-INK = "#333333"
+# Soft ICDE-friendly palette (warmer, less chalky) — match motivation
+BLUE = "#2F7FB8"
+BLUE_L = "#6CB6E3"
+ORANGE = "#E8922A"
+ORANGE_FILL = "#FFE6C2"
+ORANGE_SOFT = "#FFD9A0"
+GRAY = "#C9CED4"
+MID = "#6B7580"
+BG = "#F3F6F9"
+INK = "#55606C"  # softer than motivation ink
+MUTED = "#6B7580"
 WHITE = "#FFFFFF"
+SOFT_STROKE = "#D7DEE6"
+BLUE_SOFT = "#DCEAF5"
+GREEN = "#3BAF9F"
 
 W_IN, H_IN = 7.16, 2.7
 W, H = W_IN * 72, H_IN * 72
 SW = 0.7
-R = 3
+R = 5
 FS = 6.0
 THICK = 1.8
 
@@ -110,9 +117,9 @@ M = 3.0
 L1Y0, L1Y1 = M, 116.0
 L2Y0, L2Y1 = 120.0, H - M
 box(M, L1Y0, W - 2 * M, L1Y1 - L1Y0, fill=BG, stroke=None)
-box(M, L2Y0, W - 2 * M, L2Y1 - L2Y0, fill=WHITE, stroke=GRAY, sw=0.6)
+box(M, L2Y0, W - 2 * M, L2Y1 - L2Y0, fill="#F8FBFD", stroke=None)
 T(M + 5, L1Y0 + 9.5, "Offline · training databases", 8, bold=True)
-T(M + 5, L2Y0 + 9.5, "Online · each new question", 8, bold=True)
+T(M + 5, L2Y0 + 9.5, "Online · inference", 8, bold=True)
 
 # ====================================================================== top lane
 R1Y, R1H = 18.0, 42.0
@@ -126,12 +133,14 @@ SRC_CX = 24.0
 for k in range(3):
     c.cylinder(SRC_CX - 13 + k * 3.2, CM - 24 + k * 4.5, 16, 15)
 centered(SRC_CX, CM + 12, ["Training", "databases"], 6.5, 7.4, bold=True)
-centered(SRC_CX, CM + 29, ["disjoint from", "all benchmarks"], FS, 6.8, italic=True)
 
 # detection + three checks
-DX0, DW = 50.0, 32.0
+DX0, DW = 48.0, 36.0
 harrow(44.0, DX0, CM - 8)
-label_box(DX0, CM - 11, DW, 22, ["Detection"])
+box(DX0, CM - 23.5, DW, 47)
+T(DX0 + DW / 2, CM - 15.5, "Detection", 6.2, "middle", bold=True)
+for k, nm in enumerate(["forward", "backward"]):
+    label_box(DX0 + 3, CM - 10 + k * 15, DW - 6, 11, [nm])
 FX0, FX1 = 88.0, 134.0
 harrow(DX0 + DW, FX0, CM)
 box(FX0, CM - 23.5, FX1 - FX0, 47, fill="none", stroke=GRAY, sw=0.6)
@@ -149,11 +158,19 @@ fan(FAN_CX, CM - 12.5)
 T(FAN_CX, CM + 14, "$Φ$", 6.5, "middle")
 SUX0, SUW = 158.0, 64.0
 harrow(FAN_CX + 8, SUX0, CM)
-box(SUX0, CM - 23, SUW, 46, fill=ORANGE, stroke=ORANGE)
-T(SUX0 + 4, CM - 8, "Simulated user", 6.5, bold=True)
-for j, s in enumerate(["picks the option", "matching the gold", "query, or Others"]):
-    T(SUX0 + 4, CM + 0.5 + j * 6.8, s, FS, maxw=SUW - 6)
-tgl = "can see the gold SQL"
+box(SUX0, CM - 23, SUW, 46, fill=ORANGE_FILL, stroke=ORANGE)
+T(SUX0 + 4, CM - 10, "Simulated user", 6.5, bold=True)
+T(SUX0 + 4, CM - 2.5, "/{match gold SQL?}", FS)
+for j, (fill_a, out) in enumerate(((INK, "pick A"), (None, "Others"))):
+    yy = CM + 2 + j * 10
+    for q, lt in enumerate("AB"):
+        on = fill_a is not None and q == 0
+        c.rect(SUX0 + 4 + q * 9, yy, 7.5, 7.5, rx=1.2, fill=INK if on else WHITE,
+               stroke=INK, sw=0.5)
+        T(SUX0 + 7.75 + q * 9, yy + 5.6, lt, FS, "middle", bold=True, color=WHITE if on else MID)
+    c.arrow([(SUX0 + 24, yy + 3.75), (SUX0 + 31, yy + 3.75)], INK, 0.6, hs=2.2)
+    T(SUX0 + 33, yy + 5.8, out, FS, bold=True)
+tgl = "sees gold SQL"
 tgw = c.tw(tgl, FS) + 15
 tgx = SUX0 + SUW / 2 - tgw / 2
 box(tgx, CM - 27.6, tgw, 9.6, fill=WHITE, stroke=INK, rx=4.8)
@@ -168,8 +185,8 @@ c.line([(FKX, r1m), (FKX, r2m)], INK, SW)
 c.circle(FKX, CM, 1.3, fill=INK)
 harrow(FKX, BR, r1m)
 harrow(FKX, BR, r2m)
-T(FKX + 3, r1m - 2.2, "training set, 60 DBs", FS)
-T(FKX + 3, r2m - 2.2, "validation set, 9 DBs", FS)
+T(FKX + 3, r1m - 2.2, "training set", FS)
+T(FKX + 3, r2m - 2.2, "validation set", FS)
 T(FKX + 3, CM - 1.2, "/{split by}", FS)
 T(FKX + 3, CM + 5.6, "/{database}", FS)
 
@@ -186,29 +203,57 @@ TRAIN_CX = TX + TW / 2
 harrow(330.0, TX, r1m)
 box(TX, R1Y, TW, R1H, stroke=BLUE, sw=1.1)
 centered(TRAIN_CX, R1Y + 8.5, ["Train", "scorer"], 6.5, 7.2, bold=True, color=BLUE)
-T(TRAIN_CX, R1Y + 26.5, "$L$ = − $Σ_{j}$ $q_{j}$ log $w_{j}$", 6.2, "middle", maxw=TW - 2)
-T(TRAIN_CX, R1Y + 33.5, "option order", FS, "middle", maxw=TW - 2)
-ew = c.tw("shuffled per epoch", FS)
-T(TRAIN_CX + 3, R1Y + 39.5, "shuffled per epoch", FS, "middle")
-cycle_icon(TRAIN_CX + 3 - ew / 2 - 4.0, R1Y + 37.6, r=2.3)
+T(TRAIN_CX, R1Y + 24.5, "$L$ = − $Σ_{j}$ $q_{j}$ log $w_{j}$", 6.2, "middle", maxw=TW - 2)
+SHY = R1Y + 27.5
+for g, order in enumerate(("AB", "BA")):
+    gx = TRAIN_CX - 21 + g * 27
+    for q, lt in enumerate(order):
+        c.rect(gx + q * 7.5, SHY, 6.5, 6.5, rx=1, fill=WHITE, stroke=BLUE, sw=0.5)
+        T(gx + 3.25 + q * 7.5, SHY + 5.0, lt, 5.5 if False else FS, "middle", bold=True, color=BLUE)
+cycle_icon(TRAIN_CX, SHY + 3.4, r=2.4)
+T(TRAIN_CX, R1Y + 39.8, "/{shuffled per epoch}", FS, "middle", maxw=TW - 2)
 
 # online hand-off line (drawn before the boxes it passes)
 JW = 28.0
 MR0, MR1 = L2Y0 + 14, L2Y0 + 66
 mm = (MR0 + MR1) / 2
 JEV_TOP = mm - 14
-c.line([(TRAIN_CX, R1Y + R1H), (TRAIN_CX, JEV_TOP - 6)], INK, THICK)
+c.line([(TRAIN_CX, R1Y + R1H), (TRAIN_CX, R2Y + 4 - 5)], INK, THICK)
+c.polygon([(TRAIN_CX, R2Y + 4), (TRAIN_CX - 2.7, R2Y + 4 - 5.3), (TRAIN_CX + 2.7, R2Y + 4 - 5.3)],
+          INK)
+c.line([(TRAIN_CX, R2Y + R2H - 4), (TRAIN_CX, JEV_TOP - 6)], INK, THICK)
 c.polygon([(TRAIN_CX, JEV_TOP), (TRAIN_CX - 2.7, JEV_TOP - 6.3), (TRAIN_CX + 2.7, JEV_TOP - 6.3)],
           INK)
 
 # lower row: apply scorer
 SC_X0, SC_X1 = BR, TX + TW
-SC_Y, SC_H = R2Y + 4, R2H - 8
+SC_Y, SC_H = R2Y + 2, R2H - 4
 box(SC_X0, SC_Y, SC_X1 - SC_X0, SC_H, stroke=BLUE, sw=1.1)
-scx = (SC_X0 + TRAIN_CX - 4) / 2
-T(scx, SC_Y + 10, "Apply trained", 6.5, "middle", bold=True, color=BLUE)
-T(scx, SC_Y + 17.5, "scorer", 6.5, "middle", bold=True, color=BLUE)
-T(scx, SC_Y + 25.5, "$H_{norm}$, top option", FS, "middle")
+scx = (SC_X0 + SC_X1) / 2
+T(scx, SC_Y + 8.5, "Apply trained scorer", 6.5, "middle", bold=True, color=BLUE)
+BASE = SC_Y + 24.5
+LBL = SC_Y + 31.0
+bx = SC_X0 + 6
+for lt, hgt in (("A", 10.0), ("B", 3.5), ("C", 1.5), ("…", None), ("Z", 0.6)):
+    if hgt is not None:
+        c.rect(bx, BASE - hgt, 3.8, hgt, rx=0.4, fill=BLUE if lt == "A" else GRAY)
+    T(bx + 1.9, LBL, lt, FS, "middle", bold=(lt == "A"),
+      color=BLUE if lt == "A" else MID)
+    bx += 5.6
+c.line([(SC_X0 + 5, BASE), (bx - 1, BASE)], MID, 0.4)
+AR0 = bx + 1
+harrow(AR0, AR0 + 6, BASE - 4)
+TPX = AR0 + 8
+c.rect(TPX, BASE - 8.5, 8, 8, rx=1.2, fill=BLUE)
+T(TPX + 4, BASE - 2.6, "A", FS, "middle", bold=True, color=WHITE)
+T(TPX + 4, LBL, "top", FS, "middle", color=MID)
+T(TPX + 13, BASE - 2.4, "=", 7, "middle", bold=True)
+USX = TPX + 18
+c.rect(USX, BASE - 8.5, 8, 8, rx=1.2, fill=ORANGE_SOFT, stroke=ORANGE, sw=0.7)
+T(USX + 4, BASE - 2.6, "A", FS, "middle", bold=True)
+T(USX + 4, LBL, "user", FS, "middle", color=MID)
+harrow(USX + 9, USX + 15, BASE - 4)
+T(USX + 17, BASE - 2.4, "agr($θ$)", FS)
 harrow(SC_X1, CH_X0, r2m)
 
 # validation chart
@@ -216,7 +261,7 @@ CY0, CY1 = R1Y - 3, L1Y1 - 4
 box(CH_X0, CY0, CH_X1 - CH_X0, CY1 - CY0, stroke=BLUE, sw=1.1)
 chm = (CH_X0 + CH_X1) / 2
 T(chm, CY0 + 9, "Select θ* on validation set", 6.5, "middle", bold=True, maxw=CH_X1 - CH_X0 - 4)
-AX0, AY0, AX1, AY1 = CH_X0 + 8, CY0 + 14, CH_X1 - 10, CY1 - 31
+AX0, AY0, AX1, AY1 = CH_X0 + 8, CY0 + 14, CH_X1 - 10, CY1 - 37
 c.arrow([(AX0, AY1), (AX0, AY0)], INK, 0.65, hs=2.4)
 c.arrow([(AX0, AY1), (AX1 + 3, AY1)], INK, 0.65, hs=2.4)
 T(AX0 + 3, AY0 + 2.5, "agreement", FS)
@@ -247,22 +292,22 @@ c.line([(ix, iy), (ix, AY1)], BLUE, 0.6)
 star(ix, iy, ro=3.8, ri=1.6)
 T(ix - 4, ALY + 12, "$θ^{*}$", 7, "end", bold=True)
 T(chm, AY1 + 15, "`θ* = max{θ : agr(θ) ≥ α}`", FS, "middle", maxw=CH_X1 - CH_X0 - 4)
-T(chm, AY1 + 22, "/{α: target agreement, set by the user}", FS, "middle", color=MID,
-  maxw=CH_X1 - CH_X0 - 4)
-T(chm, AY1 + 28.5, "/{agr: top option = user's choice}", FS, "middle", color=MID,
-  maxw=CH_X1 - CH_X0 - 4)
+for j, ln in enumerate(["agr: top option = user's choice",
+                        "α: target agreement, set by the user",
+                        "θ*: largest entropy threshold meeting α"]):
+    T(chm, AY1 + 22 + j * 6.5, f"/{{{ln}}}", FS, "middle", color=INK if j == 2 else MID,
+      maxw=CH_X1 - CH_X0 - 4)
 
 # ====================================================================== bottom lane
 CD, CDW = M + 5, 92.0
 CDY, CDH = MR0 + 4, MR1 - MR0 - 8
 box(CD, CDY, CDW, CDH)
 c.path(f"M{CD},{CDY + 9} V{CDY + R} Q{CD},{CDY} {CD + R},{CDY} H{CD + CDW - R} "
-       f"Q{CD + CDW},{CDY} {CD + CDW},{CDY + R} V{CDY + 9} Z", INK, SW, fill=ORANGE)
+       f"Q{CD + CDW},{CDY} {CD + CDW},{CDY + R} V{CDY + 9} Z", ORANGE, SW, fill=ORANGE_SOFT)
 T(CD + 3, CDY + 6.6, "'total cholesterol' · Project", 6, bold=True, maxw=CDW - 5)
-T(CD + 3, CDY + 16.5, "ambiguity $φ$ ∈ $Φ$, $m$ = 2", FS, italic=True, maxw=CDW - 5)
 for j, (lt, ln) in enumerate([("A", "The rate only"), ("B", "The rate and both"), ("", "monthly values")]):
-    T(CD + 3, CDY + 25 + j * 6.8, lt, FS, bold=True)
-    T(CD + 9.5, CDY + 25 + j * 6.8, ln, FS, maxw=CDW - 11)
+    T(CD + 3, CDY + 19 + j * 7.2, lt, FS, bold=True)
+    T(CD + 9.5, CDY + 19 + j * 7.2, ln, FS, maxw=CDW - 11)
 PX0 = CD + CDW + 7
 JX0 = TRAIN_CX - JW / 2
 PX1 = JX0 - 7
@@ -270,7 +315,7 @@ harrow(CD + CDW, PX0, mm)
 box(PX0, MR0, PX1 - PX0, MR1 - MR0)
 c.path(f"M{PX0},{MR0 + 8.5} V{MR0 + R} Q{PX0},{MR0} {PX0 + R},{MR0} H{PX1 - R} Q{PX1},{MR0} "
        f"{PX1},{MR0 + R} V{MR0 + 8.5} Z", INK, SW, fill=BG)
-T(PX0 + 2.5, MR0 + 6.4, "Scorer input for the running example (abridged)", FS, maxw=PX1 - PX0 - 3)
+T(PX0 + 2.5, MR0 + 6.4, "Scorer input for the running example", FS, maxw=PX1 - PX0 - 3)
 rows = ["Question: …the decrease rate for his/her total cholesterol…",
         "Evidence: …   Schema: Laboratory(ID, Date, T-CHO, …)",
         "Span h: 'total cholesterol'   Type: Project",
@@ -311,9 +356,9 @@ PLW = W - M - 4 - PLX
 c.line([(OX, mm), (BX, mm)], ORANGE, 1.1)
 c.arrow([(BX, mm), (BX, mm - 10), (PLX, mm - 10)], GRAY, SW, hs=2.4, r=1.5)
 c.arrow([(BX, mm), (BX, mm + 10), (PLX, mm + 10)], ORANGE, 1.1, hs=2.6, r=1.5)
-box(PLX, mm - 15.5, PLW, 11, fill=WHITE, stroke=GRAY, rx=5.5)
+box(PLX, mm - 15.5, PLW, 11, fill=WHITE, stroke=SOFT_STROKE, rx=5.5)
 T(PLX + PLW / 2, mm - 7.8, "Auto", 6.5, "middle", bold=True, color=MID)
-box(PLX, mm + 4.5, PLW, 11, fill=ORANGE, stroke=ORANGE, rx=5.5)
+box(PLX, mm + 4.5, PLW, 11, fill=ORANGE_FILL, stroke=ORANGE, rx=5.5)
 T(PLX + PLW / 2, mm + 12.2, "Ask", 6.5, "middle", bold=True)
 T(BX + 1, mm - 18, "/{yes}", FS, color=MID)
 T(BX + 1, mm + 24, "/{no}", FS)
