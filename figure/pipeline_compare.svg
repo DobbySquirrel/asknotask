@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="7.16in" height="2.7in" viewBox="0 0 515.52 194.4">
 <rect width="515.52" height="194.4" fill="#FFFFFF"/>
 <rect x="3.00" y="3.00" width="509.52" height="113.00" rx="5" fill="#F3F6F9" stroke="none"/>
-<rect x="3.00" y="120.00" width="509.52" height="71.40" rx="5" fill="#F8FBFD" stroke="none"/>
+<rect x="3.00" y="120.00" width="509.52" height="71.40" rx="5" fill="#F3F6F9" stroke="none"/>
 <text fill="#55606C" xml:space="preserve"><tspan x="8.00" y="12.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="8.00" font-weight="bold">Offline · training databases</tspan></text>
 <text fill="#55606C" xml:space="preserve"><tspan x="8.00" y="129.50" font-family="'Liberation Sans', Helvetica, Arial, sans-serif" font-size="8.00" font-weight="bold">Online · inference</tspan></text>
 <path d="M11.0,42.55 A8.0,2.5500000000000003 0 0 1 27.0,42.55 V52.45 A8.0,2.5500000000000003 0 0 1 11.0,52.45 Z" fill="#FFFFFF" stroke="#55606C" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>

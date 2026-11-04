@@ -117,7 +117,7 @@ M = 3.0
 L1Y0, L1Y1 = M, 116.0
 L2Y0, L2Y1 = 120.0, H - M
 box(M, L1Y0, W - 2 * M, L1Y1 - L1Y0, fill=BG, stroke=None)
-box(M, L2Y0, W - 2 * M, L2Y1 - L2Y0, fill="#F8FBFD", stroke=None)
+box(M, L2Y0, W - 2 * M, L2Y1 - L2Y0, fill=BG, stroke=None)
 T(M + 5, L1Y0 + 9.5, "Offline · training databases", 8, bold=True)
 T(M + 5, L2Y0 + 9.5, "Online · inference", 8, bold=True)
 
