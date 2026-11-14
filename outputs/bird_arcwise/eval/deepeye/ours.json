@@ -1,0 +1,13 @@
+{
+  "n": 498,
+  "correct": {
+    "gold": 390
+  },
+  "ex": {
+    "gold": 78.3132530120482
+  },
+  "gold_key": "gold",
+  "source": "synced from eval_rescored/deepeye/ours.json (evaluator.ex gold_timeout=600)",
+  "q": 0.0,
+  "q_total": 0
+}

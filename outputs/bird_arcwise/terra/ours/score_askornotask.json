@@ -1,0 +1,4016 @@
+{
+ "hit": 372,
+ "n": 498,
+ "ex": 74.6987951807229,
+ "full": {
+  "n": 498,
+  "gold_key": "gold",
+  "correct": {
+   "gold": 372,
+   "gold_1": 372,
+   "any_gold": 372
+  },
+  "ex": {
+   "gold": 74.6987951807229,
+   "gold_1": 74.6987951807229,
+   "any_gold": 74.6987951807229
+  },
+  "q": 0.0,
+  "q_total": 0,
+  "n_pred_missing": 0,
+  "n_pred_error": 2,
+  "n_gold_error": 0,
+  "gold_errors": [],
+  "pred_file": "outputs/bird_arcwise/predictions/gpt56_terra/ours.jsonl",
+  "gold_file": "dataset/bird_arcwise/gold.jsonl",
+  "timeout_s": 30.0,
+  "per_question": [
+   {
+    "qid": "bird:1471",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1472",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1473",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1476",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1479",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1480",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1481",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1482",
+    "db_id": "debit_card_specializing",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1483",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1484",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1486",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1490",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1493",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1498",
+    "db_id": "debit_card_specializing",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1500",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1501",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1505",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1506",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1507",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1509",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1514",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1515",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1521",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1524",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1525",
+    "db_id": "debit_card_specializing",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1526",
+    "db_id": "debit_card_specializing",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1528",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1529",
+    "db_id": "debit_card_specializing",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1531",
+    "db_id": "debit_card_specializing",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1533",
+    "db_id": "debit_card_specializing",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1312",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1317",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1322",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1323",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1331",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1334",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1338",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1339",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1340",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1344",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1346",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1350",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1351",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1352",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1356",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1357",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1359",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1361",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1362",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1368",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1371",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1375",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1376",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1378",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1380",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1381",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1387",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1389",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1390",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1392",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1394",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1398",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1399",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1401",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1403",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1404",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1405",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1409",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1410",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1411",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1422",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1426",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1427",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1432",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1435",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1457",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1460",
+    "db_id": "student_club",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1464",
+    "db_id": "student_club",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1149",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1150",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1152",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1153",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1155",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1156",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1157",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1162",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1164",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1166",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1168",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1169",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1171",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1175",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1179",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1185",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1187",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1189",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1192",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1195",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1198",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1201",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1205",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1208",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1209",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1220",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1225",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1227",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1229",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1231",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1232",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1235",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1238",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1239",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1241",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1242",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1243",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1247",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1251",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1252",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1254",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1255",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1256",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1257",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1265",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1267",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1270",
+    "db_id": "thrombosis_prediction",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1275",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1281",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1302",
+    "db_id": "thrombosis_prediction",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1025",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1028",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1029",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1030",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1031",
+    "db_id": "european_football_2",
+    "error": "timeout",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1032",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1035",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1036",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1037",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1039",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1040",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1042",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1044",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1048",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1057",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1058",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1068",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1076",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1078",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1079",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1080",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1084",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1088",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1091",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1092",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1094",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1096",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1098",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1102",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1103",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1105",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1107",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1110",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1113",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1114",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1115",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1116",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1122",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1124",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1130",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1133",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1134",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1135",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1136",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1139",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1141",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1144",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1145",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1146",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1147",
+    "db_id": "european_football_2",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1148",
+    "db_id": "european_football_2",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:846",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:847",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:850",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:854",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:857",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:859",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:861",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:862",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:865",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:866",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:868",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:869",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:872",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:875",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:877",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:879",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:880",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:881",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:884",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:892",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:894",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:895",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:896",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:897",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:898",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:901",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:902",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:904",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:906",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:909",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:910",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:912",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:915",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:928",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:930",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:931",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:933",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:937",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:940",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:944",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:945",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:948",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:950",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:951",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:954",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:955",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:959",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:960",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:962",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:963",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:964",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:967",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:971",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:972",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:977",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:978",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:981",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:988",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:989",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:990",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:717",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:994",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1001",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1002",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1003",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:1011",
+    "db_id": "formula_1",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:1014",
+    "db_id": "formula_1",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:719",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:723",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:724",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:726",
+    "db_id": "superhero",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:728",
+    "db_id": "superhero",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:730",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:732",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:733",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:736",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:737",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:738",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:739",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:740",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:743",
+    "db_id": "superhero",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:744",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:745",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:747",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:750",
+    "db_id": "superhero",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:751",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:753",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:758",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:760",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:761",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:764",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:765",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:766",
+    "db_id": "superhero",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:769",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:772",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:773",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:775",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:779",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:781",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:782",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:785",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:786",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:788",
+    "db_id": "superhero",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:790",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:791",
+    "db_id": "superhero",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:792",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:794",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:796",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:797",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:798",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:800",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:801",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:806",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:819",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:822",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:824",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:825",
+    "db_id": "superhero",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:829",
+    "db_id": "superhero",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:531",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:532",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:533",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:539",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:537",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:544",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:547",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:549",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:555",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:557",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:563",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:565",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:567",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:568",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:571",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:572",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:573",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:576",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:578",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:581",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:584",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:586",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:587",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:592",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:595",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:598",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:604",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:629",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:633",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:634",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:637",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:639",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:640",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:665",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:669",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:671",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:672",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:678",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:682",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:683",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:685",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:687",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:694",
+    "db_id": "codebase_community",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:701",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:704",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:705",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:707",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:710",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:716",
+    "db_id": "codebase_community",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:340",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:341",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:344",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:345",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:346",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:347",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:349",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:352",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:356",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:358",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:366",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:368",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:371",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:377",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:379",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:383",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:391",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:397",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:402",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:405",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:407",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:408",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:409",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:412",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:414",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:415",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:416",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:422",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:424",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:427",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:440",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:459",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:462",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:465",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:466",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:468",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:469",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:472",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:473",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:474",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:477",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:479",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:480",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:483",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:484",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:486",
+    "db_id": "card_games",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:487",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:518",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:522",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:528",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:529",
+    "db_id": "card_games",
+    "error": "timeout",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:530",
+    "db_id": "card_games",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:195",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:197",
+    "db_id": "toxicology",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:198",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:200",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:201",
+    "db_id": "toxicology",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:206",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:207",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:208",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:212",
+    "db_id": "toxicology",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:213",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:215",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:218",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:219",
+    "db_id": "toxicology",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:220",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:226",
+    "db_id": "toxicology",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:227",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:228",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:230",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:231",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:232",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:234",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:236",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:239",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:240",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:242",
+    "db_id": "toxicology",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:243",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:244",
+    "db_id": "toxicology",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:245",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:247",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:248",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:249",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:253",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:255",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:260",
+    "db_id": "toxicology",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:263",
+    "db_id": "toxicology",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:268",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:273",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:281",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:282",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:327",
+    "db_id": "toxicology",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:5",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:11",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:12",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:17",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:23",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:24",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:25",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:26",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:27",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:28",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:31",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:32",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:37",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:36",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:39",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:40",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:41",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:45",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:46",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:47",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:48",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:50",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:62",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:72",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:77",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:79",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:82",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:83",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:85",
+    "db_id": "california_schools",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:87",
+    "db_id": "california_schools",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:89",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:92",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:93",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:94",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:95",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:98",
+    "db_id": "financial",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:99",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:100",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:112",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:115",
+    "db_id": "financial",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:116",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:117",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:118",
+    "db_id": "financial",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:125",
+    "db_id": "financial",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:128",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:136",
+    "db_id": "financial",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:137",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:138",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:129",
+    "db_id": "financial",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:145",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:149",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:152",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:159",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:168",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:169",
+    "db_id": "financial",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:173",
+    "db_id": "financial",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   },
+   {
+    "qid": "bird:186",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:189",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:192",
+    "db_id": "financial",
+    "gold_1": true,
+    "any_gold": true,
+    "gold": true,
+    "q": 0
+   },
+   {
+    "qid": "bird:194",
+    "db_id": "financial",
+    "gold_1": false,
+    "any_gold": false,
+    "gold": false,
+    "q": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,13 @@
+{
+  "n": 498,
+  "correct": {
+    "gold": 333
+  },
+  "ex": {
+    "gold": 66.86746987951807
+  },
+  "gold_key": "gold",
+  "source": "synced from eval_rescored/qwen_coder/ours_wo_scorer.json (evaluator.ex gold_timeout=600)",
+  "q": 2.927710843373494,
+  "q_total": 1458
+}

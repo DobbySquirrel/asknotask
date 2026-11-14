@@ -1,0 +1,13 @@
+{
+  "n": 1149,
+  "correct": {
+    "gold_1": 673
+  },
+  "ex": {
+    "gold_1": 58.572671888598784
+  },
+  "gold_key": "gold_1",
+  "source": "synced from eval_rescored/gpt56_terra/ours_wo_scorer.json (evaluator.ex gold_timeout=600)",
+  "q": 0.0,
+  "q_total": 0
+}

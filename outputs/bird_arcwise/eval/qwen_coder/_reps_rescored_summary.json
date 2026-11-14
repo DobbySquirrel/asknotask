@@ -1,0 +1,33 @@
+{
+  "never_ask": {
+    "hits": [
+      299,
+      290,
+      297
+    ],
+    "mean": 295.3333333333333,
+    "q": 0.0,
+    "q_src": "n_asked=0"
+  },
+  "ambisql": {
+    "hits": [
+      300,
+      298,
+      299
+    ],
+    "mean": 299.0,
+    "q": 1.9096385542168675,
+    "q_src": "ambisql_rep2 n_asked"
+  },
+  "clear": {
+    "hits": [
+      299,
+      301,
+      298
+    ],
+    "mean": 299.3333333333333,
+    "q": 0.285140562248996,
+    "q_src": "clear_dqg_rep2 n_asked"
+  },
+  "note": "hits after evaluator.ex gold_timeout=600; eval EX uses round(mean hits)"
+}

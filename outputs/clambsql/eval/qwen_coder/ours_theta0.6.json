@@ -1,0 +1,13 @@
+{
+  "n": 1400,
+  "correct": {
+    "intended": 788
+  },
+  "ex": {
+    "intended": 56.285714285714285
+  },
+  "gold_key": "intended",
+  "source": "synced from eval_rescored/qwen_coder/ours_theta0.6.json (evaluator.ex gold_timeout=600); Q kept from prior eval (1.6264)",
+  "q": 1.6264,
+  "q_total": 2276.96
+}

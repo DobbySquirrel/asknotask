@@ -1,0 +1,18 @@
+{
+ "n": 498,
+ "correct": {
+  "gold": 372
+ },
+ "ex": {
+  "gold": 74.6987951807229
+ },
+ "gold_key": "gold",
+ "source": "terra_rerun/ours (outputs/bird_arcwise/terra/ours/pred.jsonl)",
+ "q": 0.0,
+ "q_total": 0,
+ "rerun_meta": {
+  "parser": "gpt-5.6-terra",
+  "note": "soft NOTE inserted in evidence",
+  "ts": "2026-11-09T12:32:19"
+ }
+}

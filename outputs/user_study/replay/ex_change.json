@@ -1,0 +1,46 @@
+{
+  "before": {
+    "n": 100,
+    "n_hit": 81,
+    "ex_percent": 81.0,
+    "sql_execution_errors": 1
+  },
+  "after": {
+    "n": 100,
+    "n_hit": 79,
+    "ex_percent": 79.0,
+    "sql_execution_errors": 1
+  },
+  "rerun": [
+    {
+      "id": "clambsql:672",
+      "old_correct": true,
+      "new_correct": false
+    },
+    {
+      "id": "bird:62",
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "id": "clambsql:299",
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "id": "clambsql:1312",
+      "old_correct": true,
+      "new_correct": false
+    },
+    {
+      "id": "clambsql:706",
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "id": "ambrosia:2851",
+      "old_correct": false,
+      "new_correct": false
+    }
+  ]
+}

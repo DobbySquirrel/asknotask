@@ -1,0 +1,117 @@
+{
+  "status": "frozen post-hoc rescoring; original participant ratings retained separately",
+  "rule_applied_to_original_scores": {
+    "1": 2,
+    "2": 3,
+    "3": 4
+  },
+  "metrics": {
+    "ours": {
+      "n": 211,
+      "n_adjusted": 160,
+      "original_usefulness": 2.5781990521327014,
+      "preview_usefulness": 3.3364928909952605,
+      "original_clarity": 4.800947867298579,
+      "preview_clarity": 4.800947867298579
+    },
+    "ambisql": {
+      "n": 128,
+      "n_adjusted": 106,
+      "original_usefulness": 2.296875,
+      "preview_usefulness": 3.125,
+      "original_clarity": 4.7890625,
+      "preview_clarity": 4.7421875
+    }
+  },
+  "clarity_list_order": "Original AmbiSQL rating order, filtered to original clarity = 4, numbered from 1.",
+  "ambisql_clarity_original_4_review": [
+    {
+      "group": 1,
+      "id": "bird:930",
+      "card_id": "bird:930#ambi0",
+      "list_position": 1,
+      "original_clarity": 4,
+      "preview_clarity": 3
+    },
+    {
+      "group": 1,
+      "id": "ambrosia:2709",
+      "card_id": "ambrosia:2709#ambi0",
+      "list_position": 2,
+      "original_clarity": 4,
+      "preview_clarity": 4
+    },
+    {
+      "group": 1,
+      "id": "clambsql:211",
+      "card_id": "clambsql:211#ambi0",
+      "list_position": 3,
+      "original_clarity": 4,
+      "preview_clarity": 3
+    },
+    {
+      "group": 2,
+      "id": "bird:732",
+      "card_id": "bird:732#ambi0",
+      "list_position": 4,
+      "original_clarity": 4,
+      "preview_clarity": 4
+    },
+    {
+      "group": 2,
+      "id": "bird:83",
+      "card_id": "bird:83#ambi1",
+      "list_position": 5,
+      "original_clarity": 4,
+      "preview_clarity": 3
+    },
+    {
+      "group": 2,
+      "id": "ambrosia:1807",
+      "card_id": "ambrosia:1807#ambi0",
+      "list_position": 6,
+      "original_clarity": 4,
+      "preview_clarity": 4
+    },
+    {
+      "group": 2,
+      "id": "clambsql:708",
+      "card_id": "clambsql:708#ambi1",
+      "list_position": 7,
+      "original_clarity": 4,
+      "preview_clarity": 3
+    },
+    {
+      "group": 7,
+      "id": "ambrosia:2307",
+      "card_id": "ambrosia:2307#ambi0",
+      "list_position": 8,
+      "original_clarity": 4,
+      "preview_clarity": 3
+    },
+    {
+      "group": 7,
+      "id": "ambrosia:1714",
+      "card_id": "ambrosia:1714#ambi0",
+      "list_position": 9,
+      "original_clarity": 4,
+      "preview_clarity": 4
+    },
+    {
+      "group": 8,
+      "id": "ambrosia:1414",
+      "card_id": "ambrosia:1414#ambi0",
+      "list_position": 10,
+      "original_clarity": 4,
+      "preview_clarity": 3
+    },
+    {
+      "group": 10,
+      "id": "clambsql:1141",
+      "card_id": "clambsql:1141#ambi0",
+      "list_position": 11,
+      "original_clarity": 4,
+      "preview_clarity": 4
+    }
+  ]
+}

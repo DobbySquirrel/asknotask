@@ -1,0 +1,1057 @@
+{
+  "seed": 20261031,
+  "theta": 0.5,
+  "rule": "Eligible：Ours θ*=0.5 仍要问，或 AmbiSQL n_asked>0。分层：优先 AmbiSQL 相对 Never-Ask 的 gain / both_ok，限制 hurt；库内轮流。每人 1 组 10 题。",
+  "strata_target": {
+    "bird": {
+      "gain": 6,
+      "both_ok": 12,
+      "ours_only": 8,
+      "hurt_max": 1
+    },
+    "ambrosia": {
+      "gain": 8,
+      "both_ok": 4,
+      "ours_only": 8,
+      "hurt_max": 1
+    },
+    "clambsql": {
+      "gain": 5,
+      "both_ok": 10,
+      "ours_only": 7,
+      "hurt_max": 1
+    }
+  },
+  "eligible": {
+    "bird": 416,
+    "ambrosia": 1131,
+    "clambsql": 1355
+  },
+  "sample": {
+    "n": 100,
+    "by_dataset": {
+      "bird": 40,
+      "ambrosia": 30,
+      "clambsql": 30
+    },
+    "card_types": {
+      "Aggregate": {
+        "n": 56,
+        "share": 0.1879
+      },
+      "Attachment": {
+        "n": 5,
+        "share": 0.0168
+      },
+      "Column": {
+        "n": 85,
+        "share": 0.2852
+      },
+      "Join": {
+        "n": 1,
+        "share": 0.0034
+      },
+      "Project": {
+        "n": 77,
+        "share": 0.2584
+      },
+      "Scope": {
+        "n": 46,
+        "share": 0.1544
+      },
+      "Table": {
+        "n": 11,
+        "share": 0.0369
+      },
+      "Tie": {
+        "n": 1,
+        "share": 0.0034
+      },
+      "Value": {
+        "n": 16,
+        "share": 0.0537
+      }
+    },
+    "n_cards": 298,
+    "ours_mean_Q": 2.41,
+    "ambisql_mean_Q": 2.22,
+    "never_ask_ex": {
+      "n": 100,
+      "n_hit": 43,
+      "ex": 0.43
+    }
+  },
+  "sample_by_dataset": {
+    "bird": {
+      "n": 40,
+      "by_dataset": {
+        "bird": 40
+      },
+      "card_types": {
+        "Aggregate": {
+          "n": 32,
+          "share": 0.2353
+        },
+        "Attachment": {
+          "n": 1,
+          "share": 0.0074
+        },
+        "Column": {
+          "n": 36,
+          "share": 0.2647
+        },
+        "Project": {
+          "n": 38,
+          "share": 0.2794
+        },
+        "Scope": {
+          "n": 15,
+          "share": 0.1103
+        },
+        "Table": {
+          "n": 3,
+          "share": 0.0221
+        },
+        "Tie": {
+          "n": 1,
+          "share": 0.0074
+        },
+        "Value": {
+          "n": 10,
+          "share": 0.0735
+        }
+      },
+      "n_cards": 136,
+      "ours_mean_Q": 2.925,
+      "ambisql_mean_Q": 2.525,
+      "never_ask_ex": {
+        "n": 40,
+        "n_hit": 21,
+        "ex": 0.525
+      }
+    },
+    "ambrosia": {
+      "n": 30,
+      "by_dataset": {
+        "ambrosia": 30
+      },
+      "card_types": {
+        "Aggregate": {
+          "n": 5,
+          "share": 0.0595
+        },
+        "Attachment": {
+          "n": 4,
+          "share": 0.0476
+        },
+        "Column": {
+          "n": 26,
+          "share": 0.3095
+        },
+        "Join": {
+          "n": 1,
+          "share": 0.0119
+        },
+        "Project": {
+          "n": 22,
+          "share": 0.2619
+        },
+        "Scope": {
+          "n": 20,
+          "share": 0.2381
+        },
+        "Table": {
+          "n": 4,
+          "share": 0.0476
+        },
+        "Value": {
+          "n": 2,
+          "share": 0.0238
+        }
+      },
+      "n_cards": 84,
+      "ours_mean_Q": 2.0,
+      "ambisql_mean_Q": 2.1,
+      "never_ask_ex": {
+        "n": 30,
+        "n_hit": 6,
+        "ex": 0.2
+      }
+    },
+    "clambsql": {
+      "n": 30,
+      "by_dataset": {
+        "clambsql": 30
+      },
+      "card_types": {
+        "Aggregate": {
+          "n": 19,
+          "share": 0.2436
+        },
+        "Column": {
+          "n": 23,
+          "share": 0.2949
+        },
+        "Project": {
+          "n": 17,
+          "share": 0.2179
+        },
+        "Scope": {
+          "n": 11,
+          "share": 0.141
+        },
+        "Table": {
+          "n": 4,
+          "share": 0.0513
+        },
+        "Value": {
+          "n": 4,
+          "share": 0.0513
+        }
+      },
+      "n_cards": 78,
+      "ours_mean_Q": 2.1333,
+      "ambisql_mean_Q": 1.9333,
+      "never_ask_ex": {
+        "n": 30,
+        "n_hit": 16,
+        "ex": 0.5333
+      }
+    }
+  },
+  "population": {
+    "n": 3047,
+    "by_dataset": {
+      "bird": 498,
+      "ambrosia": 1149,
+      "clambsql": 1400
+    },
+    "card_types": {
+      "Aggregate": {
+        "n": 890,
+        "share": 0.1134
+      },
+      "Attachment": {
+        "n": 232,
+        "share": 0.0296
+      },
+      "Column": {
+        "n": 2380,
+        "share": 0.3031
+      },
+      "Join": {
+        "n": 47,
+        "share": 0.006
+      },
+      "NULL": {
+        "n": 1,
+        "share": 0.0001
+      },
+      "Project": {
+        "n": 2283,
+        "share": 0.2908
+      },
+      "Rank": {
+        "n": 1,
+        "share": 0.0001
+      },
+      "Scope": {
+        "n": 1160,
+        "share": 0.1478
+      },
+      "Table": {
+        "n": 408,
+        "share": 0.052
+      },
+      "Tie": {
+        "n": 36,
+        "share": 0.0046
+      },
+      "Value": {
+        "n": 413,
+        "share": 0.0526
+      }
+    },
+    "n_cards": 7851,
+    "ours_mean_Q": 1.9006,
+    "ambisql_mean_Q": 1.9278,
+    "never_ask_ex": {
+      "n": 3047,
+      "n_hit": 1078,
+      "ex": 0.3538
+    }
+  },
+  "population_by_dataset": {
+    "bird": {
+      "n": 498,
+      "by_dataset": {
+        "bird": 498
+      },
+      "card_types": {
+        "Aggregate": {
+          "n": 235,
+          "share": 0.1877
+        },
+        "Attachment": {
+          "n": 31,
+          "share": 0.0248
+        },
+        "Column": {
+          "n": 347,
+          "share": 0.2772
+        },
+        "Join": {
+          "n": 6,
+          "share": 0.0048
+        },
+        "NULL": {
+          "n": 1,
+          "share": 0.0008
+        },
+        "Project": {
+          "n": 387,
+          "share": 0.3091
+        },
+        "Scope": {
+          "n": 107,
+          "share": 0.0855
+        },
+        "Table": {
+          "n": 30,
+          "share": 0.024
+        },
+        "Tie": {
+          "n": 12,
+          "share": 0.0096
+        },
+        "Value": {
+          "n": 96,
+          "share": 0.0767
+        }
+      },
+      "n_cards": 1252,
+      "ours_mean_Q": 1.8916,
+      "ambisql_mean_Q": 1.9096,
+      "never_ask_ex": {
+        "n": 498,
+        "n_hit": 295,
+        "ex": 0.5924
+      }
+    },
+    "ambrosia": {
+      "n": 1149,
+      "by_dataset": {
+        "ambrosia": 1149
+      },
+      "card_types": {
+        "Aggregate": {
+          "n": 131,
+          "share": 0.0478
+        },
+        "Attachment": {
+          "n": 110,
+          "share": 0.0401
+        },
+        "Column": {
+          "n": 771,
+          "share": 0.2812
+        },
+        "Join": {
+          "n": 17,
+          "share": 0.0062
+        },
+        "Project": {
+          "n": 788,
+          "share": 0.2874
+        },
+        "Rank": {
+          "n": 1,
+          "share": 0.0004
+        },
+        "Scope": {
+          "n": 618,
+          "share": 0.2254
+        },
+        "Table": {
+          "n": 167,
+          "share": 0.0609
+        },
+        "Tie": {
+          "n": 8,
+          "share": 0.0029
+        },
+        "Value": {
+          "n": 131,
+          "share": 0.0478
+        }
+      },
+      "n_cards": 2742,
+      "ours_mean_Q": 1.8198,
+      "ambisql_mean_Q": 1.9956,
+      "never_ask_ex": {
+        "n": 1149,
+        "n_hit": 140,
+        "ex": 0.1218
+      }
+    },
+    "clambsql": {
+      "n": 1400,
+      "by_dataset": {
+        "clambsql": 1400
+      },
+      "card_types": {
+        "Aggregate": {
+          "n": 524,
+          "share": 0.1359
+        },
+        "Attachment": {
+          "n": 91,
+          "share": 0.0236
+        },
+        "Column": {
+          "n": 1262,
+          "share": 0.3272
+        },
+        "Join": {
+          "n": 24,
+          "share": 0.0062
+        },
+        "Project": {
+          "n": 1108,
+          "share": 0.2873
+        },
+        "Scope": {
+          "n": 435,
+          "share": 0.1128
+        },
+        "Table": {
+          "n": 211,
+          "share": 0.0547
+        },
+        "Tie": {
+          "n": 16,
+          "share": 0.0041
+        },
+        "Value": {
+          "n": 186,
+          "share": 0.0482
+        }
+      },
+      "n_cards": 3857,
+      "ours_mean_Q": 1.97,
+      "ambisql_mean_Q": 1.8786,
+      "never_ask_ex": {
+        "n": 1400,
+        "n_hit": 643,
+        "ex": 0.4593
+      }
+    }
+  },
+  "table_ii_check": {
+    "ok": true,
+    "rows": [
+      {
+        "dataset": "bird",
+        "method": "Never-Ask",
+        "ex": 59.1,
+        "Q": 0.0,
+        "table_ii_ex": 59.0,
+        "table_ii_Q": 0.0,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "bird",
+        "method": "CLEAR",
+        "ex": 59.84,
+        "Q": 0.3173,
+        "table_ii_ex": 59.8,
+        "table_ii_Q": 0.29,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "bird",
+        "method": "AmbiSQL",
+        "ex": 59.64,
+        "Q": 1.9096,
+        "table_ii_ex": 59.6,
+        "table_ii_Q": 1.91,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "bird",
+        "method": "Ours",
+        "ex": 66.47,
+        "Q": 1.8916,
+        "table_ii_ex": 66.5,
+        "table_ii_Q": 1.89,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "ambrosia",
+        "method": "Never-Ask",
+        "ex": 12.18,
+        "Q": 0.0,
+        "table_ii_ex": 12.2,
+        "table_ii_Q": 0.0,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "ambrosia",
+        "method": "CLEAR",
+        "ex": 16.97,
+        "Q": 0.7511,
+        "table_ii_ex": 17.0,
+        "table_ii_Q": 0.75,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "ambrosia",
+        "method": "AmbiSQL",
+        "ex": 20.19,
+        "Q": 1.9956,
+        "table_ii_ex": 20.2,
+        "table_ii_Q": 2.0,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "ambrosia",
+        "method": "Ours",
+        "ex": 47.61,
+        "Q": 1.8198,
+        "table_ii_ex": 47.6,
+        "table_ii_Q": 1.82,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "clambsql",
+        "method": "Never-Ask",
+        "ex": 45.93,
+        "Q": 0.0,
+        "table_ii_ex": 45.9,
+        "table_ii_Q": 0.0,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "clambsql",
+        "method": "CLEAR",
+        "ex": 48.14,
+        "Q": 1.1657,
+        "table_ii_ex": 48.1,
+        "table_ii_Q": 1.18,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "clambsql",
+        "method": "AmbiSQL",
+        "ex": 49.0,
+        "Q": 1.8786,
+        "table_ii_ex": 49.0,
+        "table_ii_Q": 1.88,
+        "ex_ok": true,
+        "Q_ok": true
+      },
+      {
+        "dataset": "clambsql",
+        "method": "Ours",
+        "ex": 56.93,
+        "Q": 1.97,
+        "table_ii_ex": 56.9,
+        "table_ii_Q": 1.97,
+        "ex_ok": true,
+        "Q_ok": true
+      }
+    ]
+  },
+  "groups": [
+    {
+      "group": 0,
+      "ids": [
+        "ambrosia:695",
+        "bird:1068",
+        "bird:930",
+        "ambrosia:3960",
+        "bird:728",
+        "ambrosia:2709",
+        "clambsql:211",
+        "clambsql:714",
+        "bird:469",
+        "clambsql:1382"
+      ],
+      "n_by_dataset": {
+        "ambrosia": 3,
+        "bird": 4,
+        "clambsql": 3
+      }
+    },
+    {
+      "group": 1,
+      "ids": [
+        "bird:1507",
+        "ambrosia:3733",
+        "clambsql:772",
+        "bird:732",
+        "bird:83",
+        "clambsql:355",
+        "ambrosia:1807",
+        "bird:94",
+        "clambsql:708",
+        "ambrosia:2787"
+      ],
+      "n_by_dataset": {
+        "bird": 4,
+        "ambrosia": 3,
+        "clambsql": 3
+      }
+    },
+    {
+      "group": 2,
+      "ids": [
+        "ambrosia:1696",
+        "clambsql:672",
+        "ambrosia:1986",
+        "bird:62",
+        "clambsql:788",
+        "bird:1378",
+        "clambsql:299",
+        "ambrosia:3566",
+        "bird:1359",
+        "bird:1235"
+      ],
+      "n_by_dataset": {
+        "ambrosia": 3,
+        "clambsql": 3,
+        "bird": 4
+      }
+    },
+    {
+      "group": 3,
+      "ids": [
+        "bird:1525",
+        "ambrosia:3228",
+        "clambsql:773",
+        "clambsql:73",
+        "bird:273",
+        "bird:1427",
+        "clambsql:1226",
+        "bird:981",
+        "ambrosia:1708",
+        "ambrosia:2474"
+      ],
+      "n_by_dataset": {
+        "bird": 4,
+        "ambrosia": 3,
+        "clambsql": 3
+      }
+    },
+    {
+      "group": 4,
+      "ids": [
+        "ambrosia:724",
+        "ambrosia:2378",
+        "clambsql:701",
+        "bird:189",
+        "bird:82",
+        "bird:1144",
+        "clambsql:716",
+        "clambsql:730",
+        "ambrosia:1824",
+        "bird:197"
+      ],
+      "n_by_dataset": {
+        "ambrosia": 3,
+        "clambsql": 3,
+        "bird": 4
+      }
+    },
+    {
+      "group": 5,
+      "ids": [
+        "clambsql:674",
+        "ambrosia:945",
+        "bird:17",
+        "bird:1029",
+        "bird:761",
+        "ambrosia:3889",
+        "bird:1152",
+        "ambrosia:2701",
+        "clambsql:661",
+        "clambsql:1253"
+      ],
+      "n_by_dataset": {
+        "clambsql": 3,
+        "ambrosia": 3,
+        "bird": 4
+      }
+    },
+    {
+      "group": 6,
+      "ids": [
+        "clambsql:756",
+        "ambrosia:2307",
+        "clambsql:1312",
+        "bird:1501",
+        "ambrosia:957",
+        "ambrosia:1714",
+        "bird:822",
+        "bird:598",
+        "clambsql:726",
+        "bird:409"
+      ],
+      "n_by_dataset": {
+        "clambsql": 3,
+        "ambrosia": 3,
+        "bird": 4
+      }
+    },
+    {
+      "group": 7,
+      "ids": [
+        "bird:726",
+        "ambrosia:1414",
+        "clambsql:706",
+        "clambsql:1270",
+        "bird:592",
+        "ambrosia:911",
+        "bird:1401",
+        "bird:766",
+        "ambrosia:2476",
+        "clambsql:700"
+      ],
+      "n_by_dataset": {
+        "bird": 4,
+        "ambrosia": 3,
+        "clambsql": 3
+      }
+    },
+    {
+      "group": 8,
+      "ids": [
+        "bird:192",
+        "clambsql:658",
+        "clambsql:784",
+        "bird:194",
+        "ambrosia:2360",
+        "bird:633",
+        "bird:226",
+        "clambsql:611",
+        "ambrosia:3143",
+        "ambrosia:2161"
+      ],
+      "n_by_dataset": {
+        "bird": 4,
+        "clambsql": 3,
+        "ambrosia": 3
+      }
+    },
+    {
+      "group": 9,
+      "ids": [
+        "ambrosia:1874",
+        "bird:487",
+        "clambsql:1195",
+        "ambrosia:2851",
+        "clambsql:297",
+        "clambsql:1141",
+        "bird:1302",
+        "bird:964",
+        "ambrosia:4195",
+        "bird:1317"
+      ],
+      "n_by_dataset": {
+        "ambrosia": 3,
+        "bird": 4,
+        "clambsql": 3
+      }
+    }
+  ],
+  "assignment": [
+    {
+      "participant_id": 1,
+      "group": 0,
+      "order": "BA",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "ambrosia:695",
+        "bird:1068",
+        "bird:930",
+        "ambrosia:3960",
+        "bird:728",
+        "ambrosia:2709",
+        "clambsql:211",
+        "clambsql:714",
+        "bird:469",
+        "clambsql:1382"
+      ]
+    },
+    {
+      "participant_id": 2,
+      "group": 1,
+      "order": "AB",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "bird:1507",
+        "ambrosia:3733",
+        "clambsql:772",
+        "bird:732",
+        "bird:83",
+        "clambsql:355",
+        "ambrosia:1807",
+        "bird:94",
+        "clambsql:708",
+        "ambrosia:2787"
+      ]
+    },
+    {
+      "participant_id": 3,
+      "group": 2,
+      "order": "BA",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "ambrosia:1696",
+        "clambsql:672",
+        "ambrosia:1986",
+        "bird:62",
+        "clambsql:788",
+        "bird:1378",
+        "clambsql:299",
+        "ambrosia:3566",
+        "bird:1359",
+        "bird:1235"
+      ]
+    },
+    {
+      "participant_id": 4,
+      "group": 3,
+      "order": "AB",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "bird:1525",
+        "ambrosia:3228",
+        "clambsql:773",
+        "clambsql:73",
+        "bird:273",
+        "bird:1427",
+        "clambsql:1226",
+        "bird:981",
+        "ambrosia:1708",
+        "ambrosia:2474"
+      ]
+    },
+    {
+      "participant_id": 5,
+      "group": 4,
+      "order": "BA",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "ambrosia:724",
+        "ambrosia:2378",
+        "clambsql:701",
+        "bird:189",
+        "bird:82",
+        "bird:1144",
+        "clambsql:716",
+        "clambsql:730",
+        "ambrosia:1824",
+        "bird:197"
+      ]
+    },
+    {
+      "participant_id": 6,
+      "group": 5,
+      "order": "AB",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "clambsql:674",
+        "ambrosia:945",
+        "bird:17",
+        "bird:1029",
+        "bird:761",
+        "ambrosia:3889",
+        "bird:1152",
+        "ambrosia:2701",
+        "clambsql:661",
+        "clambsql:1253"
+      ]
+    },
+    {
+      "participant_id": 7,
+      "group": 6,
+      "order": "BA",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "clambsql:756",
+        "ambrosia:2307",
+        "clambsql:1312",
+        "bird:1501",
+        "ambrosia:957",
+        "ambrosia:1714",
+        "bird:822",
+        "bird:598",
+        "clambsql:726",
+        "bird:409"
+      ]
+    },
+    {
+      "participant_id": 8,
+      "group": 7,
+      "order": "AB",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "bird:726",
+        "ambrosia:1414",
+        "clambsql:706",
+        "clambsql:1270",
+        "bird:592",
+        "ambrosia:911",
+        "bird:1401",
+        "bird:766",
+        "ambrosia:2476",
+        "clambsql:700"
+      ]
+    },
+    {
+      "participant_id": 9,
+      "group": 8,
+      "order": "BA",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "bird:192",
+        "clambsql:658",
+        "clambsql:784",
+        "bird:194",
+        "ambrosia:2360",
+        "bird:633",
+        "bird:226",
+        "clambsql:611",
+        "ambrosia:3143",
+        "ambrosia:2161"
+      ]
+    },
+    {
+      "participant_id": 10,
+      "group": 9,
+      "order": "AB",
+      "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+      "n_questions": 10,
+      "ids": [
+        "ambrosia:1874",
+        "bird:487",
+        "clambsql:1195",
+        "ambrosia:2851",
+        "clambsql:297",
+        "clambsql:1141",
+        "bird:1302",
+        "bird:964",
+        "ambrosia:4195",
+        "bird:1317"
+      ]
+    }
+  ],
+  "main_table_100": [
+    {
+      "method": "Never-Ask",
+      "source": "无",
+      "parser": "gpt-5.6-terra",
+      "n": 100,
+      "n_hit": 60,
+      "ex": 0.6
+    },
+    {
+      "method": "AmbiSQL",
+      "source": "模拟用户",
+      "parser": "gpt-5.6-terra",
+      "n": 100,
+      "n_hit": 70,
+      "ex": 0.7
+    },
+    {
+      "method": "AmbiSQL",
+      "source": "真人",
+      "parser": "gpt-5.6-terra",
+      "n": 100,
+      "n_hit": null,
+      "ex": null
+    },
+    {
+      "method": "Ours",
+      "source": "模拟用户",
+      "parser": "gpt-5.6-terra",
+      "n": 100,
+      "n_hit": 78,
+      "ex": 0.78
+    },
+    {
+      "method": "Ours",
+      "source": "真人",
+      "parser": "gpt-5.6-terra",
+      "n": 100,
+      "n_hit": null,
+      "ex": null
+    }
+  ],
+  "sim_ex_note": "参照行（模拟用户）EX 使用 gpt-5.6-terra，设置同 Table III。本样本 Never-Ask/AmbiSQL/Ours = 60/70/78。Coder-30B 口径保留在 packages._analysis.coder_*，作者可自行补跑。",
+  "sources": {
+    "ours_cards": "abc333_base_*_v2a + step1 train1 H_norm；提问卡冻结，不重跑检测",
+    "ours_ex": {
+      "bird": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/theta_curve/bird/t0.5/score.json",
+      "ambrosia": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/theta_curve/ambrosia/t0.5/score.json",
+      "clambsql": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/theta_curve/clambsql/t0.5/score.json"
+    },
+    "ambisql_pred": {
+      "bird": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/coder30b/base/bird/ambisql_rep2/pred.jsonl",
+      "ambrosia": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/ambisql_gold/ambrosia/ambrosia_base/pred.jsonl",
+      "clambsql": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/ambisql_gold/clambsql/clambsql_base/pred.jsonl"
+    },
+    "ambisql_score": {
+      "bird": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/coder30b/base/bird/ambisql_rep2/score.json",
+      "ambrosia": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/ambisql_gold/ambrosia/ambrosia_base/score.json",
+      "clambsql": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/ambisql_gold/clambsql/clambsql_base/score.json"
+    },
+    "never_ask": {
+      "bird": "coder30b/base/bird/zero_rep{1,2,3} majority; Table II 59.0 = mean of 3 reps",
+      "ambrosia": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/gold_choice_rescore/ambrosia/zero/score.json",
+      "clambsql": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/gold_choice_rescore/clambsql/zero/score.json"
+    },
+    "clear": {
+      "bird": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/coder30b/base/bird/clear_dqg/score.json",
+      "ambrosia": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/gold_choice_rescore/ambrosia/clear/score.json",
+      "clambsql": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/gold_choice_rescore/clambsql/clear/score.json"
+    }
+  },
+  "terra_baseline_sources": {
+    "never_ask": {
+      "bird": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/terra_bird/zero/score.json",
+      "ambrosia": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/gold_choice_rescore/terra/ambrosia_zero/score.json",
+      "clambsql": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/gold_choice_rescore/terra/clambsql_zero/score.json"
+    },
+    "ambisql": {
+      "bird": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/terra_bird/ambisql_soft/score.json",
+      "ambrosia": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/gold_choice_rescore/terra/ambrosia_ambisql/score.json",
+      "clambsql": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/step1/gold_choice_rescore/terra/clambsql_ambisql/score.json"
+    },
+    "ours": {
+      "bird": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/terra_bird/train1/score.json",
+      "ambrosia": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/terra_other/ambrosia_train1/score.json",
+      "clambsql": "/hpc2hdd/home/sshen190/wtao565/label_packs/detect/method_final/runs/exp/20261030_jev_abc/terra_other/clambsql_train1/score.json"
+    }
+  }
+}

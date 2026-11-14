@@ -1,0 +1,192 @@
+[
+  {
+    "participant_id": 1,
+    "group": 0,
+    "order": "BA",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "ambrosia:695",
+      "bird:1068",
+      "bird:930",
+      "ambrosia:3960",
+      "bird:728",
+      "ambrosia:2709",
+      "clambsql:211",
+      "clambsql:714",
+      "bird:469",
+      "clambsql:1382"
+    ]
+  },
+  {
+    "participant_id": 2,
+    "group": 1,
+    "order": "AB",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "bird:1507",
+      "ambrosia:3733",
+      "clambsql:772",
+      "bird:732",
+      "bird:83",
+      "clambsql:355",
+      "ambrosia:1807",
+      "bird:94",
+      "clambsql:708",
+      "ambrosia:2787"
+    ]
+  },
+  {
+    "participant_id": 3,
+    "group": 2,
+    "order": "BA",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "ambrosia:1696",
+      "clambsql:672",
+      "ambrosia:1986",
+      "bird:62",
+      "clambsql:788",
+      "bird:1378",
+      "clambsql:299",
+      "ambrosia:3566",
+      "bird:1359",
+      "bird:1235"
+    ]
+  },
+  {
+    "participant_id": 4,
+    "group": 3,
+    "order": "AB",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "bird:1525",
+      "ambrosia:3228",
+      "clambsql:773",
+      "clambsql:73",
+      "bird:273",
+      "bird:1427",
+      "clambsql:1226",
+      "bird:981",
+      "ambrosia:1708",
+      "ambrosia:2474"
+    ]
+  },
+  {
+    "participant_id": 5,
+    "group": 4,
+    "order": "BA",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "ambrosia:724",
+      "ambrosia:2378",
+      "clambsql:701",
+      "bird:189",
+      "bird:82",
+      "bird:1144",
+      "clambsql:716",
+      "clambsql:730",
+      "ambrosia:1824",
+      "bird:197"
+    ]
+  },
+  {
+    "participant_id": 6,
+    "group": 5,
+    "order": "AB",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "clambsql:674",
+      "ambrosia:945",
+      "bird:17",
+      "bird:1029",
+      "bird:761",
+      "ambrosia:3889",
+      "bird:1152",
+      "ambrosia:2701",
+      "clambsql:661",
+      "clambsql:1253"
+    ]
+  },
+  {
+    "participant_id": 7,
+    "group": 6,
+    "order": "BA",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "clambsql:756",
+      "ambrosia:2307",
+      "clambsql:1312",
+      "bird:1501",
+      "ambrosia:957",
+      "ambrosia:1714",
+      "bird:822",
+      "bird:598",
+      "clambsql:726",
+      "bird:409"
+    ]
+  },
+  {
+    "participant_id": 8,
+    "group": 7,
+    "order": "AB",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "bird:726",
+      "ambrosia:1414",
+      "clambsql:706",
+      "clambsql:1270",
+      "bird:592",
+      "ambrosia:911",
+      "bird:1401",
+      "bird:766",
+      "ambrosia:2476",
+      "clambsql:700"
+    ]
+  },
+  {
+    "participant_id": 9,
+    "group": 8,
+    "order": "BA",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "bird:192",
+      "clambsql:658",
+      "clambsql:784",
+      "bird:194",
+      "ambrosia:2360",
+      "bird:633",
+      "bird:226",
+      "clambsql:611",
+      "ambrosia:3143",
+      "ambrosia:2161"
+    ]
+  },
+  {
+    "participant_id": 10,
+    "group": 9,
+    "order": "AB",
+    "order_note": "奇数先 B 再 A，偶数先 A 再 B",
+    "n_questions": 10,
+    "ids": [
+      "ambrosia:1874",
+      "bird:487",
+      "clambsql:1195",
+      "ambrosia:2851",
+      "clambsql:297",
+      "clambsql:1141",
+      "bird:1302",
+      "bird:964",
+      "ambrosia:4195",
+      "bird:1317"
+    ]
+  }
+]

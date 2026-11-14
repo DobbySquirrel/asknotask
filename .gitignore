@@ -1,0 +1,28 @@
+.preview/
+__pycache__/
+
+# Cluster absolute symlinks / large raw runs — sources recorded in eval JSON + MANIFEST
+outputs/**/predictions/**/*.jsonl
+outputs/scorer/checkpoint
+outputs/scorer/train_set.jsonl
+outputs/scorer/val_set.jsonl
+outputs/scorer/build/
+outputs/user_study/assignment.json
+outputs/user_study/groups.json
+outputs/user_study/sample_report.json
+outputs/user_study/preview_opus
+outputs/user_study/replay_simulated_frozen
+outputs/user_study/replay_simulated_report.json
+outputs/user_study/supplement_RESULTS.md
+outputs/analysis/case_study_candidates.jsonl
+outputs/analysis/case_study_selected.md
+outputs/analysis/span_recall_table.md
+outputs/analysis/gold_sensitivity.json
+outputs/**/eval_rescored/
+.DS_Store
+.env
+.cursor/
+configs/llm.yaml
+scripts/start_vllm/logs/
+# Machine-local database pointer. Do not commit an absolute symlink.
+dataset/databases

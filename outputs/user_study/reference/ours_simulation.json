@@ -1,0 +1,3689 @@
+{
+  "bird:1501": {
+    "cards": [
+      {
+        "card_id": "bird:1501#499",
+        "options": [
+          "Use the Country field — the geographical country where each gas station is located.",
+          "Use the ChainID field — an identifier linking the gas station to a specific chain or brand.",
+          "Use the Segment field — a classification or category assigned to the gas station."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1501#500",
+        "options": [
+          "Use the Country attribute to display the country of each gas station.",
+          "Use the ChainID attribute to represent the country of each gas station.",
+          "Use the Segment attribute to represent the country of each gas station."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1144": {
+    "cards": [
+      {
+        "card_id": "bird:1144#137",
+        "options": [
+          "Include all players who share the maximum weight.",
+          "Select only one player with the maximum weight, choosing arbitrarily in case of ties."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1144#138",
+        "options": [
+          "Use Player_Attributes.finishing — the player's finishing skill level.",
+          "Use Player_Attributes.short_passing — the player's short passing skill level.",
+          "Use Player_Attributes.heading_accuracy — the player's heading accuracy skill level."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1144#139",
+        "options": [
+          "Use the curve attribute — measures a player's ability to bend the ball during play.",
+          "Use the volleys attribute — measures a player's ability to strike the ball cleanly under pressure.",
+          "Use the dribbling attribute — measures a player's skill in controlling the ball while moving."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1144#140",
+        "options": [
+          "Use the player's weight in pounds or kilograms.",
+          "Use the player's height as a proxy for determining heaviness.",
+          "Use the player's age as a proxy for determining heaviness."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1144#141",
+        "options": [
+          "Select all players who share the maximum weight value.",
+          "Select only one player even if multiple players share the maximum weight."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1144#142",
+        "options": [
+          "Use finishing — the player's ability to finish plays effectively.",
+          "Use short_passing — the player's skill at making short passes.",
+          "Use heading_accuracy — the player's precision when heading the ball."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1144#143",
+        "options": [
+          "Use the curve attribute — a measure of how well a player can bend the ball during a shot.",
+          "Use the volleys attribute — a measure of how effectively a player handles balls hit directly at them.",
+          "Use the dribbling attribute — a measure of how well a player controls the ball while moving."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:633": {
+    "cards": [
+      {
+        "card_id": "bird:633#884",
+        "options": [
+          "Use users.DisplayName — the display name stored in the users table for the user.",
+          "Use posts.OwnerDisplayName — the display name associated with the post author in the posts table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:598": {
+    "cards": [
+      {
+        "card_id": "bird:598#866",
+        "options": [
+          "Use '2011' as a four-digit year value.",
+          "Use '2011-01-01' as the full date for January 1st, 2011.",
+          "Use '2011-07-19 19:39:07.0' as the full timestamp for July 19th, 2011 at 19:39:07."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:598#867",
+        "options": [
+          "Filter for badges where the name is exactly 'Student' (with capital S).",
+          "Filter for badges where the name is exactly 'student' (lowercase s)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:598#868",
+        "options": [
+          "Count badges where the year portion of the Date column equals 2010.",
+          "Count badges issued between January 1, 2010 and December 31, 2010 (inclusive)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:598#869",
+        "options": [
+          "Count badges issued strictly in the year 2011, based on the year portion of the Date field.",
+          "Count all badges issued between January 1, 2011 and December 31, 2011 (inclusive of start, exclusive of end)."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1525": {
+    "cards": [
+      {
+        "card_id": "bird:1525#518",
+        "options": [
+          "Calculate the percentage of customers who used EUR as their currency.",
+          "Calculate the percentage of transactions that occurred on 2012-08-25."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:732": {
+    "cards": [
+      {
+        "card_id": "bird:732#950",
+        "options": [
+          "Use hero_attribute.attribute_value — the numerical value representing the superhero's speed.",
+          "Use superhero.id — the unique identifier of the superhero, not a speed measure."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:732#951",
+        "options": [
+          "Use the superhero table, which stores core superhero information including their unique ID.",
+          "Use the hero_attribute table, which links to superheroes via hero_id and contains detailed attributes like speed."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:732#952",
+        "options": [
+          "Select the superhero with the minimum recorded attribute value (e.g., lowest speed score).",
+          "Identify the superhero with the lowest speed value in the dataset."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:981": {
+    "cards": [
+      {
+        "card_id": "bird:981#1225",
+        "options": [
+          "Return the year of the first qualifying race for the youngest driver overall.",
+          "Return the year of the first qualifying race for each youngest driver separately across years."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:981#1226",
+        "options": [
+          "Use races.year — the actual year when the race took place.",
+          "Use drivers.dob — the birth year of the driver, not the race year."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:981#1227",
+        "options": [
+          "Use races.name — the official name of the race.",
+          "Use drivers.forename — the first name of the driver.",
+          "Use drivers.surname — the last name of the driver."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:981#1228",
+        "options": [
+          "Use races.date — the actual date when the race took place.",
+          "Use drivers.dob — the birth date of the driver, not the race date."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:981#1229",
+        "options": [
+          "Use races.time — the scheduled start time of the race.",
+          "Use drivers.dob — the date of birth of the driver (not the race time)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:981#1230",
+        "options": [
+          "Return the year of the race in which the youngest driver had their first qualifying race.",
+          "Return the birth year of the youngest driver who had their first qualifying race."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:981#1231",
+        "options": [
+          "Display the name of the race.",
+          "Display the full name of the driver (first and last name)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:981#1232",
+        "options": [
+          "Return the date of the race when the youngest driver had their first qualifying race.",
+          "Return the birth date of the youngest driver."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:981#1233",
+        "options": [
+          "Return the time of the race when the youngest driver first qualified.",
+          "Return the birth date of the youngest driver."
+        ],
+        "sim_indices": [],
+        "sim_free_text": "Project races.time into the result."
+      }
+    ]
+  },
+  "bird:726": {
+    "cards": [
+      {
+        "card_id": "bird:726#945",
+        "options": [
+          "Display only the names of the heroes.",
+          "Display both the names and unique IDs of the heroes."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:726#946",
+        "options": [
+          "Use the pre-stored height in centimeters (height_cm).",
+          "Use the pre-stored height in centimeters (height_cm)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:194": {
+    "cards": [
+      {
+        "card_id": "bird:194#570",
+        "options": [
+          "Use client.client_id — the unique identifier assigned to each client.",
+          "Use account.account_id — the identifier for a specific financial account.",
+          "Use card.card_id — the identifier for a specific credit card.",
+          "Use disp.disp_id — the identifier linking a client to an account."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:194#571",
+        "options": [
+          "Use the unique client identifier (client_id).",
+          "Use the account identifier (account_id) associated with the client.",
+          "Use the credit card identifier (card_id) linked to the client.",
+          "Use the disposition identifier (disp_id) linking the client to an account."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:226": {
+    "cards": [
+      {
+        "card_id": "bird:226#596",
+        "options": [
+          "Calculate using a direct count of double bonds divided by total bonds, multiplied by 100.",
+          "Calculate using a conditional sum of double bonds over total bonds, multiplied by 100."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:728": {
+    "cards": [
+      {
+        "card_id": "bird:728#947",
+        "options": [
+          "Display only the eye color name.",
+          "Display the eye color name, the count of superheroes with that color, and the rank of each color by frequency."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:728#948",
+        "options": [
+          "Count all superhero records, including those with missing IDs.",
+          "Count only superheroes with a valid ID, excluding any null or missing entries."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:728#949",
+        "options": [
+          "Arbitrarily truncate the results to return only a single ranked eye color, even if multiple colors share the same count.",
+          "Preserve and return all eye colors that tie for the same rank based on their frequency."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:592": {
+    "cards": [
+      {
+        "card_id": "bird:592#865",
+        "options": [
+          "Count the occurrences of each badge name to determine how many unique badges each user has earned.",
+          "Count all badge records associated with each user, including duplicates if applicable."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:82": {
+    "cards": [
+      {
+        "card_id": "bird:82#1035",
+        "options": [
+          "Use schools.GSoffered — the grade spans that the school offers.",
+          "Use schools.GSserved — the grade spans that the school serves."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:82#1036",
+        "options": [
+          "Return the grade span offered by the school.",
+          "Return the grade span served by the school."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1302": {
+    "cards": [
+      {
+        "card_id": "bird:1302#331",
+        "options": [
+          "Use the KCT test result where '+' denotes a positive measure of coagulation.",
+          "Use the RVVT test result where '+' denotes a positive measure of coagulation.",
+          "Use the LAC test result where '+' denotes a positive measure of coagulation."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1302#332",
+        "options": [
+          "Count patients where the KCT test result is marked as positive (+).",
+          "Count patients where the RVVT test result is marked as positive (+).",
+          "Count patients where the LAC test result is marked as positive (+)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1378": {
+    "cards": [
+      {
+        "card_id": "bird:1378#383",
+        "options": [
+          "Use the pre-stored budget.spent value directly.",
+          "Compute the budget spend as the difference between amount and remaining (amount - remaining)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:761": {
+    "cards": [
+      {
+        "card_id": "bird:761#976",
+        "options": [
+          "Display only the superhero name.",
+          "Display both the superhero name and full name together as a complete profile."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:761#977",
+        "options": [
+          "Calculate the average weight of all superheroes and multiply by 0.79 in the query.",
+          "Use a subquery to calculate the 79% average weight from the superhero table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:189": {
+    "cards": [
+      {
+        "card_id": "bird:189#561",
+        "options": [
+          "Use account.account_id — the unique identifier for accounts in the account table.",
+          "Use disp.account_id — the unique identifier for accounts in the disp table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:189#562",
+        "options": [
+          "Use the gender column to filter for female clients.",
+          "Use the account ID to identify the oldest female client (assuming gender is stored elsewhere)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:189#563",
+        "options": [
+          "Use district.A11 — the average salary value from the district table.",
+          "Use client.client_id — the unique identifier for each client (not average salary)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:189#564",
+        "options": [
+          "Return the account ID directly from the account table.",
+          "Return the account ID from the disp table, which links accounts to clients."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:189#565",
+        "options": [
+          "Use the client's birth date directly to identify the oldest female client.",
+          "Filter for female clients first, then use their birth date to determine the oldest."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:189#566",
+        "options": [
+          "Use the average salary value already stored in the district table.",
+          "Compute the average salary based on salary data from the client table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:197": {
+    "cards": [
+      {
+        "card_id": "bird:197#572",
+        "options": [
+          "Include only molecules where every bond is a single bond.",
+          "Include molecules that have at least one single bond present."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:197#573",
+        "options": [
+          "Use atom.element — the specific element type of each atom (e.g., oxygen, carbon).",
+          "Use bond.bond_type — the type of chemical bond (e.g., single, double) between atoms."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:197#574",
+        "options": [
+          "Use the bond table, which includes bond_type to distinguish single bonds.",
+          "Use the molecule table, which identifies molecules via molecule_id; bond details may need to be joined."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:197#575",
+        "options": [
+          "Compute the average by first counting oxygen atoms per molecule and then averaging those counts.",
+          "Calculate the total count of oxygen atoms across all molecules and divide by the number of distinct molecules."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:197#576",
+        "options": [
+          "Include all atoms from molecules that contain only single bonds (using bond_type = '-').",
+          "Include only the molecule identifiers of molecules that have no bonds other than single bonds."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:192": {
+    "cards": [
+      {
+        "card_id": "bird:192#567",
+        "options": [
+          "For \"after each transaction\" in the question: for each transaction, list its own loan.",
+          "For \"after each transaction\" in the question: for each loan, count the distinct transactions related to it, and keep the loan only if this count equals the total number of transactions.",
+          "For \"after each transaction\" in the question: list the loan of all transactions together."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:192#568",
+        "options": [
+          "Use loan status 'C' to identify loans with a running contract.",
+          "Use loan status 'D' to identify loans with a running contract."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:192#569",
+        "options": [
+          "Use the direct average of the loan.amount column as stored in the database.",
+          "Calculate the average by dividing the total loan amount by the number of loans (SUM(amount)/COUNT(loan_id))."
+        ],
+        "sim_indices": [],
+        "sim_free_text": "Aggregate using AVG(loan.amount)."
+      }
+    ]
+  },
+  "bird:487": {
+    "cards": [
+      {
+        "card_id": "bird:487#801",
+        "options": [
+          "Calculate as the ratio of cards with both foil and non-foil IDs, multiplied by 100.",
+          "Compute using a conditional sum to count cards with both foil and non-foil IDs, then divide by total count and multiply by 100."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:487#802",
+        "options": [
+          "Use the condition where both cardKingdomFoilId and cardKingdomId are present to define incredibly powerful cards.",
+          "Use the condition where both cardKingdomFoilId and cardKingdomId are present to define incredibly powerful cards."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:487#803",
+        "options": [
+          "Use the exact set name 'Coldsnap' as recorded in the database.",
+          "Use the full set name 'Coldsnap Expansion' as recorded in the database."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:83": {
+    "cards": [
+      {
+        "card_id": "bird:83#1044",
+        "options": [
+          "For \"K-8\" in the question: for each city, list its own how many schools are there.",
+          "For \"K-8\" in the question: for each how many schools are there, count the distinct citys related to it, and keep the how many schools are there only if this count equals the total number of citys.",
+          "For \"K-8\" in the question: list the how many schools are there of all citys together."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:83#1045",
+        "options": [
+          "For \"Multiple Provision Types\" in the question: for each city, list its own how many schools are there.",
+          "For \"Multiple Provision Types\" in the question: for each how many schools are there, count the distinct citys related to it, and keep the how many schools are there only if this count equals the total number of citys.",
+          "For \"Multiple Provision Types\" in the question: list the how many schools are there of all citys together."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:83#1046",
+        "options": [
+          "Use GSoffered — the grade levels officially offered by the school.",
+          "Use GSserved — the grade levels actually served by the school."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:83#1047",
+        "options": [
+          "Use the value 'Multiple Provision Types' to identify schools with multiple provision types.",
+          "Use the value 'Multiple Provision Type' to identify schools with multiple provision types."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:83#1048",
+        "options": [
+          "Use GSoffered — the grade levels that are offered by the school.",
+          "Use GSserved — the grade levels that are actually served by the school."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:83#1049",
+        "options": [
+          "Use NSLP Provision Status with the exact value 'Multiple Provision Types'.",
+          "Use NSLP Provision Status with the exact value 'Multiple Provision Type'."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1359": {
+    "cards": [
+      {
+        "card_id": "bird:1359#368",
+        "options": [
+          "Count the number of times the 'Advertisement' budget category was used for the 'Yearly Kickoff' meeting.",
+          "Calculate the ratio of the total amount spent on 'Advertisement' for the 'Yearly Kickoff' meeting compared to the 'October Meeting'."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1359#369",
+        "options": [
+          "Use budget.category — the categorical breakdown of the budget allocation.",
+          "Use budget.spent — the amount of money actually spent from the budget.",
+          "Use budget.amount — the total monetary value assigned to the budget."
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1359#370",
+        "options": [
+          "Count the number of budget entries where the 'Yearly Kickoff' meeting has a higher budget than the 'October Meeting'.",
+          "Calculate the ratio of the total budget for 'Yearly Kickoff' to the total budget for 'October Meeting'."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:94": {
+    "cards": [
+      {
+        "card_id": "bird:94#1163",
+        "options": [
+          "Use account.account_id — the unique identifier for accounts in the account table.",
+          "Use disp.account_id — the unique identifier for accounts in the disp table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:94#1164",
+        "options": [
+          "Use district.A11 — the average salary value stored in the district table.",
+          "Use loan.amount — the loan amount, possibly interpreted as a proxy for average salary."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:94#1165",
+        "options": [
+          "Use district.A11 — the average salary value stored in the district table.",
+          "Use loan.amount — the loan amount, possibly interpreted as a proxy for average salary."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:94#1166",
+        "options": [
+          "Return only the unique account ID number.",
+          "Return the account ID along with related account information."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:94#1167",
+        "options": [
+          "Use the client.gender column to identify the oldest female client.",
+          "Use the card.type column to identify the oldest female client."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:94#1168",
+        "options": [
+          "Calculate the average salary using the district's A11 column.",
+          "Calculate the average salary based on the loan amounts."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:94#1169",
+        "options": [
+          "Calculate the average salary using the A11 column from district data.",
+          "Calculate the average salary based on the loan amount column."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:469": {
+    "cards": [
+      {
+        "card_id": "bird:469#780",
+        "options": [
+          "Use the cards.name column — the primary name field for cards in the database.",
+          "Use the foreign_data.name column — the card name in non-English languages or alternate printings."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:469#781",
+        "options": [
+          "Use sets.mtgoCode — the code representing the set's availability on Magic: The Gathering Online.",
+          "Use sets.isOnlineOnly — a boolean flag indicating if the set is exclusive to Magic: The Gathering Online."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:469#782",
+        "options": [
+          "Retrieve the card name from the main cards table.",
+          "Retrieve the card name from the foreign_data table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:469#783",
+        "options": [
+          "Include sets where the mtgoCode field is not null, indicating online availability.",
+          "Include sets marked as online-only using the isOnlineOnly flag."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:409": {
+    "cards": [
+      {
+        "card_id": "bird:409#746",
+        "options": [
+          "Count only cards that are exclusively legal in the pre-modern format and not legal in any other format.",
+          "Count cards that are legal in the pre-modern format, even if they are also legal in other formats."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:409#747",
+        "options": [
+          "Apply the ruling text to cards that have pre-modern format AND do not have multiple faces.",
+          "Apply the ruling text to cards that have pre-modern format and do not have multiple faces, regardless of whether they match the ruling text."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:409#748",
+        "options": [
+          "Use legalities.format — the legal play formats in which the card is allowed. This column indicates whether the card is permitted in pre-modern formats.",
+          "Use cards.type — the categorization of the card (e.g., creature, instant). This does not indicate format legality."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:409#749",
+        "options": [
+          "Use rulings.text — the official rulings text associated with the card.",
+          "Use cards.text — the English rules text printed directly on the card."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:409#750",
+        "options": [
+          "Filter cards based on whether they are legal in the pre-modern format (using legalities.format).",
+          "Filter cards based on their type being labeled as 'premodern' (using cards.type)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:409#751",
+        "options": [
+          "Filter cards using the rulings.text column, which contains official ruling explanations for cards.",
+          "Filter cards using the cards.text column, which contains the English rules text printed directly on the card."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1427": {
+    "cards": [
+      {
+        "card_id": "bird:1427#424",
+        "options": [
+          "Use budget.category — the designated category label for the event's budget allocation.",
+          "Use expense.expense_description — a textual description of the expense item related to the event."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1427#425",
+        "options": [
+          "Use event.location — the specific room or venue where the event is held (e.g., MU 215).",
+          "Use zip_code.city — infer the city from the zip code to determine the event's location."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1427#426",
+        "options": [
+          "Use event.type — the type field from the Event table to classify the guest speaker.",
+          "Use expense.expense_description — the description field from the Expense table to indicate the guest speaker type."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1427#427",
+        "options": [
+          "Use the category column from the Budget table to describe the budget category.",
+          "Use the expense description from the Expense table to describe the budget category."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1427#428",
+        "options": [
+          "Filter events by their specific location (e.g., MU 215) as stored in the event.location column.",
+          "Filter events by the city associated with their zip code, using the zip_code.city column."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1427#429",
+        "options": [
+          "Use the event.type column to identify guest speaker events.",
+          "Use the expense.expense_description column to identify guest speaker events."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1235": {
+    "cards": [
+      {
+        "card_id": "bird:1235#272",
+        "options": [
+          "Select patients whose red blood cell (RBC) count is less than 3.5.",
+          "Select patients whose red blood cell (RBC) values are below the normal reference range."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1235#273",
+        "options": [
+          "Use the Diagnosis column from the Examination table.",
+          "Use the Diagnosis column from the Patient table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1235#274",
+        "options": [
+          "Retrieve the diagnosis from the patient's examination record.",
+          "Retrieve the diagnosis from the patient's general profile information."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1235#275",
+        "options": [
+          "Filter patients with red blood cell count less than 3.5 (fixed numerical threshold).",
+          "Filter patients with red blood cell count below the normal reference range."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1507": {
+    "cards": [
+      {
+        "card_id": "bird:1507#504",
+        "options": [
+          "Return the unique timestamps of all transactions occurring at gas stations from chain no. 11.",
+          "Return individual transaction times that vary or differ from each other at gas stations from chain no. 11."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1507#505",
+        "options": [
+          "Use transactions_1k.Time — the specific time when each transaction occurred.",
+          "Use transactions_1k.Date — the date on which each transaction occurred."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1507#506",
+        "options": [
+          "Return the specific time of each transaction.",
+          "Return the distinct date values when transactions occurred."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1317": {
+    "cards": [
+      {
+        "card_id": "bird:1317#337",
+        "options": [
+          "Use the member table — it stores individual student details and membership information.",
+          "Use the attendance table — it tracks which members attended specific events and links to member records."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1317#338",
+        "options": [
+          "Use the exact event name 'Women's Soccer' as stored in the database.",
+          "Use the alternative event name 'Women Soccer' as stored in the database."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1317#339",
+        "options": [
+          "Return the unique member ID of each student from the club.",
+          "Return the attendance link that connects students to the club event."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1317#340",
+        "options": [
+          "Use the exact event name as stored: \"Women's Soccer\".",
+          "Use the variant event name: \"Women Soccer\" (without apostrophe)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1401": {
+    "cards": []
+  },
+  "bird:17": {
+    "cards": [
+      {
+        "card_id": "bird:17#551",
+        "options": [
+          "Use the Charter School Number from the frpm table.",
+          "Use the CharterNum from the schools table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:964": {
+    "cards": [
+      {
+        "card_id": "bird:964#1203",
+        "options": [
+          "Use drivers.code — the abbreviated code assigned to the driver.",
+          "Use drivers.forename — the first name of the driver.",
+          "Use drivers.surname — the last name of the driver."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:964#1204",
+        "options": [
+          "Display the abbreviated code assigned to each driver.",
+          "Display the first name of each driver.",
+          "Display the last name of each driver."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1029": {
+    "cards": [
+      {
+        "card_id": "bird:1029#20",
+        "options": [
+          "Select the 4 teams with the highest buildUpPlaySpeed values, regardless of ranking.",
+          "Select teams ranked in the top 4 based on buildUpPlaySpeed."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1029#21",
+        "options": [
+          "Use buildUpPlaySpeed — the rate at which a team builds up play and initiates attacking actions.",
+          "Use buildUpPlayDribbling — the skill level of dribbling during the build-up phase of play.",
+          "Use buildUpPlayPassing — the efficiency and accuracy of passing during the build-up phase of play."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1029#22",
+        "options": [
+          "Use the numeric buildUpPlaySpeed column directly as the measure of build-up play speed.",
+          "Use the categorical buildUpPlaySpeedClass column, which classifies the speed level (e.g., Low, Medium, High)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1029#23",
+        "options": [
+          "Return the full long names of the top 4 teams.",
+          "Return only the unique IDs of the top 4 teams."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1029#24",
+        "options": [
+          "Use the pre-stored buildUpPlaySpeed value directly from the Team_Attributes table.",
+          "Compute the build-up play speed as the sum of buildUpPlayDribbling and buildUpPlayPassing from the Team_Attributes table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:273": {
+    "cards": [
+      {
+        "card_id": "bird:273#653",
+        "options": [
+          "Use the full name of the element (e.g., chlorine).",
+          "Use the chemical symbol of the element (e.g., Cl for chlorine)."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:273#654",
+        "options": [
+          "Use the pre-stored percentage value for chlorine in each molecule.",
+          "Calculate the percentage dynamically as the count of chlorine atoms divided by the total number of atoms per molecule, multiplied by 100."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:273#655",
+        "options": [
+          "Project only the element type (e.g., chlorine).",
+          "Project both the element type and the molecule identifier for clarity."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:273#656",
+        "options": [
+          "Project only the carcinogenic label for each molecule.",
+          "Project both the carcinogenic label and the unique molecule identifier."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1068": {
+    "cards": [
+      {
+        "card_id": "bird:1068#66",
+        "options": [
+          "Compute the average directly from the stored overall_rating column.",
+          "Calculate the average using the formula SUM(overall_rating) / COUNT(id)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:822": {
+    "cards": [
+      {
+        "card_id": "bird:822#1037",
+        "options": [
+          "Use eye_colour_id — the ID of the eye color associated with the superhero.",
+          "Use hair_colour_id — the ID of the hair color associated with the superhero.",
+          "Use skin_colour_id — the ID of the skin color associated with the superhero."
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:822#1038",
+        "options": [
+          "Count villains based on their skin color being green.",
+          "Count villains based on their eye color being green.",
+          "Count villains based on their hair color being green."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:822#1039",
+        "options": [
+          "Count villains using the alignment_id field from the superhero table.",
+          "Count villains using the id field from the alignment table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:62": {
+    "cards": [
+      {
+        "card_id": "bird:62#875",
+        "options": [
+          "For \"non-chartered schools\" in the question: for each grade 1 through 12, list its own percent (%) of eligible free meals.",
+          "For \"non-chartered schools\" in the question: for each percent (%) of eligible free meals, count the distinct grade 1 through 12s related to it, and keep the percent (%) of eligible free meals only if this count equals the total number of grade 1 through 12s.",
+          "For \"non-chartered schools\" in the question: list the percent (%) of eligible free meals of all grade 1 through 12s together."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:62#876",
+        "options": [
+          "For \"percent (%) of eligible free meals for grades 1 through 12\" in the question: for each non-chartered schools in the county of Los Angeles, list its own percent (%) of eligible free meals for grades 1 through 12.",
+          "For \"percent (%) of eligible free meals for grades 1 through 12\" in the question: for each percent (%) of eligible free meals for grades 1 through 12, count the distinct non-chartered schools in the county of Los Angeles related to it, and keep the percent (%) of eligible free meals for grades 1 through 12 only if this count equals the total number of non-chartered schools in the county of Los Angeles.",
+          "For \"percent (%) of eligible free meals for grades 1 through 12\" in the question: list the percent (%) of eligible free meals for grades 1 through 12 of all non-chartered schools in the county of Los Angeles together."
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:62#877",
+        "options": [
+          "Use frpm.Charter School — the column indicating if a school is charter status. Non-chartered schools are those where this value is not marked as 'Yes' or equivalent.",
+          "Use schools.Charter — the column indicating if a school is charter status. Non-chartered schools are those where this value is not marked as 'Yes' or equivalent."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:62#878",
+        "options": [
+          "Use frpm.Percent (%) Eligible Free (K-12) — the percentage of students eligible for free meals across all grades K-12.",
+          "Use frpm.Percent (%) Eligible FRPM (K-12) — another representation of the percentage of students eligible for free and reduced-price meals across grades K-12."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:62#879",
+        "options": [
+          "Return the total number of non-chartered schools in Los Angeles County.",
+          "List the unique identifiers and names of each non-chartered school in Los Angeles County."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:62#880",
+        "options": [
+          "Compute the total percentage as the sum of free meal counts divided by total enrollment across all non-chartered schools in Los Angeles County.",
+          "Use the pre-existing attribute Percent (%) Eligible Free (K-12) as the percentage for each individual school."
+        ],
+        "sim_indices": [],
+        "sim_free_text": "Map 'percent (%) of eligible free meals for grades 1 through 12' to the computed expression: frpm.Free Meal Count (K-12) / frpm.Enrollment (K-12) * 100."
+      },
+      {
+        "card_id": "bird:62#881",
+        "options": [
+          "Use the schools.Charter column, where 0 indicates a non-chartered school.",
+          "Use the frpm.Charter School column, where 0 indicates a non-chartered school."
+        ],
+        "sim_indices": [],
+        "sim_free_text": "Project COUNT(*) of non-chartered schools."
+      },
+      {
+        "card_id": "bird:62#882",
+        "options": [
+          "Use Percent (%) Eligible Free (K-12) — the pre-calculated percentage value for free meals across all grades K-12.",
+          "Use Free Meal Count (K-12) / Enrollment (K-12) * 100 — compute the percentage from raw counts and enrollment."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:930": {
+    "cards": [
+      {
+        "card_id": "bird:930#1154",
+        "options": [
+          "Find the single best (lowest numerical) rank that Lewis Hamilton achieved across all Formula_1 races.",
+          "Identify the highest (lowest numerical) rank Lewis Hamilton obtained in each individual Formula_1 race."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:930#1155",
+        "options": [
+          "Use the driver's first name (forename) and last name (surname) together to identify the driver.",
+          "Use the driver's unique reference name (driverRef) to identify the driver."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:930#1156",
+        "options": [
+          "Find the race where Lewis Hamilton achieved his best (lowest) overall rank across all races.",
+          "Identify the highest rank Lewis Hamilton achieved in each individual race."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:930#1157",
+        "options": [
+          "Use the first name and last name fields to identify the driver.",
+          "Use the driver's reference name (driverRef) to identify the driver."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:766": {
+    "cards": [
+      {
+        "card_id": "bird:766#978",
+        "options": [
+          "For \"all heroes\" in the question: for each heroes, list its own full names.",
+          "For \"all heroes\" in the question: for each full names, count the distinct heroes related to it, and keep the full names only if this count equals the total number of heroes.",
+          "For \"all heroes\" in the question: list the full names of all heroes together."
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:766#979",
+        "options": [
+          "Use the direct stored value from the hero_attribute table representing strength.",
+          "Join the hero_attribute table with the attribute table to find the strength attribute and retrieve its value."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "bird:1152": {
+    "cards": [
+      {
+        "card_id": "bird:1152#162",
+        "options": [
+          "Match 'SLE' in the Patient.Diagnosis column.",
+          "Match 'SLE' in the Examination.Diagnosis column."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1152#163",
+        "options": [
+          "Use Patient.Admission where '+' indicates inpatient admission.",
+          "Use Laboratory.Admission where '+' indicates inpatient admission."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "bird:1152#164",
+        "options": [
+          "Use the Admission column from the Patient table where '-' denotes outpatient follow-up treatment.",
+          "Use the Admission column from the Laboratory table where '-' denotes outpatient follow-up treatment."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:3733": {
+    "cards": [
+      {
+        "card_id": "ambrosia:3733#1926",
+        "options": [
+          "Use the Financial_Institutions table to access total liabilities data.",
+          "Use the Financial_Institutions table to access the founding year data."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3733#1927",
+        "options": [
+          "Use Total_Liabilities — the total amount of obligations and debts owed by the institution.",
+          "Use Total_Assets — the total value of all assets owned by the institution."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3733#1928",
+        "options": [
+          "Use Total_Liabilities — the total amount of obligations the financial institution owes.",
+          "Use Total_Assets — the total value of resources owned by the financial institution."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3733#1929",
+        "options": [
+          "Return only the name of the financial institution.",
+          "Return both the name and the founding year of the financial institution."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:2709": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2709#1264",
+        "options": [
+          "For \"every movie set\" in the question: for each movie set, list its own items of equipment.",
+          "For \"every movie set\" in the question: for each items of equipment, count the distinct movie sets related to it, and keep the items of equipment only if this count equals the total number of movie sets.",
+          "For \"every movie set\" in the question: list the items of equipment of all movie sets together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:2307": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2307#951",
+        "options": [
+          "For \"each credit card\" in the question: for each credit card, list its own benefits.",
+          "For \"each credit card\" in the question: for each benefits, count the distinct credit cards related to it, and keep the benefits only if this count equals the total number of credit cards.",
+          "For \"each credit card\" in the question: list the benefits of all credit cards together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:1986": {
+    "cards": [
+      {
+        "card_id": "ambrosia:1986#740",
+        "options": [
+          "For \"every reporter\" in the question: for each reporter, list its own end dates of elections.",
+          "For \"every reporter\" in the question: for each end dates of elections, count the distinct reporters related to it, and keep the end dates of elections only if this count equals the total number of reporters.",
+          "For \"every reporter\" in the question: list the end dates of elections of all reporters together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1986#741",
+        "options": [
+          "Use election_type — the type or category of the election (e.g., primary, general).",
+          "Use end_date — the actual date when the election ends."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1986#742",
+        "options": [
+          "Return the type of election (e.g., presidential, congressional).",
+          "Return the actual end date when each election concluded."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:3960": {
+    "cards": [
+      {
+        "card_id": "ambrosia:3960#2096",
+        "options": [
+          "Retrieve costume designers with a budget under 750k and their associated costumes.",
+          "Retrieve costume supervisors with a budget under 750k and their associated costumes."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3960#2097",
+        "options": [
+          "Use the Costume_Designer attribute to refer to the costumiers.",
+          "Use the Costume_Supervisor attribute to refer to the costumiers."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3960#2098",
+        "options": [
+          "Display the costume designers responsible for creating the costumes.",
+          "Display the costume supervisors overseeing the costume production."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:945": {
+    "cards": [
+      {
+        "card_id": "ambrosia:945#2698",
+        "options": [
+          "Professor Smith assessed both the exams and the quiz.",
+          "Professor Smith assessed the quiz, but not necessarily the exams."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:945#2699",
+        "options": [
+          "Use Assessments.AssessmentMethod — the method or type of assessment (e.g., Exam, Quiz).",
+          "Use Assessments.AssessmentID — a unique identifier for each assessment."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:945#2700",
+        "options": [
+          "Use TotalMarks — retrieve the total possible marks for each exam or quiz.",
+          "Use PassingMark — retrieve the minimum passing score required for each exam or quiz."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:1714": {
+    "cards": [
+      {
+        "card_id": "ambrosia:1714#562",
+        "options": [
+          "For \"each streaming service\" in the question: for each streaming service, list its own monetization models.",
+          "For \"each streaming service\" in the question: for each monetization models, count the distinct streaming services related to it, and keep the monetization models only if this count equals the total number of streaming services.",
+          "For \"each streaming service\" in the question: list the monetization models of all streaming services together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1714#563",
+        "options": [
+          "Use the descriptive name of the monetization model (e.g., 'Subscription', 'Ad-Supported').",
+          "Use the unique identifier or code assigned to each monetization model."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1714#564",
+        "options": [
+          "Use the full name of the streaming service (e.g., Netflix, Hulu).",
+          "Use the unique identifier (ID) assigned to each streaming service."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1714#565",
+        "options": [
+          "Display the full names of the monetization models.",
+          "Display the unique IDs of the monetization models."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1714#566",
+        "options": [
+          "Display the full name of each streaming service.",
+          "Display the unique identifier (ID) of each streaming service."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:3889": {
+    "cards": [
+      {
+        "card_id": "ambrosia:3889#2050",
+        "options": [
+          "Include customers who have purchased tickets to pop music concerts.",
+          "Include customers who are associated with pop music artists (e.g., fans of specific artists)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3889#2051",
+        "options": [
+          "Use Customers.PhoneNumber — the actual phone number contact information for customers.",
+          "Use Customers.Email — the email address, which may serve as an alternative contact identifier."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3889#2052",
+        "options": [
+          "Use AddressLine — the detailed street address of the customer.",
+          "Use PostalCode — the zip/postal code of the customer's location."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3889#2053",
+        "options": [
+          "Use Artists.Genre — the musical genre attributed to the artist.",
+          "Use Albums.Title — the title of the album, which may imply the genre indirectly."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3889#2054",
+        "options": [
+          "Return phone numbers and locations of customers who purchased tickets to pop music concerts.",
+          "Return phone numbers and locations of customers associated with pop music artists (e.g., through album purchases)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3889#2055",
+        "options": [
+          "Display the phone number of each pop music fan.",
+          "Display the email address of each pop music fan instead of the phone number."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3889#2056",
+        "options": [
+          "Display the full address line for each customer.",
+          "Display only the postal code for each customer."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3889#2057",
+        "options": [
+          "Filter for pop music based on the genre attribute of artists.",
+          "Filter for pop music based on the title of albums."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:1708": {
+    "cards": [
+      {
+        "card_id": "ambrosia:1708#556",
+        "options": [
+          "For \"each streaming service\" in the question: for each streaming service, list its own type of social media content.",
+          "For \"each streaming service\" in the question: for each type of social media content, count the distinct streaming services related to it, and keep the type of social media content only if this count equals the total number of streaming services.",
+          "For \"each streaming service\" in the question: list the type of social media content of all streaming services together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1708#557",
+        "options": [
+          "Use social_media_id — the unique identifier for each social media entry.",
+          "Use type — the category or kind of social media content."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1708#558",
+        "options": [
+          "Display the unique identifier for each social media content item.",
+          "Display the descriptive type of each social media content item."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:695": {
+    "cards": [
+      {
+        "card_id": "ambrosia:695#2463",
+        "options": [
+          "Include articles that contain either photos or videos (or both) as visual elements.",
+          "Include only articles that contain both photos and videos as visual elements."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:1824": {
+    "cards": [
+      {
+        "card_id": "ambrosia:1824#648",
+        "options": [
+          "For \"every food critic\" in the question: for each food critic, list its own cuisines.",
+          "For \"every food critic\" in the question: for each cuisines, count the distinct food critics related to it, and keep the cuisines only if this count equals the total number of food critics.",
+          "For \"every food critic\" in the question: list the cuisines of all food critics together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:1414": {
+    "cards": [
+      {
+        "card_id": "ambrosia:1414#339",
+        "options": [
+          "For \"every nutritionist\" in the question: for each nutritionist, list its own diets.",
+          "For \"every nutritionist\" in the question: for each diets, count the distinct nutritionists related to it, and keep the diets only if this count equals the total number of nutritionists.",
+          "For \"every nutritionist\" in the question: list the diets of all nutritionists together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:2378": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2378#1008",
+        "options": [
+          "For \"each art gallery\" in the question: for each art gallery, list its own exhibitions.",
+          "For \"each art gallery\" in the question: for each exhibitions, count the distinct art gallerys related to it, and keep the exhibitions only if this count equals the total number of art gallerys.",
+          "For \"each art gallery\" in the question: list the exhibitions of all art gallerys together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:2378#1009",
+        "options": [
+          "Use Exhibitions.Type — the category or type of the exhibition (e.g., 'Sculpture', 'Painting').",
+          "Use Exhibitions.Description — the detailed written description of the exhibition."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:2378#1010",
+        "options": [
+          "Display the type of each exhibition (e.g., solo, group, themed).",
+          "Display the detailed description of each exhibition."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:911": {
+    "cards": [
+      {
+        "card_id": "ambrosia:911#2660",
+        "options": [
+          "Both mobile banking customers and internet banking customers must use biometric authentication.",
+          "Only internet banking customers must use biometric authentication."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:911#2661",
+        "options": [
+          "Use Customers.Digital_Solutions — the digital solutions chosen by customers, such as mobile banking.",
+          "Use Customers.Sign_in_Options — the sign-in methods preferred by customers, such as biometric authentication."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:911#2662",
+        "options": [
+          "Use Customers.Digital_Solutions — the digital solutions chosen by customers. This includes internet banking as one of the options.",
+          "Use Customers.Sign_in_Options — the sign-in methods available to customers. This may include internet banking as a method."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:911#2663",
+        "options": [
+          "Use Customers.Sign_in_Options — the type of sign-in method chosen by the customer.",
+          "Use Customers.Digital_Solutions — the digital services utilized by the customer."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:2161": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2161#855",
+        "options": [
+          "For \"every learning platform\" in the question: for each learning platform, list its own course descriptions.",
+          "For \"every learning platform\" in the question: for each course descriptions, count the distinct learning platforms related to it, and keep the course descriptions only if this count equals the total number of learning platforms.",
+          "For \"every learning platform\" in the question: list the course descriptions of all learning platforms together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:2851": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2851#1346",
+        "options": [
+          "For \"all the films\" in the question: for each the films, list its own result.",
+          "For \"all the films\" in the question: for each result, count the distinct the films related to it, and keep the result only if this count equals the total number of the films.",
+          "For \"all the films\" in the question: list the result of all the films together."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:2851#1347",
+        "options": [
+          "Use Movie.director_id — the ID of the director who created the film.",
+          "Use Studio.name — the name of the studio that produced the film."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:2851#1348",
+        "options": [
+          "Display the name of the director who created the film.",
+          "Display the name of the studio that produced the film."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:3143": {
+    "cards": [
+      {
+        "card_id": "ambrosia:3143#1546",
+        "options": [
+          "Use mean_commute_time — the average commute time for the neighborhood.",
+          "Use median_commute_time — the middle value of commute times for the neighborhood."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3143#1547",
+        "options": [
+          "Display only the average commute time for each neighborhood.",
+          "Display only the median commute time for each neighborhood.",
+          "Display both the neighborhood name and the average commute time.",
+          "Display both the neighborhood name and the median commute time."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:2787": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2787#1315",
+        "options": [
+          "Use degree level as the qualification attribute.",
+          "Use certification as the qualification attribute.",
+          "Use both degree level and certification together as the qualification attributes."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:2787#1316",
+        "options": [
+          "Count all job postings dynamically using a row-based calculation.",
+          "Use a precomputed column that already tracks the number of available jobs."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:3566": {
+    "cards": [
+      {
+        "card_id": "ambrosia:3566#1820",
+        "options": [
+          "Use Countries.Name — the official name of the country.",
+          "Use Countries.Capital — the capital city of the country.",
+          "Use Countries.Official_Language — the official language of the country.",
+          "Use Countries.Spoken_Language — the primary spoken language of the country."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3566#1821",
+        "options": [
+          "Use Countries.Population — the population of each country.",
+          "Use Regions.PopulationCount — the total population of each region.",
+          "Use Cities.Population — the population of each city."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3566#1822",
+        "options": [
+          "Use Official_Language — the designated official language(s) of the country.",
+          "Use Spoken_Language — the languages commonly spoken in the country."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3566#1823",
+        "options": [
+          "Return only the name of the country with the smallest population.",
+          "Return the capital city of the country with the smallest population.",
+          "Return the official language of the country with the smallest population.",
+          "Return the most widely spoken language in the country with the smallest population."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3566#1824",
+        "options": [
+          "Use the Population column from the Countries table.",
+          "Use the PopulationCount column from the Regions table.",
+          "Use the Population column from the Cities table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3566#1825",
+        "options": [
+          "Display the official language of the country.",
+          "Display the spoken language of the country."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:1696": {
+    "cards": [
+      {
+        "card_id": "ambrosia:1696#545",
+        "options": [
+          "For \"each streaming service\" in the question: for each streaming service, list its own customer support description.",
+          "For \"each streaming service\" in the question: for each customer support description, count the distinct streaming services related to it, and keep the customer support description only if this count equals the total number of streaming services.",
+          "For \"each streaming service\" in the question: list the customer support description of all streaming services together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1696#546",
+        "options": [
+          "Use customer_support.support_type — the type or category of customer support offered.",
+          "Use customer_support.description — the detailed textual description of customer support services."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1696#547",
+        "options": [
+          "Display only the type of customer support (e.g., phone, email, chat).",
+          "Display the full description of customer support options."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:2476": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2476#1091",
+        "options": [
+          "For \"each hotel\" in the question: for each hotel, list its own amenities available.",
+          "For \"each hotel\" in the question: for each amenities available, count the distinct hotels related to it, and keep the amenities available only if this count equals the total number of hotels.",
+          "For \"each hotel\" in the question: list the amenities available of all hotels together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:957": {
+    "cards": [
+      {
+        "card_id": "ambrosia:957#2710",
+        "options": [
+          "Use Educational_Materials — a column that categorizes books as educational materials, including textbooks.",
+          "Use Title — a column containing the book's title, which may imply textbook status through naming conventions."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:957#2711",
+        "options": [
+          "Use Educational_Materials — this column likely distinguishes between textbook and e-book formats.",
+          "Use Title — this column contains the title of the book, not its format type."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:957#2712",
+        "options": [
+          "Use the Email column from the Publishers table to identify the publisher's email address.",
+          "Use the ContactNumber column from the Publishers table to identify the publisher's email address."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:1807": {
+    "cards": [
+      {
+        "card_id": "ambrosia:1807#639",
+        "options": [
+          "For \"each stream\" in the question: for each stream has, list its own result.",
+          "For \"each stream\" in the question: for each result, count the distinct stream has related to it, and keep the result only if this count equals the total number of stream has.",
+          "For \"each stream\" in the question: list the result of all stream has together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1807#640",
+        "options": [
+          "Use the type field — this may refer to the kind or category of caption/subtitle (e.g., closed caption, open caption).",
+          "Use the language field — this refers to the actual language code or name of the caption/subtitle (e.g., English, Spanish)."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1807#641",
+        "options": [
+          "Display the type of caption or subtitle (e.g., closed caption, open subtitle).",
+          "Display the language of the caption or subtitle (e.g., English, Spanish)."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:3228": {
+    "cards": [
+      {
+        "card_id": "ambrosia:3228#1592",
+        "options": [
+          "Focus on readers who subscribe to a variety of distinct magazine publications.",
+          "Include each instance where a reader is associated with an individual magazine they read."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3228#1593",
+        "options": [
+          "Use the unique reader_id assigned to each reader.",
+          "Use the name of each reader."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3228#1594",
+        "options": [
+          "Use the Magazines table, which holds details about each magazine including its ID.",
+          "Use the Readers table, which links readers to their preferred magazine via magazine ID."
+        ],
+        "sim_indices": [],
+        "sim_free_text": "Map to Readers.preferred_magazine_id (reader's preferred magazine identifier)."
+      },
+      {
+        "card_id": "ambrosia:3228#1595",
+        "options": [
+          "Use Readers.demographic_group_id — the demographic group identifier associated with the readers.",
+          "Use Authors.demographic_group_id — the demographic group identifier associated with the authors."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3228#1596",
+        "options": [
+          "Display the unique identifier assigned to each reader.",
+          "Display the name of each reader."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3228#1597",
+        "options": [
+          "Display the unique ID of each magazine (magazine_id).",
+          "Display the preferred magazine ID associated with each reader (preferred_magazine_id)."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:3228#1598",
+        "options": [
+          "Use the demographic group identifier from the readers.",
+          "Use the demographic group identifier from the authors."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:2701": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2701#1256",
+        "options": [
+          "For \"each health app\" in the question: for each health app, list its own functions.",
+          "For \"each health app\" in the question: for each functions, count the distinct health apps related to it, and keep the functions only if this count equals the total number of health apps.",
+          "For \"each health app\" in the question: list the functions of all health apps together."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:4195": {
+    "cards": [
+      {
+        "card_id": "ambrosia:4195#2232",
+        "options": [
+          "Focus on projects whose scores are greater than 90 when considered as a group across all projects.",
+          "Focus on projects where each individual project’s score exceeds 90."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:4195#2233",
+        "options": [
+          "Select projects with a grade higher than 90.",
+          "Select projects with a grade higher than 90.0."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:4195#2234",
+        "options": [
+          "Return only the title of the projects.",
+          "Return both the title and detailed description of the projects."
+        ],
+        "sim_indices": [],
+        "sim_free_text": "Map to Topic.name (topic name)."
+      }
+    ]
+  },
+  "ambrosia:2360": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2360#1000",
+        "options": [
+          "For \"each terminal\" in the question: for each terminal, list its own description of the facilities available.",
+          "For \"each terminal\" in the question: for each description of the facilities available, count the distinct terminals related to it, and keep the description of the facilities available only if this count equals the total number of terminals.",
+          "For \"each terminal\" in the question: list the description of the facilities available of all terminals together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:724": {
+    "cards": [
+      {
+        "card_id": "ambrosia:724#2479",
+        "options": [
+          "Use the Psychologists table to display data about psychologists.",
+          "Use the Psychiatrists table to display data about psychiatrists."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:724#2480",
+        "options": [
+          "Use the Psychologists table to display psychologist-related data.",
+          "Use the Psychiatrists table to display psychiatrist-related data."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:724#2481",
+        "options": [
+          "Match the clinic name in the Psychologists table.",
+          "Match the clinic name in the Psychiatrists table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:2474": {
+    "cards": [
+      {
+        "card_id": "ambrosia:2474#1089",
+        "options": [
+          "For \"every hotel\" in the question: for each hotel, list its own services.",
+          "For \"every hotel\" in the question: for each services, count the distinct hotels related to it, and keep the services only if this count equals the total number of hotels.",
+          "For \"every hotel\" in the question: list the services of all hotels together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:2474#1090",
+        "options": [
+          "List the services provided by each individual hotel.",
+          "Return the set of services that are offered by all hotels."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "ambrosia:1874": {
+    "cards": [
+      {
+        "card_id": "ambrosia:1874#669",
+        "options": [
+          "For \"each UX designer\" in the question: for each UX designer, list its own descriptions of the components.",
+          "For \"each UX designer\" in the question: for each descriptions of the components, count the distinct UX designers related to it, and keep the descriptions of the components only if this count equals the total number of UX designers.",
+          "For \"each UX designer\" in the question: list the descriptions of the components of all UX designers together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "ambrosia:1874#670",
+        "options": [
+          "Return only the descriptions of the components.",
+          "Return both the component descriptions and the names of the associated UX designers."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:706": {
+    "cards": [
+      {
+        "card_id": "clambsql:706#3050",
+        "options": [
+          "Apply the condition to the height attribute in the body_builder table.",
+          "Apply the condition to the height attribute in the body_builder_people_total view."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:706#3051",
+        "options": [
+          "Use the Height column from the body_builder table.",
+          "Use the height column from the body_builder_people_total table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:706#3052",
+        "options": [
+          "Calculate the average using the Total column from the body_builder table.",
+          "Calculate the average using the sum_total column from the body_builder_people_total view."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:73": {
+    "cards": [
+      {
+        "card_id": "clambsql:73#3102",
+        "options": [
+          "Use the standard name field for the student.",
+          "Use the full legal name of the student.",
+          "Use the given (first) name of the student.",
+          "Use the grade level or year of the student."
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:672": {
+    "cards": [
+      {
+        "card_id": "clambsql:672#2963",
+        "options": [
+          "Filter by the last name 'Shieber'.",
+          "Filter by the first name 'David'."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:672#2964",
+        "options": [
+          "Use the precomputed sum of hours per week directly from the database.",
+          "Calculate the total hours per week as the average hours per week multiplied by the number of games played."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:672#2965",
+        "options": [
+          "Use a precomputed sum of games played for the student.",
+          "Calculate the total games played as the average games per week multiplied by the count of weeks."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:299": {
+    "cards": [
+      {
+        "card_id": "clambsql:299#1664",
+        "options": [
+          "Use Templates.Template_Type_Code — the template type code stored in the Templates table.",
+          "Use Documents.Template_Type_Code — the template type code associated with documents in the Documents table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:299#1665",
+        "options": [
+          "Use Ref_Template_Types.Template_Type_Code — the code field from the reference template types table.",
+          "Use Template_Types_Reference.Template_Type_Code — the code field from the template types reference table.",
+          "Use Type_Templates.Template_Type_Code — the code field from the type templates table."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:299#1666",
+        "options": [
+          "Return the unique code identifier for the template type.",
+          "Return the descriptive label or name of the template type."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:299#1667",
+        "options": [
+          "Use the Template_Type_Code from the Ref_Template_Types table.",
+          "Use the Template_Type_Code from the Template_Types_Reference table.",
+          "Use the Template_Type_Code from the Type_Templates table."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:1195": {
+    "cards": [
+      {
+        "card_id": "clambsql:1195#556",
+        "options": [
+          "For \"all photos and illustrations\" in the question: for each photos and illustrations, list its own descriptions.",
+          "For \"all photos and illustrations\" in the question: for each descriptions, count the distinct photos and illustrations related to it, and keep the descriptions only if this count equals the total number of photos and illustrations.",
+          "For \"all photos and illustrations\" in the question: list the descriptions of all photos and illustrations together."
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1195#557",
+        "options": [
+          "Use the subject name to identify the history course.",
+          "Use the subject ID to identify the history course."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:784": {
+    "cards": [
+      {
+        "card_id": "clambsql:784#3236",
+        "options": [
+          "Use Rooms.decor — the decoration style of the room as stored in the Rooms table.",
+          "Use rooms_baseprice.decor — the decoration style of the room as stored in the rooms_baseprice table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:784#3237",
+        "options": [
+          "Return only the count of modern rooms.",
+          "Return the room IDs of all modern rooms along with their decor details."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:708": {
+    "cards": [
+      {
+        "card_id": "clambsql:708#3053",
+        "options": [
+          "Use Document_Functional_Areas.functional_area_code — the coded identifier for the functional area.",
+          "Use Functional_Areas.functional_area_description — the textual description of the functional area."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:708#3054",
+        "options": [
+          "Compute the average using the pre-stored sum_access_count divided by the count of documents.",
+          "Calculate the average dynamically from the access_count column for each document."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:1312": {
+    "cards": [
+      {
+        "card_id": "clambsql:1312#864",
+        "options": [
+          "For \"each community development corporation\" in the question: for each community development corporation, list its own description of initiatives.",
+          "For \"each community development corporation\" in the question: for each description of initiatives, count the distinct community development corporations related to it, and keep the description of initiatives only if this count equals the total number of community development corporations.",
+          "For \"each community development corporation\" in the question: list the description of initiatives of all community development corporations together."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1312#865",
+        "options": [
+          "Use the description from the Initiatives table.",
+          "Use the description from the Community_Development_Corporations_Initiatives table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1312#866",
+        "options": [
+          "Use the Community_Development_Corporations table, which contains the core information about each corporation.",
+          "Use the Community_Development_Corporations_Initiatives table, which links initiatives to community development corporations via community_development_corporation_id."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1312#867",
+        "options": [
+          "Display only the description of each initiative.",
+          "Display the initiative descriptions along with associated community development corporation details."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:772": {
+    "cards": [
+      {
+        "card_id": "clambsql:772#3205",
+        "options": [
+          "For \"For each sex\" in the question: for each sex, list its own name and sex of the candidate with the minimum oppose rate for their sex.",
+          "For \"For each sex\" in the question: for each name and sex of the candidate with the minimum oppose rate for their sex, count the distinct sexs related to it, and keep the name and sex of the candidate with the minimum oppose rate for their sex only if this count equals the total number of sexs.",
+          "For \"For each sex\" in the question: list the name and sex of the candidate with the minimum oppose rate for their sex of all sexs together."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:772#3206",
+        "options": [
+          "Use candidate.Oppose_rate — the oppose rate directly associated with each candidate.",
+          "Use people_candidate_oppose_rate.max_oppose_rate — the maximum oppose rate observed for each candidate."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:772#3207",
+        "options": [
+          "Use people.Sex — the sex attribute from the people table linked via candidate.People_ID.",
+          "Use people_candidate_oppose_rate.sex — the sex attribute directly in the oppose rate table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:772#3208",
+        "options": [
+          "Use people.Name — the full name of the candidate from the people table.",
+          "Use people_candidate_oppose_rate.name — the name field directly associated with the candidate and their oppose rate."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:772#3209",
+        "options": [
+          "Use the stored oppose rate value directly from the candidate record.",
+          "Use the precomputed maximum oppose rate for each candidate."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:772#3210",
+        "options": [
+          "Include the sex attribute from the people table.",
+          "Include the sex attribute from the people_candidate_oppose_rate table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:772#3211",
+        "options": [
+          "Use the name from the people table.",
+          "Use the name from the people_candidate_oppose_rate table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:726": {
+    "cards": [
+      {
+        "card_id": "clambsql:726#3099",
+        "options": [
+          "Use the user_profiles table where followers count is stored directly in the followers column.",
+          "Use the user_profiles_followers table where the total sum of followers is precomputed in the sum_followers column."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:726#3100",
+        "options": [
+          "Calculate the maximum followers count directly from the raw user profile data.",
+          "Retrieve the precomputed maximum followers count from the summary statistics table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:726#3101",
+        "options": [
+          "Sum the followers count from each individual user profile.",
+          "Use the precomputed total followers value from the summary table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:674": {
+    "cards": [
+      {
+        "card_id": "clambsql:674#2969",
+        "options": [
+          "Calculate the average directly from the Money_Requested column in the entrepreneur table.",
+          "Use the precomputed avg_money_requested summary column from the entrepreneur_money_requested table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:788": {
+    "cards": [
+      {
+        "card_id": "clambsql:788#3247",
+        "options": [
+          "Use the product type code to group the average price.",
+          "Use the product name to group the average price."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:788#3248",
+        "options": [
+          "Use the precomputed avg_product_price column for the average price.",
+          "Calculate the average price dynamically from the individual product_price values."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:788#3249",
+        "options": [
+          "Display the product type using its code (e.g., 'ELEC' for Electronics).",
+          "Display the product type using its descriptive name (e.g., 'Electronics')."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:611": {
+    "cards": [
+      {
+        "card_id": "clambsql:611#2800",
+        "options": [
+          "For \"each category\" in the question: for each category, list its own cheapest products.",
+          "For \"each category\" in the question: for each cheapest products, count the distinct categorys related to it, and keep the cheapest products only if this count equals the total number of categorys.",
+          "For \"each category\" in the question: list the cheapest products of all categorys together."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:611#2801",
+        "options": [
+          "Use the Products table to retrieve the product names.",
+          "Use the products_price table to retrieve the product names."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:611#2802",
+        "options": [
+          "Use the Code attribute from the Products table.",
+          "Use the code attribute from the products_price table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:611#2803",
+        "options": [
+          "Use the Name column from the Products table.",
+          "Use the name column from the products_price table."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:611#2804",
+        "options": [
+          "Use the Price column from the Products table to determine the cheapest product.",
+          "Use the min_price column from the products_price view to determine the cheapest product."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:701": {
+    "cards": [
+      {
+        "card_id": "clambsql:701#3041",
+        "options": [
+          "Compute the average using the pre-stored no_of_customers column per bank.",
+          "Calculate the average by dividing the total number of customers by the number of branches (sum_no_of_customers / COUNT(branch_ID))."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:1226": {
+    "cards": [
+      {
+        "card_id": "clambsql:1226#632",
+        "options": [
+          "For \"every facility\" in the question: for each facility, list its own species.",
+          "For \"every facility\" in the question: for each species, count the distinct facilitys related to it, and keep the species only if this count equals the total number of facilitys.",
+          "For \"every facility\" in the question: list the species of all facilitys together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:716": {
+    "cards": [
+      {
+        "card_id": "clambsql:716#3073",
+        "options": [
+          "Use the Products table and filter by Product_Name to identify photo products.",
+          "Use the Services table and filter by Product_Name to identify photo products.",
+          "Use the Order_Items table and filter by Product_ID to identify photo products.",
+          "Use the Invoices table and filter by Product_ID to identify photo products."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:756": {
+    "cards": [
+      {
+        "card_id": "clambsql:756#3167",
+        "options": [
+          "Sum the individual order quantities directly from the Order_Items table.",
+          "Use a precomputed aggregate value stored in the order_items_products_order_quantity view."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:730": {
+    "cards": [
+      {
+        "card_id": "clambsql:730#3103",
+        "options": [
+          "For \"each employee\" in the question: for each employee, list its own employee ids.",
+          "For \"each employee\" in the question: for each employee ids, count the distinct employees related to it, and keep the employee ids only if this count equals the total number of employees.",
+          "For \"each employee\" in the question: list the employee ids of all employees together."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:730#3104",
+        "options": [
+          "Use job_history.END_DATE — the actual end date recorded for each job in the history.",
+          "Use job_history_end_date.max_end_date — the latest (maximum) end date across all jobs for each employee."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:730#3105",
+        "options": [
+          "Use the most recent end date from the job history records for each employee.",
+          "Compute and return the maximum end date across all job history entries for each employee."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:658": {
+    "cards": [
+      {
+        "card_id": "clambsql:658#2914",
+        "options": [
+          "Use transactions_share_count.avg_share_count — the precomputed average share count per transaction.",
+          "Use Transactions.share_count — the individual share count values that can be averaged."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:658#2915",
+        "options": [
+          "Use the transactions_share_count table, which includes investor_id and share count data.",
+          "Use the Transactions table, which includes transaction_id and related transaction details."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:658#2916",
+        "options": [
+          "Use the precomputed average share count stored in the summary table.",
+          "Calculate the average share count dynamically by summing share counts and dividing by the number of transactions."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:658#2917",
+        "options": [
+          "Use the summarized transaction share count data grouped by investor ID.",
+          "Use the raw transaction records grouped by investor ID to calculate the average."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:1270": {
+    "cards": [
+      {
+        "card_id": "clambsql:1270#744",
+        "options": [
+          "For \"each real estate agency\" in the question: for each real estate agency, list its own prices of services.",
+          "For \"each real estate agency\" in the question: for each prices of services, count the distinct real estate agencys related to it, and keep the prices of services only if this count equals the total number of real estate agencys.",
+          "For \"each real estate agency\" in the question: list the prices of services of all real estate agencys together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1270#745",
+        "options": [
+          "Use service_id — a unique identifier for each service, not its cost.",
+          "Use price — the actual monetary cost associated with each service."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1270#746",
+        "options": [
+          "Display the unique identifiers (IDs) of the services provided by each real estate agency.",
+          "Display the monetary prices associated with each service offered by the agencies."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1270#747",
+        "options": [
+          "Display the unique identifiers (IDs) of the real estate agencies.",
+          "Display the full names of the real estate agencies."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:1141": {
+    "cards": [
+      {
+        "card_id": "clambsql:1141#381",
+        "options": [
+          "Use Development_Projects.ProjectName — the name of the project, which may contain keywords like 'Airport Expansion' or 'Renovation'.",
+          "Use Development_Projects.Increased_Capacity — the capacity increase associated with the project."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1141#382",
+        "options": [
+          "Use the format '1000 Passengers per Day' for the increased capacity.",
+          "Use the format '1000 passengers per day' for the increased capacity."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1141#383",
+        "options": [
+          "Return the names of the development projects.",
+          "Return the descriptions of the capacity increases associated with the projects."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:355": {
+    "cards": [
+      {
+        "card_id": "clambsql:355#1878",
+        "options": [
+          "Use the country table, which lists countries by their unique code.",
+          "Use the nation table, which lists nations by their unique code.",
+          "Use the state table, which lists states by their unique code."
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:355#1879",
+        "options": [
+          "Use countrylanguage.Language — the language column from the countrylanguage table to identify English.",
+          "Use official_language.Language — the language column from the official_language table to identify English.",
+          "Use spoken_language.Language — the language column from the spoken_language table to identify English."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:355#1880",
+        "options": [
+          "Use countrylanguage.Language — the language field from the countrylanguage table to identify Dutch.",
+          "Use official_language.Language — the language field from the official_language table to identify Dutch.",
+          "Use spoken_language.Language — the language field from the spoken_language table to identify Dutch."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:1253": {
+    "cards": [
+      {
+        "card_id": "clambsql:1253#702",
+        "options": [
+          "For \"each route\" in the question: for each route, list its own restriction types.",
+          "For \"each route\" in the question: for each restriction types, count the distinct routes related to it, and keep the restriction types only if this count equals the total number of routes.",
+          "For \"each route\" in the question: list the restriction types of all routes together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1253#703",
+        "options": [
+          "Use Restrictions.restrictionType — the type of restriction defined in the Restrictions table.",
+          "Use Routes_Restrictions.restrictionsType — the type of restriction linked to routes in the Routes_Restrictions table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:1253#704",
+        "options": [
+          "Use restrictionType from the Restrictions table.",
+          "Use restrictionsType from the Routes_Restrictions join table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:297": {
+    "cards": [
+      {
+        "card_id": "clambsql:297#1657",
+        "options": [
+          "Use the pet type from the Pets table.",
+          "Use the pet type from the Animals table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:297#1658",
+        "options": [
+          "Use the weight attribute from the Pets table.",
+          "Use the weight attribute from the Animals table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:297#1659",
+        "options": [
+          "Calculate the average weight dynamically using the Pets.weight column.",
+          "Calculate the average weight dynamically using the Animals.weight column."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:297#1660",
+        "options": [
+          "Group by PetType from the Pets table.",
+          "Group by PetType from the Animals table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:773": {
+    "cards": [
+      {
+        "card_id": "clambsql:773#3212",
+        "options": [
+          "Use the precomputed average attendance stored in the performance_attendance table.",
+          "Calculate the average attendance dynamically from the raw Attendance column in the performance table."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:700": {
+    "cards": []
+  },
+  "clambsql:1382": {
+    "cards": [
+      {
+        "card_id": "clambsql:1382#1038",
+        "options": [
+          "For \"every airline\" in the question: for each airline, list its own fleet names and capacities shown.",
+          "For \"every airline\" in the question: for each fleet names and capacities shown, count the distinct airlines related to it, and keep the fleet names and capacities shown only if this count equals the total number of airlines.",
+          "For \"every airline\" in the question: list the fleet names and capacities shown of all airlines together."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:661": {
+    "cards": [
+      {
+        "card_id": "clambsql:661#2924",
+        "options": [
+          "Use gradeconversion_gradepoint.avg_gradepoint — the average gradepoint from the grade conversion table.",
+          "Use enrolled_in_gradeconversion_student_gradepoint.avg_gradepoint — the average gradepoint from the enrollment-grade conversion-student relationship table."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:661#2925",
+        "options": [
+          "Retrieve the precomputed average gradepoint from the grade conversion table.",
+          "Calculate the average gradepoint dynamically from the enrolled grades of students with the last name Smith."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:211": {
+    "cards": [
+      {
+        "card_id": "clambsql:211#1354",
+        "options": [
+          "Select the program with the highest total count of enrolled students across all records.",
+          "Select the program that has the greatest number of students in any single enrollment record."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:211#1355",
+        "options": [
+          "Use the Degree_Programs table to identify the program with the most students enrolled.",
+          "Use the Academic_Programs table to identify the program with the most students enrolled.",
+          "Use the Majors table to identify the program with the most students enrolled."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:211#1356",
+        "options": [
+          "Use Student_Enrolment.student_id — the identifier for students enrolled in programs.",
+          "Use Student_Enrolment_Courses.student_id — the identifier for students enrolled in courses.",
+          "Use Learners.student_id — the identifier for learners in the system.",
+          "Use Pupils.student_id — the identifier for pupils registered in programs."
+        ],
+        "sim_indices": [],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:211#1357",
+        "options": [
+          "Count the total number of students enrolled in each program and select the program with the highest total.",
+          "Identify the program with the largest single enrollment event (i.e., maximum count of students in one record)."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      },
+      {
+        "card_id": "clambsql:211#1358",
+        "options": [
+          "Use the Degree_Programs table to retrieve the program ID and summary name.",
+          "Use the Academic_Programs table to retrieve the program ID and summary name.",
+          "Use the Majors table to retrieve the program ID and summary name."
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null
+      }
+    ]
+  },
+  "clambsql:714": {
+    "cards": [
+      {
+        "card_id": "clambsql:714#3069",
+        "options": [
+          "Use the precomputed summary column 'settlements_amount_settled' which already contains the total.",
+          "Dynamically compute the total by summing the 'Amount_Settled' field across all individual settlement records."
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null
+      }
+    ]
+  }
+}

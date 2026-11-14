@@ -1,0 +1,20 @@
+# Core pipeline, evaluation, and LLM client
+openai
+httpx
+PyYAML
+sqlglot
+
+# Paper figures and some analysis scripts
+numpy
+matplotlib
+Pillow
+fonttools
+cairosvg
+
+# Optional: scorer training / PEFT (pipeline/scorer)
+# torch
+# transformers
+# peft
+
+# Optional: analysis/sqlite_scoring.py MySQL DSN support
+# PyMySQL

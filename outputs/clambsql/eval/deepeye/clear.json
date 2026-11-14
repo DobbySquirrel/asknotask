@@ -1,0 +1,13 @@
+{
+  "n": 1400,
+  "correct": {
+    "intended": 789
+  },
+  "ex": {
+    "intended": 56.357142857142854
+  },
+  "gold_key": "intended",
+  "source": "synced from eval_rescored/deepeye/clear.json (evaluator.ex gold_timeout=600)",
+  "q": 0.0,
+  "q_total": 0
+}

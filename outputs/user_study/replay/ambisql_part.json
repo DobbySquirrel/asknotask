@@ -1,0 +1,612 @@
+{
+  "n": 100,
+  "correct": {
+    "gold": 71
+  },
+  "ex": {
+    "gold": 71.0
+  },
+  "gold_key": "gold",
+  "per_question": [
+    {
+      "qid": "ambrosia:1414",
+      "gold": true,
+      "sql": "SELECT d.diet_type_value\nFROM Diets AS d\nWHERE NOT EXISTS (\n  SELECT 1\n  FROM Nutritionists AS n\n  WHERE NOT EXISTS (\n    SELECT 1\n    FROM Nutritionists_Diets AS nd\n    WHERE nd.nutritionist_id = n.nutritionist_id\n      AND nd.diet_type_id = d.diet_type_id\n  )\n)",
+      "request_key": "62172c320c9d85ef0bd837311d480761e48a1197d6870172a26c24baaea6894b"
+    },
+    {
+      "qid": "ambrosia:1696",
+      "gold": false,
+      "sql": "SELECT streaming_service.name, customer_support.description\nFROM streaming_service\nJOIN streaming_service_customer_support\n  ON streaming_service.id = streaming_service_customer_support.streaming_service_id\nJOIN customer_support\n  ON customer_support.id = streaming_service_customer_support.customer_support_id",
+      "request_key": "236fea8d761ddb772fbb4c07455df030a1be473e03075448d5dfaad6a2d8c4d2"
+    },
+    {
+      "qid": "ambrosia:1708",
+      "gold": false,
+      "sql": "SELECT ss.service_name, sm.type\nFROM Streaming_Service AS ss\nJOIN Streaming_Service_Social_Media AS sssm\n  ON ss.id = sssm.streaming_service_id\nJOIN Social_Media AS sm\n  ON sssm.social_media_id = sm.social_media_id",
+      "request_key": "e14af7815271002472c8feb2684b0cb6fe2eb3604f59dee12588e772cb177de1"
+    },
+    {
+      "qid": "ambrosia:1714",
+      "gold": false,
+      "sql": "SELECT ss.name, mm.model_name\nFROM Streaming_Service AS ss\nJOIN Streaming_Service_Monetization_Model AS ssmm\n  ON ss.id = ssmm.streaming_service_id\nJOIN Monetization_Model AS mm\n  ON ssmm.monetization_model_id = mm.id",
+      "request_key": "d1456b0be7dbb235b5f68abbee7cff6e645168130a60f1d15ee80e15f29a7496"
+    },
+    {
+      "qid": "ambrosia:1807",
+      "gold": false,
+      "sql": "SELECT s.title, c.language\nFROM Streamings AS s\nJOIN Streamings_captions_and_subtitles AS scs\n  ON s.streaming_id = scs.streamings_id\nJOIN Captions_and_subtitles AS c\n  ON scs.captions_and_subtitles_id = c.caption_id",
+      "request_key": "c715fdcd2f2f8d2c41e37ee581fec8c84ec06fd0e674f07b4543b722bd5fb4e2"
+    },
+    {
+      "qid": "ambrosia:1824",
+      "gold": true,
+      "sql": "SELECT c.cuisine_name\nFROM Cuisines AS c\nJOIN Food_Critics_Cuisines AS fcc\n  ON c.id = fcc.cuisine_id\nGROUP BY c.id, c.cuisine_name\nHAVING COUNT(DISTINCT fcc.food_critic_id) = (\n  SELECT COUNT(*)\n  FROM Food_Critics\n)",
+      "request_key": "d9a600bcb4a463ea5fd9e35a2ee991ac3a1ca64e006f1e9f94a1e26048c88240"
+    },
+    {
+      "qid": "ambrosia:1874",
+      "gold": false,
+      "sql": "SELECT Ux_Designers.name, Components.description\nFROM Ux_Designers\nJOIN Ux_Designers_Components\n  ON Ux_Designers.id = Ux_Designers_Components.ux_designer_id\nJOIN Components\n  ON Ux_Designers_Components.component_id = Components.id",
+      "request_key": "4fedd1dd0904004cdacfe68b81f603507c2db0d18e89e43c5eacecea5f489027"
+    },
+    {
+      "qid": "ambrosia:1986",
+      "gold": true,
+      "sql": "SELECT e.end_date\nFROM Elections AS e\nJOIN Political_Reporters_Elections AS pre\n  ON e.id = pre.election_id\nGROUP BY e.id, e.end_date\nHAVING COUNT(DISTINCT pre.reporter_id) = (\n  SELECT COUNT(*)\n  FROM Political_Reporters\n)",
+      "request_key": "476d3d96816183bc69c76e500f6fe3f9268dc408d6890bdbab397c0b71f8b2ba"
+    },
+    {
+      "qid": "ambrosia:2161",
+      "gold": false,
+      "sql": "SELECT c.description\nFROM Online_Learning_Platforms AS p\nJOIN Online_Learning_Platforms_Courses AS pc\n  ON p.platformID = pc.platformID\nJOIN Courses AS c\n  ON pc.courseID = c.courseID",
+      "request_key": "bb52c19b5e872afe7a47bc45b11fa795b87320c2e423a7f3cded42a2c6276425"
+    },
+    {
+      "qid": "ambrosia:2307",
+      "gold": false,
+      "sql": "SELECT cc.id, b.benefitName\nFROM Credit_Cards AS cc\nJOIN Credit_Card_Benefits AS ccb ON cc.id = ccb.creditCardId\nJOIN Benefits AS b ON ccb.benefitId = b.id",
+      "request_key": "10f14ef6b45c1b1ac0a97eba9bf9cfeff124ce2f7a111914ab113b1a1df8f36b"
+    },
+    {
+      "qid": "ambrosia:2360",
+      "gold": false,
+      "sql": "SELECT t.name, f.description\nFROM Terminals AS t\nJOIN Terminals_Facilities AS tf ON t.id = tf.terminalId\nJOIN Facilities AS f ON tf.facilityId = f.id",
+      "request_key": "c315f29d586311929f1e176d49952232c0165c2434bf44c30f50fc0c33241a93"
+    },
+    {
+      "qid": "ambrosia:2378",
+      "gold": false,
+      "sql": "SELECT Art_Galleries.Name, Exhibitions.Description\nFROM Art_Galleries\nJOIN Art_Galleries_Exhibitions\n  ON Art_Galleries.GalleryID = Art_Galleries_Exhibitions.GalleryID\nJOIN Exhibitions\n  ON Art_Galleries_Exhibitions.ExhibitionID = Exhibitions.ExhibitionID",
+      "request_key": "60c260bc37928511ec421132658e548f71cd8c50fbc3e666efd998ab038452d2"
+    },
+    {
+      "qid": "ambrosia:2474",
+      "gold": true,
+      "sql": "SELECT ServiceName\nFROM Services s\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM Hotels h\n    WHERE NOT EXISTS (\n        SELECT 1\n        FROM Hotels_Services hs\n        WHERE hs.Hotels_ID = h.HotelID\n          AND hs.Service_ID = s.ServiceID\n    )\n)",
+      "request_key": "012d96c1bce3f007db161bcea3fd59e84424ae61a3b1429a78d5cf116f1d1ebb"
+    },
+    {
+      "qid": "ambrosia:2476",
+      "gold": false,
+      "sql": "SELECT h.name, a.amenityName\nFROM Hotels AS h\nJOIN Hotel_Amenities AS ha ON h.id = ha.hotelId\nJOIN Amenities AS a ON ha.amenityId = a.amenityId",
+      "request_key": "6ead3afdc114cc6eb260b730ba8bdfe950f7f2da59780cfd17146c144d846541"
+    },
+    {
+      "qid": "ambrosia:2701",
+      "gold": true,
+      "sql": "SELECT f.value\nFROM Functions AS f\nJOIN Health_Apps_Functions AS haf\n  ON f.functionID = haf.functionID\nGROUP BY f.functionID, f.value\nHAVING COUNT(DISTINCT haf.healthAppID) = (\n  SELECT COUNT(*)\n  FROM Health_Apps\n)",
+      "request_key": "563fa8ed0b02e62d0486d5d4a12b2ba43221cee95127e6fb245248cbb9a45be7"
+    },
+    {
+      "qid": "ambrosia:2709",
+      "gold": true,
+      "sql": "SELECT e.name\nFROM Equipment AS e\nWHERE NOT EXISTS (\n  SELECT 1\n  FROM Movie_sets AS ms\n  WHERE NOT EXISTS (\n    SELECT 1\n    FROM Movie_sets_equipment AS mse\n    WHERE mse.movie_set_id = ms.id\n      AND mse.equipment_id = e.id\n  )\n)",
+      "request_key": "141bfc2c3d45f424705de47c798644bf76598af147081e626fa0e9b5494f3c60"
+    },
+    {
+      "qid": "ambrosia:2787",
+      "gold": true,
+      "sql": "SELECT Degree_Level.level_name, COUNT(Job_Post.id)\nFROM Job_Post\nJOIN Degree_Level ON Job_Post.degree_level_id = Degree_Level.id\nGROUP BY Degree_Level.id, Degree_Level.level_name",
+      "request_key": "39c1a0be2bf36e83477a62b1ea01619f8731417f4de39fbf21028db9a42773f9"
+    },
+    {
+      "qid": "ambrosia:2851",
+      "gold": true,
+      "sql": "SELECT Movie.title, Movie.genre, Movie.release_year, Studio.name\nFROM Movie\nJOIN Studio ON Movie.studio_id = Studio.id",
+      "request_key": "4ce0d81c897e33c15eabe44ae3a1a5db07080f0dce6148e708a2196ec6ea38ef"
+    },
+    {
+      "qid": "ambrosia:3143",
+      "gold": true,
+      "sql": "SELECT name, mean_commute_time\nFROM Neighborhood\nWHERE population < 10000",
+      "request_key": "3df6f2e5be9f43831b356cc231dfbf32c5e2aa1d9a19177ce10089fd4fe4d08d"
+    },
+    {
+      "qid": "ambrosia:3228",
+      "gold": false,
+      "sql": "SELECT r.name, m.title, dg.group_name\nFROM Readers AS r\nJOIN Magazines AS m ON r.preferred_magazine_id = m.magazine_id\nJOIN Demographic_Groups AS dg ON r.demographic_group_id = dg.id",
+      "request_key": "85b9e2d4d454d5953b8e03a4990342ff98af3cee8ad487d75b18b965aa8a5cc0"
+    },
+    {
+      "qid": "ambrosia:3566",
+      "gold": true,
+      "sql": "SELECT Name, Official_Language\nFROM Countries\nORDER BY Population ASC\nLIMIT 1",
+      "request_key": "6e061953aa6d0d95adde1afd27c086eaa76fdeebb38a7b9f549bae1cd2724e93"
+    },
+    {
+      "qid": "ambrosia:3733",
+      "gold": true,
+      "sql": "SELECT Name, Founding_Year\nFROM Financial_Institutions\nORDER BY Total_Liabilities ASC\nLIMIT 1",
+      "request_key": "cf976ee005c9199270af7876b6311891781f8637f267f4b968f330389f150df7"
+    },
+    {
+      "qid": "ambrosia:3889",
+      "gold": true,
+      "sql": "SELECT DISTINCT c.PhoneNumber, c.AddressLine\nFROM Customers AS c\nJOIN Tickets AS t ON c.CustomerID = t.CustomerID\nJOIN Concerts AS co ON t.ConcertID = co.ConcertID\nJOIN Artists AS a ON co.HeadlineArtistID = a.ArtistID\nWHERE a.Genre = 'Pop'",
+      "request_key": "92b16f984b99bcc5daa835a75039a92a0dc64ea42fbdad944865e200c8cd1403"
+    },
+    {
+      "qid": "ambrosia:3960",
+      "gold": true,
+      "sql": "SELECT Costume_Designer, Costumes\nFROM Costumes\nWHERE Budget < 750000",
+      "request_key": "f69ffcbfd769d259b626bbb07aed2d4cd467c36361bb75ca39b7cc68be826a7f"
+    },
+    {
+      "qid": "ambrosia:4195",
+      "gold": true,
+      "sql": "SELECT DISTINCT Topic.name\nFROM Project\nJOIN Topic ON Project.topicId = Topic.id\nJOIN Enrollment ON Enrollment.projectId = Project.id\nWHERE Enrollment.grade > 90",
+      "request_key": "f5292f5dedd6655ebcb50f5a9979bf4c98dfe7a57e5aa32a991edc20652a65da"
+    },
+    {
+      "qid": "ambrosia:695",
+      "gold": true,
+      "sql": "SELECT title\nFROM Articles\nWHERE visualStorytelling IN ('Photo', 'Video')\n  AND articleType = 'Technology'",
+      "request_key": "086f9275e964dfdce4de5faf5672277911b34142d1e33fb65b7cfc99cbc13034"
+    },
+    {
+      "qid": "ambrosia:724",
+      "gold": true,
+      "sql": "SELECT name\nFROM Psychologists\nWHERE clinic = 'Harmony Wellness Center'\nUNION ALL\nSELECT name\nFROM Psychiatrists\nWHERE clinic = 'Harmony Wellness Center'",
+      "request_key": "086c08782fe2ddf23ecf9814ac52fc1f8133e00688c4d21d3068f75420a7702a"
+    },
+    {
+      "qid": "ambrosia:911",
+      "gold": true,
+      "sql": "SELECT FullName\nFROM Customers\nWHERE Digital_Solutions IN ('Mobile Banking App', 'Internet Banking Platform')\n  AND Sign_in_Options = 'Biometric Authentication'",
+      "request_key": "32c89aa8f1fb8b08adb38dcc0154890e62571115a79fbe6734a554f41cfa3999"
+    },
+    {
+      "qid": "ambrosia:945",
+      "gold": true,
+      "sql": "SELECT PassingMark\nFROM Assessments\nWHERE Assessor = 'Professor Smith'\n  AND AssessmentMethod IN ('Exam', 'Quiz')",
+      "request_key": "7e115e651040891efed00d1f4eac149f49ed65e37a4a1e6371e40e3a7757545f"
+    },
+    {
+      "qid": "ambrosia:957",
+      "gold": false,
+      "sql": "SELECT Books.Title\nFROM Books\nJOIN Publishers ON Books.PublisherID = Publishers.PublisherID\nWHERE Publishers.Email = 'pearson@email.com'\n  AND Books.Educational_Materials IN ('textbook', 'e-book')",
+      "request_key": "604f151723d5428682e31da3cfc2fac9b5dc2a85f31a09d0adb765cc2d24d0e8"
+    },
+    {
+      "qid": "bird:1029",
+      "gold": true,
+      "sql": "SELECT buildUpPlaySpeed\nFROM Team_Attributes\nORDER BY buildUpPlaySpeed DESC\nLIMIT 4",
+      "request_key": "7d806c50c3b3e090329c39e6cdfb6d139b251e01247ba16f655afe027afb3e13"
+    },
+    {
+      "qid": "bird:1068",
+      "gold": false,
+      "sql": "SELECT SUM(pa.overall_rating) / COUNT(pa.id)\nFROM Player AS p\nJOIN Player_Attributes AS pa\n  ON p.player_api_id = pa.player_api_id\nWHERE p.height > 170\n  AND strftime('%Y', pa.date) >= '2010'\n  AND strftime('%Y', pa.date) <= '2015'",
+      "request_key": "5f74df1aaa02caf5ef010fc89b54bac4a1364590f4528ed2881367b289db6a95"
+    },
+    {
+      "qid": "bird:1144",
+      "gold": true,
+      "sql": "SELECT pa.finishing, pa.curve\nFROM Player AS p\nJOIN Player_Attributes AS pa\n  ON p.player_api_id = pa.player_api_id\nWHERE p.weight = (SELECT MAX(weight) FROM Player)",
+      "request_key": "bd2006b62ebdbad0908dcb72802733757b221e8762d199020326e939e39af853"
+    },
+    {
+      "qid": "bird:1152",
+      "gold": true,
+      "sql": "SELECT CAST(COUNT(CASE WHEN Admission = '+' THEN ID END) AS REAL) / NULLIF(COUNT(CASE WHEN Admission = '-' THEN ID END), 0)\nFROM Patient\nWHERE Diagnosis = 'SLE'",
+      "request_key": "fcb126d2666058fb3973616577c4ee7424103a5d79cab97273de50911e7e4bfa"
+    },
+    {
+      "qid": "bird:1235",
+      "gold": true,
+      "sql": "SELECT Patient.Diagnosis, Patient.ID,\n       CAST(strftime('%Y', 'now') AS INTEGER) - CAST(strftime('%Y', Patient.Birthday) AS INTEGER) AS age\nFROM Patient\nJOIN Laboratory ON Patient.ID = Laboratory.ID\nWHERE Laboratory.RBC < 3.5",
+      "request_key": "fea2160640256b0c54c4f809b680b79d1a235b1439672fa66e3d254794d932ee"
+    },
+    {
+      "qid": "bird:1302",
+      "gold": true,
+      "sql": "SELECT COUNT(DISTINCT l.ID)\nFROM Laboratory AS l\nJOIN Examination AS e ON l.ID = e.ID\nWHERE l.CPK < 250\n  AND (e.KCT = '+' OR e.RVVT = '+' OR e.LAC = '+')",
+      "request_key": "419c552fca44b0dfcae171ce6fa23055d5114a15b04dd27fe8db6b03712e19ba"
+    },
+    {
+      "qid": "bird:1317",
+      "gold": true,
+      "sql": "SELECT COUNT(DISTINCT m.member_id)\nFROM member AS m\nJOIN attendance AS a ON m.member_id = a.link_to_member\nJOIN event AS e ON a.link_to_event = e.event_id\nWHERE e.event_name = 'Women''s Soccer'\n  AND m.t_shirt_size = 'Medium'",
+      "request_key": "510d1d44e8e410aeba8a52a8af74c45e748cce59c2bac2b015528c23527c8d0f"
+    },
+    {
+      "qid": "bird:1359",
+      "gold": true,
+      "sql": "SELECT CAST(SUM(CASE WHEN event.event_name = 'Yearly Kickoff' THEN budget.amount END) AS REAL) /\n       SUM(CASE WHEN event.event_name = 'October Meeting' THEN budget.amount END)\nFROM budget\nJOIN event ON budget.link_to_event = event.event_id\nWHERE budget.category = 'Advertisement'",
+      "request_key": "5a731487ab0b0faf89cce717660fa98eb755315f6c526e19f510e68bf9a5fc5f"
+    },
+    {
+      "qid": "bird:1378",
+      "gold": true,
+      "sql": "SELECT MAX(spent) FROM budget",
+      "request_key": "50462b9170def04350ed4490f70379ba22cd3618c9e611535b591c54642ab263"
+    },
+    {
+      "qid": "bird:1401",
+      "gold": true,
+      "sql": "SELECT expense.cost\nFROM expense\nJOIN budget ON expense.link_to_budget = budget.budget_id\nJOIN event ON budget.link_to_event = event.event_id\nWHERE expense.expense_description = 'Posters'\n  AND event.event_name = 'September Speaker'",
+      "request_key": "31f2e36daec2bed5b7547c235498e65431bd5a7251817c1e14677e0061c8f0ad"
+    },
+    {
+      "qid": "bird:1427",
+      "gold": true,
+      "sql": "SELECT b.category\nFROM budget AS b\nJOIN event AS e ON b.link_to_event = e.event_id\nWHERE e.location = 'MU 215'\n  AND e.type = 'Guest Speaker'\n  AND b.spent = 0",
+      "request_key": "d45927a5f24924aaa8a7d8e0cc6a90cb0dc9ba7ba7903e29568f46c99c426fbf"
+    },
+    {
+      "qid": "bird:1501",
+      "gold": true,
+      "sql": "SELECT DISTINCT g.Country\nFROM gasstations AS g\nJOIN transactions_1k AS t\n  ON g.GasStationID = t.GasStationID\nWHERE t.Date LIKE '2012-08-%'",
+      "request_key": "12deed3e3fbf0dfc036a31b58fd68cb4ca9782bfa8470de8adb7182f716e1fa2"
+    },
+    {
+      "qid": "bird:1507",
+      "gold": true,
+      "sql": "SELECT DISTINCT t.Time\nFROM transactions_1k AS t\nJOIN gasstations AS g ON t.GasStationID = g.GasStationID\nWHERE g.ChainID = 11",
+      "request_key": "974e006fb2a1546cdd1865177ec5cecb00c78794a7ff666bb31b58e1badc5e0f"
+    },
+    {
+      "qid": "bird:1525",
+      "gold": true,
+      "sql": "SELECT 100.0 * COUNT(DISTINCT CASE WHEN c.Currency = 'EUR' THEN t.CustomerID END) / COUNT(DISTINCT t.CustomerID) AS percentage\nFROM transactions_1k AS t\nJOIN customers AS c ON t.CustomerID = c.CustomerID\nWHERE t.Date = '2012-08-25'",
+      "request_key": "7079f8f7e20bd4cb54ad6dcfd8d29423c13601c93ebf5b753e3fee872f880420"
+    },
+    {
+      "qid": "bird:17",
+      "gold": false,
+      "sql": "SELECT CharterNum, AvgScrWrite,\n       RANK() OVER (ORDER BY AvgScrWrite DESC) AS rank\nFROM satscores\nJOIN schools ON satscores.cds = schools.CDSCode\nWHERE AvgScrWrite > 499",
+      "request_key": "152f37e932ca0745356cb57ab086d3edc97bab0779f57086d5a2b1037dfd74f2"
+    },
+    {
+      "qid": "bird:189",
+      "gold": true,
+      "sql": "SELECT d.account_id\nFROM client AS c\nJOIN disp AS d ON c.client_id = d.client_id\nJOIN district AS di ON c.district_id = di.district_id\nWHERE c.gender = 'F'\nORDER BY c.birth_date ASC, di.A11 ASC\nLIMIT 1",
+      "request_key": "d31f9a90a70d3a7e43d585ce13ab8ba9efbe9d5079b68ffdd76518940e870478"
+    },
+    {
+      "qid": "bird:192",
+      "gold": true,
+      "sql": "SELECT AVG(l.amount)\nFROM loan AS l\nJOIN account AS a ON l.account_id = a.account_id\nWHERE l.status IN ('C', 'D')\n  AND a.frequency = 'POPLATEK PO OBRATU'",
+      "request_key": "1a5c0cee1d044fa07dbcc9020fd51b1d0e83c30fe5ed19e26c4b40283dca92da"
+    },
+    {
+      "qid": "bird:194",
+      "gold": false,
+      "sql": "SELECT DISTINCT\n  c.client_id,\n  CAST(strftime('%Y', 'now') AS INTEGER) - CAST(strftime('%Y', c.birth_date) AS INTEGER)\n    - (strftime('%m-%d', 'now') < strftime('%m-%d', c.birth_date)) AS age\nFROM client AS c\nJOIN disp AS d ON c.client_id = d.client_id\nJOIN card AS ca ON d.disp_id = ca.disp_id\nWHERE ca.type = 'gold'\n  AND d.type = 'OWNER'",
+      "request_key": "9ca7acc893cf5f746fa77633c2f8faa782dec6208cf8f435ce7abbda18b08bed"
+    },
+    {
+      "qid": "bird:197",
+      "gold": true,
+      "sql": "SELECT AVG(oxygen_count)\nFROM (\n  SELECT b.molecule_id,\n         SUM(a.element = 'o') AS oxygen_count\n  FROM (SELECT DISTINCT molecule_id FROM bond WHERE bond_type = '-') AS b\n  JOIN atom AS a ON b.molecule_id = a.molecule_id\n  GROUP BY b.molecule_id\n)",
+      "request_key": "9e07e93594c1b4ac16ce2e035254b841263a9feacc5efb6ed926e653caf0def5"
+    },
+    {
+      "qid": "bird:226",
+      "gold": false,
+      "sql": "SELECT printf('%.5f%%', 100.0 * SUM(bond_type = '=') / COUNT(bond_id)) AS percentage\nFROM bond\nWHERE molecule_id = 'TR008'",
+      "request_key": "ee97e12207e44e619e86cbb36dcda10e6ab49370943aa714cf19aa28a9aed269"
+    },
+    {
+      "qid": "bird:273",
+      "gold": false,
+      "sql": "SELECT CAST(SUM(atom.element = 'cl') AS REAL) / COUNT(molecule.molecule_id) AS percentage\nFROM molecule\nJOIN atom ON molecule.molecule_id = atom.molecule_id\nWHERE molecule.label = '+'",
+      "request_key": "86346ce1468a3420209a39056c7e53e4cdb4038efb327fbca376949a6d0af4be"
+    },
+    {
+      "qid": "bird:409",
+      "gold": true,
+      "sql": "SELECT COUNT(DISTINCT cards.id)\nFROM cards\nJOIN legalities ON cards.uuid = legalities.uuid\nJOIN rulings ON cards.uuid = rulings.uuid\nWHERE legalities.format = 'premodern'\n  AND rulings.text = 'This is a triggered mana ability.'\n  AND cards.side IS NULL",
+      "request_key": "6db3b885e3bf62af95461088764094b7f6294b4195c124e0a326d1974f7d1890"
+    },
+    {
+      "qid": "bird:469",
+      "gold": true,
+      "sql": "SELECT DISTINCT s.name\nFROM cards AS c\nJOIN sets AS s\n  ON c.setCode = s.code\nWHERE c.name = 'Angel of Mercy'\n  AND s.mtgoCode IS NOT NULL",
+      "request_key": "677841548bbe52bf7da72bb7cf6a1a8b6e9462853f0b8ef5e9b67daea5044a4b"
+    },
+    {
+      "qid": "bird:487",
+      "gold": true,
+      "sql": "SELECT 100.0 * SUM(CASE WHEN cardKingdomFoilId IS NOT NULL AND cardKingdomId IS NOT NULL THEN 1 ELSE 0 END) / SUM(CASE WHEN setCode = (SELECT code FROM sets WHERE name = 'Coldsnap') THEN 1 ELSE 0 END)\nFROM cards\nWHERE setCode = (SELECT code FROM sets WHERE name = 'Coldsnap')",
+      "request_key": "084169721921c6808340e9aee53d55f72ae62c4a6b9c0e1e6aae6048c352416f"
+    },
+    {
+      "qid": "bird:592",
+      "gold": true,
+      "sql": "SELECT COUNT(*)\nFROM (\n  SELECT UserId\n  FROM badges\n  GROUP BY UserId\n  HAVING COUNT(Name) > 5\n)",
+      "request_key": "9fb0b49e30750a999226244e24971a793c677ae89c571b163d4fbca0c5c3c620"
+    },
+    {
+      "qid": "bird:598",
+      "gold": true,
+      "sql": "SELECT 100.0 * (\n    SUM(CASE WHEN strftime('%Y', Date) = '2010' THEN 1 ELSE 0 END) -\n    SUM(CASE WHEN strftime('%Y', Date) = '2011' THEN 1 ELSE 0 END)\n) / COUNT(Name)\nFROM badges\nWHERE Name = 'Student'",
+      "request_key": "53c6fdc1298c0ef0fb74eada60c2e598e146e7c9f50b6e146da6ed2833ccfd00"
+    },
+    {
+      "qid": "bird:62",
+      "gold": true,
+      "sql": "SELECT COUNT(DISTINCT s.CDSCode)\nFROM schools AS s\nJOIN frpm AS f\n  ON s.CDSCode = f.CDSCode\nWHERE s.Charter = 0\n  AND s.County = 'Los Angeles'\n  AND f.\"Enrollment (K-12)\" > 0\n  AND f.\"Free Meal Count (K-12)\" * 100.0 / f.\"Enrollment (K-12)\" < 0.18",
+      "request_key": "1d27c70885db2a3c999ffabaa332cdb10937c835ba0abcee82345d37c633bded"
+    },
+    {
+      "qid": "bird:633",
+      "gold": true,
+      "sql": "SELECT p.Id\nFROM posts AS p\nJOIN users AS u ON p.OwnerUserId = u.Id\nWHERE u.DisplayName = 'slashnick'\nORDER BY p.AnswerCount DESC\nLIMIT 1",
+      "request_key": "c1e51c778977046b3abccfb8df021524c3ed32ff1b7ffd737d47892bc1887afe"
+    },
+    {
+      "qid": "bird:726",
+      "gold": false,
+      "sql": "SELECT superhero.superhero_name\nFROM superhero\nJOIN publisher ON superhero.publisher_id = publisher.id\nWHERE publisher.publisher_name = 'Marvel Comics'\nORDER BY superhero.height_cm DESC",
+      "request_key": "cf6362ad18455a42e40fed300093efe6bee215f8a5b30833127ab77ca0d2e795"
+    },
+    {
+      "qid": "bird:728",
+      "gold": true,
+      "sql": "SELECT c.colour,\n       COUNT(s.id) AS superhero_count,\n       RANK() OVER (ORDER BY COUNT(s.id) DESC) AS rank\nFROM superhero AS s\nJOIN publisher AS p ON s.publisher_id = p.id\nJOIN colour AS c ON s.eye_colour_id = c.id\nWHERE p.publisher_name = 'Marvel Comics'\nGROUP BY c.colour\nORDER BY superhero_count DESC",
+      "request_key": "57928c3e696ef9bb6f90a431015685c7d4d50f3325a33bfa9e90586bf9dd3b4d"
+    },
+    {
+      "qid": "bird:732",
+      "gold": true,
+      "sql": "SELECT p.publisher_name\nFROM publisher AS p\nJOIN superhero AS s ON p.id = s.publisher_id\nJOIN hero_attribute AS ha ON s.id = ha.hero_id\nJOIN attribute AS a ON ha.attribute_id = a.id\nWHERE a.attribute_name = 'Speed'\n  AND ha.attribute_value = (\n    SELECT MIN(ha2.attribute_value)\n    FROM hero_attribute AS ha2\n    JOIN attribute AS a2 ON ha2.attribute_id = a2.id\n    WHERE a2.attribute_name = 'Speed'\n  )",
+      "request_key": "fe96c8756d04033e43801d0a2f8abfe367c16a434341f14403e48cbe2c0b3603"
+    },
+    {
+      "qid": "bird:761",
+      "gold": true,
+      "sql": "SELECT s.superhero_name\nFROM superhero AS s\nJOIN gender AS g ON s.gender_id = g.id\nWHERE g.gender = 'Male'\n  AND s.weight_kg > 0.79 * (\n    SELECT AVG(weight_kg)\n    FROM superhero\n  )",
+      "request_key": "82add72ffc677194aeda69c5c2f1799153df3480c0861e745888e781fe64ebd0"
+    },
+    {
+      "qid": "bird:766",
+      "gold": true,
+      "sql": "SELECT s.full_name\nFROM superhero AS s\nJOIN hero_attribute AS ha ON s.id = ha.hero_id\nJOIN attribute AS a ON ha.attribute_id = a.id\nWHERE a.attribute_name = 'Strength'\n  AND ha.attribute_value = (\n    SELECT MAX(ha2.attribute_value)\n    FROM hero_attribute AS ha2\n    JOIN attribute AS a2 ON ha2.attribute_id = a2.id\n    WHERE a2.attribute_name = 'Strength'\n  )",
+      "request_key": "9e6bf5134d546ad876cf90573a0aebd427cddfc33e9e48cf26109f052fcd6447"
+    },
+    {
+      "qid": "bird:82",
+      "gold": true,
+      "sql": "SELECT GSoffered\nFROM schools\nORDER BY ABS(Longitude) DESC\nLIMIT 1",
+      "request_key": "dd390c08aa5cee5a2ab4e824f9f9f4b7c97726b839baa8fe0f3829d929e0616a"
+    },
+    {
+      "qid": "bird:822",
+      "gold": true,
+      "sql": "SELECT COUNT(*)\nFROM superhero\nJOIN colour ON superhero.skin_colour_id = colour.id\nJOIN alignment ON superhero.alignment_id = alignment.id\nWHERE colour.colour = 'Green'\n  AND alignment.alignment = 'Bad'",
+      "request_key": "97dd5dc3ba816eeb77623f2999df66ae5f7e2c0b337dd2d999aee26a932d18b3"
+    },
+    {
+      "qid": "bird:83",
+      "gold": true,
+      "sql": "SELECT s.City, COUNT(DISTINCT s.CDSCode) AS school_count\nFROM schools AS s\nJOIN frpm AS f\n  ON s.CDSCode = f.CDSCode\nWHERE s.GSoffered = 'K-8'\n  AND f.\"NSLP Provision Status\" = 'Multiple Provision Types'\nGROUP BY s.City",
+      "request_key": "283d38c2a4b2b60dbfe3851219f5af7441d0511f470413db4207783eb34af898"
+    },
+    {
+      "qid": "bird:930",
+      "gold": true,
+      "sql": "SELECT races.name\nFROM results\nJOIN drivers ON results.driverId = drivers.driverId\nJOIN races ON results.raceId = races.raceId\nWHERE drivers.forename = 'Lewis'\n  AND drivers.surname = 'Hamilton'\n  AND results.rank = (\n    SELECT MIN(r2.rank)\n    FROM results AS r2\n    JOIN drivers AS d2 ON r2.driverId = d2.driverId\n    WHERE d2.forename = 'Lewis'\n      AND d2.surname = 'Hamilton'\n  )",
+      "request_key": "bdb3670e5cb65809a8c94536ea9f719a3fddf8ae8a4c429b8ee41e951be26135"
+    },
+    {
+      "qid": "bird:94",
+      "gold": true,
+      "sql": "SELECT\n  (\n    SELECT account.account_id\n    FROM client\n    JOIN disp ON client.client_id = disp.client_id\n    JOIN account ON disp.account_id = account.account_id\n    WHERE client.gender = 'F'\n    ORDER BY client.birth_date ASC\n    LIMIT 1\n  ) AS account_id,\n  MAX(A11) - MIN(A11) AS gap\nFROM district",
+      "request_key": "36f50bd56628f6b518152d75093755c59264131e05f053f027796cb35fc05197"
+    },
+    {
+      "qid": "bird:964",
+      "gold": true,
+      "sql": "SELECT code\nFROM drivers\nWHERE nationality = 'American'",
+      "request_key": "4f8e9242b960d0b3152f44ca0e0df3862db769dadac42dc4fbadea83f38db649"
+    },
+    {
+      "qid": "bird:981",
+      "gold": false,
+      "sql": "SELECT strftime('%Y', r.date), r.name, r.date, r.time\nFROM qualifying q\nJOIN races r ON q.raceId = r.raceId\nWHERE q.driverId = (\n  SELECT driverId\n  FROM drivers\n  ORDER BY dob DESC\n  LIMIT 1\n)\nORDER BY r.date ASC\nLIMIT 1",
+      "request_key": "75e4b051026e9d17f817f960ef0ded176427446cb5d846313d4ffd999e725c37"
+    },
+    {
+      "qid": "clambsql:1141",
+      "gold": true,
+      "sql": "SELECT ProjectName\nFROM Development_Projects\nWHERE ProjectName IN ('Airport Expansion', 'Renovation')\n  AND Increased_Capacity = '1000 Passengers per Day'",
+      "request_key": "0a315bf932142a51332913b8d843d5e1fbc3eb96857a356e133c55ab1a384410"
+    },
+    {
+      "qid": "clambsql:1195",
+      "gold": false,
+      "sql": "SELECT Description\nFROM Photos\nWHERE SubjectID = (\n    SELECT ID\n    FROM Subjects\n    WHERE Name = 'history'\n)\nUNION\nSELECT Description\nFROM Illustrations\nWHERE SubjectID = (\n    SELECT ID\n    FROM Subjects\n    WHERE Name = 'history'\n)",
+      "request_key": "7e144484c0eb76300d7c3fcd15b3f23595225761046992057e2344a205097cc7"
+    },
+    {
+      "qid": "clambsql:1226",
+      "gold": false,
+      "sql": "SELECT af.name, fs.species_name\nFROM Aquaculture_Facility AS af\nJOIN Aquaculture_Facility_Fish_Species AS affs\n  ON af.id = affs.aquaculture_facility_id\nJOIN Fish_Species AS fs\n  ON affs.fish_species_id = fs.id",
+      "request_key": "8ba58ad3a6b40b735f878d5160141cb037f0100f4e4e96e081c7a7c71813c9ad"
+    },
+    {
+      "qid": "clambsql:1253",
+      "gold": false,
+      "sql": "SELECT r.routeName, rr.restrictionsType\nFROM Routes AS r\nJOIN Routes_Restrictions AS rr ON r.id = rr.routesId",
+      "request_key": "9c5db4fc978b680a0929cc369735aace692118b33d42efe7ce04a79e2b4afc8e"
+    },
+    {
+      "qid": "clambsql:1270",
+      "gold": false,
+      "sql": "SELECT s.price\nFROM Real_Estate_Agencies AS rea\nJOIN Real_Estate_Agencies_Services AS reas\n  ON rea.agency_id = reas.real_estate_agency_id\nJOIN Services AS s\n  ON reas.service_id = s.service_id",
+      "request_key": "2b5008a91affaf31f44424900fc6f290753ec1997c55ddeab3613054dc994397"
+    },
+    {
+      "qid": "clambsql:1312",
+      "gold": true,
+      "sql": "SELECT c.name, i.description\nFROM Community_Development_Corporations AS c\nJOIN Community_Development_Corporations_Initiatives AS cdi\n  ON c.id = cdi.community_development_corporation_id\nJOIN Initiatives AS i\n  ON cdi.initiative_id = i.id",
+      "request_key": "ebd3fb0f5bed044ab07db01eab91e40fb1f4fce2b52cb0da04718df369bbe1dd"
+    },
+    {
+      "qid": "clambsql:1382",
+      "gold": false,
+      "sql": "SELECT Fleets.fleetName, Fleets.capacity\nFROM Airlines\nJOIN Airlines_Fleets ON Airlines.id = Airlines_Fleets.airlineId\nJOIN Fleets ON Airlines_Fleets.fleetId = Fleets.id",
+      "request_key": "7e627632f5ba4f6e247faae53313b03db7cc97c71257057d17b0eb730c170e12"
+    },
+    {
+      "qid": "clambsql:211",
+      "gold": true,
+      "sql": "SELECT ap.degree_program_id, ap.degree_summary_name\nFROM Student_Enrolment AS se\nJOIN Academic_Programs AS ap\n  ON se.degree_program_id = ap.degree_program_id\nGROUP BY ap.degree_program_id, ap.degree_summary_name\nORDER BY COUNT(DISTINCT se.student_id) DESC\nLIMIT 1",
+      "request_key": "938f3bcd4e925d022353f4e6a3bc948b57fe723713558d00bc77a79f7cbbc0f5"
+    },
+    {
+      "qid": "clambsql:297",
+      "gold": false,
+      "sql": "SELECT PetType, AVG(weight) AS average_weight\nFROM Pets\nGROUP BY PetType",
+      "request_key": "94d7eb4b3019348f6e3d5667dc0bb0a86f7e89cc2a6b90ecc972b084f09cedb2"
+    },
+    {
+      "qid": "clambsql:299",
+      "gold": true,
+      "sql": "SELECT f.Template_Type_Code\nFROM Forms AS f\nJOIN Documents AS d ON f.Template_ID = d.Template_ID\nGROUP BY f.Template_Type_Code\nORDER BY COUNT(d.Document_ID) DESC\nLIMIT 1",
+      "request_key": "c1897c33ca8397e68eee29fad0bceedf7eb285cc11ee6afdebfb4da6c31f91bb"
+    },
+    {
+      "qid": "clambsql:355",
+      "gold": false,
+      "sql": "SELECT COUNT(DISTINCT CountryCode)\nFROM countrylanguage\nWHERE Language IN ('English', 'Dutch')\nGROUP BY CountryCode\nHAVING COUNT(DISTINCT Language) = 2",
+      "request_key": "320c1530f0a8e80f63a73e420de4100e522dc45f69fcac80fdac2717b66a42f4"
+    },
+    {
+      "qid": "clambsql:611",
+      "gold": false,
+      "sql": "SELECT Code, Name\nFROM Products AS p\nWHERE Price = (\n  SELECT MIN(Price)\n  FROM Products\n  WHERE Manufacturer = p.Manufacturer\n)",
+      "request_key": "cad67d04e58b92fc38c96e1d43a0cf8387d3351240028990867ae313010dafc7"
+    },
+    {
+      "qid": "clambsql:658",
+      "gold": true,
+      "sql": "SELECT investor_id, AVG(share_count) AS avg_share_count\nFROM Transactions\nGROUP BY investor_id",
+      "request_key": "0a3ab67be1aa4263a7548a80478a6285ff06ab4caef9b05660061551286f46bb"
+    },
+    {
+      "qid": "clambsql:661",
+      "gold": true,
+      "sql": "SELECT avg_gradepoint\nFROM enrolled_in_gradeconversion_student_gradepoint\nWHERE lname = 'Smith'",
+      "request_key": "21072569f119fef1c8d2ffb9eb50f00d8ff21a5d62e8018c85c77758fb3b1ff4"
+    },
+    {
+      "qid": "clambsql:672",
+      "gold": false,
+      "sql": "SELECT HoursPerWeek, GamesPlayed\nFROM SportsInfo\nJOIN Student ON SportsInfo.StuID = Student.StuID\nWHERE Fname = 'David' AND LName = 'Shieber'",
+      "request_key": "894194892a3664c5f630e71664ea71c6d4840e64c53b2feb8a15b853c5d5ad23"
+    },
+    {
+      "qid": "clambsql:674",
+      "gold": true,
+      "sql": "SELECT AVG(Money_Requested) FROM entrepreneur",
+      "request_key": "a2dc0352288e992df97e4c663cc4462150bc5193c16d8824da2c2ca06af02353"
+    },
+    {
+      "qid": "clambsql:700",
+      "gold": true,
+      "sql": "SELECT MAX(points) FROM climber WHERE country = 'United Kingdom'",
+      "request_key": "a427883765a5d9009860677d08b1b3b04d396283bcbf10f6f31767866678aaab"
+    },
+    {
+      "qid": "clambsql:701",
+      "gold": true,
+      "sql": "SELECT avg_no_of_customers\nFROM bank_no_of_customers",
+      "request_key": "0dd4f15d1bca37901cbc344333113a0ca22940278b88e11af3842bf6e361f899"
+    },
+    {
+      "qid": "clambsql:706",
+      "gold": true,
+      "sql": "SELECT avg_total\nFROM body_builder_people_total\nWHERE height > 200",
+      "request_key": "b3875b8f9c0f4dbd38d0dd8026e59a17e547be42ccaf672cc351d9607c700a75"
+    },
+    {
+      "qid": "clambsql:708",
+      "gold": true,
+      "sql": "SELECT AVG(d.access_count)\nFROM Documents AS d\nJOIN Document_Functional_Areas AS dfa\n  ON d.document_code = dfa.document_code\nJOIN Functional_Areas AS fa\n  ON dfa.functional_area_code = fa.functional_area_code\nWHERE fa.functional_area_description = 'Acknowledgement'",
+      "request_key": "e385dc4aa2b9893151a9c851c8695c2b864d71017f31cc14aa272774e94a93b7"
+    },
+    {
+      "qid": "clambsql:714",
+      "gold": true,
+      "sql": "SELECT sum_amount_settled\nFROM settlements_amount_settled",
+      "request_key": "8fe5f8e7d5770ee87b2ad7fa7672274daaec2c4858107f10b34da9c63d0bbd11"
+    },
+    {
+      "qid": "clambsql:716",
+      "gold": true,
+      "sql": "SELECT SUM(oi.Order_Quantity)\nFROM Order_Items AS oi\nJOIN Products AS p ON oi.Product_ID = p.Product_ID\nWHERE p.Product_Name LIKE '%photo%'",
+      "request_key": "019565e6a75cb5818e38c86ce523211926905c570b1fd2d44f9bb8af42ce566f"
+    },
+    {
+      "qid": "clambsql:726",
+      "gold": true,
+      "sql": "SELECT max_followers, sum_followers\nFROM user_profiles_followers",
+      "request_key": "a2fb7512de7fb681738b4da544730ccd6de564a09fc971081c3d00fcc4bd8037"
+    },
+    {
+      "qid": "clambsql:73",
+      "gold": true,
+      "sql": "SELECT name\nFROM Highschooler\nWHERE ID NOT IN (\n  SELECT student_id\n  FROM Friend\n)",
+      "request_key": "65458e44648b8c40d4f91375f3a2bd98a17bf24ce7633923eba689455941be1e"
+    },
+    {
+      "qid": "clambsql:730",
+      "gold": true,
+      "sql": "SELECT employee_id, max_end_date\nFROM job_history_end_date",
+      "request_key": "8b56e9c8e8156fccbf4a8cfe25b1b9d88ad7a2c1fe4b3435d136c9df38d65a0e"
+    },
+    {
+      "qid": "clambsql:756",
+      "gold": true,
+      "sql": "SELECT SUM(oi.Order_Quantity)\nFROM Order_Items AS oi\nJOIN Products AS p ON oi.Product_ID = p.Product_ID\nWHERE p.Product_Name = 'photo'",
+      "request_key": "233b586d19bdd784e6f9bb912f36a62a31cbe9eb8e1f65cf5bb431094542f00f"
+    },
+    {
+      "qid": "clambsql:772",
+      "gold": false,
+      "sql": "SELECT name, sex\nFROM people_candidate_oppose_rate",
+      "request_key": "ea342a1dd9d95090558d24f57ebd44c93d6fa1619d05f70bf1c723d266a45dc2"
+    },
+    {
+      "qid": "clambsql:773",
+      "gold": true,
+      "sql": "SELECT avg_attendance\nFROM performance_attendance",
+      "request_key": "3b45b4e9da7036395eb85943578e10627c2f729b05d4788a5652a4484470cf82"
+    },
+    {
+      "qid": "clambsql:784",
+      "gold": true,
+      "sql": "SELECT SUM(maxOccupancy)\nFROM Rooms\nWHERE decor = 'modern'",
+      "request_key": "12ff6c0c35c8554702955b19c05416b22656444a1d205de9f761b6aa070661d3"
+    },
+    {
+      "qid": "clambsql:788",
+      "gold": true,
+      "sql": "SELECT product_type_code, AVG(product_price) AS average_price\nFROM Products\nGROUP BY product_type_code",
+      "request_key": "26de7c7273b1b47b9680bf94a5004d375a6e67822f6570937e0db3b6ab129c36"
+    }
+  ]
+}

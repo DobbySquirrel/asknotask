@@ -1,0 +1,13 @@
+{
+  "n": 1400,
+  "correct": {
+    "intended": 825
+  },
+  "ex": {
+    "intended": 58.92857142857143
+  },
+  "gold_key": "intended",
+  "source": "synced from eval_rescored/deepeye/ambisql.json (evaluator.ex gold_timeout=600)",
+  "q": 0.0,
+  "q_total": 0
+}

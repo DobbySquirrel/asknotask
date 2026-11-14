@@ -1,0 +1,156 @@
+{
+  "note": "Condition B agreement and accept rates used in the paper. Extracted from the former outputs/user_study/paper_summary/summary.json on 2026-11-11, before that file was moved out of the public tree. Do not use the old summary for EX, flips, McNemar, usefulness, or clarity; those official numbers are in replay_eval/paired_rescore_v1/ and rescored_v1/.",
+  "n_questions": 100,
+  "n_answer_sheets": 10,
+  "n_bird_arcwise": 40,
+  "n_ambrosia": 30,
+  "n_clambsql": 30,
+  "asked": {
+    "ours": 211,
+    "ambisql": 128
+  },
+  "agree": {
+    "ours": {
+      "match": 143,
+      "total": 184,
+      "pct": 77.71739130434783
+    },
+    "ambisql": {
+      "match": 69,
+      "total": 111,
+      "pct": 62.16216216216216
+    }
+  },
+  "settled": {
+    "accepted": 79,
+    "total": 87,
+    "pct": 90.80459770114942
+  },
+  "surveys": [
+    {
+      "system": "System B",
+      "group": 0,
+      "burden": 3,
+      "willing": 2
+    },
+    {
+      "system": "System A",
+      "group": 0,
+      "burden": 3,
+      "willing": 3
+    },
+    {
+      "system": "System A",
+      "group": 1,
+      "burden": 4,
+      "willing": 2
+    },
+    {
+      "system": "System B",
+      "group": 1,
+      "burden": 3,
+      "willing": 2
+    },
+    {
+      "system": "System B",
+      "group": 2,
+      "burden": 3,
+      "willing": 2
+    },
+    {
+      "system": "System A",
+      "group": 2,
+      "burden": 4,
+      "willing": 2
+    },
+    {
+      "system": "System A",
+      "group": 3,
+      "burden": 4,
+      "willing": 3
+    },
+    {
+      "system": "System B",
+      "group": 3,
+      "burden": 2,
+      "willing": 2
+    },
+    {
+      "system": "System B",
+      "group": 4,
+      "burden": 3,
+      "willing": 3
+    },
+    {
+      "system": "System A",
+      "group": 4,
+      "burden": 3,
+      "willing": 3
+    },
+    {
+      "system": "System A",
+      "group": 5,
+      "burden": 3,
+      "willing": 4
+    },
+    {
+      "system": "System B",
+      "group": 5,
+      "burden": 3,
+      "willing": 2
+    },
+    {
+      "system": "System B",
+      "group": 6,
+      "burden": 3,
+      "willing": 2
+    },
+    {
+      "system": "System A",
+      "group": 6,
+      "burden": 4,
+      "willing": 3
+    },
+    {
+      "system": "System A",
+      "group": 7,
+      "burden": 2,
+      "willing": 4
+    },
+    {
+      "system": "System B",
+      "group": 7,
+      "burden": 4,
+      "willing": 2
+    },
+    {
+      "system": "System B",
+      "group": 8,
+      "burden": 3,
+      "willing": 3
+    },
+    {
+      "system": "System A",
+      "group": 8,
+      "burden": 3,
+      "willing": 3
+    },
+    {
+      "system": "System A",
+      "group": 9,
+      "burden": 4,
+      "willing": 2
+    },
+    {
+      "system": "System B",
+      "group": 9,
+      "burden": 2,
+      "willing": 3
+    }
+  ],
+  "printed": {
+    "agree_ours": "143/184=77.7%",
+    "agree_ambisql": "69/111=62.2%",
+    "accept": "79/87=90.8%"
+  }
+}

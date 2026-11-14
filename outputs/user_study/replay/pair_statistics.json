@@ -1,0 +1,122 @@
+{
+  "metrics": {
+    "never_ask_control": {
+      "never_ask": {
+        "n": 100,
+        "n_hit": 61,
+        "ex_percent": 61.0,
+        "sql_execution_errors": 0
+      }
+    },
+    "sim_visible": {
+      "ours": {
+        "n": 100,
+        "n_hit": 74,
+        "ex_percent": 74.0,
+        "sql_execution_errors": 1
+      },
+      "ambisql": {
+        "n": 100,
+        "n_hit": 68,
+        "ex_percent": 68.0,
+        "sql_execution_errors": 0
+      }
+    },
+    "human_internal": {
+      "ours": {
+        "n": 100,
+        "n_hit": 79,
+        "ex_percent": 79.0,
+        "sql_execution_errors": 1
+      },
+      "ambisql": {
+        "n": 100,
+        "n_hit": 71,
+        "ex_percent": 71.0,
+        "sql_execution_errors": 0
+      }
+    }
+  },
+  "human_vs_sim": {
+    "ours": {
+      "delta_pp": 5.0,
+      "matrix": {
+        "rows": [
+          "sim_ok",
+          "sim_fail"
+        ],
+        "cols": [
+          "human_ok",
+          "human_fail"
+        ],
+        "cells": [
+          [
+            73,
+            1
+          ],
+          [
+            6,
+            20
+          ]
+        ]
+      },
+      "mcnemar": {
+        "n": 100,
+        "only_a": 1,
+        "only_b": 6,
+        "agree_both_true": 73,
+        "agree_both_false": 20,
+        "p_exact": 0.125
+      }
+    },
+    "ambisql": {
+      "delta_pp": 3.0,
+      "matrix": {
+        "rows": [
+          "sim_ok",
+          "sim_fail"
+        ],
+        "cols": [
+          "human_ok",
+          "human_fail"
+        ],
+        "cells": [
+          [
+            67,
+            1
+          ],
+          [
+            4,
+            28
+          ]
+        ]
+      },
+      "mcnemar": {
+        "n": 100,
+        "only_a": 1,
+        "only_b": 4,
+        "agree_both_true": 67,
+        "agree_both_false": 28,
+        "p_exact": 0.375
+      }
+    }
+  },
+  "ours_vs_ambisql": {
+    "sim_visible": {
+      "n": 100,
+      "only_a": 18,
+      "only_b": 12,
+      "agree_both_true": 56,
+      "agree_both_false": 14,
+      "p_exact": 0.361595
+    },
+    "human_internal": {
+      "n": 100,
+      "only_a": 19,
+      "only_b": 11,
+      "agree_both_true": 60,
+      "agree_both_false": 10,
+      "p_exact": 0.200488
+    }
+  }
+}

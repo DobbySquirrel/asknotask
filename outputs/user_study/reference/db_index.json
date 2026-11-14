@@ -1,0 +1,702 @@
+{
+  "ambrosia:695": {
+    "db_id": "attachment_1tab_val_visual_storytelling",
+    "db_path": "databases/ambrosia/attachment_1tab_val_visual_storytelling/attachment_1tab_val_visual_storytelling.sqlite",
+    "gold_sql": "SELECT Articles.title \nFROM Articles\nWHERE (Articles.visualStorytelling = \"Photo\" OR Articles.visualStorytelling = \"Video\") AND Articles.articleType = \"Technology\"",
+    "dataset": "ambrosia",
+    "gold_fp": "820edc065f80de4a7fbf5293627e2e8007d52bf4"
+  },
+  "bird:1068": {
+    "db_id": "european_football_2",
+    "db_path": "databases/bird/european_football_2/european_football_2.sqlite",
+    "gold_sql": "SELECT AVG(t2.overall_rating) AS avg_rating\nFROM `Player` AS t1\nJOIN `Player_Attributes` AS t2 ON t1.player_api_id = t2.player_api_id\nWHERE t1.height > 170\n  AND strftime('%Y', t2.`date`) BETWEEN '2010' AND '2015';",
+    "dataset": "bird",
+    "gold_fp": "23ee504f70245fc8ade91a28901f2d89ebd9ea33"
+  },
+  "bird:930": {
+    "db_id": "formula_1",
+    "db_path": "databases/bird/formula_1/formula_1.sqlite",
+    "gold_sql": "SELECT name FROM races WHERE raceId IN ( SELECT raceId FROM results WHERE rank = 0 AND driverId = ( SELECT driverId FROM drivers WHERE forename = 'Lewis' AND surname = 'Hamilton' ) )",
+    "dataset": "bird",
+    "gold_fp": "b13ef02bca7ffda03d096a7799150ab06f6e12d8"
+  },
+  "ambrosia:3960": {
+    "db_id": "vague_2cols_costumier",
+    "db_path": "databases/ambrosia/vague_2cols_costumier/vague_2cols_costumier.sqlite",
+    "gold_sql": "SELECT \nCostumes.Costume_Designer,\nCostumes.Costumes\nFROM Costumes\nWHERE Budget < '750000'",
+    "dataset": "ambrosia",
+    "gold_fp": "da3b1a1bc80f5c20c808a2589b7c87a62e222979"
+  },
+  "bird:728": {
+    "db_id": "superhero",
+    "db_path": "databases/bird/superhero/superhero.sqlite",
+    "gold_sql": "SELECT colour.colour AS EyeColor, COUNT(superhero.id) AS Count, RANK() OVER (ORDER BY COUNT(superhero.id) DESC) AS PopularityRank FROM superhero INNER JOIN colour ON superhero.eye_colour_id = colour.id INNER JOIN publisher ON superhero.publisher_id = publisher.id WHERE publisher.publisher_name = 'Marvel Comics' GROUP BY colour.colour",
+    "dataset": "bird",
+    "gold_fp": "4e7d1531b87c9e6eb121ed06be06707a5c2b0feb"
+  },
+  "ambrosia:2709": {
+    "db_id": "scope_movie_sets_equipment",
+    "db_path": "databases/ambrosia/scope_movie_sets_equipment/scope_movie_sets_equipment.sqlite",
+    "gold_sql": "SELECT Equipment.name  from Movie_sets_equipment join Equipment on Movie_sets_equipment.equipment_id = Equipment.id join Movie_sets on Movie_sets_equipment.movie_set_id = Movie_sets.id   GROUP BY Movie_sets_equipment.equipment_id HAVING COUNT(DISTINCT Movie_sets_equipment.movie_set_id) = (SELECT COUNT(*) FROM  Movie_sets)",
+    "dataset": "ambrosia",
+    "gold_fp": "247b3b785876d2be3c92a9dee8950a2890e8e488"
+  },
+  "clambsql:211": {
+    "db_id": "student_transcripts_tracking",
+    "db_path": "databases/clambsql/student_transcripts_tracking/student_transcripts_tracking.sqlite",
+    "gold_sql": "select t1.degree_program_id, t1.degree_summary_name from academic_programs as t1 join student_enrolment as t2 on t1.degree_program_id = t2.degree_program_id group by t1.degree_program_id order by count(*) desc limit 1",
+    "dataset": "clambsql",
+    "gold_fp": "d8b91d282f525983d6c790d49bc374a9cdb3f71d"
+  },
+  "clambsql:714": {
+    "db_id": "insurance_policies",
+    "db_path": "databases/clambsql/insurance_policies/insurance_policies.sqlite",
+    "gold_sql": "select sum_amount_settled from settlements_amount_settled",
+    "dataset": "clambsql",
+    "gold_fp": "df5b35e6f8b042a547e34b616ee36617a62620be"
+  },
+  "bird:469": {
+    "db_id": "card_games",
+    "db_path": "databases/bird/card_games/card_games.sqlite",
+    "gold_sql": "SELECT DISTINCT T2.name FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE T1.name = 'Angel of Mercy' AND T2.mtgoCode IS NOT NULL",
+    "dataset": "bird",
+    "gold_fp": "f20972f62761ea098b7d9a8ec0cf1709fe163668"
+  },
+  "clambsql:1382": {
+    "db_id": "Airport",
+    "db_path": "databases/clambsql/Airport/scope_airlines_fleets.sqlite",
+    "gold_sql": "SELECT Fleets.fleetName, Fleets.capacity from Airlines_Fleets join Fleets on Airlines_Fleets.fleetId = Fleets.id join Airlines on Airlines_Fleets.airlineId = Airlines.id GROUP BY Airlines_Fleets.fleetId HAVING COUNT(DISTINCT Airlines_Fleets.airlineId) = (SELECT COUNT(*) FROM Airlines)",
+    "dataset": "clambsql",
+    "gold_fp": "2c5817779e1bad049bbe6889da800c37a45b4a57"
+  },
+  "bird:1507": {
+    "db_id": "debit_card_specializing",
+    "db_path": "databases/bird/debit_card_specializing/debit_card_specializing.sqlite",
+    "gold_sql": "SELECT DISTINCT T1.Time FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T2.ChainID = 11",
+    "dataset": "bird",
+    "gold_fp": "22fcb055f5e183d420daa0763486623c3ec78c6e"
+  },
+  "ambrosia:3733": {
+    "db_id": "vague_2cols_founding_date",
+    "db_path": "databases/ambrosia/vague_2cols_founding_date/vague_2cols_founding_date.sqlite",
+    "gold_sql": "SELECT Name, Founding_Year\nFROM Financial_Institutions\nORDER BY Total_Liabilities\nLIMIT 1",
+    "dataset": "ambrosia",
+    "gold_fp": "47d8e17ba3e708fa03734ec2f5db862dc57b23d7"
+  },
+  "clambsql:772": {
+    "db_id": "candidate_poll",
+    "db_path": "databases/clambsql/candidate_poll/candidate_poll.sqlite",
+    "gold_sql": "select name, sex, min_oppose_rate from people_candidate_oppose_rate",
+    "dataset": "clambsql",
+    "gold_fp": "0628162e8cc0f032c0862926d5512152783122ac"
+  },
+  "bird:732": {
+    "db_id": "superhero",
+    "db_path": "databases/bird/superhero/superhero.sqlite",
+    "gold_sql": "SELECT T2.publisher_name FROM superhero AS T1 INNER JOIN publisher AS T2 ON T1.publisher_id = T2.id INNER JOIN hero_attribute AS T3 ON T1.id = T3.hero_id INNER JOIN attribute AS T4 ON T3.attribute_id = T4.id WHERE T4.attribute_name = 'Speed' ORDER BY T3.attribute_value LIMIT 1",
+    "dataset": "bird",
+    "gold_fp": "660cfacbedd5ebd9d12f5b727542eca0ccee21cd"
+  },
+  "bird:83": {
+    "db_id": "california_schools",
+    "db_path": "databases/bird/california_schools/california_schools.sqlite",
+    "gold_sql": "SELECT s.City, COUNT(*) AS school_count FROM schools s JOIN frpm f ON s.CDSCode = f.CDSCode WHERE s.GSoffered = 'K-8' AND f.\"NSLP Provision Status\" = 'Multiple Provision Types' GROUP BY s.City",
+    "dataset": "bird",
+    "gold_fp": "d74ccf9212e1e589cbd4972370de900fcc058939"
+  },
+  "clambsql:355": {
+    "db_id": "world_1",
+    "db_path": "databases/clambsql/world_1/world_1.sqlite",
+    "gold_sql": "select count(*) from (select t1.name from state as t1 join countrylanguage as t2 on t1.code = t2.countrycode where t2.language = 'English' intersect select t1.name from state as t1 join countrylanguage as t2 on t1.code = t2.countrycode where t2.language = 'Dutch')",
+    "dataset": "clambsql",
+    "gold_fp": "f53ce3883d7d617d7e0408a1944e2b0221db1841"
+  },
+  "ambrosia:1807": {
+    "db_id": "scope_streamings_captions_and_subtitles",
+    "db_path": "databases/ambrosia/scope_streamings_captions_and_subtitles/scope_streamings_captions_and_subtitles.sqlite",
+    "gold_sql": "SELECT Captions_and_subtitles.language  from Streamings_captions_and_subtitles join Captions_and_subtitles on Streamings_captions_and_subtitles.captions_and_subtitles_id = Captions_and_subtitles.caption_id join Streamings on Streamings_captions_and_subtitles.streamings_id = Streamings.streaming_id   GROUP BY Streamings_captions_and_subtitles.captions_and_subtitles_id HAVING COUNT(DISTINCT Streamings_captions_and_subtitles.streamings_id) = (SELECT COUNT(*) FROM  Streamings)",
+    "dataset": "ambrosia",
+    "gold_fp": "c893a013f93f5e1e3ce09636f003fd452a01dfbe"
+  },
+  "bird:94": {
+    "db_id": "financial",
+    "db_path": "databases/bird/financial/financial.sqlite",
+    "gold_sql": "SELECT T1.account_id , ( SELECT MAX(A11) - MIN(A11) FROM district ) FROM account AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id INNER JOIN disp AS T3 ON T1.account_id = T3.account_id INNER JOIN client AS T4 ON T3.client_id = T4.client_id WHERE T4.client_id = ( SELECT client_id FROM client WHERE gender = 'F' ORDER BY birth_date ASC LIMIT 1 ) ORDER BY T2.A11 DESC LIMIT 1",
+    "dataset": "bird",
+    "gold_fp": "e5b98480549d24d67e00e05072d3d2432e423bad"
+  },
+  "clambsql:708": {
+    "db_id": "document_management",
+    "db_path": "databases/clambsql/document_management/document_management.sqlite",
+    "gold_sql": "select avg(t1.access_count) from documents as t1 join document_functional_areas as t2 on t1.document_code = t2.document_code join functional_areas as t3 on t2.functional_area_code = t3.functional_area_code where t3.functional_area_description = 'Acknowledgement'",
+    "dataset": "clambsql",
+    "gold_fp": "2028d92ecfbbb1ae44197b2ad691ada5762f4cfc"
+  },
+  "ambrosia:2787": {
+    "db_id": "vague_2tabs_qualifications",
+    "db_path": "databases/ambrosia/vague_2tabs_qualifications/vague_2tabs_qualifications.sqlite",
+    "gold_sql": "select level_name, count(*) from Degree_Level join Job_Post on Job_Post.degree_level_id = Degree_Level.id group by level_name",
+    "dataset": "ambrosia",
+    "gold_fp": "617f1abb110c971a1af7436dbee6886c5a5ff1cc"
+  },
+  "ambrosia:1696": {
+    "db_id": "scope_streaming_service_customer_support",
+    "db_path": "databases/ambrosia/scope_streaming_service_customer_support/scope_streaming_service_customer_support.sqlite",
+    "gold_sql": "SELECT customer_support.description  from streaming_service_customer_support join customer_support on streaming_service_customer_support.customer_support_id = customer_support.id join streaming_service on streaming_service_customer_support.streaming_service_id = streaming_service.id   GROUP BY streaming_service_customer_support.customer_support_id HAVING COUNT(DISTINCT streaming_service_customer_support.streaming_service_id) = (SELECT COUNT(*) FROM  streaming_service)",
+    "dataset": "ambrosia",
+    "gold_fp": "e51d85c5a572bde9b1897d814cca4fd0a16a7cce"
+  },
+  "clambsql:672": {
+    "db_id": "game_1",
+    "db_path": "databases/clambsql/game_1/game_1.sqlite",
+    "gold_sql": "select sum(hoursperweek), sum(gamesplayed) from sportsinfo as t1 join student as t2 on t1.stuid = t2.stuid where t2.fname = 'David' and t2.lname = 'Shieber'",
+    "dataset": "clambsql",
+    "gold_fp": "9e115bad4365a2d5477c2123fbf34d6dcf32a647"
+  },
+  "ambrosia:1986": {
+    "db_id": "scope_political_reporters_elections",
+    "db_path": "databases/ambrosia/scope_political_reporters_elections/scope_political_reporters_elections.sqlite",
+    "gold_sql": "SELECT Elections.end_date  from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id   GROUP BY Political_Reporters_Elections.election_id HAVING COUNT(DISTINCT Political_Reporters_Elections.reporter_id) = (SELECT COUNT(*) FROM  Political_Reporters)",
+    "dataset": "ambrosia",
+    "gold_fp": "f6db9c22e0381ada8d2bc584e69d0afd30de4828"
+  },
+  "bird:62": {
+    "db_id": "california_schools",
+    "db_path": "databases/bird/california_schools/california_schools.sqlite",
+    "gold_sql": "SELECT COUNT(T2.School) FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.County = 'Los Angeles' AND T2.Charter = 0 AND CAST(T1.\"Free Meal Count (K-12)\" AS REAL) * 100 / T1.\"Enrollment (K-12)\" < 0.18",
+    "dataset": "bird",
+    "gold_fp": "e0cb2115120c0ac7112a7f180c3a6d3e08569340"
+  },
+  "clambsql:788": {
+    "db_id": "department_store",
+    "db_path": "databases/clambsql/department_store/department_store.sqlite",
+    "gold_sql": "select product_type_code, avg(product_price) from products group by product_type_code",
+    "dataset": "clambsql",
+    "gold_fp": "e73afbedccca1e69d75524377579b29b9ace25ce"
+  },
+  "bird:1378": {
+    "db_id": "student_club",
+    "db_path": "databases/bird/student_club/student_club.sqlite",
+    "gold_sql": "SELECT MAX(spent) FROM budget",
+    "dataset": "bird",
+    "gold_fp": "6abcb83196e0168c3ae82908c08e5057f5f7dac6"
+  },
+  "clambsql:299": {
+    "db_id": "cre_Doc_Template_Mgt",
+    "db_path": "databases/clambsql/cre_Doc_Template_Mgt/cre_Doc_Template_Mgt.sqlite",
+    "gold_sql": "select t1.template_type_code from forms as t1 join documents as t2 on t1.template_id = t2.template_id group by t1.template_type_code order by count(*) desc limit 1",
+    "dataset": "clambsql",
+    "gold_fp": "c3ec16a4b78027156d626165e96d88747f167007"
+  },
+  "ambrosia:3566": {
+    "db_id": "vague_2cols_languages",
+    "db_path": "databases/ambrosia/vague_2cols_languages/vague_2cols_languages.sqlite",
+    "gold_sql": "SELECT Name, Official_Language FROM Countries ORDER BY Population ASC LIMIT 1",
+    "dataset": "ambrosia",
+    "gold_fp": "a48edaf83f8bfa4e0b640da14fb0f1333c53beb1"
+  },
+  "bird:1359": {
+    "db_id": "student_club",
+    "db_path": "databases/bird/student_club/student_club.sqlite",
+    "gold_sql": "SELECT CAST(SUM(CASE WHEN T2.event_name = 'Yearly Kickoff' THEN T1.amount ELSE 0 END) AS REAL) / SUM(CASE WHEN T2.event_name = 'October Meeting' THEN T1.amount ELSE 0 END) FROM budget AS T1 INNER JOIN event AS T2 ON T1.link_to_event = T2.event_id WHERE T1.category = 'Advertisement' AND T2.type = 'Meeting'",
+    "dataset": "bird",
+    "gold_fp": "1306ff9f466bd5fd14986f2ba54962cc8f76659b"
+  },
+  "bird:1235": {
+    "db_id": "thrombosis_prediction",
+    "db_path": "databases/bird/thrombosis_prediction/thrombosis_prediction.sqlite",
+    "gold_sql": "SELECT DISTINCT T1.Diagnosis, T1.ID , STRFTIME('%Y', CURRENT_TIMESTAMP) -STRFTIME('%Y', T1.Birthday) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.RBC < 3.5",
+    "dataset": "bird",
+    "gold_fp": "586bd17d32093ee511102bd399169eeb41fbe890"
+  },
+  "bird:1525": {
+    "db_id": "debit_card_specializing",
+    "db_path": "databases/bird/debit_card_specializing/debit_card_specializing.sqlite",
+    "gold_sql": "SELECT CAST(COUNT(DISTINCT IIF(T2.Currency = 'EUR', T1.CustomerID, NULL)) AS FLOAT) * 100 / COUNT(DISTINCT T1.CustomerID) FROM transactions_1k AS T1 INNER JOIN customers AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Date = '2012-08-25'",
+    "dataset": "bird",
+    "gold_fp": "e116077a03275910b0cf6e25e5798bed035e599a"
+  },
+  "ambrosia:3228": {
+    "db_id": "vague_2tabs_audience",
+    "db_path": "databases/ambrosia/vague_2tabs_audience/vague_2tabs_audience.sqlite",
+    "gold_sql": "Select r.name, a.group_name FROM Readers r JOIN Demographic_Groups a on a.id = r.demographic_group_id",
+    "dataset": "ambrosia",
+    "gold_fp": "4748f3de93e803f1baa4ea4e8b848466dd1c51dd"
+  },
+  "clambsql:773": {
+    "db_id": "performance_attendance",
+    "db_path": "databases/clambsql/performance_attendance/performance_attendance.sqlite",
+    "gold_sql": "select avg_attendance from performance_attendance",
+    "dataset": "clambsql",
+    "gold_fp": "bb70d726149afba91554716e569c87fc5a2e8a4e"
+  },
+  "clambsql:73": {
+    "db_id": "network_1",
+    "db_path": "databases/clambsql/network_1/network_1.sqlite",
+    "gold_sql": "select given_name from highschooler except select t2.given_name from friend as t1 join highschooler as t2 on t1.student_id = t2.id",
+    "dataset": "clambsql",
+    "gold_fp": "4b4b3cf501dadef067fc332cb013bbd730f150d5"
+  },
+  "bird:273": {
+    "db_id": "toxicology",
+    "db_path": "databases/bird/toxicology/toxicology.sqlite",
+    "gold_sql": "SELECT CAST(COUNT( CASE WHEN T1.element = 'cl' THEN T1.element ELSE NULL END) AS REAL) * 100 / COUNT(T1.element) FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T2.label = '+'",
+    "dataset": "bird",
+    "gold_fp": "ac6581b8db0a8a311eb126401edb16b8c9caa40c"
+  },
+  "bird:1427": {
+    "db_id": "student_club",
+    "db_path": "databases/bird/student_club/student_club.sqlite",
+    "gold_sql": "SELECT DISTINCT T2.category FROM event AS T1 INNER JOIN budget AS T2 ON T1.event_id = T2.link_to_event WHERE T1.location = 'MU 215' AND T2.spent = 0 AND T1.type = 'Guest Speaker'",
+    "dataset": "bird",
+    "gold_fp": "3b360153054d56da387283e36cd3021d951e74f5"
+  },
+  "clambsql:1226": {
+    "db_id": "Agriculture",
+    "db_path": "databases/clambsql/Agriculture/scope_aquaculture_facility_fish_species.sqlite",
+    "gold_sql": "SELECT Fish_Species.species_name from Aquaculture_Facility_Fish_Species join Fish_Species on Aquaculture_Facility_Fish_Species.fish_species_id = Fish_Species.id join Aquaculture_Facility on Aquaculture_Facility_Fish_Species.aquaculture_facility_id = Aquaculture_Facility.id GROUP BY Aquaculture_Facility_Fish_Species.fish_species_id HAVING COUNT(DISTINCT Aquaculture_Facility_Fish_Species.aquaculture_facility_id) = (SELECT COUNT(*) FROM Aquaculture_Facility)",
+    "dataset": "clambsql",
+    "gold_fp": "a81f881aea92155fbbda7c5806dfc035bae45f35"
+  },
+  "bird:981": {
+    "db_id": "formula_1",
+    "db_path": "databases/bird/formula_1/formula_1.sqlite",
+    "gold_sql": "SELECT T3.year, T3.name, T3.date, T3.time FROM qualifying AS T1 INNER JOIN drivers AS T2 on T1.driverId = T2.driverId INNER JOIN races AS T3 on T1.raceId = T3.raceId WHERE T1.driverId = ( SELECT driverId FROM drivers ORDER BY dob DESC LIMIT 1 ) ORDER BY T3.date ASC LIMIT 1",
+    "dataset": "bird",
+    "gold_fp": "941a3681eb4d6a064b21d8e60a76ecfa59a7f9a3"
+  },
+  "ambrosia:1708": {
+    "db_id": "scope_streaming_service_social_media",
+    "db_path": "databases/ambrosia/scope_streaming_service_social_media/scope_streaming_service_social_media.sqlite",
+    "gold_sql": "SELECT Social_Media.type  from Streaming_Service_Social_Media join Social_Media on Streaming_Service_Social_Media.social_media_id = Social_Media.social_media_id join Streaming_Service on Streaming_Service_Social_Media.streaming_service_id = Streaming_Service.id   GROUP BY Streaming_Service_Social_Media.social_media_id HAVING COUNT(DISTINCT Streaming_Service_Social_Media.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Service)",
+    "dataset": "ambrosia",
+    "gold_fp": "1131a6b27335d65a7b97640c68e8a7c45c70520f"
+  },
+  "ambrosia:2474": {
+    "db_id": "scope_hotels_services",
+    "db_path": "databases/ambrosia/scope_hotels_services/scope_hotels_services.sqlite",
+    "gold_sql": "SELECT Services.ServiceName  from Hotels_Services join Services on Hotels_Services.Service_ID = Services.ServiceID join Hotels on Hotels_Services.Hotels_ID = Hotels.HotelID   GROUP BY Hotels_Services.Service_ID HAVING COUNT(DISTINCT Hotels_Services.Hotels_ID) = (SELECT COUNT(*) FROM  Hotels)",
+    "dataset": "ambrosia",
+    "gold_fp": "f4303a21bf2446c4bfc6fd187e919a59d99325e0"
+  },
+  "ambrosia:724": {
+    "db_id": "attachment_2tab_val_mental_health_careers",
+    "db_path": "databases/ambrosia/attachment_2tab_val_mental_health_careers/attachment_2tab_val_mental_health_careers.sqlite",
+    "gold_sql": "SELECT Psychologists.name\nFROM Psychologists JOIN Clinics ON Psychologists.clinic = Clinics.name\nWHERE Clinics.name = \"Harmony Wellness Center\"\nUNION\nSELECT Psychiatrists.name\nFROM Psychiatrists JOIN Clinics ON Psychiatrists.clinic = Clinics.name\nWHERE Clinics.name = \"Harmony Wellness Center\"",
+    "dataset": "ambrosia",
+    "gold_fp": "1a2b3c9669ca31ac6df6b9873cf283f4affc9b58"
+  },
+  "ambrosia:2378": {
+    "db_id": "scope_art_galleries_exhibitions",
+    "db_path": "databases/ambrosia/scope_art_galleries_exhibitions/scope_art_galleries_exhibitions.sqlite",
+    "gold_sql": "SELECT Exhibitions.Description  from Art_Galleries_Exhibitions join Exhibitions on Art_Galleries_Exhibitions.ExhibitionID = Exhibitions.ExhibitionID join Art_Galleries on Art_Galleries_Exhibitions.GalleryID = Art_Galleries.GalleryID   GROUP BY Art_Galleries_Exhibitions.ExhibitionID HAVING COUNT(DISTINCT Art_Galleries_Exhibitions.GalleryID) = (SELECT COUNT(*) FROM  Art_Galleries)",
+    "dataset": "ambrosia",
+    "gold_fp": "39ded18f79f41ebc7196cabc121905e4af9c9bd8"
+  },
+  "clambsql:701": {
+    "db_id": "loan_1",
+    "db_path": "databases/clambsql/loan_1/loan_1.sqlite",
+    "gold_sql": "select avg_no_of_customers from bank_no_of_customers",
+    "dataset": "clambsql",
+    "gold_fp": "976c7f0f6ef99ac949adfcc58923c933afcc1ed0"
+  },
+  "bird:189": {
+    "db_id": "financial",
+    "db_path": "databases/bird/financial/financial.sqlite",
+    "gold_sql": "SELECT T3.account_id FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id INNER JOIN account AS T3 ON T2.district_id = T3.district_id INNER JOIN disp AS T4 ON T1.client_id = T4.client_id AND T4.account_id = T3.account_id  WHERE T1.gender = 'F' ORDER BY T1.birth_date ASC, T2.A11 ASC LIMIT 1",
+    "dataset": "bird",
+    "gold_fp": "d7b8da541a9f24e4753ad64ff36d2085f1e12c03"
+  },
+  "bird:82": {
+    "db_id": "california_schools",
+    "db_path": "databases/bird/california_schools/california_schools.sqlite",
+    "gold_sql": "SELECT GSoffered FROM schools ORDER BY ABS(longitude) DESC LIMIT 1",
+    "dataset": "bird",
+    "gold_fp": "92f515fb0332a02fc15912355c9bdded7245f728"
+  },
+  "bird:1144": {
+    "db_id": "european_football_2",
+    "db_path": "databases/bird/european_football_2/european_football_2.sqlite",
+    "gold_sql": "SELECT finishing, curve FROM Player_Attributes WHERE player_api_id IN (SELECT player_api_id FROM Player WHERE weight = (SELECT MAX(weight) from Player))",
+    "dataset": "bird",
+    "gold_fp": "6e9652e2e3f5295501fca8c53c8cc542c501fd07"
+  },
+  "clambsql:716": {
+    "db_id": "cre_Drama_Workshop_Groups",
+    "db_path": "databases/clambsql/cre_Drama_Workshop_Groups/cre_Drama_Workshop_Groups.sqlite",
+    "gold_sql": "select sum(t1.order_quantity) from order_items as t1 join products as t2 on t1.product_id = t2.product_id where t2.product_name = 'photo'",
+    "dataset": "clambsql",
+    "gold_fp": "f53ce3883d7d617d7e0408a1944e2b0221db1841"
+  },
+  "clambsql:730": {
+    "db_id": "hr_1",
+    "db_path": "databases/clambsql/hr_1/hr_1.sqlite",
+    "gold_sql": "select employee_id, max_end_date from job_history_end_date",
+    "dataset": "clambsql",
+    "gold_fp": "92ab727fd47b36a347795cab0399b185f9d9b497"
+  },
+  "ambrosia:1824": {
+    "db_id": "scope_food_critics_cuisines",
+    "db_path": "databases/ambrosia/scope_food_critics_cuisines/scope_food_critics_cuisines.sqlite",
+    "gold_sql": "SELECT Cuisines.cuisine_name  from Food_Critics_Cuisines join Cuisines on Food_Critics_Cuisines.cuisine_id = Cuisines.id join Food_Critics on Food_Critics_Cuisines.food_critic_id = Food_Critics.id   GROUP BY Food_Critics_Cuisines.cuisine_id HAVING COUNT(DISTINCT Food_Critics_Cuisines.food_critic_id) = (SELECT COUNT(*) FROM  Food_Critics)",
+    "dataset": "ambrosia",
+    "gold_fp": "3abcfa9510d0527dfafcabe4bc9343895482ba5b"
+  },
+  "bird:197": {
+    "db_id": "toxicology",
+    "db_path": "databases/bird/toxicology/toxicology.sqlite",
+    "gold_sql": "WITH oxygen_atoms_per_molecule AS (SELECT atom.molecule_id, SUM(atom.element = 'o') AS oxygen_count FROM atom GROUP BY atom.molecule_id), single_bond_molecules AS (SELECT DISTINCT bond.molecule_id FROM bond WHERE bond.bond_type = '-') SELECT AVG(oxygen_atoms_per_molecule.oxygen_count) AS average_oxygen_atoms FROM single_bond_molecules JOIN oxygen_atoms_per_molecule ON single_bond_molecules.molecule_id = oxygen_atoms_per_molecule.molecule_id",
+    "dataset": "bird",
+    "gold_fp": "956f4bb24bbf336e6a627990d0ebc5d016b61757"
+  },
+  "clambsql:674": {
+    "db_id": "entrepreneur",
+    "db_path": "databases/clambsql/entrepreneur/entrepreneur.sqlite",
+    "gold_sql": "select avg(money_requested) from entrepreneur",
+    "dataset": "clambsql",
+    "gold_fp": "db9188dcb0cda986fe0746a6cbc251605b886d93"
+  },
+  "ambrosia:945": {
+    "db_id": "attachment_1tab_val_assessment_methods",
+    "db_path": "databases/ambrosia/attachment_1tab_val_assessment_methods/attachment_1tab_val_assessment_methods.sqlite",
+    "gold_sql": "SELECT Assessments.PassingMark \nFROM Assessments \nWHERE (Assessments.AssessmentMethod = 'Exam' OR Assessments.AssessmentMethod = 'Quiz') AND Assessments.Assessor = 'Professor Smith'",
+    "dataset": "ambrosia",
+    "gold_fp": "20b285d4245a9c3abf40940f57fcf30e4b65259f"
+  },
+  "bird:17": {
+    "db_id": "california_schools",
+    "db_path": "databases/bird/california_schools/california_schools.sqlite",
+    "gold_sql": "SELECT CharterNum, AvgScrWrite, \nRANK() OVER (ORDER BY AvgScrWrite DESC) AS WritingScoreRank \nFROM schools AS T1  INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds \nWHERE T2.AvgScrWrite > 499 AND CharterNum is not null AND rtype = 'S'",
+    "dataset": "bird",
+    "gold_fp": "14932d7036814d65853d1593dfa9602f21f7d32e"
+  },
+  "bird:1029": {
+    "db_id": "european_football_2",
+    "db_path": "databases/bird/european_football_2/european_football_2.sqlite",
+    "gold_sql": "SELECT t1.buildUpPlaySpeed FROM Team_Attributes AS t1 INNER JOIN Team AS t2 ON t1.team_api_id = t2.team_api_id ORDER BY t1.buildUpPlaySpeed DESC LIMIT 4",
+    "dataset": "bird",
+    "gold_fp": "6389943c4c89f265ac366adac29aafda6c34a4e1"
+  },
+  "bird:761": {
+    "db_id": "superhero",
+    "db_path": "databases/bird/superhero/superhero.sqlite",
+    "gold_sql": "SELECT T1.superhero_name FROM superhero AS T1 INNER JOIN gender AS T2 ON T1.gender_id = T2.id WHERE T2.gender = 'Male' AND T1.weight_kg * 100 > ( SELECT AVG(weight_kg) FROM superhero WHERE weight_kg > 0) * 79",
+    "dataset": "bird",
+    "gold_fp": "99771e9d8ae16db9cc876f67e25d532995c7b34d"
+  },
+  "ambrosia:3889": {
+    "db_id": "vague_2cols_location2",
+    "db_path": "databases/ambrosia/vague_2cols_location2/vague_2cols_location2.sqlite",
+    "gold_sql": "SELECT Customers.PhoneNumber, Customers.AddressLine FROM Tickets JOIN Customers ON Tickets.CustomerID = Customers.CustomerID JOIN Concerts ON Concerts.ConcertID = Tickets.ConcertID JOIN Artists  ON Artists.ArtistID = Concerts.HeadlineArtistID WHERE Artists.Genre = 'Pop'",
+    "dataset": "ambrosia",
+    "gold_fp": "3f2d5068207ba7efc9a7284f17a8705f35ff8863"
+  },
+  "bird:1152": {
+    "db_id": "thrombosis_prediction",
+    "db_path": "databases/bird/thrombosis_prediction/thrombosis_prediction.sqlite",
+    "gold_sql": "SELECT SUM(CASE WHEN Admission = '+' THEN 1.0 ELSE 0 END) / SUM(CASE WHEN Admission = '-' THEN 1 ELSE 0 END) FROM Patient WHERE Diagnosis = 'SLE'",
+    "dataset": "bird",
+    "gold_fp": "8ded434ce1e5835b2254282760e37c1802f0c0e3"
+  },
+  "ambrosia:2701": {
+    "db_id": "scope_health_apps_functions",
+    "db_path": "databases/ambrosia/scope_health_apps_functions/scope_health_apps_functions.sqlite",
+    "gold_sql": "SELECT Functions.value  from Health_Apps_Functions join Functions on Health_Apps_Functions.functionID = Functions.functionID join Health_Apps on Health_Apps_Functions.healthAppID = Health_Apps.appID   GROUP BY Health_Apps_Functions.functionID HAVING COUNT(DISTINCT Health_Apps_Functions.healthAppID) = (SELECT COUNT(*) FROM  Health_Apps)",
+    "dataset": "ambrosia",
+    "gold_fp": "2a5cb8867ea5a5febedf88c8fc9a0bc8413cc633"
+  },
+  "clambsql:661": {
+    "db_id": "college_3",
+    "db_path": "databases/clambsql/college_3/college_3.sqlite",
+    "gold_sql": "select avg_gradepoint from enrolled_in_gradeconversion_student_gradepoint where lname = 'Smith'",
+    "dataset": "clambsql",
+    "gold_fp": "a4c3bb9cd6a4c32751c1c1b8fa7fa3402bcfa6ad"
+  },
+  "clambsql:1253": {
+    "db_id": "Traffic",
+    "db_path": "databases/clambsql/Traffic/scope_routes_restrictions.sqlite",
+    "gold_sql": "SELECT Restrictions.restrictionType from routes_restrictions join routes ON routes_restrictions.routesId = Routes.id join restrictions ON routes_restrictions.restrictionsType = Restrictions.restrictionType GROUP BY Routes_Restrictions.restrictionsType HAVING COUNT(DISTINCT Routes_Restrictions.routesId) = (SELECT COUNT(*) FROM Routes)",
+    "dataset": "clambsql",
+    "gold_fp": "f096e499b207d50393cabe3e205d45cefd85eb11"
+  },
+  "clambsql:756": {
+    "db_id": "cre_Drama_Workshop_Groups",
+    "db_path": "databases/clambsql/cre_Drama_Workshop_Groups/cre_Drama_Workshop_Groups.sqlite",
+    "gold_sql": "select sum(t1.order_quantity) from order_items as t1 join products as t2 on t1.product_id = t2.product_id where t2.product_name = 'photo'",
+    "dataset": "clambsql",
+    "gold_fp": "f53ce3883d7d617d7e0408a1944e2b0221db1841"
+  },
+  "ambrosia:2307": {
+    "db_id": "scope_credit_cards_benefits",
+    "db_path": "databases/ambrosia/scope_credit_cards_benefits/scope_credit_cards_benefits.sqlite",
+    "gold_sql": "SELECT Benefits.benefitName  from Credit_Card_Benefits join Benefits on Credit_Card_Benefits.benefitId = Benefits.id join Credit_Cards on Credit_Card_Benefits.creditCardId = Credit_Cards.id   GROUP BY Credit_Card_Benefits.benefitId HAVING COUNT(DISTINCT Credit_Card_Benefits.creditCardId) = (SELECT COUNT(*) FROM  Credit_Cards)",
+    "dataset": "ambrosia",
+    "gold_fp": "4016feefb18da4a4a19ae02915f9911887aa794b"
+  },
+  "clambsql:1312": {
+    "db_id": "Housing Market",
+    "db_path": "databases/clambsql/Housing Market/scope_community_development_corporations_initiatives.sqlite",
+    "gold_sql": "select community_development_corporations.name , initiatives.description from Community_Development_Corporations_Initiatives join Initiatives on Community_Development_Corporations_Initiatives.initiative_id = Initiatives.id join Community_Development_Corporations on Community_Development_Corporations_Initiatives.community_development_corporation_id = Community_Development_Corporations.id",
+    "dataset": "clambsql",
+    "gold_fp": "bde57468af4afb9f91530656f8d1fe3c944aa815"
+  },
+  "bird:1501": {
+    "db_id": "debit_card_specializing",
+    "db_path": "databases/bird/debit_card_specializing/debit_card_specializing.sqlite",
+    "gold_sql": "SELECT DISTINCT T2.Country FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T1.Date LIKE '2012-08-%'",
+    "dataset": "bird",
+    "gold_fp": "dd1df27d24e6cddd9798879f922ee0e2c5f9e196"
+  },
+  "ambrosia:957": {
+    "db_id": "attachment_1tab_val_educational_materials",
+    "db_path": "databases/ambrosia/attachment_1tab_val_educational_materials/attachment_1tab_val_educational_materials.sqlite",
+    "gold_sql": "SELECT Books.Title \nFROM Books JOIN Publishers ON Books.PublisherID = Publishers.PublisherID\nWHERE (Books.Educational_Materials = 'Textbook' OR Books.Educational_Materials = 'E-Book') AND Publishers.email = \"pearson@email.com\"",
+    "dataset": "ambrosia",
+    "gold_fp": "d3a3ba1a00710bbefce8df84a33f63de5d05f7bb"
+  },
+  "ambrosia:1714": {
+    "db_id": "scope_streaming_service_monetization_model",
+    "db_path": "databases/ambrosia/scope_streaming_service_monetization_model/scope_streaming_service_monetization_model.sqlite",
+    "gold_sql": "SELECT Monetization_Model.model_name  from Streaming_Service_Monetization_Model join Monetization_Model on Streaming_Service_Monetization_Model.monetization_model_id = Monetization_Model.id join Streaming_Service on Streaming_Service_Monetization_Model.streaming_service_id = Streaming_Service.id   GROUP BY Streaming_Service_Monetization_Model.monetization_model_id HAVING COUNT(DISTINCT Streaming_Service_Monetization_Model.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Service)",
+    "dataset": "ambrosia",
+    "gold_fp": "cd691781b521b322e98b21b9b4b1516557f10faa"
+  },
+  "bird:822": {
+    "db_id": "superhero",
+    "db_path": "databases/bird/superhero/superhero.sqlite",
+    "gold_sql": "SELECT COUNT(T1.id) FROM superhero AS T1 INNER JOIN alignment AS T2 ON T1.alignment_id = T2.id INNER JOIN colour AS T3 ON T1.skin_colour_id = T3.id WHERE T2.alignment = 'Bad' AND T3.colour = 'Green'",
+    "dataset": "bird",
+    "gold_fp": "18aa4fa8326a50efa1f8134e62b8e6d2b2e982b9"
+  },
+  "bird:598": {
+    "db_id": "codebase_community",
+    "db_path": "databases/bird/codebase_community/codebase_community.sqlite",
+    "gold_sql": "SELECT CAST(SUM(IIF(STRFTIME('%Y', Date) = '2010', 1, 0)) AS REAL) * 100 / COUNT(Id) - CAST(SUM(IIF(STRFTIME('%Y', Date) = '2011', 1, 0)) AS REAL) * 100 / COUNT(Id) FROM badges WHERE Name = 'Student'",
+    "dataset": "bird",
+    "gold_fp": "7630ba1a44a70f7580859e2b9aa935a022d27f2c"
+  },
+  "clambsql:726": {
+    "db_id": "twitter_1",
+    "db_path": "databases/clambsql/twitter_1/twitter_1.sqlite",
+    "gold_sql": "select max_followers, sum_followers from user_profiles_followers",
+    "dataset": "clambsql",
+    "gold_fp": "9083231f81753dd7f8ed615650d49ce0a129234a"
+  },
+  "bird:409": {
+    "db_id": "card_games",
+    "db_path": "databases/bird/card_games/card_games.sqlite",
+    "gold_sql": "SELECT COUNT(T1.id) FROM cards AS T1 INNER JOIN legalities AS T2 ON T1.uuid = T2.uuid INNER JOIN rulings AS T3 ON T1.uuid = T3.uuid WHERE T2.format = 'premodern' AND T3.text = 'This is a triggered mana ability.' AND T1.Side IS NULL",
+    "dataset": "bird",
+    "gold_fp": "22cc62271556ac92129b080c17d9a122b1feced5"
+  },
+  "bird:726": {
+    "db_id": "superhero",
+    "db_path": "databases/bird/superhero/superhero.sqlite",
+    "gold_sql": "SELECT superhero_name FROM superhero AS s JOIN publisher AS p ON s.publisher_id = p.id WHERE p.publisher_name = 'Marvel Comics' AND s.height_cm IS NOT NULL AND s.height_cm != 0 ORDER BY s.height_cm DESC",
+    "dataset": "bird",
+    "gold_fp": "c32100aa41ec43c8f5ae4822ade6f62bfe4dbe7a"
+  },
+  "ambrosia:1414": {
+    "db_id": "scope_nutritionists_diets",
+    "db_path": "databases/ambrosia/scope_nutritionists_diets/scope_nutritionists_diets.sqlite",
+    "gold_sql": "SELECT Diets.diet_type_value  from Nutritionists_Diets join Diets on Nutritionists_Diets.diet_type_id = Diets.diet_type_id join Nutritionists on Nutritionists_Diets.nutritionist_id = Nutritionists.nutritionist_id   GROUP BY Nutritionists_Diets.diet_type_id HAVING COUNT(DISTINCT Nutritionists_Diets.nutritionist_id) = (SELECT COUNT(*) FROM  Nutritionists)",
+    "dataset": "ambrosia",
+    "gold_fp": "b44ae1540333af3384ed8ac92424e0c263fe7b5d"
+  },
+  "clambsql:706": {
+    "db_id": "body_builder",
+    "db_path": "databases/clambsql/body_builder/body_builder.sqlite",
+    "gold_sql": "select avg_total from body_builder_people_total where height > 200",
+    "dataset": "clambsql",
+    "gold_fp": "b8b3e5640607f46aad5e11ede3140e509d4dc839"
+  },
+  "clambsql:1270": {
+    "db_id": "Housing Market",
+    "db_path": "databases/clambsql/Housing Market/scope_real_estate_agencies_services.sqlite",
+    "gold_sql": "SELECT Services.price from Real_Estate_Agencies_Services join Services on Real_Estate_Agencies_Services.service_id = Services.service_id join Real_Estate_Agencies on Real_Estate_Agencies_Services.real_estate_agency_id = Real_Estate_Agencies.agency_id GROUP BY Real_Estate_Agencies_Services.service_id HAVING COUNT(DISTINCT Real_Estate_Agencies_Services.real_estate_agency_id) = (SELECT COUNT(*) FROM Real_Estate_Agencies)",
+    "dataset": "clambsql",
+    "gold_fp": "c8cef1e3968125190e70474c23dd63e304297652"
+  },
+  "bird:592": {
+    "db_id": "codebase_community",
+    "db_path": "databases/bird/codebase_community/codebase_community.sqlite",
+    "gold_sql": "SELECT COUNT(UserId) FROM ( SELECT UserId, COUNT(Name) AS num FROM badges GROUP BY UserId ) T WHERE T.num > 5",
+    "dataset": "bird",
+    "gold_fp": "0ec9efe759348f375da1925261292dfcdb20d059"
+  },
+  "ambrosia:911": {
+    "db_id": "attachment_1tab_val_digital_solutions",
+    "db_path": "databases/ambrosia/attachment_1tab_val_digital_solutions/attachment_1tab_val_digital_solutions.sqlite",
+    "gold_sql": "SELECT Customers.FullName\nFROM Customers\nWHERE (Customers.Digital_Solutions = \"Mobile Banking App\" OR Customers.Digital_Solutions = \"Internet Banking Platform\") AND Customers.Sign_in_Options = \"Biometric Authentication\"",
+    "dataset": "ambrosia",
+    "gold_fp": "d59a5c743c1e456f8aa5614b78c5bfc6994fb409"
+  },
+  "bird:1401": {
+    "db_id": "student_club",
+    "db_path": "databases/bird/student_club/student_club.sqlite",
+    "gold_sql": "SELECT T3.cost FROM event AS T1 INNER JOIN budget AS T2 ON T1.event_id = T2.link_to_event INNER JOIN expense AS T3 ON T2.budget_id = T3.link_to_budget WHERE T1.event_name = 'September Speaker' AND T3.expense_description = 'Posters'",
+    "dataset": "bird",
+    "gold_fp": "783f4524378ab60d9d46f58d281bf573ae6bc410"
+  },
+  "bird:766": {
+    "db_id": "superhero",
+    "db_path": "databases/bird/superhero/superhero.sqlite",
+    "gold_sql": "WITH max_strength AS (SELECT attribute_id, MAX(attribute_value) attribute_value FROM hero_attribute INNER JOIN attribute ON attribute_id = attribute.id WHERE attribute.attribute_name = 'Strength' GROUP BY 1) SELECT distinct T1.full_name FROM superhero AS T1 INNER JOIN hero_attribute AS T2 ON T1.id = T2.hero_id INNER JOIN max_strength AS T3 ON T2.attribute_id = T3.attribute_id AND T2.attribute_value = T3.attribute_value",
+    "dataset": "bird",
+    "gold_fp": "7f097f8f012df2a5495f549b31a44e3e64711928"
+  },
+  "ambrosia:2476": {
+    "db_id": "scope_hotels_amenities",
+    "db_path": "databases/ambrosia/scope_hotels_amenities/scope_hotels_amenities.sqlite",
+    "gold_sql": "SELECT Amenities.amenityName  from Hotel_Amenities join Amenities on Hotel_Amenities.amenityId = Amenities.amenityId join Hotels on Hotel_Amenities.hotelId = Hotels.id   GROUP BY Hotel_Amenities.amenityId HAVING COUNT(DISTINCT Hotel_Amenities.hotelId) = (SELECT COUNT(*) FROM  Hotels)",
+    "dataset": "ambrosia",
+    "gold_fp": "a2672bcf300a5419e3f28fdfaa257d73f4342a08"
+  },
+  "clambsql:700": {
+    "db_id": "climbing",
+    "db_path": "databases/clambsql/climbing/climbing.sqlite",
+    "gold_sql": "select max(points) from climber where country = 'United Kingdom'",
+    "dataset": "clambsql",
+    "gold_fp": "f1b9337dbb95c096812625057c59d6fa2eecf170"
+  },
+  "bird:192": {
+    "db_id": "financial",
+    "db_path": "databases/bird/financial/financial.sqlite",
+    "gold_sql": "SELECT AVG(T2.amount) FROM account AS T1 INNER JOIN loan AS T2 ON T1.account_id = T2.account_id WHERE T2.status IN ('C', 'D') AND T1.frequency = 'POPLATEK PO OBRATU'",
+    "dataset": "bird",
+    "gold_fp": "1dca786a82f653610550764fbf2af989ec180eb9"
+  },
+  "clambsql:658": {
+    "db_id": "tracking_share_transactions",
+    "db_path": "databases/clambsql/tracking_share_transactions/tracking_share_transactions.sqlite",
+    "gold_sql": "select investor_id, avg(share_count) from transactions group by investor_id",
+    "dataset": "clambsql",
+    "gold_fp": "379cd0e609bf242be9608abb4108f0b10e09f5cb"
+  },
+  "clambsql:784": {
+    "db_id": "inn_1",
+    "db_path": "databases/clambsql/inn_1/inn_1.sqlite",
+    "gold_sql": "select sum(maxoccupancy) from rooms where decor = 'modern'",
+    "dataset": "clambsql",
+    "gold_fp": "1483f06827d00a93d6e65e544a6386d7c905ac07"
+  },
+  "bird:194": {
+    "db_id": "financial",
+    "db_path": "databases/bird/financial/financial.sqlite",
+    "gold_sql": "SELECT T1.client_id, STRFTIME('%Y', CURRENT_TIMESTAMP) - STRFTIME('%Y', T3.birth_date) FROM disp AS T1 INNER JOIN card AS T2 ON T2.disp_id = T1.disp_id INNER JOIN client AS T3 ON T1.client_id = T3.client_id WHERE T2.type = 'gold' AND T1.type = 'OWNER'",
+    "dataset": "bird",
+    "gold_fp": "fdc4ee8fa896871ce2b3ad520ee055f3add7d74c"
+  },
+  "ambrosia:2360": {
+    "db_id": "scope_terminals_facilities",
+    "db_path": "databases/ambrosia/scope_terminals_facilities/scope_terminals_facilities.sqlite",
+    "gold_sql": "SELECT Facilities.description  from Terminals_Facilities join Facilities on Terminals_Facilities.facilityId = Facilities.id join Terminals on Terminals_Facilities.terminalId = Terminals.id   GROUP BY Terminals_Facilities.facilityId HAVING COUNT(DISTINCT Terminals_Facilities.terminalId) = (SELECT COUNT(*) FROM  Terminals)",
+    "dataset": "ambrosia",
+    "gold_fp": "f6b937559a57b4d6e3cf1de37b37eb7bfdd8b30c"
+  },
+  "bird:633": {
+    "db_id": "codebase_community",
+    "db_path": "databases/bird/codebase_community/codebase_community.sqlite",
+    "gold_sql": "SELECT p.Id\nFROM posts AS p\nJOIN users AS u ON p.OwnerUserId = u.Id\nWHERE u.DisplayName = 'slashnick'\nORDER BY p.AnswerCount DESC\nLIMIT 1;",
+    "dataset": "bird",
+    "gold_fp": "15615e0a889be03aad58f95a7adc267314e0b53e"
+  },
+  "bird:226": {
+    "db_id": "toxicology",
+    "db_path": "databases/bird/toxicology/toxicology.sqlite",
+    "gold_sql": "SELECT ROUND(CAST(COUNT(CASE WHEN T.bond_type = '=' THEN T.bond_id ELSE NULL END) AS REAL) * 100 / COUNT(T.bond_id),5) FROM bond AS T WHERE T.molecule_id = 'TR008'",
+    "dataset": "bird",
+    "gold_fp": "72738aab7fce30e76c878db825ec387c05d69360"
+  },
+  "clambsql:611": {
+    "db_id": "manufactory_1",
+    "db_path": "databases/clambsql/manufactory_1/manufactory_1.sqlite",
+    "gold_sql": "select code, name, min(price) from products group by name",
+    "dataset": "clambsql",
+    "gold_fp": "c0536b0e30b0bfae21bfda58703ad9b6ba780a10"
+  },
+  "ambrosia:3143": {
+    "db_id": "vague_2cols_commute_time",
+    "db_path": "databases/ambrosia/vague_2cols_commute_time/vague_2cols_commute_time.sqlite",
+    "gold_sql": "SELECT name, mean_commute_time FROM Neighborhood WHERE population < '10000'",
+    "dataset": "ambrosia",
+    "gold_fp": "ac0ccb518492d0b1e6e31b01a3215dfb66455516"
+  },
+  "ambrosia:2161": {
+    "db_id": "scope_online_learning_platforms_courses",
+    "db_path": "databases/ambrosia/scope_online_learning_platforms_courses/scope_online_learning_platforms_courses.sqlite",
+    "gold_sql": "SELECT Courses.description  from Online_Learning_Platforms_Courses join Courses on Online_Learning_Platforms_Courses.courseID = Courses.courseID join Online_Learning_Platforms on Online_Learning_Platforms_Courses.platformID = Online_Learning_Platforms.platformID   GROUP BY Online_Learning_Platforms_Courses.courseID HAVING COUNT(DISTINCT Online_Learning_Platforms_Courses.platformID) = (SELECT COUNT(*) FROM  Online_Learning_Platforms)",
+    "dataset": "ambrosia",
+    "gold_fp": "24f5a74e865acb615c91233c842eb52854d5af40"
+  },
+  "ambrosia:1874": {
+    "db_id": "scope_ux_designers_components",
+    "db_path": "databases/ambrosia/scope_ux_designers_components/scope_ux_designers_components.sqlite",
+    "gold_sql": "SELECT Components.description  from Ux_Designers_Components join Components on Ux_Designers_Components.component_id = Components.id join Ux_Designers on Ux_Designers_Components.ux_designer_id = Ux_Designers.id   GROUP BY Ux_Designers_Components.component_id HAVING COUNT(DISTINCT Ux_Designers_Components.ux_designer_id) = (SELECT COUNT(*) FROM  Ux_Designers)",
+    "dataset": "ambrosia",
+    "gold_fp": "63dd7d73b20a4c5a0551693ac8b087b6eba039f7"
+  },
+  "bird:487": {
+    "db_id": "card_games",
+    "db_path": "databases/bird/card_games/card_games.sqlite",
+    "gold_sql": "SELECT CAST(SUM(CASE WHEN T1.cardKingdomFoilId IS NOT NULL AND T1.cardKingdomId IS NOT NULL THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T1.id) FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE T2.name = 'Coldsnap'",
+    "dataset": "bird",
+    "gold_fp": "c8cef1e3968125190e70474c23dd63e304297652"
+  },
+  "clambsql:1195": {
+    "db_id": "Education",
+    "db_path": "databases/clambsql/Education/attachment_2tab_ref_visual_arts.sqlite",
+    "gold_sql": "SELECT Photos.description FROM Subjects JOIN Photos ON Subjects.ID = Photos.SubjectID WHERE Subjects.Name = 'History' UNION SELECT Illustrations.description FROM Subjects JOIN Illustrations ON Subjects.ID = Illustrations.SubjectID WHERE Subjects.Name = 'History'",
+    "dataset": "clambsql",
+    "gold_fp": "0f5244d8325780cc81684e79af5b20db6f53b49a"
+  },
+  "ambrosia:2851": {
+    "db_id": "vague_2cols_film_creator",
+    "db_path": "databases/ambrosia/vague_2cols_film_creator/vague_2cols_film_creator.sqlite",
+    "gold_sql": "SELECT \nMovie.title,\nMovie.genre,\nMovie.release_year,\nStudio.name\nFROM Movie\nJOIN Studio ON Studio.id = Movie.studio_id",
+    "dataset": "ambrosia",
+    "gold_fp": "b1418e8fa264b824d50742b842f5e6a3b47fc0a7"
+  },
+  "clambsql:297": {
+    "db_id": "pets_1",
+    "db_path": "databases/clambsql/pets_1/pets_1.sqlite",
+    "gold_sql": "select avg(weight), pettype from animals group by pettype",
+    "dataset": "clambsql",
+    "gold_fp": "0564ca791d3710e5267db1dce218476da59e2a24"
+  },
+  "clambsql:1141": {
+    "db_id": "Airport",
+    "db_path": "databases/clambsql/Airport/attachment_1tab_val_development_projects.sqlite",
+    "gold_sql": "SELECT Development_Projects.ProjectName FROM Development_Projects WHERE (Development_Projects.ProjectName = 'Airport Expansion' OR Development_Projects.ProjectName = 'Renovation') AND Development_Projects.Increased_Capacity = '1000 Passengers per Day'",
+    "dataset": "clambsql",
+    "gold_fp": "1c8f035ee5d87a4086457f1072583b91ee3b52e5"
+  },
+  "bird:1302": {
+    "db_id": "thrombosis_prediction",
+    "db_path": "databases/bird/thrombosis_prediction/thrombosis_prediction.sqlite",
+    "gold_sql": "SELECT COUNT(DISTINCT T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID INNER JOIN Examination AS T3 ON T1.ID = T3.ID WHERE T2.CPK < 250 AND (T3.KCT = '+' OR T3.RVVT = '+' OR T3.LAC = '+')",
+    "dataset": "bird",
+    "gold_fp": "e0cb2115120c0ac7112a7f180c3a6d3e08569340"
+  },
+  "bird:964": {
+    "db_id": "formula_1",
+    "db_path": "databases/bird/formula_1/formula_1.sqlite",
+    "gold_sql": "SELECT code FROM drivers WHERE Nationality = 'American'",
+    "dataset": "bird",
+    "gold_fp": "7f6c10d18cf302df9a53701c6e4150ed2f80764a"
+  },
+  "ambrosia:4195": {
+    "db_id": "vague_2tabs_focus_area",
+    "db_path": "databases/ambrosia/vague_2tabs_focus_area/vague_2tabs_focus_area.sqlite",
+    "gold_sql": "SELECT \n    f.name\nFROM \n    Enrollment e\n    INNER JOIN Project p ON e.projectId = p.id\n    INNER JOIN Topic f \nON p.topicId = f.id \nAND e.grade > 90",
+    "dataset": "ambrosia",
+    "gold_fp": "dcf41e0eea209b5e545e7864be7f407ef303bc2c"
+  },
+  "bird:1317": {
+    "db_id": "student_club",
+    "db_path": "databases/bird/student_club/student_club.sqlite",
+    "gold_sql": "SELECT COUNT(T1.event_id) FROM event AS T1 INNER JOIN attendance AS T2 ON T1.event_id = T2.link_to_event INNER JOIN member AS T3 ON T2.link_to_member = T3.member_id WHERE T1.event_name = 'Women''s Soccer' AND T3.t_shirt_size = 'Medium'",
+    "dataset": "bird",
+    "gold_fp": "d0d2b6909c36200b500c895610b01e7e7324beac"
+  }
+}

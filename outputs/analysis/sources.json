@@ -1,0 +1,313 @@
+{
+  "version": "official y* numbers; one-stage Q=2.32; appendix under outputs/analysis/",
+  "paper_text": "Experimental Evaluation in the paper; numbers in this directory are the public appendix",
+  "do_not_use": [
+    "Moved out of the public tree on 2026-11-11 to ._archive/2026-11-11_not_in_paper/: paired_current/ and paper_summary/ (old Condition B: 81% / 8 flips / usefulness ~2.58), and the external gold_sensitivity.json symlink",
+    "one-stage Q=2.18 (superseded; official log is 2.3233, print 2.32)",
+    "s123 ablation arm (309/498=62.0) in place of official staged fwd_nocheck (310/498=62.2)",
+    "oneprompt_bc (320/498, Q=2.3313) as the paper one-stage row",
+    "theta_curve/summary.json EX at θ=0.5 for BIRD (0.6647, 331 hits) when official eval is 333/498=66.87; use official eval for EX, curve for Q and disagreement",
+    "Moved out of the public tree on 2026-11-11 to askornotask_archive/2026-11-11_not_in_paper/extra_analysis/: scorer_clamSQL_QC_match/, analysis/cost/, case_study_candidates.jsonl, bird_arcwise/check_ab1_r2/, bird_arcwise/terra_rerun/ (not used in the paper)",
+    "Do not use scheme A question counts 1463/281 for the scorer setup sentence; official train1 counts are 1454 training questions and 261 validation questions (same 5,267 / 1,006 cards). outputs/analysis/paper/select_theta.json has been corrected.",
+    "Raw user-study answer sheets are not in the public tree (user_study/data_collect/, user_study/rescored/answers_*.json, user_study_wo_nl/data_collect/, and paired_details). Official numbers are in agreement.json, rescored/rating_summary.json, replay/pair_statistics.json, and user_study_wo_nl/analysis_results/round_a/summary.json."
+  ],
+  "tables": {
+    "tab:main": {
+      "section": "RQ1",
+      "parser": "qwen_coder",
+      "gold": "y* (BIRD gold, AMBROSIA gold_1, CLAMBSQL intended)",
+      "methods": {
+        "Never-Ask": "outputs/<ds>/eval/qwen_coder/never_ask.json",
+        "CLEAR": "outputs/<ds>/eval/qwen_coder/clear.json",
+        "AmbiSQL": "outputs/<ds>/eval/qwen_coder/ambisql.json",
+        "Ours w/o scorer": "outputs/<ds>/eval/qwen_coder/ours_wo_scorer.json",
+        "Ours": "outputs/<ds>/eval/qwen_coder/ours.json"
+      },
+      "printed": {
+        "BIRD-Arcwise n=498": {
+          "EX": [
+            "59.2",
+            "60.0",
+            "60.0",
+            "66.9",
+            "66.9"
+          ],
+          "Q": [
+            "0",
+            "0.29",
+            "1.91",
+            "2.93",
+            "1.89"
+          ],
+          "correct": [
+            295,
+            299,
+            299,
+            333,
+            333
+          ]
+        },
+        "AMBROSIA n=1149": {
+          "EX": [
+            "12.2",
+            "17.0",
+            "20.2",
+            "46.8",
+            "47.6"
+          ],
+          "Q": [
+            "0",
+            "0.75",
+            "2.00",
+            "2.55",
+            "1.82"
+          ],
+          "correct": [
+            140,
+            195,
+            232,
+            538,
+            547
+          ]
+        },
+        "CLAMBSQL n=1400": {
+          "EX": [
+            "45.9",
+            "49.2",
+            "49.0",
+            "57.4",
+            "56.9"
+          ],
+          "Q": [
+            "0",
+            "1.18",
+            "1.88",
+            "2.89",
+            "1.97"
+          ],
+          "correct": [
+            643,
+            689,
+            686,
+            803,
+            797
+          ]
+        }
+      }
+    },
+    "tab:terra": {
+      "section": "RQ1, stronger parsers",
+      "note": "Q is reused from the coder ambiguities, not stored in these eval q fields (they are 0.0). BIRD-Arcwise is not in this table. DeepEye BIRD Ours is 390/498=78.31 in the repo but unused here.",
+      "methods": {
+        "terra": "outputs/<ds>/eval/gpt56_terra/<method>.json",
+        "deepeye": "outputs/<ds>/eval/deepeye/<method>.json"
+      },
+      "printed_EX": {
+        "AMBROSIA terra": [
+          "25.8",
+          "28.9+3.0",
+          "33.3+7.5",
+          "58.6+32.8",
+          "58.4+32.6"
+        ],
+        "CLAMBSQL terra": [
+          "52.9",
+          "54.1+1.2",
+          "56.1+3.2",
+          "61.4+8.5",
+          "61.3+8.4"
+        ],
+        "AMBROSIA DeepEye": [
+          "27.2",
+          "32.8+5.6",
+          "36.3+9.1",
+          "47.6+20.4",
+          "47.7+20.5"
+        ],
+        "CLAMBSQL DeepEye": [
+          "54.1",
+          "56.4+2.3",
+          "58.9+4.9",
+          "61.4+7.3",
+          "60.8+6.7"
+        ]
+      }
+    },
+    "tab:recall": {
+      "section": "RQ1, span recall",
+      "path": "outputs/analysis/span/span_recall.json",
+      "printed": {
+        "overall_recall": [
+          "72.8",
+          "59.5",
+          "39.7"
+        ],
+        "spans_per_question": [
+          "1.87",
+          "1.15",
+          "1.12"
+        ]
+      }
+    },
+    "tab:pertype": {
+      "section": "RQ2, auto-resolution by type at θ*=0.5",
+      "path": "outputs/analysis/theta/theta_curve/by_type_t0.5.json",
+      "note": "Fold Table→Column and Rank→Tie before comparing to the paper table. Python banker's rounding would print Join BIRD auto% as 6.2; the paper uses half-up 6.3."
+    },
+    "tab:ablation": {
+      "section": "Ablation on BIRD-Arcwise, qwen_coder",
+      "rows": [
+        {
+          "variant": "Never-Ask",
+          "ex": "59.2",
+          "q": "0",
+          "path": "outputs/bird_arcwise/eval/qwen_coder/never_ask.json"
+        },
+        {
+          "variant": "Forward detection, single-stage",
+          "ex": "61.0",
+          "q": "2.32",
+          "path": "outputs/analysis/paper/fwd_onestage.json",
+          "correct": 304,
+          "q_raw": 2.3233
+        },
+        {
+          "variant": "Forward detection, staged",
+          "ex": "62.2",
+          "q": "3.66",
+          "path": "outputs/bird_arcwise/eval/qwen_coder/fwd_nocheck.json",
+          "correct": 310,
+          "q_raw": 3.6586
+        },
+        {
+          "variant": "+ ambiguity checks",
+          "ex": "65.3",
+          "q": "2.51",
+          "path": "outputs/bird_arcwise/eval/qwen_coder/fwd_checks.json",
+          "correct": 325,
+          "q_raw": 2.514
+        },
+        {
+          "variant": "+ backward detection",
+          "ex": "66.9",
+          "q": "2.93",
+          "path": "outputs/bird_arcwise/eval/qwen_coder/ours_wo_scorer.json",
+          "correct": 333,
+          "q_raw": 2.9277
+        },
+        {
+          "variant": "+ scorer",
+          "ex": "66.9",
+          "q": "1.89",
+          "path": "outputs/bird_arcwise/eval/qwen_coder/ours.json",
+          "correct": 333,
+          "q_raw": 1.8916
+        },
+        {
+          "variant": "random control (mean of 3 seeds, not a table row in the current draft)",
+          "ex": "65.2",
+          "q": "1.88",
+          "note": "mean correct (335+320+319)/3 = 324.667; 1.7 points below the scorer"
+        }
+      ]
+    }
+  },
+  "other": {
+    "scorer_theta": {
+      "path": "outputs/analysis/paper/select_theta.json",
+      "frozen_copy": "outputs/analysis/paper/select_theta.json",
+      "theta_star": 0.5,
+      "train_cards": 5267,
+      "train_questions": 1454,
+      "train_dbs": 60,
+      "val_cards": 1006,
+      "val_questions": 261,
+      "val_dbs": 9,
+      "val_auto": 305,
+      "val_auto_pct": "30.3%",
+      "val_agree_pct": "90.2%",
+      "note": "Official train1 counts in outputs/analysis/paper/select_theta.json (5,267 cards / 1,454 questions / 60 databases; 1,006 cards / 261 questions / 9 databases). An earlier committed copy mistakenly wrote scheme A's 1,463 / 281 question counts."
+    },
+    "ltt": {
+      "paths": [
+        "outputs/analysis/ltt/ltt_summary.md",
+        "outputs/analysis/ltt/ltt_val_bounds.csv",
+        "outputs/analysis/ltt/ltt_test_check.csv"
+      ],
+      "delta": 0.1,
+      "UB_theta_star": "14.4% (0.144229)"
+    },
+    "test_disagreement_at_theta_star": {
+      "path": "outputs/analysis/theta/theta_curve/summary.json",
+      "BIRD": "45/535=8.41% (paper 8.4%)",
+      "AMBROSIA": "50/869=5.75% (paper 5.8%)",
+      "CLAMBSQL": "438/1339=32.71% (paper 32.7%)"
+    },
+    "theta_0.9": {
+      "Q_from_curve_and_eval": {
+        "BIRD": 0.6426,
+        "AMBROSIA": 0.5239,
+        "CLAMBSQL": 0.5471,
+        "printed": [
+          "0.64",
+          "0.52",
+          "0.55"
+        ]
+      },
+      "EX_from_official_eval": {
+        "paths": "outputs/<ds>/eval/qwen_coder/ours_theta0.9.json",
+        "BIRD": "326/498=65.4618; +5.4 vs stronger baseline 60.0 (before rounding)",
+        "AMBROSIA": "503/1149=43.777; +23.6 vs AmbiSQL 20.2",
+        "CLAMBSQL": "762/1400=54.4286; +5.2 vs CLEAR 49.2"
+      }
+    },
+    "any_gold": {
+      "path": "outputs/analysis/gold_sensitivity/gold_sensitivity_rescore.json",
+      "ours_vs_never_ask": {
+        "AMBROSIA": 20.6,
+        "CLAMBSQL": 7.8
+      }
+    },
+    "user_study_A": {
+      "paths": [
+        "outputs/user_study_wo_nl/analysis_results/round_a/summary.json"
+      ],
+      "printed": "42/50=84.0% identical option sets; scorer chosen in both on 45/50=90.0%"
+    },
+    "user_study_B": {
+      "ex_and_flips": "outputs/user_study/replay/pair_statistics.json",
+      "usefulness_clarity": "outputs/user_study/rescored/rating_summary.json",
+      "printed": {
+        "sim_EX": [
+          "74.0",
+          "68.0",
+          "61.0"
+        ],
+        "human_EX": {
+          "Ours": "79.0",
+          "AmbiSQL": "71.0"
+        },
+        "Ours_flips": "6 vs 1, p=0.125",
+        "AmbiSQL_flips": "4 vs 1, p=0.375",
+        "usefulness_recode_1to2_2to3_3to4": {
+          "Ours": "3.336→3.3",
+          "AmbiSQL": "3.125→3.1"
+        },
+        "clarity": {
+          "Ours": "4.801→4.8",
+          "AmbiSQL": "4.742→4.7"
+        }
+      },
+      "figure": "paper/figure/make_user_pairs.py defaults to outputs/user_study/replay",
+      "agreement_and_accept": "outputs/user_study/agreement.json"
+    },
+    "ask_harm": {
+      "path": "outputs/analysis/harm_analysis/ask_harm.json",
+      "hurt_pct": {
+        "AMBROSIA": 1.6,
+        "CLAMBSQL": 3.0
+      },
+      "note": "Among questions the simulated user was asked, clarification turned a correct Never-Ask query into a wrong one on at most 1.6% (AMBROSIA) and 3.0% (CLAMBSQL). BIRD has hurt counts but no printed percent in the paper source."
+    }
+  }
+}

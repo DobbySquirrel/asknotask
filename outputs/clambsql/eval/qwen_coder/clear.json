@@ -1,0 +1,13 @@
+{
+  "n": 1400,
+  "correct": {
+    "intended": 689
+  },
+  "ex": {
+    "intended": 49.214285714285715
+  },
+  "gold_key": "intended",
+  "source": "synced from eval_rescored/qwen_coder/clear.json (evaluator.ex gold_timeout=600)",
+  "q": 1.1807142857142856,
+  "q_total": 1653
+}

@@ -1,0 +1,13 @@
+{
+  "n": 498,
+  "correct": {
+    "gold": 380
+  },
+  "ex": {
+    "gold": 76.30522088353413
+  },
+  "gold_key": "gold",
+  "source": "synced from eval_rescored/deepeye/ambisql.json (evaluator.ex gold_timeout=600)",
+  "q": 0.0,
+  "q_total": 0
+}

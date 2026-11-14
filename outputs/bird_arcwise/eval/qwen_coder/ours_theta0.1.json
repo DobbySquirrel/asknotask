@@ -1,0 +1,13 @@
+{
+  "n": 498,
+  "correct": {
+    "gold": 333
+  },
+  "ex": {
+    "gold": 66.86746987951807
+  },
+  "gold_key": "gold",
+  "source": "synced from eval_rescored/qwen_coder/ours_theta0.1.json (evaluator.ex gold_timeout=600); Q kept from prior eval (2.9277)",
+  "q": 2.9277,
+  "q_total": 1457.9946
+}

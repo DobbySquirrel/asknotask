@@ -1,0 +1,13 @@
+{
+  "n": 498,
+  "correct": {
+    "gold": 310
+  },
+  "ex": {
+    "gold": 62.24899598393574
+  },
+  "gold_key": "gold",
+  "source": "synced from eval_rescored/qwen_coder/fwd_nocheck.json (evaluator.ex gold_timeout=600)",
+  "q": 3.6586345381526106,
+  "q_total": 1822
+}

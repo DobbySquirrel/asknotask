@@ -1,0 +1,13 @@
+{
+  "n": 498,
+  "correct": {
+    "gold": 295
+  },
+  "ex": {
+    "gold": 59.23694779116466
+  },
+  "gold_key": "gold",
+  "q": 0.0,
+  "q_total": 0.0,
+  "source": "mean of rescored reps hits [299, 290, 297] \u2192 295/498; Q: n_asked=0; gold_timeout=600"
+}

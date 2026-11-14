@@ -1,0 +1,13 @@
+{
+  "n": 1400,
+  "correct": {
+    "intended": 686
+  },
+  "ex": {
+    "intended": 49.0
+  },
+  "gold_key": "intended",
+  "source": "synced from eval_rescored/qwen_coder/ambisql.json (evaluator.ex gold_timeout=600)",
+  "q": 1.8785714285714286,
+  "q_total": 2630
+}

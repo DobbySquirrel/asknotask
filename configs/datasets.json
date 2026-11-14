@@ -1,0 +1,27 @@
+{
+  "_doc": "Per-benchmark evaluation settings. Prefer per-question db_path in gold.jsonl (AMBROSIA/CLAMBSQL db_id is not unique across domains/types). db_path template is a fallback for BIRD-style layouts filled with {db_id}. gold is the y* key the paper reports: BIRD single gold; AMBROSIA gold_1 = first gold in release order (no labeled intent); CLAMBSQL intended = dataset-marked gold (not always gold_1). Float cells are rounded to 6 decimals to match paper_exp norm_cell / score_gold. See outputs/analysis/gold_sensitivity_NOTE.md.",
+  "bird_arcwise": {
+    "n": 498,
+    "gold": "gold",
+    "gold_file": "dataset/bird_arcwise/gold.jsonl",
+    "db_path": "dataset/databases/bird_arcwise/{db_id}/{db_id}.sqlite"
+  },
+  "ambrosia": {
+    "n": 1149,
+    "gold": "gold_1",
+    "gold_file": "dataset/ambrosia/gold.jsonl",
+    "db_path": "dataset/databases/ambrosia/{db_id}.sqlite"
+  },
+  "clambsql": {
+    "n": 1400,
+    "gold": "intended",
+    "gold_file": "dataset/clambsql/gold.jsonl",
+    "db_path": "dataset/databases/clambsql/{db_id}/{db_id}.sqlite"
+  },
+  "birdtrain": {
+    "n": 2000,
+    "gold": "gold",
+    "gold_file": "dataset/birdtrain/gold.jsonl",
+    "db_path": "dataset/databases/birdtrain/{db_id}/{db_id}.sqlite"
+  }
+}

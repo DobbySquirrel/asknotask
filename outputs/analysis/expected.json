@@ -1,0 +1,438 @@
+{
+  "sizes": {
+    "bird_arcwise": 498,
+    "ambrosia": 1149,
+    "clambsql": 1400
+  },
+  "gold": {
+    "bird_arcwise": "gold",
+    "ambrosia": "gold_1",
+    "clambsql": "intended"
+  },
+  "entries": [
+    {
+      "id": "T2-bird-never_ask",
+      "paper": "Table II, bird_arcwise Never-Ask",
+      "path": "bird_arcwise/eval/qwen_coder/never_ask.json",
+      "bench": "bird_arcwise",
+      "ex": "59.2",
+      "q": "0"
+    },
+    {
+      "id": "T2-bird-clear",
+      "paper": "Table II, bird_arcwise CLEAR",
+      "path": "bird_arcwise/eval/qwen_coder/clear.json",
+      "bench": "bird_arcwise",
+      "ex": "60.0",
+      "q": "0.29"
+    },
+    {
+      "id": "T2-bird-ambisql",
+      "paper": "Table II, bird_arcwise AmbiSQL",
+      "path": "bird_arcwise/eval/qwen_coder/ambisql.json",
+      "bench": "bird_arcwise",
+      "ex": "60.0",
+      "q": "1.91"
+    },
+    {
+      "id": "T2-bird-ours_wo_scorer",
+      "paper": "Table II, bird_arcwise Ours w/o scorer",
+      "path": "bird_arcwise/eval/qwen_coder/ours_wo_scorer.json",
+      "bench": "bird_arcwise",
+      "ex": "66.9",
+      "q": "2.93"
+    },
+    {
+      "id": "T2-bird-ours",
+      "paper": "Table II, bird_arcwise Ours",
+      "path": "bird_arcwise/eval/qwen_coder/ours.json",
+      "bench": "bird_arcwise",
+      "ex": "66.9",
+      "q": "1.89"
+    },
+    {
+      "id": "T2-ambrosia-never_ask",
+      "paper": "Table II, ambrosia Never-Ask",
+      "path": "ambrosia/eval/qwen_coder/never_ask.json",
+      "bench": "ambrosia",
+      "ex": "12.2",
+      "q": "0"
+    },
+    {
+      "id": "T2-ambrosia-clear",
+      "paper": "Table II, ambrosia CLEAR",
+      "path": "ambrosia/eval/qwen_coder/clear.json",
+      "bench": "ambrosia",
+      "ex": "17.0",
+      "q": "0.75"
+    },
+    {
+      "id": "T2-ambrosia-ambisql",
+      "paper": "Table II, ambrosia AmbiSQL",
+      "path": "ambrosia/eval/qwen_coder/ambisql.json",
+      "bench": "ambrosia",
+      "ex": "20.2",
+      "q": "2.00"
+    },
+    {
+      "id": "T2-ambrosia-ours_wo_scorer",
+      "paper": "Table II, ambrosia Ours w/o scorer",
+      "path": "ambrosia/eval/qwen_coder/ours_wo_scorer.json",
+      "bench": "ambrosia",
+      "ex": "46.8",
+      "q": "2.55"
+    },
+    {
+      "id": "T2-ambrosia-ours",
+      "paper": "Table II, ambrosia Ours",
+      "path": "ambrosia/eval/qwen_coder/ours.json",
+      "bench": "ambrosia",
+      "ex": "47.6",
+      "q": "1.82"
+    },
+    {
+      "id": "T2-clambsql-never_ask",
+      "paper": "Table II, clambsql Never-Ask",
+      "path": "clambsql/eval/qwen_coder/never_ask.json",
+      "bench": "clambsql",
+      "ex": "45.9",
+      "q": "0"
+    },
+    {
+      "id": "T2-clambsql-clear",
+      "paper": "Table II, clambsql CLEAR",
+      "path": "clambsql/eval/qwen_coder/clear.json",
+      "bench": "clambsql",
+      "ex": "49.2",
+      "q": "1.18"
+    },
+    {
+      "id": "T2-clambsql-ambisql",
+      "paper": "Table II, clambsql AmbiSQL",
+      "path": "clambsql/eval/qwen_coder/ambisql.json",
+      "bench": "clambsql",
+      "ex": "49.0",
+      "q": "1.88"
+    },
+    {
+      "id": "T2-clambsql-ours_wo_scorer",
+      "paper": "Table II, clambsql Ours w/o scorer",
+      "path": "clambsql/eval/qwen_coder/ours_wo_scorer.json",
+      "bench": "clambsql",
+      "ex": "57.4",
+      "q": "2.89"
+    },
+    {
+      "id": "T2-clambsql-ours",
+      "paper": "Table II, clambsql Ours",
+      "path": "clambsql/eval/qwen_coder/ours.json",
+      "bench": "clambsql",
+      "ex": "56.9",
+      "q": "1.97"
+    },
+    {
+      "id": "Tterra-ambrosia-terra-never_ask",
+      "paper": "Strong-parser table, ambrosia terra Never-Ask",
+      "path": "ambrosia/eval/gpt56_terra/never_ask.json",
+      "bench": "ambrosia",
+      "ex": "25.8"
+    },
+    {
+      "id": "Tterra-ambrosia-terra-clear",
+      "paper": "Strong-parser table, ambrosia terra CLEAR",
+      "path": "ambrosia/eval/gpt56_terra/clear.json",
+      "bench": "ambrosia",
+      "ex": "28.9"
+    },
+    {
+      "id": "Tterra-ambrosia-terra-ambisql",
+      "paper": "Strong-parser table, ambrosia terra AmbiSQL",
+      "path": "ambrosia/eval/gpt56_terra/ambisql.json",
+      "bench": "ambrosia",
+      "ex": "33.3"
+    },
+    {
+      "id": "Tterra-ambrosia-terra-ours_wo_scorer",
+      "paper": "Strong-parser table, ambrosia terra Ours w/o scorer",
+      "path": "ambrosia/eval/gpt56_terra/ours_wo_scorer.json",
+      "bench": "ambrosia",
+      "ex": "58.6"
+    },
+    {
+      "id": "Tterra-ambrosia-terra-ours",
+      "paper": "Strong-parser table, ambrosia terra Ours",
+      "path": "ambrosia/eval/gpt56_terra/ours.json",
+      "bench": "ambrosia",
+      "ex": "58.4"
+    },
+    {
+      "id": "Tterra-ambrosia-deepeye-never_ask",
+      "paper": "Strong-parser table, ambrosia deepeye Never-Ask",
+      "path": "ambrosia/eval/deepeye/never_ask.json",
+      "bench": "ambrosia",
+      "ex": "27.2"
+    },
+    {
+      "id": "Tterra-ambrosia-deepeye-clear",
+      "paper": "Strong-parser table, ambrosia deepeye CLEAR",
+      "path": "ambrosia/eval/deepeye/clear.json",
+      "bench": "ambrosia",
+      "ex": "32.8"
+    },
+    {
+      "id": "Tterra-ambrosia-deepeye-ambisql",
+      "paper": "Strong-parser table, ambrosia deepeye AmbiSQL",
+      "path": "ambrosia/eval/deepeye/ambisql.json",
+      "bench": "ambrosia",
+      "ex": "36.3"
+    },
+    {
+      "id": "Tterra-ambrosia-deepeye-ours_wo_scorer",
+      "paper": "Strong-parser table, ambrosia deepeye Ours w/o scorer",
+      "path": "ambrosia/eval/deepeye/ours_wo_scorer.json",
+      "bench": "ambrosia",
+      "ex": "47.6"
+    },
+    {
+      "id": "Tterra-ambrosia-deepeye-ours",
+      "paper": "Strong-parser table, ambrosia deepeye Ours",
+      "path": "ambrosia/eval/deepeye/ours.json",
+      "bench": "ambrosia",
+      "ex": "47.7"
+    },
+    {
+      "id": "Tterra-clambsql-terra-never_ask",
+      "paper": "Strong-parser table, clambsql terra Never-Ask",
+      "path": "clambsql/eval/gpt56_terra/never_ask.json",
+      "bench": "clambsql",
+      "ex": "52.9"
+    },
+    {
+      "id": "Tterra-clambsql-terra-clear",
+      "paper": "Strong-parser table, clambsql terra CLEAR",
+      "path": "clambsql/eval/gpt56_terra/clear.json",
+      "bench": "clambsql",
+      "ex": "54.1"
+    },
+    {
+      "id": "Tterra-clambsql-terra-ambisql",
+      "paper": "Strong-parser table, clambsql terra AmbiSQL",
+      "path": "clambsql/eval/gpt56_terra/ambisql.json",
+      "bench": "clambsql",
+      "ex": "56.1"
+    },
+    {
+      "id": "Tterra-clambsql-terra-ours_wo_scorer",
+      "paper": "Strong-parser table, clambsql terra Ours w/o scorer",
+      "path": "clambsql/eval/gpt56_terra/ours_wo_scorer.json",
+      "bench": "clambsql",
+      "ex": "61.4"
+    },
+    {
+      "id": "Tterra-clambsql-terra-ours",
+      "paper": "Strong-parser table, clambsql terra Ours",
+      "path": "clambsql/eval/gpt56_terra/ours.json",
+      "bench": "clambsql",
+      "ex": "61.3"
+    },
+    {
+      "id": "Tterra-clambsql-deepeye-never_ask",
+      "paper": "Strong-parser table, clambsql deepeye Never-Ask",
+      "path": "clambsql/eval/deepeye/never_ask.json",
+      "bench": "clambsql",
+      "ex": "54.1"
+    },
+    {
+      "id": "Tterra-clambsql-deepeye-clear",
+      "paper": "Strong-parser table, clambsql deepeye CLEAR",
+      "path": "clambsql/eval/deepeye/clear.json",
+      "bench": "clambsql",
+      "ex": "56.4"
+    },
+    {
+      "id": "Tterra-clambsql-deepeye-ambisql",
+      "paper": "Strong-parser table, clambsql deepeye AmbiSQL",
+      "path": "clambsql/eval/deepeye/ambisql.json",
+      "bench": "clambsql",
+      "ex": "58.9"
+    },
+    {
+      "id": "Tterra-clambsql-deepeye-ours_wo_scorer",
+      "paper": "Strong-parser table, clambsql deepeye Ours w/o scorer",
+      "path": "clambsql/eval/deepeye/ours_wo_scorer.json",
+      "bench": "clambsql",
+      "ex": "61.4"
+    },
+    {
+      "id": "Tterra-clambsql-deepeye-ours",
+      "paper": "Strong-parser table, clambsql deepeye Ours",
+      "path": "clambsql/eval/deepeye/ours.json",
+      "bench": "clambsql",
+      "ex": "60.8"
+    },
+    {
+      "id": "TabAbl-onestage",
+      "paper": "Ablation, single-stage forward",
+      "path": "analysis/paper/fwd_onestage.json",
+      "bench": "bird_arcwise",
+      "ex": "61.0",
+      "q": "2.32"
+    },
+    {
+      "id": "TabAbl-fwd_nocheck",
+      "paper": "Ablation, staged forward no checks",
+      "path": "bird_arcwise/eval/qwen_coder/fwd_nocheck.json",
+      "bench": "bird_arcwise",
+      "ex": "62.2",
+      "q": "3.66"
+    },
+    {
+      "id": "TabAbl-fwd_checks",
+      "paper": "Ablation, + ambiguity checks",
+      "path": "bird_arcwise/eval/qwen_coder/fwd_checks.json",
+      "bench": "bird_arcwise",
+      "ex": "65.3",
+      "q": "2.51"
+    },
+    {
+      "id": "TabAbl-askall",
+      "paper": "Ablation, + backward detection",
+      "path": "bird_arcwise/eval/qwen_coder/ours_wo_scorer.json",
+      "bench": "bird_arcwise",
+      "ex": "66.9",
+      "q": "2.93"
+    },
+    {
+      "id": "TabAbl-scorer",
+      "paper": "Ablation, + scorer",
+      "path": "bird_arcwise/eval/qwen_coder/ours.json",
+      "bench": "bird_arcwise",
+      "ex": "66.9",
+      "q": "1.89"
+    },
+    {
+      "id": "TabAbl-random",
+      "paper": "Ablation prose, random control mean EX",
+      "path": "bird_arcwise/eval/qwen_coder/random_control.json",
+      "bench": "bird_arcwise",
+      "ex": "65.2"
+    },
+    {
+      "id": "theta09-bird",
+      "paper": "RQ2, Ours at θ=0.9 on bird_arcwise",
+      "path": "bird_arcwise/eval/qwen_coder/ours_theta0.9.json",
+      "bench": "bird_arcwise",
+      "ex": "65.5",
+      "q": "0.64"
+    },
+    {
+      "id": "theta09-ambrosia",
+      "paper": "RQ2, Ours at θ=0.9 on ambrosia",
+      "path": "ambrosia/eval/qwen_coder/ours_theta0.9.json",
+      "bench": "ambrosia",
+      "ex": "43.8",
+      "q": "0.52"
+    },
+    {
+      "id": "theta09-clambsql",
+      "paper": "RQ2, Ours at θ=0.9 on clambsql",
+      "path": "clambsql/eval/qwen_coder/ours_theta0.9.json",
+      "bench": "clambsql",
+      "ex": "54.4",
+      "q": "0.55"
+    },
+    {
+      "id": "Trecall-overall",
+      "paper": "Span recall overall (Ours / CLEAR / AmbiSQL)",
+      "path": "analysis/span/span_recall.json",
+      "values": {
+        "Overall/ours": "72.8",
+        "Overall/clear": "59.5",
+        "Overall/ambisql": "39.7"
+      }
+    },
+    {
+      "id": "Trecall-spans",
+      "paper": "Spans per question (Ours / CLEAR / AmbiSQL)",
+      "path": "analysis/span/span_recall.json",
+      "values": {
+        "spans_per_question/ours": "1.87",
+        "spans_per_question/clear": "1.15",
+        "spans_per_question/ambisql": "1.12"
+      }
+    },
+    {
+      "id": "scorer-select-theta",
+      "paper": "Scorer validation selection (committed select_theta.json)",
+      "path": "analysis/paper/select_theta.json",
+      "values": {
+        "theta_star": "0.5",
+        "val_cards": "1006",
+        "val_auto": "305",
+        "val_auto_pct": "30.3",
+        "val_agree_pct": "90.2",
+        "train_cards": "5267",
+        "train_questions": "1454",
+        "val_questions": "261",
+        "train_dbs": "60",
+        "val_dbs": "9"
+      }
+    },
+    {
+      "id": "UB-ex",
+      "paper": "Condition B EX (replay)",
+      "path": "user_study/replay/pair_statistics.json",
+      "values": {
+        "metrics/sim_visible/ours/ex_percent": "74.0",
+        "metrics/sim_visible/ambisql/ex_percent": "68.0",
+        "metrics/never_ask_control/never_ask/ex_percent": "61.0",
+        "metrics/human_internal/ours/ex_percent": "79.0",
+        "metrics/human_internal/ambisql/ex_percent": "71.0"
+      }
+    },
+    {
+      "id": "UB-flips",
+      "paper": "Condition B human vs sim flips and McNemar p",
+      "path": "user_study/replay/pair_statistics.json",
+      "values": {
+        "human_vs_sim/ours/mcnemar/only_b": "6",
+        "human_vs_sim/ours/mcnemar/only_a": "1",
+        "human_vs_sim/ours/mcnemar/p_exact": "0.125",
+        "human_vs_sim/ambisql/mcnemar/only_b": "4",
+        "human_vs_sim/ambisql/mcnemar/only_a": "1",
+        "human_vs_sim/ambisql/mcnemar/p_exact": "0.375"
+      }
+    },
+    {
+      "id": "UB-ratings",
+      "paper": "Condition B rescored usefulness and clarity (print 3.3/3.1, 4.8/4.7)",
+      "path": "user_study/rescored/rating_summary.json",
+      "values": {
+        "metrics/ours/preview_usefulness": "3.3",
+        "metrics/ambisql/preview_usefulness": "3.1",
+        "metrics/ours/preview_clarity": "4.8",
+        "metrics/ambisql/preview_clarity": "4.7"
+      }
+    },
+    {
+      "id": "UA-agreement",
+      "paper": "Condition A option-set and scorer agreement",
+      "path": "user_study_wo_nl/analysis_results/round_a/summary.json",
+      "values": {
+        "exact_agreement_all/matches": "42",
+        "exact_agreement_all/denominator": "50",
+        "exact_agreement_all/percent": "84.0",
+        "scorer_support/both_selected": "45"
+      }
+    },
+    {
+      "id": "any-gold-delta",
+      "paper": "Any-gold EX gain of Ours vs Never-Ask",
+      "path": "analysis/gold_sensitivity/gold_sensitivity_rescore.json",
+      "values": {
+        "paper_setup/ours_vs_never_ask_any_gold_delta/ambrosia": "20.6",
+        "paper_setup/ours_vs_never_ask_any_gold_delta/clambsql": "7.8"
+      }
+    }
+  ]
+}

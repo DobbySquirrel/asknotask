@@ -1,0 +1,2230 @@
+{
+  "bird:1501": {
+    "questions": [
+      {
+        "qid_local": "bird:1501#ambi0",
+        "options": [
+          "Use Date column from transactions_1k table, representing the transaction date in the transactions table.",
+          "Use Time column from transactions_1k table, representing the transaction time in the transactions table.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:1501#ambi1",
+        "options": [
+          "Use Country column from gasstations table, representing the country of each gas station.",
+          "Use ChainID column from gasstations table, representing the chain identifier of each gas station.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:1507": {
+    "questions": [
+      {
+        "qid_local": "bird:1507#ambi0",
+        "options": [
+          "Retrieve all unique time values when transactions occurred at gas stations from chain no. 11 (distinct times).",
+          "Calculate the difference between earliest and latest transaction times for each gas station in chain no. 11 (variations in timing).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:1507#ambi1",
+        "options": [
+          "{'e': ['g']}"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "Retrieve all unique time values when transactions occurred at gas stations from chain no. 11 (distinct times).",
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:1525": {
+    "questions": [
+      {
+        "qid_local": "bird:1525#ambi0",
+        "options": [
+          "Use the Currency column from customers table, representing the default currency assigned to each customer.",
+          "Use the CustomerID column from transactions_1k table, representing the customer identifier linked to transactions.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:1317": {
+    "questions": []
+  },
+  "bird:1359": {
+    "questions": [
+      {
+        "qid_local": "bird:1359#ambi0",
+        "options": [
+          "Use amount column from budget table, representing the total budget amount allocated for each event.",
+          "Use spent column from budget table, representing the actual amount spent for each event.",
+          "Use remaining column from budget table, representing the remaining budget amount for each event.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:1359#ambi1",
+        "options": [
+          "Calculate the ratio of the budget for 'Yearly Kickoff' to the budget for 'October Meeting'.",
+          "Compute the difference between the budget for 'Yearly Kickoff' and the budget for 'October Meeting'.",
+          "Count how many times the budget for 'Yearly Kickoff' exceeds the budget for 'October Meeting'.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:1378": {
+    "questions": []
+  },
+  "bird:1401": {
+    "questions": [
+      {
+        "qid_local": "bird:1401#ambi0",
+        "options": [
+          "Use event column from event_name table, representing the name of the event as stored in the database.",
+          "Use budget column from category table, representing the category of budget items related to the event.",
+          "Use expense column from expense_description table, representing the description of expenses related to the event.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:1401#ambi1",
+        "options": [
+          "Filter expenses where the expense description exactly matches 'Posters'.",
+          "Filter expenses where the expense description contains the word 'Poster'.",
+          "Filter expenses where the expense description contains 'September Speaker'.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:1427": {
+    "questions": []
+  },
+  "bird:1152": {
+    "questions": []
+  },
+  "bird:1235": {
+    "questions": [
+      {
+        "qid_local": "bird:1235#ambi0",
+        "options": [
+          "Use RBC column from Laboratory table, representing the red blood cell count value from laboratory tests.",
+          "Use HGB column from Laboratory table, representing the hemoglobin level which is related to red blood cell count.",
+          "Use HCT column from Laboratory table, representing the hematocrit which indicates the proportion of red blood cells.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:1235#ambi1",
+        "options": [
+          "Use RBC < 3.5, based on the normal range provided in the schema (Normal range: 3.5 < N < 6.0).",
+          "Use RBC <= 3.5, including the boundary value as potentially indicating low count.",
+          "Use RBC < 4.0, using a slightly higher threshold to capture borderline cases.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:1235#ambi2",
+        "options": [
+          "Calculate age as the difference in years between current date and birthday (YEAR(CURRENT_DATE) - YEAR(Birthday)).",
+          "Calculate age using the timestamp difference function (TIMESTAMPDIFF(YEAR, Birthday, CURRENT_DATE)).",
+          "Calculate age using the days difference divided by average days per year (DATEDIFF(CURRENT_DATE, Birthday) / 365.25).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:1302": {
+    "questions": [
+      {
+        "qid_local": "bird:1302#ambi0",
+        "options": [
+          "Use CPK column from Laboratory table, representing the creatinine phosphokinase level in laboratory tests.",
+          "Use CRE column from Laboratory table, representing the creatinine level which is different from CPK but may be related to kidney function.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:1302#ambi1",
+        "options": [
+          "KCT = '+', RVVT = '+', or LAC = '+', indicating positive results for any of these coagulation tests.",
+          "KCT = '+' AND RVVT = '+' AND LAC = '+', requiring all three tests to be positive.",
+          "KCT = '+' OR RVVT = '+' OR LAC = '+', meaning at least one of the tests is positive.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:1029": {
+    "questions": [
+      {
+        "qid_local": "bird:1029#ambi0",
+        "options": [
+          "Use buildUpPlaySpeed column from Team_Attributes table, representing the speed of build-up play for teams.",
+          "Use buildUpPlayDribbling column from Team_Attributes table, representing the dribbling aspect of build-up play.",
+          "Use buildUpPlayPassing column from Team_Attributes table, representing the passing aspect of build-up play.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:1029#ambi1",
+        "options": [
+          "Select the top 4 teams with the maximum buildUpPlaySpeed value using ORDER BY buildUpPlaySpeed DESC LIMIT 4.",
+          "Select the top 4 teams with the highest average buildUpPlaySpeed across all records using GROUP BY team_api_id and ORDER BY AVG(buildUpPlaySpeed) DESC LIMIT 4.",
+          "Select the top 4 teams with the highest sum of buildUpPlaySpeed values using GROUP BY team_api_id and ORDER BY SUM(buildUpPlaySpeed) DESC LIMIT 4.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:1068": {
+    "questions": [
+      {
+        "qid_local": "bird:1068#ambi0",
+        "options": [
+          "Use height column from Player table, representing the height of the player in centimeters.",
+          "Use overall_rating column from Player_Attributes table, representing the overall rating of the player.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:1068#ambi1",
+        "options": [
+          "The time period includes all dates from January 1, 2010 to December 31, 2015, inclusive of both endpoints.",
+          "The time period includes all dates from January 1, 2010 to December 31, 2015.",
+          "The time period includes all dates from January 1, 2010 to December 31, 2015, but excludes the endpoints.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:1144": {
+    "questions": []
+  },
+  "bird:930": {
+    "questions": [
+      {
+        "qid_local": "bird:930#ambi0",
+        "options": [
+          "Use rank column from results table, representing the rank position of drivers in each race result.",
+          "Use position column from results table, representing the finishing position of drivers in each race result.",
+          "Use position column from driverStandings table, representing the driver standings position in each race.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:964": {
+    "questions": []
+  },
+  "bird:981": {
+    "questions": [
+      {
+        "qid_local": "bird:981#ambi0",
+        "options": [
+          "Use dob column from drivers table, representing the date of birth of the driver.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:981#ambi1",
+        "options": [
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "{\"races\": [\"date\"], \"qualifying\": [\"raceId\"]}",
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:981#ambi2",
+        "options": [
+          "{'races': ['date']}",
+          "{'qualifying': ['raceId']}",
+          "{'qualifying': ['qualifyId']}"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "{\"races\": [\"date\"], \"qualifying\": [\"raceId\"]}",
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:726": {
+    "questions": []
+  },
+  "bird:728": {
+    "questions": [
+      {
+        "qid_local": "bird:728#ambi0",
+        "options": [
+          "Use eye_colour_id column from superhero table, representing the ID of the superhero's eye color which maps to the colour table.",
+          "Use hair_colour_id column from superhero table, representing the ID of the superhero's hair color which maps to the colour table.",
+          "Use skin_colour_id column from superhero table, representing the ID of the superhero's skin color which maps to the colour table.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:728#ambi1",
+        "options": [
+          "Count occurrences of each eye color and rank them by frequency (COUNT(*) GROUP BY eye_colour_id ORDER BY COUNT(*) DESC).",
+          "Calculate the frequency of each eye color without explicit ordering (GROUP BY eye_colour_id).",
+          "Assign ranks to eye colors based on their frequency counts (RANK() OVER (ORDER BY COUNT(*) DESC)).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:732": {
+    "questions": [
+      {
+        "qid_local": "bird:732#ambi0",
+        "options": [
+          "Use attribute column from attribute_name table, representing the attribute name such as 'Speed' which is used to evaluate superhero abilities.",
+          "Use hero_attribute column from attribute_value table, representing the actual numeric value of an attribute for a specific hero, used to compare speeds among heroes.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:761": {
+    "questions": [
+      {
+        "qid_local": "bird:761#ambi0",
+        "options": [
+          "Use weight_kg column from superhero table, representing the weight of the superhero in kilograms.",
+          "Use height_cm column from superhero table, representing the height of the superhero in centimeters.",
+          "Use attribute_value column from hero_attribute table, representing the value of a specific attribute for the superhero.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:761#ambi1",
+        "options": [
+          "Use superhero_name column from superhero table, representing the display name of the superhero.",
+          "Use full_name column from superhero table, representing the complete legal name of the superhero.",
+          "Use gender_id column from superhero table, representing the gender identifier of the superhero.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:766": {
+    "questions": [
+      {
+        "qid_local": "bird:766#ambi0",
+        "options": [
+          "Use hero_attribute column from attribute_value table, representing the numerical value of the strength attribute for each hero.",
+          "Use attribute column from attribute_name table, representing the name of the attribute being queried (e.g., 'Strength').",
+          "Use superhero column from full_name table, representing the full name of the superhero.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:766#ambi1",
+        "options": [
+          "Find the maximum attribute_value where attribute_name equals 'Strength' using the MAX() function.",
+          "List all heroes with the highest recorded strength value by filtering by the maximum strength value.",
+          "Rank all heroes by their strength attribute and select those with the top rank using a RANK() or similar window function.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:822": {
+    "questions": [
+      {
+        "qid_local": "bird:822#ambi0",
+        "options": [
+          "Use skin_colour_id column from superhero table, representing the ID of the superhero's skin color that links to the colour table.",
+          "Use eye_colour_id column from superhero table, representing the ID of the superhero's eye color.",
+          "Use hair_colour_id column from superhero table, representing the ID of the superhero's hair color.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:822#ambi1",
+        "options": [
+          "Filter heroes/villains where alignment equals 'Bad' (exact match).",
+          "Filter heroes/villains where alignment_id equals 3 (representing the ID for 'Bad' alignment).",
+          "Filter heroes/villains where alignment_id equals 2 (representing the ID for 'Neutral' alignment).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:592": {
+    "questions": []
+  },
+  "bird:598": {
+    "questions": []
+  },
+  "bird:633": {
+    "questions": []
+  },
+  "bird:409": {
+    "questions": [
+      {
+        "qid_local": "bird:409#ambi0",
+        "options": [
+          "Use format column from legalities table, representing the format of play for the card.",
+          "Use type column from cards table, representing the type of the card.",
+          "Use setCode column from cards table, representing the set code of the card.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          3
+        ],
+        "sim_free_text": null,
+        "sim_abstain": true
+      },
+      {
+        "qid_local": "bird:409#ambi1",
+        "options": [
+          "The exact phrase 'This is a triggered mana ability.' exists in the text field of the cards table.",
+          "The phrase 'This is a triggered mana ability.' exists in the rulings table's text field.",
+          "The phrase 'This is a triggered mana ability.' exists in the foreign_data table's text field.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:409#ambi2",
+        "options": [
+          "The side column in the cards table is NULL, indicating no multiple faces.",
+          "The side column in the cards table is NOT NULL, indicating multiple faces exist.",
+          "The layout column in the cards table is 'normal', indicating single face.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:469": {
+    "questions": []
+  },
+  "bird:487": {
+    "questions": [
+      {
+        "qid_local": "bird:487#ambi0",
+        "options": [
+          "Use cardKingdomFoilId column from cards table, representing the card kingdom foil ID which when paired with cardKingdomId that is not Null indicates an incredibly powerful card.",
+          "Use cardKingdomId column from cards table, representing the card kingdom ID which when paired with cardKingdomFoilId that is not Null indicates an incredibly powerful card.",
+          "Use hasFoil column from cards table, representing whether the card can be found in foil, which is a general indicator of powerful status.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:487#ambi1",
+        "options": [
+          "Filter sets where the name equals 'Coldsnap' (exact match).",
+          "Filter sets where the name contains 'Coldsnap' (partial match).",
+          "Filter sets where the set code equals 'CSP'.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:197": {
+    "questions": [
+      {
+        "qid_local": "bird:197#ambi0",
+        "options": [
+          "Use atom column from element table, representing the element type of each atom in the molecule.",
+          "Use bond column from bond_type table, representing the type of bond between atoms (to filter for single bonds).",
+          "Use molecule column from molecule_id table, representing the unique identifier of each molecule to group by.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:197#ambi1",
+        "options": [
+          "COUNT the number of oxygen atoms per molecule and then take the average across all molecules.",
+          "SUM the count of oxygen atoms for each molecule and divide by the total number of molecules.",
+          "Use a nested query to first identify single-bonded molecules, then compute the average number of oxygen atoms per such molecule.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:226": {
+    "questions": []
+  },
+  "bird:273": {
+    "questions": []
+  },
+  "bird:17": {
+    "questions": [
+      {
+        "qid_local": "bird:17#ambi0",
+        "options": [
+          "Use AvgScrWrite column from satscores table, representing the average scores in writing for each school.",
+          "Use AvgScrRead column from satscores table, representing the average scores in reading for each school.",
+          "Use AvgScrMath column from satscores table, representing the average scores in math for each school.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:17#ambi1",
+        "options": [
+          "Filter schools where the average writing score is greater than 499 (AvgScrWrite > 499).",
+          "Filter schools where the average writing score is greater than or equal to 499 (AvgScrWrite >= 499).",
+          "Filter schools where the number of test takers with total SAT scores greater than or equal to 1500 is greater than 499 (NumGE1500 > 499).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:17#ambi2",
+        "options": [
+          "Use CharterNum column from schools table, representing the charter school number assigned to each school.",
+          "Use CharterNum column from frpm table, representing the charter school number from the FRPM dataset.",
+          "Use CDSCode column from schools table, representing the unique CDS code identifier for each school.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:62": {
+    "questions": [
+      {
+        "qid_local": "bird:62#ambi0",
+        "options": [
+          "Use Charter column from frpm table, representing whether a school is charter (1) or non-charter (0).",
+          "Use Charter column from schools table, representing whether a school is charter (1) or non-charter (0).",
+          "Use County Name column from frpm table, representing the county name where the school is located.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:62#ambi1",
+        "options": [
+          "Use Percent (%) Eligible Free (K-12) column from frpm table, representing the percentage of eligible free meals for K-12 grades.",
+          "Use Free Meal Count (K-12) column from frpm table, representing the count of students eligible for free meals in K-12 grades.",
+          "Use Enrollment (K-12) column from frpm table, representing the total enrollment in K-12 grades.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:62#ambi2",
+        "options": [
+          "Use County Name column from frpm table, representing the name of the county where the school is located.",
+          "Use County Code column from frpm table, representing the numeric code of the county where the school is located.",
+          "Use County column from schools table, representing the name of the county where the school is located.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:62#ambi3",
+        "options": [
+          "The threshold is 0.18%, meaning we want schools where Percent (%) Eligible Free (K-12) is less than 0.18%.",
+          "The threshold is 0.18%, meaning we want schools where Percent (%) Eligible Free (K-12) is less than or equal to 0.18%.",
+          "The threshold is 0.18%, meaning we want schools where Percent (%) Eligible Free (K-12) is less than 0.18 multiplied by 100.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:82": {
+    "questions": [
+      {
+        "qid_local": "bird:82#ambi0",
+        "options": [
+          "Use Longitude column from schools table, representing the longitude coordinate of the school's location.",
+          "Use Latitude column from schools table, representing the latitude coordinate of the school's location.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:82#ambi1",
+        "options": [
+          "The grade span offered refers to the GSoffered column which indicates the lowest and highest grades offered by the school.",
+          "The grade span offered refers to the GSserved column which indicates the actual grade levels enrolled in the school.",
+          "The grade span offered refers to the High Grade column in the frpm table which indicates the highest grade level taught.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:83": {
+    "questions": [
+      {
+        "qid_local": "bird:83#ambi0",
+        "options": [
+          "Use GSoffered column from schools table, representing the grade span offered by the school.",
+          "Use GSserved column from schools table, representing the actual grade span served by the school.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          3
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:83#ambi1",
+        "options": [
+          "NSLP Provision Status equals 'Multiple Provision Types' (exact match).",
+          "NSLP Provision Status contains 'Multiple Provision Types' (partial match).",
+          "NSLP Provision Status is one of 'Multiple Provision Types', 'Multiple Provision Types 1', or 'Multiple Provision Types 2' (inclusion match).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:83#ambi2",
+        "options": [
+          "Count all schools per city using COUNT(*) GROUP BY City.",
+          "Count distinct schools per city using COUNT(School) GROUP BY City.",
+          "Sum up enrollments per city using SUM(Enrollment) GROUP BY City.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:94": {
+    "questions": [
+      {
+        "qid_local": "bird:94#ambi0",
+        "options": [
+          "Use birth_date column from client table, representing the birth date of the client.",
+          "Use account column from date table, representing the creation date of the account.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:94#ambi1",
+        "options": [
+          "Calculate the difference between the maximum and minimum average salaries using MAX(A11) - MIN(A11) from the district table.",
+          "Use a subquery to find the maximum and minimum average salaries across all districts and compute their difference.",
+          "Compute the difference by selecting the highest and lowest A11 values from the district table separately and then subtracting them.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:189": {
+    "questions": [
+      {
+        "qid_local": "bird:189#ambi0",
+        "options": [
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:189#ambi1",
+        "options": [
+          "Use district column A11, representing the average salary in the district where the client resides.",
+          "Use client column salary, representing the individual salary of the client (if available).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:189#ambi2",
+        "options": [
+          "{'client': ['birth_date']}",
+          "{'client': ['account_created_at']}"
+        ],
+        "sim_indices": [],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:192": {
+    "questions": [
+      {
+        "qid_local": "bird:192#ambi0",
+        "options": [
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "{\"loan\": [\"status\"]}",
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:192#ambi1",
+        "options": [
+          "Transaction type 'SLUZBY' in the trans table represents payment for statement.",
+          "Transaction type 'PREVOD Z UCTU' in the trans table indicates collection from another bank, which may include statement issuance.",
+          "Transaction type 'VKLAD' in the trans table represents credit in cash, which might involve statement issuance.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:192#ambi2",
+        "options": [
+          "{'loan': ['status']}",
+          "{'trans': ['k_symbol']}",
+          "{'loan': ['status']}"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "bird:194": {
+    "questions": [
+      {
+        "qid_local": "bird:194#ambi0",
+        "options": [
+          "Use birth_date column from client table, representing the birth date of the client from which age can be calculated.",
+          "Use age column from client table, representing the age of the client directly stored in the database.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:194#ambi1",
+        "options": [
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "{\"card\": [\"type\"]}",
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:194#ambi2",
+        "options": [
+          "Filter clients where disposition type equals 'OWNER' (meaning the client owns the account and is eligible for loans).",
+          "Filter clients where disposition type equals 'DISPONENT' (meaning the client is a designated representative but may not be eligible for loans).",
+          "Filter clients where disposition type equals 'USER' (meaning the client is a regular user but may not be eligible for loans).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "bird:194#ambi3",
+        "options": [
+          "{'card': ['type']}",
+          "{'card': ['type']}",
+          "{'card': ['type']}"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:695": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:695#ambi0",
+        "options": [
+          "Use visualStorytelling column from Articles table, representing the type of visual content in the article (e.g., 'Photo', 'Video').",
+          "Use articleType column from Articles table, representing the category or topic of the article (e.g., 'Technology').",
+          "Use id column from Articles table, representing the unique identifier of each article.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:695#ambi1",
+        "options": [
+          "The article's 'articleType' column must be exactly 'Technology'.",
+          "The article's 'visualStorytelling' column must contain 'Technology' as a keyword.",
+          "The article's 'title' or 'content' fields must include keywords related to technology.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:724": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:724#ambi0",
+        "options": [
+          "Use Psychologists column from clinic table, representing the clinic name where the psychologist works.",
+          "Use Psychiatrists column from clinic table, representing the clinic name where the psychiatrist works.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:911": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:911#ambi0",
+        "options": [
+          "Use Mobile Banking App column from Digital_Solutions table, representing customers who use the mobile banking application.",
+          "Use Internet Banking Platform column from Digital_Solutions table, representing customers who use the internet banking platform.",
+          "Use Mobile Banking App or Internet Banking Platform column from Digital_Solutions table, representing customers who use either mobile or internet banking solutions.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:945": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:945#ambi0",
+        "options": [
+          "Use PassingMark column from Assessments table, representing the minimum score required to pass each assessment.",
+          "Use Score column from Scores table, representing individual student scores for assessments.",
+          "Use FinalGrade column from Grades table, representing the final letter grade assigned to students.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:945#ambi1",
+        "options": [
+          "Only assessments where AssessmentMethod equals 'Exam' or 'Quiz'.",
+          "All assessments where AssessmentMethod is either 'Exam' or 'Quiz'.",
+          "Assessments where AssessmentMethod contains 'Exam' or 'Quiz' (including variations in naming).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:957": {
+    "questions": []
+  },
+  "ambrosia:1414": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:1414#ambi0",
+        "options": [
+          "Use diet_type_id column from Nutritionists_Diets table, representing the diet type associated with each nutritionist.",
+          "Use diet_type_value column from Diets table, representing the actual name/value of the diet type.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:1696": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:1696#ambi0",
+        "options": [
+          "Use customer_support column from description table, representing the description of customer support options.",
+          "Use streaming_service column from name table, representing the name of the streaming service.",
+          "Use streaming_service_customer_support column from id table, representing the linking identifier between services and support.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:1708": {
+    "questions": []
+  },
+  "ambrosia:1714": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:1714#ambi0",
+        "options": [
+          "Use streaming_service_id column from Streaming_Service_Monetization_Model table, representing the foreign key linking to the Streaming_Service table.",
+          "Use monetization_model_id column from Streaming_Service_Monetization_Model table, representing the foreign key linking to the Monetization_Model table.",
+          "Use model_name column from Monetization_Model table, representing the name of the monetization model itself.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:1714#ambi1",
+        "options": [
+          "Retrieve monetization models directly from the database using the Streaming_Service_Monetization_Model join table.",
+          "Use LLM reasoning to interpret what monetization models each streaming service might use based on descriptions or other contextual clues.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:1807": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:1807#ambi0",
+        "options": [
+          "Use captions_and_subtitles column from language table, representing the language of the captions or subtitles.",
+          "Use streamings column from title table, representing the title of the stream which may imply language context.",
+          "Use streamings column from duration table, representing the duration of the stream which does not relate to language.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:1824": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:1824#ambi0",
+        "options": [
+          "Find cuisines that appear in the Food_Critics_Cuisines table for ALL food critics (using GROUP BY and HAVING COUNT).",
+          "Find cuisines that are reviewed by at least one food critic (using simple JOIN).",
+          "Find cuisines that are reviewed by more than one food critic (using GROUP BY and HAVING COUNT > 1).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:1874": {
+    "questions": []
+  },
+  "ambrosia:1986": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:1986#ambi0",
+        "options": [
+          "List the end dates of elections that are covered by all reporters (intersection of all elections).",
+          "List the end dates of elections that are covered by any reporter (union of all elections).",
+          "List the end dates of elections that are covered by each individual reporter separately.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:2161": {
+    "questions": []
+  },
+  "ambrosia:2307": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:2307#ambi0",
+        "options": [
+          "Use creditCardId column from Credit_Card_Benefits table, representing the foreign key linking to the Credit_Cards table.",
+          "Use benefitId column from Credit_Card_Benefits table, representing the foreign key linking to the Benefits table.",
+          "Use id column from Credit_Cards table, representing the primary key of the Credit_Cards table.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:2360": {
+    "questions": []
+  },
+  "ambrosia:2378": {
+    "questions": []
+  },
+  "ambrosia:2474": {
+    "questions": []
+  },
+  "ambrosia:2476": {
+    "questions": []
+  },
+  "ambrosia:2701": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:2701#ambi0",
+        "options": [
+          "Use Functions column from value table, representing the specific function name or capability of the app.",
+          "Use Health_Apps column from description table, representing the general description of the app which may include its functions.",
+          "Use Health_Apps_Functions column from functionID table, representing the linking ID between apps and their functions.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:2701#ambi1",
+        "options": [
+          "Retrieve all functions linked to each health app using the Health_Apps_Functions table.",
+          "Retrieve only the primary function of each health app, assuming one main function per app.",
+          "Retrieve a summary of all unique functions across all health apps without grouping by individual apps.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:2709": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:2709#ambi0",
+        "options": [
+          "Use movie_set_id column from Movie_sets_equipment table, representing the foreign key linking to the Movie_sets table.",
+          "Use equipment_id column from Movie_sets_equipment table, representing the foreign key linking to the Equipment table.",
+          "Use quantity column from Movie_sets_equipment table, representing the number of equipment items used per movie set.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:2709#ambi1",
+        "options": [
+          "List all equipment items that appear in at least one movie set.",
+          "List all equipment items that are associated with every single movie set in the database.",
+          "List all unique equipment items across all movie sets, showing their usage frequency.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:2787": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:2787#ambi0",
+        "options": [
+          "COUNT the number of job posts for each qualification, representing the total count of available positions.",
+          "GROUP BY the qualification and then COUNT the number of job posts, showing how many jobs exist for each qualification level or certification.",
+          "SUM the number of job posts grouped by qualification, indicating the total number of job listings per qualification type.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:2851": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:2851#ambi0",
+        "options": [
+          "Use director_id column from Movie table, representing the director of the movie.",
+          "Use studio_id column from Movie table, representing the studio that produced the movie.",
+          "Use id column from Director table, representing the unique identifier of the director.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          1,
+          4
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:2851#ambi1",
+        "options": [
+          "Retrieve the name of the director for each film.",
+          "Retrieve the name of the studio for each film.",
+          "Retrieve both the director name and studio name for each film.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:3143": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:3143#ambi0",
+        "options": [
+          "Use mean_commute_time column from Neighborhood table, representing the average commute time in minutes.",
+          "Use median_commute_time column from Neighborhood table, representing the median commute time in minutes.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:3228": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:3228#ambi0",
+        "options": [
+          "The category refers to the demographic group of readers, determined by the demographic_group_id column in the Readers table.",
+          "The category refers to the professional field associated with the magazine, determined by the professional_field_id column in the Magazines table.",
+          "The category refers to the preferred magazine of each reader, determined by the preferred_magazine_id column in the Readers table.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:3566": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:3566#ambi0",
+        "options": [
+          "Use Population column from Countries table, representing the total population count of each country.",
+          "Use PopulationCount column from Regions table, representing the population count of regions rather than individual countries.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:3566#ambi1",
+        "options": [
+          "Use Official_Language column from Countries table, representing the official language(s) of the country.",
+          "Use Spoken_Language column from Countries table, representing the spoken language(s) of the country.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:3733": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:3733#ambi0",
+        "options": [
+          "Use Total_Liabilities column from Financial_Institutions table, representing the total liabilities of each financial institution.",
+          "Use Total_Assets column from Financial_Institutions table, representing the total assets of each financial institution, which could be inversely related to liabilities.",
+          "Use ROI_Percentage column from Financial_Institutions table, representing the return on investment percentage, which may indirectly reflect financial health but not directly liabilities.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:3733#ambi1",
+        "options": [
+          "The lowest total liabilities, indicating better financial stability.",
+          "The highest total liabilities, suggesting larger scale operations or potential risk.",
+          "The most stable or consistent total liabilities over time, implying predictable financial behavior.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:3889": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:3889#ambi0",
+        "options": [
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "{\"Artists\": [\"Genre\"], \"Tickets\": [\"ConcertID\"]}",
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:3889#ambi1",
+        "options": [
+          "The location refers to the city or country where the customer resides, represented by Customers::AddressLine or Customers::PostalCode.",
+          "The location refers to the venue or city where pop concerts were held, represented by Concerts::City or Concerts::Country.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:3889#ambi2",
+        "options": [
+          "{'Artists': ['Genre']}",
+          "{'Tickets': ['ConcertID']}"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "{\"Artists\": [\"Genre\"], \"Tickets\": [\"ConcertID\"]}",
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:3960": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:3960#ambi0",
+        "options": [
+          "Use Budget column from Costumes table, representing the budget allocated for costumes.",
+          "Use Costume_Supervisor column from Costumes table, representing the supervisor responsible for costumes.",
+          "Use Costume_Designer column from Costumes table, representing the designer responsible for costume design.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "ambrosia:3960#ambi1",
+        "options": [
+          "'costumiers' refers to the costume designers listed in the Costumes table.",
+          "'costumiers' refers to the costume supervisors listed in the Costumes table.",
+          "'costumiers' refers to the production companies listed in the Producers table.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "ambrosia:4195": {
+    "questions": [
+      {
+        "qid_local": "ambrosia:4195#ambi0",
+        "options": [
+          "Use grade column from Enrollment table, representing the grade received by students for their project submissions.",
+          "Use score column from Project table, representing a direct scoring metric associated with each project (if exists).",
+          "Use points column from Project table, representing a points-based rating system for projects (if exists).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:73": {
+    "questions": []
+  },
+  "clambsql:211": {
+    "questions": [
+      {
+        "qid_local": "clambsql:211#ambi0",
+        "options": [
+          "Use degree_program_id column from Student_Enrolment table, representing the unique identifier for each degree program that students are enrolled in.",
+          "Use student_id column from Student_Enrolment table, representing the unique identifier for each student enrolled in a program.",
+          "Use semester_id column from Student_Enrolment table, representing the semester in which the student enrollment occurs.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:211#ambi1",
+        "options": [
+          "The summary refers to the degree_summary_name column in the Degree_Programs table, which contains names like 'Master', 'Bachelor', 'PHD'.",
+          "The summary refers to the degree_summary_description column in the Degree_Programs table, which provides descriptions of the programs.",
+          "The summary refers to the course_description column in the Courses table, which describes individual courses within the program.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:297": {
+    "questions": []
+  },
+  "clambsql:299": {
+    "questions": [
+      {
+        "qid_local": "clambsql:299#ambi0",
+        "options": [
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:299#ambi1",
+        "options": [
+          "Count the number of documents associated with each template type and rank them.",
+          "Count the number of times each template type appears across all documents and rank them.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:299#ambi2",
+        "options": [
+          "{'Documents': ['Template_ID']}",
+          "{'Templates': ['Template_Type_Code']}"
+        ],
+        "sim_indices": [],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:355": {
+    "questions": [
+      {
+        "qid_local": "clambsql:355#ambi0",
+        "options": [
+          "Use countrylanguage table with CountryCode and Language columns, representing the languages spoken in each country with their official status and percentage.",
+          "Use spoken_language table with CountryCode and Language columns, representing the spoken languages in each country.",
+          "Use official_language table with CountryCode and Language columns, representing the official languages in each country.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:355#ambi1",
+        "options": [
+          "Countries where English and Dutch are both listed as official languages (IsOfficial = 'T').",
+          "Countries where English and Dutch are both listed as spoken languages (regardless of official status).",
+          "Countries where English and Dutch are both listed as either official or non-official languages.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:611": {
+    "questions": []
+  },
+  "clambsql:658": {
+    "questions": [
+      {
+        "qid_local": "clambsql:658#ambi0",
+        "options": [
+          "Use share_count column from Transactions table, representing the number of shares in each transaction.",
+          "Use avg_share_count column from transactions_share_count table, representing the pre-calculated average share count per investor.",
+          "Use sum_share_count column from transactions_share_count table, representing the total share count per investor.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:658#ambi1",
+        "options": [
+          "Group transactions by investor_id and calculate the average share count for each investor.",
+          "Select the pre-calculated average share count directly from the transactions_share_count table.",
+          "Join the Transactions and Investors tables, group by investor_id, and compute the average share count for each investor.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:661": {
+    "questions": [
+      {
+        "qid_local": "clambsql:661#ambi0",
+        "options": [
+          "Use gradepoint column from Gradeconversion table, representing the numeric grade point value for letter grades.",
+          "Use avg_gradepoint column from Enrolled_in table, representing the average grade point for a student's enrolled courses.",
+          "Use avg_gradepoint column from Enrolled_in_Gradeconversion_Student_Gradepoint table, representing the average grade point for students with the last name Smith.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:672": {
+    "questions": []
+  },
+  "clambsql:674": {
+    "questions": [
+      {
+        "qid_local": "clambsql:674#ambi0",
+        "options": [
+          "Use Money_Requested column from entrepreneur table, representing the amount of money requested by each entrepreneur.",
+          "Use avg_money_requested column from entrepreneur_money_requested table, representing the pre-calculated average money requested across all entrepreneurs.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:700": {
+    "questions": [
+      {
+        "qid_local": "clambsql:700#ambi0",
+        "options": [
+          "Use climber column from Country table, representing the country of the climber.",
+          "Use mountain column from Country table, representing the country of the mountain climbed.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:700#ambi1",
+        "options": [
+          "The maximum point refers to the highest Points value assigned to a single climb by a climber from the United Kingdom.",
+          "The maximum point refers to the highest sum of Points across all climbs by a climber from the United Kingdom.",
+          "The maximum point refers to the highest average Points per climb for climbers from the United Kingdom.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:701": {
+    "questions": [
+      {
+        "qid_local": "clambsql:701#ambi0",
+        "options": [
+          "Use no_of_customers column from bank table, representing the number of customers per branch.",
+          "Use avg_no_of_customers column from bank_no_of_customers table, representing the average number of customers across all branches.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:706": {
+    "questions": [
+      {
+        "qid_local": "clambsql:706#ambi0",
+        "options": [
+          "Use Height column from people table, representing the height of the person in centimeters.",
+          "Use Total column from body_builder table, representing the total score of the body builder.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:706#ambi1",
+        "options": [
+          "The average of the 'Total' column from the 'body_builder' table.",
+          "The average of the 'sum_total' column from the 'body_builder_people_total' view.",
+          "The average of the 'avg_total' column from the 'body_builder_people_total' view.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:708": {
+    "questions": [
+      {
+        "qid_local": "clambsql:708#ambi0",
+        "options": [
+          "Use functional_area_description column from Functional_Areas table, representing the description of the functional area.",
+          "Use functional_area_code column from Functional_Areas table, representing the unique code of the functional area.",
+          "Use document_code column from Document_Functional_Areas table, representing the document associated with a functional area.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:708#ambi1",
+        "options": [
+          "Use access_count column from Documents table, representing the number of times each document was accessed.",
+          "Use avg_access_count column from documents_document_functional_areas_functional_areas_access_count table, representing the pre-calculated average access count for each functional area.",
+          "Use sum_access_count column from documents_document_functional_areas_functional_areas_access_count table, representing the total access count for each functional area.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:714": {
+    "questions": [
+      {
+        "qid_local": "clambsql:714#ambi0",
+        "options": [
+          "Use Amount_Settled column from Settlements table, representing the settled amount for each individual settlement record.",
+          "Use sum_amount_settled column from settlements_amount_settled table, representing the pre-aggregated sum of all settled amounts across all settlements.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:716": {
+    "questions": []
+  },
+  "clambsql:726": {
+    "questions": [
+      {
+        "qid_local": "clambsql:726#ambi0",
+        "options": [
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "{\"user_profiles_followers\": [\"max_followers\", \"sum_followers\"]}",
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:726#ambi1",
+        "options": [
+          "{'user_profiles': ['followers']}",
+          "{'user_profiles_followers': ['max_followers']}",
+          "{'user_profiles_followers': ['sum_followers']}"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "{\"user_profiles_followers\": [\"max_followers\", \"sum_followers\"]}",
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:730": {
+    "questions": [
+      {
+        "qid_local": "clambsql:730#ambi0",
+        "options": [
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [],
+        "sim_free_text": "{\"job_history_end_date\": [\"max_end_date\"]}",
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:730#ambi1",
+        "options": [
+          "{'job_history': ['END_DATE']}",
+          "{'job_history_end_date': ['max_end_date']}",
+          "{'employees': ['HIRE_DATE']}"
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:756": {
+    "questions": []
+  },
+  "clambsql:772": {
+    "questions": [
+      {
+        "qid_local": "clambsql:772#ambi0",
+        "options": [
+          "Use min_oppose_rate column from people_candidate_oppose_rate table, representing the minimum oppose rate calculated for each sex.",
+          "Use Oppose_rate column from candidate table, representing the oppose rate from individual candidate records.",
+          "Use avg_oppose_rate column from people_candidate_oppose_rate table, representing the average oppose rate calculated for each sex.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:772#ambi1",
+        "options": [
+          "Use name column from people_candidate_oppose_rate table, representing the name of the candidate associated with the minimum oppose rate.",
+          "Use Name column from people table, representing the full name of the candidate from the people table.",
+          "Use sex column from people_candidate_oppose_rate table, representing the sex of the candidate associated with the minimum oppose rate.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:773": {
+    "questions": [
+      {
+        "qid_local": "clambsql:773#ambi0",
+        "options": [
+          "Use attendance column from performance table, representing the actual attendance count for each performance.",
+          "Use avg_attendance column from performance_attendance table, representing the pre-calculated average attendance from a summary table.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:784": {
+    "questions": [
+      {
+        "qid_local": "clambsql:784#ambi0",
+        "options": [
+          "Use maxOccupancy column from Rooms table, representing the maximum number of guests allowed in each room.",
+          "Use beds column from Rooms table, representing the number of beds available in each room.",
+          "Use decor column from Rooms table, representing the style of the room (used to filter for 'modern' rooms).",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:784#ambi1",
+        "options": [
+          "Sum of maxOccupancy values across all modern rooms, indicating the total guest capacity.",
+          "Sum of beds across all modern rooms, indicating the total bed count.",
+          "Count of modern rooms, indicating how many modern rooms exist.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:788": {
+    "questions": [
+      {
+        "qid_local": "clambsql:788#ambi0",
+        "options": [
+          "Use product_type_code column from Products table, representing the type code of each product (e.g., 'Clothes', 'Hardware').",
+          "Use product_name column from Products table, representing the name of each product which might implicitly indicate its type.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:1141": {
+    "questions": [
+      {
+        "qid_local": "clambsql:1141#ambi0",
+        "options": [
+          "Use ProjectName column from Development_Projects table, representing the name of the project which could include 'Airport Expansion' or 'Renovation'.",
+          "Use Increased_Capacity column from Development_Projects table, representing the capacity increase associated with the project.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      },
+      {
+        "qid_local": "clambsql:1141#ambi1",
+        "options": [
+          "The exact value in the database is '1000 Passengers per Day'.",
+          "The value '1000' represents a numeric threshold that may need to be compared with other capacity values.",
+          "The phrase '1000 passengers per day' might be interpreted as a range or approximate value rather than an exact match.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:1195": {
+    "questions": []
+  },
+  "clambsql:1226": {
+    "questions": [
+      {
+        "qid_local": "clambsql:1226#ambi0",
+        "options": [
+          "Use aquaculture_facility_id column from Aquaculture_Facility_Fish_Species table, representing the facility ID linking to the junction table.",
+          "Use fish_species_id column from Aquaculture_Facility_Fish_Species table, representing the species ID linking to the junction table.",
+          "Use species_name column from Fish_Species table, representing the actual name of the fish species.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1,
+          2
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:1253": {
+    "questions": [
+      {
+        "qid_local": "clambsql:1253#ambi0",
+        "options": [
+          "Use routesId column from Routes_Restrictions table, representing the foreign key linking to the Routes table.",
+          "Use restrictionsType column from Routes_Restrictions table, representing the type of restriction associated with a route.",
+          "Abstain",
+          "Others"
+        ],
+        "sim_indices": [
+          0,
+          1
+        ],
+        "sim_free_text": null,
+        "sim_abstain": false
+      }
+    ]
+  },
+  "clambsql:1270": {
+    "questions": []
+  },
+  "clambsql:1312": {
+    "questions": []
+  },
+  "clambsql:1382": {
+    "questions": []
+  }
+}

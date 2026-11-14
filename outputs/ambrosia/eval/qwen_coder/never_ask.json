@@ -1,0 +1,13 @@
+{
+  "n": 1149,
+  "correct": {
+    "gold_1": 140
+  },
+  "ex": {
+    "gold_1": 12.184508268059181
+  },
+  "gold_key": "gold_1",
+  "source": "synced from eval_rescored/qwen_coder/never_ask.json (evaluator.ex gold_timeout=600)",
+  "q": 0.0,
+  "q_total": 0
+}

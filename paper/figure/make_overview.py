@@ -1,0 +1,449 @@
+"""System overview figure with running example (7.16 in x 3.4 in).
+
+Row A: running example (question with three highlighted spans, schema).
+Row B: four stage panels; each example ambiguity keeps its colour throughout.
+"""
+
+from pathlib import Path
+from figlib import Canvas
+
+# Soft ICDE-friendly palette (warmer, less chalky) — match motivation
+BLUE_L = "#6CB6E3"   # settled by data
+BLUE = "#2F7FB8"     # auto-resolved
+ORANGE = "#E8922A"   # asked
+ORANGE_FILL = "#FFE6C2"
+ORANGE_SOFT = "#FFD9A0"
+GRAY = "#C9CED4"     # removed / dropped
+GREEN = "#3BAF9F"    # correct SQL
+GREEN_SOFT = "#E6F6F2"
+BG = "#F3F6F9"
+INK = "#55606C"  # softer than motivation ink
+MUTED = "#6B7580"
+WHITE = "#FFFFFF"
+SOFT_STROKE = "#D7DEE6"
+BLUE_SOFT = "#DCEAF5"
+
+W_IN, H_IN = 7.16, 3.4
+W, H = W_IN * 72, H_IN * 72
+SW = 0.7
+THICK = 0.9
+LINK = "#9AA3AD"
+R = 5
+
+c = Canvas(W, H, stroke=SW, ink=INK)
+T = c.text
+
+CARD = {1: BLUE_L, 2: BLUE, 3: ORANGE}
+CARD_TXT = {1: INK, 2: WHITE, 3: WHITE}
+
+
+def tag(cx, cy, n, r=3.6):
+    # single solid disc (no double ring)
+    c.circle(cx, cy, r, fill=CARD[n])
+    T(cx, cy + 2.15, str(n), 6, "middle", bold=True, color=CARD_TXT[n])
+
+
+def box(x, y, w, h, fill=WHITE, stroke=INK, rx=R, sw=None, dash=None):
+    c.rect(x, y, w, h, rx=rx, fill=fill, stroke=stroke, sw=sw, dash=dash)
+
+
+def pill(x, y, w, h, fill, stroke=None):
+    c.rect(x, y, w, h, rx=h / 2, fill=fill, stroke=stroke)
+
+
+def header(x, y, n, title, sub=None):
+    c.circle(x + 9, y + 9, 5.4, fill=INK)
+    T(x + 9, y + 11.7, str(n), 7.5, "middle", bold=True, color=WHITE)
+    T(x + 17, y + 11.7, title, 7.5, bold=True)
+    if sub:
+        T(x + 17, y + 19.2, sub, 6, italic=True)
+
+
+def magnifier(cx, cy, r=2.6, color=INK):
+    c.circle(cx, cy, r, fill="#EEF6FB", stroke=color, sw=0.65)
+    c.line([(cx + r * 0.71, cy + r * 0.71), (cx + r * 0.71 + 2.2, cy + r * 0.71 + 2.2)], color, 1.0)
+
+
+def table_icon(x, y, w, h, color=INK):
+    c.rect(x, y, w, h, rx=1.2, fill="#F5F9FC", stroke=color, sw=0.6)
+    c.line([(x, y + h * 0.3), (x + w, y + h * 0.3)], color, 0.6)
+    c.line([(x, y + h * 0.65), (x + w, y + h * 0.65)], color, 0.45)
+    for k in (1, 2):
+        c.line([(x + w * k / 3, y + h * 0.3), (x + w * k / 3, y + h)], color, 0.45)
+
+
+def bubble(cx, cy, color=INK):
+    c.rect(cx - 3.1, cy - 2.4, 6.2, 4, rx=1.8, fill="#FFF7EA", stroke=color, sw=0.6)
+    c.path(f"M{cx - 1.5},{cy + 1.6} L{cx - 2.1},{cy + 3.1} L{cx + 0.1},{cy + 1.6}", color, 0.6, fill=color)
+
+
+def trash(cx, cy, color=INK):
+    c.line([(cx - 2.3, cy - 2.2), (cx + 2.3, cy - 2.2)], color, 0.6)
+    c.line([(cx - 0.8, cy - 2.2), (cx - 0.8, cy - 2.9), (cx + 0.8, cy - 2.9), (cx + 0.8, cy - 2.2)], color, 0.5)
+    c.path(f"M{cx - 1.7},{cy - 1.5} L{cx - 1.3},{cy + 2.5} L{cx + 1.3},{cy + 2.5} L{cx + 1.7},{cy - 1.5}", color, 0.6)
+
+
+def check(cx, cy, r=3.7):
+    c.circle(cx, cy, r + 0.8, fill=GREEN_SOFT, stroke=None)
+    c.circle(cx, cy, r, fill=GREEN, stroke=WHITE, sw=0.6)
+    c.line([(cx - 1.6, cy + 0.1), (cx - 0.4, cy + 1.3), (cx + 1.8, cy - 1.2)], WHITE, 0.9)
+
+
+def dotted(pts, color, r=2):
+    c.line(pts, color, 0.9, dash="0.01,1.7", r=r)
+
+
+def mini_card(x, y, color, w=12.5, h=9):
+    c.rect(x, y, w, h, rx=1.2, fill=WHITE, stroke=INK, sw=0.55)
+    c.path(f"M{x},{y + 2.8} V{y + 1.2} Q{x},{y} {x + 1.2},{y} H{x + w - 1.2} "
+           f"Q{x + w},{y} {x + w},{y + 1.2} V{y + 2.8} Z", INK, 0.55, fill=color)
+    for k in (0, 1):
+        c.line([(x + 2, y + 4.8 + k * 2.2), (x + w - 2.5 - k * 2.5, y + 4.8 + k * 2.2)], INK, 0.4)
+
+
+# ====================================================================== grid
+M = 4.0
+AY0, AY1 = 4.0, 47.5          # row A
+SHIFT = 11.0                  # row B is drawn in its own frame, lifted by SHIFT
+PT, PB = 78.0, 241.5 + SHIFT  # row B (in its frame)
+GAP = 8.0
+widths = [108.0, 171.0, 117.0, W - 2 * M - 3 * GAP - 396.0]
+xs = [M]
+for w_ in widths[:-1]:
+    xs.append(xs[-1] + w_ + GAP)
+P = list(zip(xs, widths))
+
+# ====================================================================== row A
+box(M, AY0, W - 2 * M, AY1 - AY0, fill=BG, stroke=None)
+T(M + 6, 14.5, "!{Input} $x$ = ($Q$, $S$, $D$, $E$)", 6.5)
+
+# legend of card outcomes
+lx = M + 92
+for col, lab in [(BLUE_L, "settled by data"), (BLUE, "auto-resolved"), (ORANGE, "asked"),
+                 (GRAY, "removed / dropped"), (GREEN, "correct SQL")]:
+    c.rect(lx, 9.6, 8, 5, rx=1.2, fill=col)
+    lx += 10.5 + T(lx + 10.5, 14.3, lab, 6) + 9
+
+# database + schema snippet
+DBX = 376.0
+c.cylinder(DBX, 7.5, 13, 18)
+T(DBX + 6.5, 20.6, "$D$", 7, "middle")
+T(DBX + 18, 14.3, "`Patient(ID, Birthday, ...)`", 6)
+T(DBX + 18, 22.8, "`Laboratory(ID, Date, T-CHO, ...)`", 6, maxw=W - M - DBX - 20)
+
+# question with highlighted spans
+QS = 7.0
+QY = 39.0
+segs = [("“For the patient who was ", None), ("born on 1959/2/18", 1),
+        (", what is the ", None), ("decrease rate", 2), (" for his/her ", None),
+        ("total cholesterol", 3), (" from November to December in 1981?”", None)]
+qx = M + 6
+span_x = {}
+for txt, n in segs:
+    w_ = c.tw(txt, QS, italic=True)
+    if n:
+        c.rect(qx - 1, QY - 6.3, w_ + 2, 8.6, rx=2.2, fill=CARD[n])
+        span_x[n] = (qx, w_)
+    T(qx, QY, txt, QS, italic=True, color=CARD_TXT[n] if n else INK)
+    qx += w_
+for n, (sx, sw_) in span_x.items():
+    tag(sx + sw_ / 2, QY - 11.5, n)
+
+# ====================================================================== panels
+c.items.append(f'<g transform="translate(0,{-SHIFT})">')
+titles = [("Detection", None), ("Ambiguity Checks", None),
+          ("Predicting the User's Choice", None), ("Parsing", None)]
+for k, ((x, w_), (t, s)) in enumerate(zip(P, titles)):
+    box(x, PT, w_, PB - PT, fill=BG, stroke=None)
+    header(x, PT, k + 1, t, s)
+
+# ---------------------------------------------------------------- panel 1
+x0, pw = P[0]
+SX, SWD = x0 + 17, pw - 20
+CHW, CHY, CHH = (pw - 10) / 2, 100.0, 17.0
+chips = [(x0 + 3, "!{Forward}", "$Q$, $S^{+}$, $E$"),
+         (x0 + 7 + CHW, "!{Backward}", "+ draft groups $G$")]
+for chx, t1, t2 in chips:
+    box(chx, CHY, CHW, CHH)
+    T(chx + CHW / 2, CHY + 6.6, t1, 6.2, "middle", maxw=CHW - 2)
+    T(chx + CHW / 2, CHY + 13.6, t2, 6, "middle", maxw=CHW - 2)
+    c.arrow([(chx + CHW / 2, CHY + CHH), (chx + CHW / 2, 125.0)], hs=2.8)
+
+stages = [("$Φ$_{str}", ["Scope · Attachment"], 125.0, 13.0),
+          ("$Φ$_{row}", ["Column · Join ·", "Value · NULL"], 150.0, 18.0),
+          ("$Φ$_{out}", ["Aggregate · Project · Tie"], 180.0, 13.0),
+          ("cover", ["bwd: groups unmatched"], 205.0, 12.0)]
+mids = []
+for tg, rows, y, h in stages:
+    box(SX, y, SWD, h)
+    rr = min(R, h / 2 - 0.4)
+    c.path(f"M{SX + 16.5},{y} H{SX + rr} Q{SX},{y} {SX},{y + rr} V{y + h - rr} "
+           f"Q{SX},{y + h} {SX + rr},{y + h} H{SX + 16.5} Z", INK, SW, fill=INK)
+    T(SX + 8.3, y + h / 2 + 2.2, tg, 6.2, "middle", bold=True, color=WHITE)
+    y0 = y + h / 2 - (len(rows) - 1) * 3.5 + 2.15
+    for j, r_ in enumerate(rows):
+        T(SX + 18.6, y0 + j * 7.0, r_, 6, maxw=SWD - 20, italic=(tg == "cover"))
+    mids.append(y + h / 2)
+acx = SX + SWD / 2 + 6
+for (_, _, y, h), (_, _, yn, _) in zip(stages, stages[1:]):
+    c.arrow([(acx, y + h), (acx, yn)], hs=3)
+RAIL = x0 + 7
+c.line([(SX, mids[0]), (RAIL, mids[0]), (RAIL, mids[2])], r=1.5)
+c.arrow([(RAIL, mids[1]), (SX, mids[1])], hs=3)
+c.arrow([(RAIL, mids[2]), (SX, mids[2])], hs=3)
+T(RAIL + 2.2, (mids[0] + mids[1]) / 2 + 2.2, "earlier $Φ$", 6)
+DY, DH = stages[3][2], stages[3][3]
+
+# output: fanned stack, examples shown in panel 2
+STX, STY = x0 + 3.0, 226.0
+c.arrow([(SX + 3, DY + DH), (SX + 3, DY + DH + 4), (STX + 7, DY + DH + 4), (STX + 7, STY - 0.3)],
+        hs=2.8, r=1.5)
+for k, (n, rot) in enumerate([(3, -9), (1, -4), (2, 2)]):
+    c.items.append(f'<g transform="rotate({rot} {STX + 6} {STY + 10})">')
+    mini_card(STX + k * 0.6, STY + k * 1.6, CARD[n])
+    c.items.append("</g>")
+T(STX + 21, STY + 9.5, "$Φ_{raw}$", 6.5)
+RAW_OUT = (STX + 37, STY + 7.5)
+
+# ---------------------------------------------------------------- panel 2
+x0, pw = P[1]
+GX = x0 + 1.5
+RW = pw - 6.5
+RY0, RH, RG = 98.5, 9.0, 1.6
+RAW_IN = None
+amb_rows = [(1, "'born on 1959/2/18' · Value", "A '1959-02-18'   B '1959/02/18'"),
+            (2, "'decrease rate' · Aggregate", "A–D: ÷ Nov or Dec × sum/avg"),
+            (3, "'total cholesterol' · Project", "A rate   B rate + both months")]
+HW = 75.0
+for k, (n, hd, bd) in enumerate(amb_rows):
+    ry = RY0 + k * (RH + RG)
+    box(GX + 2, ry, RW, RH)
+    c.path(f"M{GX + 2 + HW},{ry} H{GX + 2 + 3} Q{GX + 2},{ry} {GX + 2},{ry + 3} V{ry + RH - 3} "
+           f"Q{GX + 2},{ry + RH} {GX + 2 + 3},{ry + RH} H{GX + 2 + HW} Z", INK, SW, fill=CARD[n])
+    T(GX + 4.5, ry + 6.4, hd, 6, color=CARD_TXT[n], maxw=HW - 3)
+    T(GX + HW + 5, ry + 6.4, bd, 6, maxw=RW - HW - 6)
+    tag(GX + 2 + RW, ry + 0.6, n, r=3.0)
+    if k == 1:
+        RAW_IN = (GX + 2, ry + RH / 2)
+RB = RY0 + 3 * RH + 2 * RG
+T(GX + 2 + RW - 8, PT + 11.7, "$Φ_{raw}$ (example)", 6, "end", italic=True)
+GY = RB + 5.0
+c.arrow([(GX + 30, RB), (GX + 30, GY)], hs=2.6)
+cols = [
+    (52.0, ["Existence"], ["0 rows → remove", "1 left → Auto"]),
+    (54.0, ["Difference"], ["res($q_{1}$) = res($q_{2}$)", "→ Drop"]),
+    (54.0, ["Relevance"], ["res($y_{p}$) = res($y_{⊥}$)", "→ Drop"]),
+]
+CT = GY + 2
+CODE_Y, CB = CT + 45.0, CT + 66.0
+TOOLS = [("exists?", "SQL: template", GRAY, INK),
+         ("differs on $D$?", "SQL: LLM, verified", BLUE_L, INK),
+         ("changes SQL?", "SQL: parser", INK, WHITE)]
+cx_ = GX + 2
+col_pos = []
+for k, (cw, title, code) in enumerate(cols):
+    box(cx_, CT, cw, CB - CT, stroke=INK)
+    ic = cx_ + cw / 2
+    if k == 0:
+        c.cylinder(ic - 5.5, CT + 3.5, 10, 12)
+        magnifier(ic + 4.6, CT + 12.2)
+    elif k == 2:
+        c.rect(ic - 11, CT + 4, 9, 11, rx=1, fill=INK)
+        for dy in (5.5, 9.5, 13.5):
+            c.line([(ic - 2, CT + dy), (ic + 3, CT + 9.5)], INK, 0.5)
+        T(ic + 6.5, CT + 11.6, "=", 7, "middle", bold=True)
+    else:
+        for dx in (-9.5, 3.5):
+            c.rect(ic + dx, CT + 3.2, 6, 5, rx=0.8, fill=WHITE, stroke=INK, sw=0.55)
+            c.line([(ic + dx + 1.2, CT + 5.0), (ic + dx + 4.8, CT + 5.0)], INK, 0.4)
+            c.line([(ic + dx + 1.2, CT + 6.5), (ic + dx + 3.6, CT + 6.5)], INK, 0.4)
+        for dy in (4.5, 5.7, 6.9):
+            c.line([(ic - 1.8, CT + dy), (ic + 1.8, CT + dy)], INK, 0.5)
+        c.cylinder(ic - 4.5, CT + 9.6, 9, 7.6)
+    T(ic, CT + 22.5, title[0], 6.5, "middle", bold=True, maxw=cw - 2)
+    chip, sub, cf, ct = TOOLS[k]
+    chw = c.tw(chip, 6, True) + 7
+    c.rect(ic - chw / 2, CT + 26.5, chw, 8.6, rx=4.3, fill=cf)
+    T(ic, CT + 32.7, chip, 6, "middle", bold=True, color=ct, maxw=cw - 2)
+    T(ic, CT + 42.0, sub, 6, "middle", italic=True, maxw=cw - 1.5)
+    box(cx_ + 1.2, CODE_Y, cw - 2.4, CB - CODE_Y - 1.5, fill=BG, rx=2)
+    for j, ln in enumerate(code):
+        T(cx_ + cw / 2, CODE_Y + 7.6 + j * 7.6, ln, 6, "middle",
+          bold=(j == 1), maxw=cw - (4.4 if k == 0 else 3.8))
+    col_pos.append((cx_, cw))
+    cx_ += cw + 2
+GW = cx_ - GX
+
+# outcome table
+TBY = CB + 3
+LEAD_T = 7.0
+TB_H = 5 * LEAD_T + 3
+box(GX + 2, TBY, GW - 4, TB_H, fill=WHITE, stroke=GRAY, rx=2)
+TOFF = 30.0
+TCX = [GX + 10 + TOFF, GX + 21 + TOFF, GX + 32 + TOFF]
+OCX = GX + 44 + TOFF
+for x_, h_ in zip(TCX, ("E", "D", "R")):
+    T(x_, TBY + 6.6, h_, 6, "middle", bold=True)
+T(OCX, TBY + 6.6, "outcome", 6, bold=True)
+rows_t = [(("1 left", None, None), "Auto, written to $E$", BLUE_L),
+          (("T", "F", "·"), "Drop", GRAY),
+          (("T", "T", "F"), "Drop", GRAY),
+          (("T", "T", "T"), "pass on as $Φ$", None)]
+for j, (marks, out, col) in enumerate(rows_t):
+    yy = TBY + 6.6 + (j + 1) * LEAD_T
+    if marks[1] is None:
+        T(TCX[0] - 4, yy, marks[0], 6, color=INK)
+    else:
+        for x_, m_ in zip(TCX, marks):
+            T(x_, yy, m_, 6, "middle", color=BLUE if m_ == "T" else INK, bold=(m_ == "F"))
+    if col:
+        ww = c.tw(out, 6, True) + 6
+        c.rect(OCX - 1.5, yy - 5.2, ww, 7, rx=3.5, fill=col)
+        T(OCX + 1.5, yy, out, 6, bold=True)
+    else:
+        T(OCX, yy, out, 6, bold=True)
+GBOT = TBY + TB_H + 2.5
+box(GX, GY, GW, GBOT - GY, fill="none", stroke=GRAY)
+
+# P1 -> P2
+XG = P[0][0] + P[0][1] + 2.6
+c.arrow([RAW_OUT, (XG, RAW_OUT[1]), (XG, RAW_IN[1]), RAW_IN], LINK, THICK, r=2.5)
+
+# ---------------------------------------------------------------- panel 3
+x0, pw = P[2]
+SCX, SCY0, SCW, SCH = x0 + 19, 101.0, 30.0, 30.0
+JY = SCY0 + SCH / 2
+XG2 = (P[1][0] + P[1][1] + x0) / 2
+YOUT = CT + 22.0
+c.arrow([(GX + GW, YOUT), (XG2, YOUT), (XG2, JY), (SCX, JY)], LINK, THICK, r=2.5)
+for k, n in enumerate((2, 3)):
+    tag(x0 + 3 + k * 8.2, JY, n, r=3.4)
+T(x0 + 4, (JY + YOUT) / 2 + 2.4, "$Φ$", 7)
+box(SCX, SCY0, SCW, SCH, stroke=INK)
+T(SCX + SCW / 2, JY - 1.3, "Trained", 6.5, "middle", bold=True)
+T(SCX + SCW / 2, JY + 6.0, "scorer", 6.5, "middle", bold=True)
+
+BX0 = x0 + 56
+rows3 = [(2, SCY0 + 4.5, [(42, BLUE), (2.5, GRAY)], "$H_{norm}$ = 0.19", x0 + 104),
+         (3, SCY0 + 22.5, [(24, ORANGE), (22, ORANGE)], "$H_{norm}$ = 0.99", x0 + 112)]
+tag_pos = {}
+for n, ry, bars, lab, tx in rows3:
+    c.arrow([(SCX + SCW, ry + 1.8), (BX0 - 2, ry + 1.8)], hs=2.8)
+    for j, (ln, col) in enumerate(bars):
+        c.rect(BX0, ry + j * 4.7 - 0.0, ln, 3.6, rx=0.6, fill=col)
+    T(BX0, ry + 14.4, lab, 6.5)
+    tag(tx, ry + 2.5, n)
+    tag_pos[n] = (tx, ry + 2.5)
+
+FSY = 145.0
+box(x0 + 3, FSY, pw - 6, 11.5, stroke=SOFT_STROKE, rx=3)
+T(x0 + pw / 2, FSY + 8.3, "$H_{norm}(φ) = −Σ_{j} w_{j} log w_{j} / log |P|$", 6.5, "middle",
+  maxw=pw - 8)
+
+DCX, DCY, DHW, DHH = x0 + 28, 175.0, 25.0, 12.0
+c.arrow([(DCX, FSY + 11.5), (DCX, DCY - DHH)], hs=2.8)
+c.path(f"M{DCX},{DCY - DHH} L{DCX + DHW},{DCY} L{DCX},{DCY + DHH} L{DCX - DHW},{DCY} Z",
+       INK, SW, fill=WHITE)
+T(DCX, DCY + 2.2, "$H_{norm}$ ≤ $θ^{*}$ ?", 6.5, "middle", maxw=2 * DHW - 10)
+
+APX, APW = x0 + 68, 46.0
+c.arrow([(DCX + DHW, DCY), (APX, DCY)], hs=3)
+T(DCX + DHW + 2, DCY - 5.2, "yes", 6, italic=True)
+tag((DCX + DHW + APX) / 2 + 0.5, DCY, 2, r=3.4)
+pill(APX, DCY - 5.5, APW, 11, BLUE_SOFT, stroke=BLUE)
+T(APX + APW / 2, DCY + 2.2, "Auto($p_{j}^{*}$)", 6.5, "middle", bold=True, color=BLUE)
+
+NY1, NY2 = 201.0, 223.0
+QX = x0 + 36
+QW = pw - 38
+c.line([(DCX, DCY + DHH), (DCX, NY1)], r=0)
+T(DCX - 2, DCY + DHH + 7.2, "no", 6, "end", italic=True)
+c.arrow([(DCX, NY1), (QX, NY1)], hs=3)
+pill(QX, NY1 - 5.5, QW, 11, ORANGE_FILL, stroke=ORANGE)
+bubble(QX + 6.4, NY1 - 0.3, ORANGE)
+T(QX + 11.5, NY1 + 2.1, "Ask → $r(φ) ∈ P ∪ {⊥}$", 6, bold=True, maxw=QW - 13)
+iw = T(QX + 2, NY1 + 12.4, "to the user", 6, italic=True)
+tag(QX + 2 + iw + 5.5, NY1 + 10.2, 3, r=3.4)
+
+TX = x0 + 10
+ty_edge = DCY + DHH * (1 - (DCX - TX) / DHW)
+c.arrow([(TX, PB), (TX, ty_edge)], INK, 0.75, dash="2.2,1.4", hs=3, cap="butt")
+T(TX + 3, PB - 5.5, "$θ^{*}$ from validation data", 6)
+
+# ---------------------------------------------------------------- panel 4
+x0, pw = P[3]
+WPX, WPW = x0 + 50, 34.0
+pill(WPX, PT + 4, WPW, 10, BLUE_SOFT, stroke=BLUE_L)
+T(WPX + WPW / 2, PT + 11.1, "Write to $E$", 6, "middle", bold=True, color=BLUE)
+
+EX, EY, EW = x0 + 3, 99.0, pw - 6
+items = [
+    (BLUE_L, ["Birthday is stored", "as '1959-02-18'."]),
+    (BLUE, ["'decrease rate':", "<description of p₁>."]),
+    (ORANGE, ["'total cholesterol':", "<description of the", "reading the user", "selects>."]),
+]
+LEAD = 6.6
+y = EY + 22.0
+item_mid = []
+for col, lns in items:
+    top = y - 5.0
+    bot = y + (len(lns) - 1) * LEAD + 1.8
+    item_mid.append((col, top, bot, y, lns))
+    y = bot + 6.6
+EH = item_mid[-1][2] + 2.5 - EY
+box(EX, EY, EW, EH, stroke=INK)
+for col, top, bot, y0, lns in item_mid:
+    c.rect(EX + 3, top, 2.2, bot - top, rx=0.8, fill=col)
+    for j, ln in enumerate(lns):
+        T(EX + 7.2, y0 + j * LEAD, f"`{ln}`", 6, maxw=EW - 8.5)
+T(EX + EW / 2, EY + 7.6, "!{$E′$ = $E$ ⊕}", 7, "middle")
+T(EX + EW / 2, EY + 14.0, "clarification sentences", 6, "middle")
+c.arrow([(WPX + WPW / 2, PT + 14), (WPX + WPW / 2, EY)], BLUE_L, 1.1, hs=3)
+
+EB = EY + EH
+PRY, PRH = EB + 8, 13.0
+c.arrow([(EX + EW / 2, EB), (EX + EW / 2, PRY)], hs=3)
+box(EX, PRY, EW, PRH, fill=INK, stroke=INK)
+T(EX + EW / 2, PRY + 8.8, "!{Parser}", 6.5, "middle", color=WHITE)
+T(EX + 1, PRY + PRH + 8.0, "input: $Q$, $E′$, schema", 6, italic=True)
+SQX, SQY = x0 + 12, PRY + PRH + 19.5
+SQW, SQH = x0 + pw - 2 - SQX, 23.5
+c.arrow([(SQX + SQW - 8, PRY + PRH), (SQX + SQW - 8, SQY)], hs=3)
+box(SQX, SQY, SQW, SQH, stroke=GREEN, fill=GREEN_SOFT)
+for j, ln in enumerate(["SELECT … T-CHO …", "FROM Patient JOIN …", "WHERE Birthday = …"]):
+    T(SQX + 2.2, SQY + 7.3 + j * 6.8, f"`{ln}`", 6, maxw=SQW - 3)
+check(SQX + SQW, SQY)
+T(x0 + 6.5, SQY + 14, "$ŷ$", 8, "middle")
+T(x0 + 3, PB - 2.8, "1 question (w/o scorer: 2)", 6, maxw=pw - 4)
+
+# P3 -> P4 coloured hand-offs
+G34 = (P[2][0] + P[2][1] + x0) / 2
+mid2 = (item_mid[1][1] + item_mid[1][2]) / 2
+mid3 = (item_mid[2][1] + item_mid[2][2]) / 2
+c.arrow([(APX + APW, DCY), (G34 - 1.6, DCY), (G34 - 1.6, mid2), (EX, mid2)], BLUE, 1.1, r=2.5)
+c.arrow([(QX + QW, NY1), (G34 + 1.6, NY1), (G34 + 1.6, mid3), (EX, mid3)], ORANGE, 1.1, r=2.5)
+
+# ---------------------------------------------------------------- connectors
+c.items.append("</g>")
+C1L = col_pos[0][0]
+Y1A, Y1B = CT + 8.0, CT + 19.0
+LX1, LX2 = P[0][0] + P[0][1] + 1.6, P[0][0] + P[0][1] + 5.6
+tag(C1L, Y1B - SHIFT, 1)
+s1 = span_x[1][0] + span_x[1][1] / 2
+s2 = span_x[2][0] + span_x[2][1] / 2
+s3 = span_x[3][0] + span_x[3][1] / 2
+J = AY1 + 4.5
+R1X, R1Y = GX + 2 + RW, RY0 + 0.6 - SHIFT
+c.items.append(f'<g transform="translate(0,{-SHIFT})">')
+
+# write-to-E arc: from the Content check, over panel 3, into panel 4
+ARC_Y = 72.5
+c.arrow([(C1L, Y1A), (LX2, Y1A), (LX2, ARC_Y), (WPX + WPW / 2, ARC_Y), (WPX + WPW / 2, PT + 4)],
+        BLUE_L, 1.1, r=3, halo=2.2)
+tag(P[2][0] + 30, ARC_Y, 1, r=3.4)
+c.items.append("</g>")
+
+for w_ in c.warn:
+    print("WARN", w_)
+c.save(str(Path(__file__).resolve().parent / "overview"), W_IN, H_IN)
+print(f"wrote {Path(__file__).resolve().parent / 'overview'}.{{svg,pdf,png}}")

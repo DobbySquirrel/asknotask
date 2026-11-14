@@ -1,0 +1,13 @@
+{
+  "n": 498,
+  "correct": {
+    "gold": 299
+  },
+  "ex": {
+    "gold": 60.04016064257028
+  },
+  "gold_key": "gold",
+  "q": 1.9096385542168675,
+  "q_total": 951.0,
+  "source": "mean of rescored reps hits [300, 298, 299] \u2192 299/498; Q: ambisql_rep2 n_asked; gold_timeout=600"
+}

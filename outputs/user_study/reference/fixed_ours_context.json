@@ -1,0 +1,1055 @@
+{
+  "ambrosia:695": [
+    {
+      "nl_span": "photos and videos",
+      "type": "Column",
+      "interpretation": "Which column represents the visual storytelling type: 'Photo' or 'Video'?",
+      "mapping_snippet": "Articles.visualStorytelling"
+    },
+    {
+      "nl_span": "technology",
+      "type": "Column",
+      "interpretation": "Which column contains the article type category: 'Technology' or another category?",
+      "mapping_snippet": "Articles.articleType"
+    }
+  ],
+  "bird:1068": [
+    {
+      "nl_span": "higher than 170",
+      "type": "Project",
+      "interpretation": "What player attribute to use for filtering: height from Player table vs. some other metric.",
+      "mapping_snippet": "Player.height"
+    },
+    {
+      "nl_span": "overall rating",
+      "type": "Column",
+      "interpretation": "Which column holds the overall rating of players: Player_Attributes.overall_rating vs another attribute.",
+      "mapping_snippet": "Player_Attributes.overall_rating"
+    },
+    {
+      "nl_span": "overall rating\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether the overall rating is derived from the stored overall_rating column or the potential column.",
+      "mapping_snippet": "Player_Attributes.overall_rating"
+    },
+    {
+      "nl_span": "height",
+      "type": "Column",
+      "interpretation": "Use Player.height — the height of the players in centimeters or inches.",
+      "mapping_snippet": "Player.height"
+    },
+    {
+      "nl_span": "height",
+      "type": "Project",
+      "interpretation": "Filter players based on their height being greater than 170.",
+      "mapping_snippet": "Player.height"
+    }
+  ],
+  "bird:930": [
+    {
+      "nl_span": "rank the highest\n[Value]",
+      "type": "Value",
+      "interpretation": "Which literal value represents the highest rank in the context of the query.",
+      "mapping_snippet": "results.rank = \"1\""
+    },
+    {
+      "nl_span": "rank the highest\n[Value]\n[Tie]",
+      "type": "Tie",
+      "interpretation": "How to handle ties when determining the highest rank, specifically whether rank 1 or 0 represents the highest rank.",
+      "mapping_snippet": "results.rank: 1"
+    },
+    {
+      "nl_span": "rank the highest",
+      "type": "Column",
+      "interpretation": "Map 'rank the highest' to results.rank.",
+      "mapping_snippet": "results.rank"
+    },
+    {
+      "nl_span": "rank the highest",
+      "type": "Project",
+      "interpretation": "Project races.name for the race(s) with the best rank.",
+      "mapping_snippet": "races.name"
+    }
+  ],
+  "ambrosia:3960": [],
+  "bird:728": [
+    {
+      "nl_span": "Marvel Comics",
+      "type": "Value",
+      "interpretation": "Which stored spelling of the publisher name matches 'Marvel Comics' in publisher.publisher_name.",
+      "mapping_snippet": "publisher.publisher_name = \"Marvel Comics\""
+    }
+  ],
+  "ambrosia:2709": [],
+  "clambsql:211": [
+    {
+      "nl_span": "List both the id and the summary",
+      "type": "Project",
+      "interpretation": "Display both the unique identifier (ID) and the summary name of the degree program.",
+      "mapping_snippet": [
+        "Degree_Programs.degree_program_id",
+        "Degree_Programs.degree_summary_name"
+      ]
+    },
+    {
+      "nl_span": "most number of students are enrolled in",
+      "type": "Aggregate",
+      "interpretation": "Aggregate using COUNT(student_id) from Student_Enrolment table.",
+      "mapping_snippet": "Student_Enrolment.\"COUNT(student_id)\""
+    },
+    {
+      "nl_span": "most number of students",
+      "type": "Scope",
+      "interpretation": "Select the program with the highest total count of enrolled students.",
+      "mapping_snippet": "\"Select the program with the highest total count of enrolled students\".",
+      "choice": "Select the program with the highest total count of enrolled students."
+    }
+  ],
+  "clambsql:714": [],
+  "bird:469": [
+    {
+      "nl_span": "Angel of Mercy",
+      "type": "Column",
+      "interpretation": "Use the cards.name column — the primary name field for cards.",
+      "mapping_snippet": "cards.name"
+    },
+    {
+      "nl_span": "Magic: The Gathering Online",
+      "type": "Column",
+      "interpretation": "Which attribute indicates if a set is available on Magic: The Gathering Online: sets.mtgoCode vs sets.isOnlineOnly.",
+      "mapping_snippet": "sets.isOnlineOnly"
+    },
+    {
+      "nl_span": "Magic: The Gathering Online",
+      "type": "Aggregate",
+      "interpretation": "Filter sets where mtgoCode IS NOT NULL AND mtgoCode != ''.",
+      "mapping_snippet": "sets.\"mtgoCode IS NOT NULL AND mtgoCode != ''\""
+    },
+    {
+      "nl_span": "Angel of Mercy",
+      "type": "Column",
+      "interpretation": "Use the cards.name column — the primary name field for cards.",
+      "mapping_snippet": "\"Use the cards\".\"name column — the primary name field for cards.\"",
+      "choice": "Use the cards.name column — the primary name field for cards."
+    },
+    {
+      "nl_span": "Magic: The Gathering Online",
+      "type": "Value",
+      "interpretation": "mtgoCode is not null and not empty — indicates online availability.",
+      "mapping_snippet": "\"mtgoCode is not null and not empty — indicates online availability\".",
+      "choice": "mtgoCode is not null and not empty — indicates online availability."
+    }
+  ],
+  "clambsql:1382": [],
+  "bird:1507": [],
+  "ambrosia:3733": [],
+  "clambsql:772": [],
+  "bird:732": [
+    {
+      "nl_span": "publisher",
+      "type": "Column",
+      "interpretation": "Which attribute holds the publisher name: publisher_name vs. another column.",
+      "mapping_snippet": "publisher.publisher_name"
+    },
+    {
+      "nl_span": "publisher\n[Project]",
+      "type": "Project",
+      "interpretation": "Whether to return the publisher name or the publisher ID in the output.",
+      "mapping_snippet": "publisher.id"
+    }
+  ],
+  "bird:83": [],
+  "clambsql:355": [],
+  "ambrosia:1807": [],
+  "bird:94": [
+    {
+      "nl_span": "oldest female client",
+      "type": "Column",
+      "interpretation": "Which attribute identifies the client's gender: gender or another column.",
+      "mapping_snippet": "client.gender"
+    },
+    {
+      "nl_span": "oldest female client",
+      "type": "Column",
+      "interpretation": "Which attribute represents the client's age or birth date for determining the oldest: birth_date or age derived from it.",
+      "mapping_snippet": "client.birth_date"
+    },
+    {
+      "nl_span": "gap",
+      "type": "Value",
+      "interpretation": "How to compute the gap between highest and lowest average salary: using MAX(A11) - MIN(A11) or other calculation.",
+      "mapping_snippet": "district.A11 = \"MAX(A11) - MIN(A11)\""
+    },
+    {
+      "nl_span": "account number\n[Project]",
+      "type": "Project",
+      "interpretation": "Whether to return the account_id from the account table or from the disp table as the account identifier.",
+      "mapping_snippet": "account.account_id"
+    },
+    {
+      "nl_span": "oldest female client\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether to determine the oldest client based on birth_date or a computed age field.",
+      "mapping_snippet": "client.birth_date"
+    },
+    {
+      "nl_span": "gap",
+      "type": "Aggregate",
+      "interpretation": "Subtract the lowest average salary from the highest average salary (MAX - MIN).",
+      "mapping_snippet": "district.A11"
+    }
+  ],
+  "clambsql:708": [
+    {
+      "nl_span": "Acknowledgement",
+      "type": "Value",
+      "interpretation": "Which stored spelling of the functional area description to match.",
+      "mapping_snippet": "Functional_Areas.functional_area_description = \"Acknowledgement\""
+    }
+  ],
+  "ambrosia:2787": [
+    {
+      "nl_span": "available jobs",
+      "type": "Column",
+      "interpretation": "Map to Job_Post.id (unique identifier for each job posting).",
+      "mapping_snippet": [
+        "Job_Post.id",
+        "Job_Post.degree_level_id"
+      ]
+    },
+    {
+      "nl_span": "available jobs",
+      "type": "Aggregate",
+      "interpretation": "Aggregate using COUNT(Job_Post.id) to calculate the total number of job postings.",
+      "mapping_snippet": "Job_Post.\"COUNT(id)\""
+    },
+    {
+      "nl_span": "qualifications",
+      "type": "Column",
+      "interpretation": "Map 'qualifications' to Degree_Level.level_name.",
+      "mapping_snippet": "Degree_Level.level_name"
+    }
+  ],
+  "ambrosia:1696": [],
+  "clambsql:672": [
+    {
+      "nl_span": "total hours per week\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether the total hours per week is taken from a precomputed summary column or dynamically summed from base table values.",
+      "mapping_snippet": "SportsInfo.\"SUM(HoursPerWeek)\""
+    },
+    {
+      "nl_span": "number of games played\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether the number of games played is taken from a precomputed summary column or dynamically summed from base table values.",
+      "mapping_snippet": "SportsInfo.\"SUM(GamesPlayed)\""
+    },
+    {
+      "nl_span": "number of games played",
+      "type": "Column",
+      "interpretation": "Map 'number of games played' to SportsInfo.SUM(GamesPlayed) (aggregated computation).",
+      "mapping_snippet": "SportsInfo.\"SUM(GamesPlayed)\""
+    },
+    {
+      "nl_span": "total hours per week",
+      "type": "Column",
+      "interpretation": "Map 'total hours per week' to SUM(SportsInfo.HoursPerWeek) (aggregated computation).",
+      "mapping_snippet": "SportsInfo.\"SUM(HoursPerWeek)\""
+    }
+  ],
+  "ambrosia:1986": [],
+  "bird:62": [
+    {
+      "nl_span": "percent (%) of eligible free meals",
+      "type": "Aggregate",
+      "interpretation": "Compute the rate as Free Meal Count (K-12) * 100 / Enrollment (K-12).",
+      "mapping_snippet": "frpm.\"Free Meal Count (K-12) * 100 / Enrollment (K-12)\""
+    }
+  ],
+  "clambsql:788": [
+    {
+      "nl_span": "average price",
+      "type": "Column",
+      "interpretation": "Which column represents the average price of products: sum_product_price, avg_product_price, max_product_price, or min_product_price.",
+      "mapping_snippet": "products_product_price.avg_product_price"
+    }
+  ],
+  "bird:1378": [],
+  "clambsql:299": [],
+  "ambrosia:3566": [
+    {
+      "nl_span": "smallest population",
+      "type": "Aggregate",
+      "interpretation": "Use ORDER BY Countries.Population ASC LIMIT 1.",
+      "mapping_snippet": "Countries.Population"
+    }
+  ],
+  "bird:1359": [
+    {
+      "nl_span": "Yearly Kickoff",
+      "type": "Value",
+      "interpretation": "Which literal value corresponds to the event name 'Yearly Kickoff' in the event table.",
+      "mapping_snippet": "event.event_name = \"Yearly Kickoff\""
+    },
+    {
+      "nl_span": "October Meeting",
+      "type": "Value",
+      "interpretation": "Which literal value corresponds to the event name 'October Meeting' in the event table.",
+      "mapping_snippet": "event.event_name = \"October Meeting\""
+    },
+    {
+      "nl_span": "budget in Advertisement\n[Project]",
+      "type": "Project",
+      "interpretation": "How to interpret the budget category filter for 'Advertisement': using the category column directly or aggregating spent/amount.",
+      "mapping_snippet": "budget.amount"
+    },
+    {
+      "nl_span": "more than",
+      "type": "Scope",
+      "interpretation": "Compare the total budget for 'Yearly Kickoff' against the total budget for 'October Meeting'.",
+      "mapping_snippet": "\"total budget amount for Yearly Kickoff is greater than total budget amount for October Meeting\""
+    },
+    {
+      "nl_span": "more than",
+      "type": "Aggregate",
+      "interpretation": "Aggregate budget amounts per meeting and compare totals.",
+      "mapping_snippet": "budget.amount"
+    },
+    {
+      "nl_span": "Yearly Kickoff",
+      "type": "Project",
+      "interpretation": "Filter using event_name = 'Yearly Kickoff'.",
+      "mapping_snippet": "event.event_name = 'Yearly Kickoff'"
+    }
+  ],
+  "bird:1235": [
+    {
+      "nl_span": "lower red blood blood cell\n[Value]",
+      "type": "Value",
+      "interpretation": "The specific threshold value for RBC that defines 'lower red blood cell'.",
+      "mapping_snippet": "Laboratory.RBC = \"3.5\""
+    },
+    {
+      "nl_span": "lower red blood blood cell",
+      "type": "Value",
+      "interpretation": "Which stored value or threshold indicates lower red blood cell count in the RBC column.",
+      "mapping_snippet": "Laboratory.RBC = \"< 3.5\""
+    },
+    {
+      "nl_span": "age",
+      "type": "Column",
+      "interpretation": "Which attribute represents the patient's age: computed from Birthday or a separate age column.",
+      "mapping_snippet": "Patient.Birthday"
+    },
+    {
+      "nl_span": "lower red blood blood cell\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether 'lower red blood cell' refers to the stored RBC value or a computed threshold comparison.",
+      "mapping_snippet": "Laboratory.\"RBC < 3.5\""
+    },
+    {
+      "nl_span": "age\n[Project]",
+      "type": "Project",
+      "interpretation": "How to compute the patient's age: from Birthday or using a precomputed age column.",
+      "mapping_snippet": "Patient.\"CAST(strftime('%Y', 'now') AS INTEGER) - CAST(strftime('%Y', Birthday) AS INTEGER)\""
+    },
+    {
+      "nl_span": "those who has lower red blood blood cell",
+      "type": "Scope",
+      "interpretation": "patients with RBC < 3.5 in any laboratory record",
+      "mapping_snippet": "\"patients with RBC < 3\".\"5 in any laboratory record\""
+    }
+  ],
+  "bird:1525": [
+    {
+      "nl_span": "EUR",
+      "type": "Value",
+      "interpretation": "Which stored currency code matches the requested 'EUR' in the customers' Currency column.",
+      "mapping_snippet": "customers.Currency = \"EUR\""
+    },
+    {
+      "nl_span": "2012/8/25",
+      "type": "Value",
+      "interpretation": "Which date format is used to filter transactions on the specified date in transactions_1k.Date.",
+      "mapping_snippet": "transactions_1k.Date = \"2012-08-25\""
+    },
+    {
+      "nl_span": "EUR",
+      "type": "Value",
+      "interpretation": "Which stored spelling of the currency code to match in customers.Currency.",
+      "mapping_snippet": "customers.Currency = \"EUR\""
+    },
+    {
+      "nl_span": "2012/8/25",
+      "type": "Value",
+      "interpretation": "Which date format to use for filtering transactions on August 25, 2012.",
+      "mapping_snippet": "transactions_1k.Date = \"2012-08-25\""
+    }
+  ],
+  "ambrosia:3228": [],
+  "clambsql:773": [],
+  "clambsql:73": [
+    {
+      "nl_span": "names",
+      "type": "Project",
+      "interpretation": "Use the standard name field for each student.",
+      "mapping_snippet": "Highschooler.given_name"
+    }
+  ],
+  "bird:273": [
+    {
+      "nl_span": "carcinogenic",
+      "type": "Column",
+      "interpretation": "Which attribute indicates whether a molecule is carcinogenic: 'label' column in molecule table.",
+      "mapping_snippet": "molecule.label"
+    },
+    {
+      "nl_span": "carcinogenic molecules",
+      "type": "Column",
+      "interpretation": "Which attribute indicates whether a molecule is carcinogenic: 'label' column in molecule table.",
+      "mapping_snippet": "molecule.label"
+    }
+  ],
+  "bird:1427": [
+    {
+      "nl_span": "0 budget spent",
+      "type": "Value",
+      "interpretation": "What literal value represents zero spending in the budget table.",
+      "mapping_snippet": "budget.spent = \"0.0\""
+    }
+  ],
+  "clambsql:1226": [],
+  "bird:981": [],
+  "ambrosia:1708": [],
+  "ambrosia:2474": [
+    {
+      "nl_span": "services",
+      "type": "Project",
+      "interpretation": "Return only the names of the services provided.",
+      "mapping_snippet": "Services.ServiceName"
+    }
+  ],
+  "ambrosia:724": [],
+  "ambrosia:2378": [
+    {
+      "nl_span": "art gallery",
+      "type": "Table",
+      "interpretation": "Which table contains information about art galleries: Art_Galleries or Art_Galleries_Exhibitions.",
+      "mapping_snippet": "Art_Galleries.Name"
+    },
+    {
+      "nl_span": "each art gallery",
+      "type": "Table",
+      "interpretation": "Map 'each art gallery' to Art_Galleries.GalleryID.",
+      "mapping_snippet": [
+        "Art_Galleries.GalleryID",
+        "Exhibitions.ExhibitionID"
+      ]
+    }
+  ],
+  "clambsql:701": [],
+  "bird:189": [
+    {
+      "nl_span": "lowest average salary",
+      "type": "Column",
+      "interpretation": "Map 'lowest average salary' to district.A11; this does not represent salary data.",
+      "mapping_snippet": [
+        "client.birth_date",
+        "district.A11"
+      ]
+    },
+    {
+      "nl_span": "lowest average salary",
+      "type": "Aggregate",
+      "interpretation": "Use the average salary of the district where the client resides to break ties.",
+      "mapping_snippet": [
+        "district.A11",
+        "client.birth_date"
+      ]
+    }
+  ],
+  "bird:82": [
+    {
+      "nl_span": "the highest longitude",
+      "type": "Scope",
+      "interpretation": "maximum absolute longitude value",
+      "mapping_snippet": "\"maximum absolute longitude value\""
+    },
+    {
+      "nl_span": "the highest longitude",
+      "type": "Value",
+      "interpretation": "Map to schools.Longitude = maximum absolute longitude value.",
+      "mapping_snippet": "schools.Longitude = \"maximum absolute longitude value\""
+    },
+    {
+      "nl_span": "the highest longitude",
+      "type": "Tie",
+      "interpretation": "Arbitrarily select just one school with the highest longitude.",
+      "mapping_snippet": "schools.Longitude: LIMIT 1"
+    }
+  ],
+  "bird:1144": [],
+  "clambsql:716": [
+    {
+      "nl_span": "photo products",
+      "type": "Column",
+      "interpretation": "Which attribute identifies the product name 'photo' in the context of order quantities.",
+      "mapping_snippet": "Products.Product_Name"
+    },
+    {
+      "nl_span": "total order quantities",
+      "type": "Aggregate",
+      "interpretation": "Whether the total order quantity is derived from the Order_Quantity column or computed via a dynamic sum operation.",
+      "mapping_snippet": "Order_Items.Order_Quantity"
+    }
+  ],
+  "clambsql:730": [],
+  "ambrosia:1824": [],
+  "bird:197": [
+    {
+      "nl_span": "molecule",
+      "type": "Aggregate",
+      "interpretation": "Confirmed Aggregate mapping: molecule_id IN (SELECT DISTINCT molecule_id FROM bond WHERE bond_type = '-')",
+      "mapping_snippet": "molecule_id IN (SELECT DISTINCT molecule_id FROM bond WHERE bond_type = '-')"
+    }
+  ],
+  "clambsql:674": [],
+  "ambrosia:945": [
+    {
+      "nl_span": "Professor Smith",
+      "type": "Value",
+      "interpretation": "Which stored spelling or identifier of the assessor name matches 'Professor Smith'.",
+      "mapping_snippet": "Assessments.Assessor = \"Professor Smith\""
+    }
+  ],
+  "bird:17": [
+    {
+      "nl_span": "Writing",
+      "type": "Column",
+      "interpretation": "Which column contains the writing score data: frpm.Percent (%) Eligible FRPM (K-12) or satscores.AvgScrWrite.",
+      "mapping_snippet": "satscores.AvgScrWrite"
+    },
+    {
+      "nl_span": "charter numbers",
+      "type": "Column",
+      "interpretation": "Which column holds the charter school numbers: frpm.Charter School Number or schools.CharterNum.",
+      "mapping_snippet": "schools.CharterNum"
+    },
+    {
+      "nl_span": "Writing\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether the writing score refers to the stored Percent (%) Eligible FRPM (K-12) column or the AvgScrWrite column.",
+      "mapping_snippet": "satscores.AvgScrWrite"
+    },
+    {
+      "nl_span": "average score",
+      "type": "Column",
+      "interpretation": "Use satscores.AvgScrWrite — the average SAT writing score.",
+      "mapping_snippet": "satscores.AvgScrWrite"
+    },
+    {
+      "nl_span": "average score",
+      "type": "Aggregate",
+      "interpretation": "Use the AvgScrWrite column from the satscores table to compute the average writing score.",
+      "mapping_snippet": "satscores.AvgScrWrite"
+    },
+    {
+      "nl_span": "charter numbers",
+      "type": "Column",
+      "interpretation": "Map 'charter numbers' to schools.CharterNum.",
+      "mapping_snippet": "schools.CharterNum"
+    }
+  ],
+  "bird:1029": [],
+  "bird:761": [],
+  "ambrosia:3889": [],
+  "bird:1152": [
+    {
+      "nl_span": "SLE\n[Project]",
+      "type": "Project",
+      "interpretation": "Which table's Diagnosis column should be used to identify SLE patients: Patient or Examination.",
+      "mapping_snippet": "Patient.Diagnosis"
+    },
+    {
+      "nl_span": "inpatient\n[Project]",
+      "type": "Project",
+      "interpretation": "Which table's Admission column should be used to identify inpatient treatments: Patient or Laboratory.",
+      "mapping_snippet": "Patient.Admission"
+    },
+    {
+      "nl_span": "outpatient\n[Project]",
+      "type": "Project",
+      "interpretation": "Which table's Admission column should be used to identify outpatient follow-ups: Patient or Laboratory.",
+      "mapping_snippet": "Patient.Admission"
+    },
+    {
+      "nl_span": "among all the 'SLE' diagnosed patient",
+      "type": "Scope",
+      "interpretation": "For \"among all the 'SLE' diagnosed patient\" in the question: list the inpatient to outpatient followed up treatment of all 'SLE' diagnosed patients together.",
+      "mapping_snippet": "\"For \"\"among all the 'SLE' diagnosed patient\"\" in the question\": list the inpatient to outpatient followed up treatment of all 'SLE' diagnosed patients together."
+    },
+    {
+      "nl_span": "ratio",
+      "type": "Aggregate",
+      "interpretation": "Compute ratio as COUNT(Admission = '+') / COUNT(Admission = '-').",
+      "mapping_snippet": "Patient.Admission"
+    }
+  ],
+  "ambrosia:2701": [],
+  "clambsql:661": [
+    {
+      "nl_span": "last name Smith",
+      "type": "Value",
+      "interpretation": "Which stored spelling of the last name 'Smith' to match in student.LName.",
+      "mapping_snippet": "Student.LName = \"Smith\""
+    }
+  ],
+  "clambsql:1253": [],
+  "clambsql:756": [
+    {
+      "nl_span": "photo",
+      "type": "Value",
+      "interpretation": "Which stored spelling of the product name should be matched to identify orders for the 'photo' product.",
+      "mapping_snippet": "Products.Product_Name = \"photo\""
+    }
+  ],
+  "ambrosia:2307": [
+    {
+      "nl_span": "benefits",
+      "type": "Project",
+      "interpretation": "Display only the benefit names without linking them to specific credit cards.",
+      "mapping_snippet": [
+        "Credit_Card_Benefits.benefitId",
+        "Benefits.benefitName"
+      ]
+    }
+  ],
+  "clambsql:1312": [],
+  "bird:1501": [
+    {
+      "nl_span": "August, 2012",
+      "type": "Value",
+      "interpretation": "Which date format to use for filtering transactions in August 2012.",
+      "mapping_snippet": "transactions_1k.Date = \"2012-08-%\""
+    }
+  ],
+  "ambrosia:957": [
+    {
+      "nl_span": "pearson@email.com",
+      "type": "Value",
+      "interpretation": "Which exact email format to match against the publisher's email field.",
+      "mapping_snippet": "Publishers.Email = \"pearson@email.com\""
+    },
+    {
+      "nl_span": "textbooks and e-books",
+      "type": "Value",
+      "interpretation": "Which stored value represents the educational material type 'textbook' or 'e-book'.",
+      "mapping_snippet": "Books.Educational_Materials = \"Textbook\""
+    },
+    {
+      "nl_span": "publisher email address",
+      "type": "Value",
+      "interpretation": "Which stored email address matches the given email 'pearson@email.com'.",
+      "mapping_snippet": "Publishers.Email = \"pearson@email.com\""
+    },
+    {
+      "nl_span": "textbooks and e-books",
+      "type": "Project",
+      "interpretation": "Display only the title of each book.",
+      "mapping_snippet": "Books.Title"
+    }
+  ],
+  "ambrosia:1714": [],
+  "bird:822": [
+    {
+      "nl_span": "villains",
+      "type": "Column",
+      "interpretation": "Which attribute represents the alignment of a superhero: good, bad, or neutral.",
+      "mapping_snippet": "superhero.alignment_id"
+    }
+  ],
+  "bird:598": [
+    {
+      "nl_span": "student badges",
+      "type": "Value",
+      "interpretation": "Which stored value represents the 'Student' badge name in the badges.Name column.",
+      "mapping_snippet": "badges.Name = \"Student\""
+    },
+    {
+      "nl_span": "2010",
+      "type": "Value",
+      "interpretation": "Which stored format of the year 2010 matches the date in badges.Date.",
+      "mapping_snippet": "badges.Date = \"2010-07-19 19:39:07.0\""
+    },
+    {
+      "nl_span": "student badges",
+      "type": "Column",
+      "interpretation": "Which attribute represents the badge type: Name column in badges table.",
+      "mapping_snippet": "badges.Name"
+    },
+    {
+      "nl_span": "2010",
+      "type": "Value",
+      "interpretation": "Which stored format of the year 2010 to match against badge dates.",
+      "mapping_snippet": "badges.Date = \"2010-07-19 19:39:07.0\""
+    }
+  ],
+  "clambsql:726": [
+    {
+      "nl_span": "followers",
+      "type": "Aggregate",
+      "interpretation": "Retrieve precalculated max_followers and sum_followers from user_profiles_followers.",
+      "mapping_snippet": [
+        "user_profiles_followers.max_followers",
+        "user_profiles_followers.sum_followers"
+      ]
+    }
+  ],
+  "bird:409": [
+    {
+      "nl_span": "pre-modern format",
+      "type": "Aggregate",
+      "interpretation": "Filter cards where format = 'premodern'.",
+      "mapping_snippet": "legalities.format = 'premodern'"
+    }
+  ],
+  "bird:726": [
+    {
+      "nl_span": "Marvel Comics",
+      "type": "Value",
+      "interpretation": "Which stored spelling of the publisher name matches 'Marvel Comics' in publisher.publisher_name.",
+      "mapping_snippet": "publisher.publisher_name = \"Marvel Comics\""
+    }
+  ],
+  "ambrosia:1414": [],
+  "clambsql:706": [],
+  "clambsql:1270": [
+    {
+      "nl_span": "real estate agency",
+      "type": "Table",
+      "interpretation": "Which table contains information about real estate agencies: Real_Estate_Agencies or Services.",
+      "mapping_snippet": "Services.service_id"
+    }
+  ],
+  "bird:592": [
+    {
+      "nl_span": "users",
+      "type": "Table",
+      "interpretation": "Which table contains the user information needed to count badges per user.",
+      "mapping_snippet": "badges.UserId"
+    },
+    {
+      "nl_span": "badges",
+      "type": "Table",
+      "interpretation": "Which table stores the badge information associated with users.",
+      "mapping_snippet": "badges.UserId"
+    }
+  ],
+  "ambrosia:911": [],
+  "bird:1401": [
+    {
+      "nl_span": "cost",
+      "type": "Column",
+      "interpretation": "Which column represents the monetary value of an expense item.",
+      "mapping_snippet": "expense.cost"
+    },
+    {
+      "nl_span": "Posters",
+      "type": "Value",
+      "interpretation": "Which exact textual description matches the expense item for posters.",
+      "mapping_snippet": "expense.expense_description = \"Post Cards, Posters\""
+    },
+    {
+      "nl_span": "September Speaker",
+      "type": "Value",
+      "interpretation": "Which event name corresponds to the 'September Speaker' event.",
+      "mapping_snippet": "event.event_name = \"September Speaker\""
+    },
+    {
+      "nl_span": "cost\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether the cost is represented by the 'cost' column or the 'amount' column in the expense table.",
+      "mapping_snippet": "expense.cost"
+    },
+    {
+      "nl_span": "Posters\n[Project]",
+      "type": "Project",
+      "interpretation": "Whether to return the exact expense description 'Posters' or the more general 'Post Cards, Posters' as matching the poster expense.",
+      "mapping_snippet": "expense.expense_description"
+    },
+    {
+      "nl_span": "September Speaker\n[Project]",
+      "type": "Project",
+      "interpretation": "Whether to match the event name exactly as 'September Speaker' or consider a possible variation like 'September Speaker Event'.",
+      "mapping_snippet": "event.event_name"
+    }
+  ],
+  "bird:766": [
+    {
+      "nl_span": "full names",
+      "type": "Column",
+      "interpretation": "Use the full_name attribute to capture the complete identity of the hero.",
+      "mapping_snippet": "superhero.full_name"
+    },
+    {
+      "nl_span": "strength",
+      "type": "Column",
+      "interpretation": "Which attribute represents the strength attribute: hero_attribute.attribute_id or another column.",
+      "mapping_snippet": "attribute.attribute_name"
+    },
+    {
+      "nl_span": "full names\n[Project]",
+      "type": "Project",
+      "interpretation": "Whether to return just the full_name column or include additional descriptive attributes.",
+      "mapping_snippet": "superhero.full_name"
+    },
+    {
+      "nl_span": "Strength",
+      "type": "Column",
+      "interpretation": "Map 'Strength' to attribute.attribute_name.",
+      "mapping_snippet": [
+        "attribute.attribute_name",
+        "hero_attribute.attribute_value"
+      ]
+    },
+    {
+      "nl_span": "Strength",
+      "type": "Aggregate",
+      "interpretation": "Map 'strength' to attribute.attribute_name.",
+      "mapping_snippet": [
+        "attribute.attribute_name",
+        "hero_attribute.attribute_value"
+      ]
+    },
+    {
+      "nl_span": "full names",
+      "type": "Column",
+      "interpretation": "Map to superhero.full_name.",
+      "mapping_snippet": "superhero.full_name"
+    },
+    {
+      "nl_span": "full names",
+      "type": "Project",
+      "interpretation": "Use the full_name field — the complete identity name of the hero.",
+      "mapping_snippet": "superhero.full_name"
+    }
+  ],
+  "ambrosia:2476": [],
+  "clambsql:700": [
+    {
+      "nl_span": "United Kingdom",
+      "type": "Value",
+      "interpretation": "Which stored spelling or code for the country name matches the climber's country field.",
+      "mapping_snippet": "climber.Country = \"United Kingdom\""
+    },
+    {
+      "nl_span": "maximum point",
+      "type": "Aggregate",
+      "interpretation": "Whether the maximum point is derived from the Points column or from a precomputed aggregate like max_points in climber_points.",
+      "mapping_snippet": "climber_points.max_points"
+    }
+  ],
+  "bird:192": [
+    {
+      "nl_span": "statement issuance",
+      "type": "Value",
+      "interpretation": "Which frequency value corresponds to issuance after transaction: 'POPLATEK PO OBRATU'.",
+      "mapping_snippet": "account.frequency = \"POPLATEK PO OBRATU\""
+    },
+    {
+      "nl_span": "after each transaction\n[Value]",
+      "type": "Value",
+      "interpretation": "Which frequency value indicates issuance after each transaction: 'POPLATEK PO OBRATU'.",
+      "mapping_snippet": "account.frequency = \"POPLATEK PO OBRATU\""
+    },
+    {
+      "nl_span": "after each transaction",
+      "type": "Attachment",
+      "interpretation": "loans issued with frequency 'POPLATEK PO OBRATU' and status 'C' or 'D'",
+      "mapping_snippet": "\"loans issued with frequency 'POPLATEK PO OBRATU' and status 'C' or 'D'\""
+    },
+    {
+      "nl_span": "still on running contract",
+      "type": "Value",
+      "interpretation": "Use loan status 'C' to identify loans that are still on a running contract.",
+      "mapping_snippet": "loan.status IN [\"C\", \"D\"]"
+    }
+  ],
+  "clambsql:658": [],
+  "clambsql:784": [
+    {
+      "nl_span": "total can stay",
+      "type": "Column",
+      "interpretation": "Which attribute represents the maximum number of guests that can stay in a room: maxOccupancy in Rooms or rooms_maxoccupancy.max_maxoccupancy.",
+      "mapping_snippet": "Rooms.maxOccupancy"
+    },
+    {
+      "nl_span": "total can stay\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether the total occupancy is computed from the maxOccupancy column or the precomputed sum_maxoccupancy.",
+      "mapping_snippet": "Rooms.maxOccupancy"
+    }
+  ],
+  "bird:194": [
+    {
+      "nl_span": "age",
+      "type": "Column",
+      "interpretation": "Which attribute holds the client's age information: direct birth_date or calculated from birth_date.",
+      "mapping_snippet": "client.birth_date"
+    },
+    {
+      "nl_span": "age\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether the age is derived from birth_date or stored directly as an age column.",
+      "mapping_snippet": "client.birth_date"
+    }
+  ],
+  "ambrosia:2360": [],
+  "bird:633": [
+    {
+      "nl_span": "post ID",
+      "type": "Column",
+      "interpretation": "Which column represents the unique identifier of a post in the posts table.",
+      "mapping_snippet": "posts.Id"
+    },
+    {
+      "nl_span": "post ID\n[Project]",
+      "type": "Project",
+      "interpretation": "Whether to return the Id column or PostId column as the unique identifier for a post.",
+      "mapping_snippet": "posts.Id"
+    },
+    {
+      "nl_span": "slashnick\n[Project]",
+      "type": "Project",
+      "interpretation": "Whether to look up 'slashnick' in the users table or posts table for matching display names.",
+      "mapping_snippet": "users.DisplayName"
+    }
+  ],
+  "bird:226": [],
+  "clambsql:611": [
+    {
+      "nl_span": "codes",
+      "type": "Column",
+      "interpretation": "Which table contains the product codes to be retrieved.",
+      "mapping_snippet": "products_price.code"
+    },
+    {
+      "nl_span": "cheapest",
+      "type": "Column",
+      "interpretation": "Which column represents the price or cost used to determine the cheapest products.",
+      "mapping_snippet": "products_price.min_price"
+    }
+  ],
+  "ambrosia:3143": [],
+  "ambrosia:2161": [],
+  "ambrosia:1874": [],
+  "bird:487": [
+    {
+      "nl_span": "type",
+      "type": "Column",
+      "interpretation": "Confirmed Column mapping: Value",
+      "mapping_snippet": "Value"
+    },
+    {
+      "nl_span": "interpretation",
+      "type": "Column",
+      "interpretation": "Confirmed Column mapping: \"Which stored spelling of the set name to match in sets\".\"name.\"",
+      "mapping_snippet": "\"Which stored spelling of the set name to match in sets\".\"name.\""
+    },
+    {
+      "nl_span": "candidates",
+      "type": "Value",
+      "interpretation": "Confirmed Value mapping: sets.name = \"Coldsnap\"",
+      "mapping_snippet": "sets.name = \"Coldsnap\""
+    }
+  ],
+  "clambsql:1195": [
+    {
+      "nl_span": "history course",
+      "type": "Value",
+      "interpretation": "Which stored spelling of the subject name should be matched in Subjects.Name to identify the history course.",
+      "mapping_snippet": "Subjects.Name = \"History\""
+    }
+  ],
+  "ambrosia:2851": [],
+  "clambsql:297": [],
+  "clambsql:1141": [
+    {
+      "nl_span": "1000 passengers per day",
+      "type": "Value",
+      "interpretation": "Which exact string representation of capacity increase is stored in the database.",
+      "mapping_snippet": "Development_Projects.Increased_Capacity = \"1000 Passengers per Day\""
+    },
+    {
+      "nl_span": "airport expansions and renovations\n[Project]",
+      "type": "Project",
+      "interpretation": "Whether to return only project names that match 'expansion' or 'renovation' keywords, or all matching projects regardless of keyword presence.",
+      "mapping_snippet": [
+        "Development_Projects.ProjectName",
+        "filter.\"ProjectName LIKE '%expansion%' OR ProjectName LIKE '%renovation%'\""
+      ]
+    },
+    {
+      "nl_span": "airport expansions and renovations",
+      "type": "Scope",
+      "interpretation": "For \"airport expansions and renovations\" in the question: list the result of all airport expansions and renovations together.",
+      "mapping_snippet": "\"For \"\"airport expansions and renovations\"\" in the question\": list the result of all airport expansions and renovations together."
+    },
+    {
+      "nl_span": "1000 passengers per day",
+      "type": "Aggregate",
+      "interpretation": "Filter Development_Projects.Increased_Capacity = '1000 Passengers per Day'.",
+      "mapping_snippet": "Development_Projects.Increased_Capacity"
+    }
+  ],
+  "bird:1302": [
+    {
+      "nl_span": "normal range of creatinine phosphokinase",
+      "type": "Value",
+      "interpretation": "Which stored value or condition indicates a normal range for CPK in the laboratory table.",
+      "mapping_snippet": "Laboratory.CPK = \"248\""
+    },
+    {
+      "nl_span": "normal range of creatinine phosphokinase\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether the normal range condition for CPK is defined as a stored threshold value or a dynamic comparison.",
+      "mapping_snippet": "Laboratory.CPK"
+    }
+  ],
+  "bird:964": [
+    {
+      "nl_span": "American",
+      "type": "Value",
+      "interpretation": "Which stored spelling of the nationality to match in drivers.nationality.",
+      "mapping_snippet": "drivers.nationality = \"American\""
+    }
+  ],
+  "ambrosia:4195": [
+    {
+      "nl_span": "focus",
+      "type": "Column",
+      "interpretation": "Map to Topic.name (topic name).",
+      "mapping_snippet": "Topic.name"
+    }
+  ],
+  "bird:1317": [
+    {
+      "nl_span": "medium size",
+      "type": "Value",
+      "interpretation": "Which literal value represents the medium t-shirt size in the database.",
+      "mapping_snippet": "member.t_shirt_size = \"Medium\""
+    },
+    {
+      "nl_span": "medium size\n[Aggregate]",
+      "type": "Aggregate",
+      "interpretation": "Whether to match the t-shirt size using uppercase or lowercase literal.",
+      "mapping_snippet": "member.t_shirt_size"
+    },
+    {
+      "nl_span": "T-shirt that's in medium size",
+      "type": "Value",
+      "interpretation": "Which stored value represents the medium t-shirt size in the t_shirt_size column.",
+      "mapping_snippet": "member.t_shirt_size = \"Medium\""
+    }
+  ]
+}

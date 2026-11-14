@@ -1,0 +1,13 @@
+{
+  "n": 498,
+  "correct": {
+    "gold": 335
+  },
+  "ex": {
+    "gold": 67.26907630522088
+  },
+  "gold_key": "gold",
+  "source": "synced from eval_rescored/qwen_coder/random_control_seed0.json (evaluator.ex gold_timeout=600)",
+  "q": 0.0,
+  "q_total": 0
+}

@@ -1,0 +1,37 @@
+{
+  "n": 498,
+  "correct": {
+    "gold": 324.6666666666667
+  },
+  "ex": {
+    "gold": 65.19410977242303
+  },
+  "gold_key": "gold",
+  "seeds": [
+    {
+      "seed": 0,
+      "n_hit": 335,
+      "n": 498,
+      "Q": 1.8916,
+      "asked": 942,
+      "n_changed": 266
+    },
+    {
+      "seed": 1,
+      "n_hit": 320,
+      "n": 498,
+      "Q": 1.8835,
+      "asked": 938,
+      "n_changed": 265
+    },
+    {
+      "seed": 2,
+      "n_hit": 319,
+      "n": 498,
+      "Q": 1.8735,
+      "asked": 933,
+      "n_changed": 268
+    }
+  ],
+  "source": "mean of rescored random_control_seed{0,1,2} hits [335, 320, 319] \u2192 mean 324.6666666666667; Q from prior seed metadata"
+}

@@ -1,0 +1,13 @@
+{
+  "n": 1149,
+  "correct": {
+    "gold_1": 232
+  },
+  "ex": {
+    "gold_1": 20.191470844212358
+  },
+  "gold_key": "gold_1",
+  "source": "synced from eval_rescored/qwen_coder/ambisql.json (evaluator.ex gold_timeout=600)",
+  "q": 1.9956483899042645,
+  "q_total": 2293
+}

@@ -1,0 +1,13 @@
+{
+  "n": 1400,
+  "correct": {
+    "intended": 858
+  },
+  "ex": {
+    "intended": 61.285714285714285
+  },
+  "gold_key": "intended",
+  "source": "synced from eval_rescored/gpt56_terra/ours.json (evaluator.ex gold_timeout=600)",
+  "q": 0.0,
+  "q_total": 0
+}

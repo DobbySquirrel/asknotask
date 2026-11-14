@@ -1,0 +1,18 @@
+{
+ "n": 498,
+ "correct": {
+  "gold": 370
+ },
+ "ex": {
+  "gold": 74.29718875502007
+ },
+ "gold_key": "gold",
+ "source": "terra_rerun/ambisql (outputs/bird_arcwise/terra/ambisql/pred.jsonl)",
+ "q": 0.0,
+ "q_total": 0,
+ "rerun_meta": {
+  "parser": "gpt-5.6-terra",
+  "note": "soft NOTE inserted in evidence",
+  "ts": "2026-11-09T12:33:52"
+ }
+}

@@ -1,0 +1,15 @@
+{
+  "n": 498,
+  "correct": 304,
+  "ex": 61.044176706827315,
+  "q": 2.3233,
+  "dataset": "bird_arcwise",
+  "gold": "gold",
+  "method": "fwd_onestage",
+  "parser": "qwen_coder",
+  "source": {
+    "ex": "git HEAD:outputs/bird/predictions/qwen_coder/fwd_ablation_06_v3_slotfix/oneprompt/score_paper.json",
+    "q": "git HEAD:outputs/bird/predictions/qwen_coder/fwd_ablation_06_v3_slotfix/logs/oneprompt_ex.log",
+    "run": "fwd_ablation_06_v3_slotfix/oneprompt"
+  }
+}
